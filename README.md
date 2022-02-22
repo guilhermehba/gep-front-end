@@ -17,26 +17,26 @@ Línguagens utilizadas:
 
 | Nome | Papel |
 | --- | --- |
-| Guilherme Henrique Batista Araújo | Desenvolvedor |
-| Wellysson Nascimento Rocha | Desenvolvedor |
+| [Wellysson Nascimento Rocha](#Wellysson) | Desenvolvedor |
+| [Guilherme Henrique Batista Araújo](#Guilherme) | Desenvolvedor |
 
 ### Recursos
 
-- [ ] Frequência
-- [ ] Conteúdo
-- [ ] Notas
-- [ ] Planejamento de Aulas
-- [ ] Conceitos
-- [ ] Observações Turma
-- [ ] Mural da Turma
-- [ ] Horário
-- [ ] Alunos x Faltas
-- [ ] Gráficos
+- [x] Frequência
+- [x] Conteúdo
+- [x] Notas
+- [x] Planejamento de Aulas
+- [x] Conceitos
+- [x] Observações Turma
+- [x] Mural da Turma
+- [x] Horário
+- [x] Alunos x Faltas
+- [x] Gráficos
 
 <hr>
 
 ![Ergon Sistemas](https://ergonsistemas.com.br/wp-content/uploads/logo@2x-222x48.png)
-
+<span id="Wellysson"></span>
 #### Wellysson Nascimento Rocha
 
 <div>
@@ -48,6 +48,8 @@ Línguagens utilizadas:
 
 [![Wellysson](https://img.shields.io/badge/LinkedIn-wellysson-blue.svg)](https://www.linkedin.com/in/wellyssonrocha/)
 [![Wellysson](https://img.shields.io/badge/GitHub-wellysson-lightgrey.svg)](https://github.com/Werisu/)
+
+<span id="Guilherme"></span>
 
 #### Guilherme Henrique
 
