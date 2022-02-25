@@ -51,8 +51,7 @@
 
                     <!-- Tabela de frequência -->
                     <div class="table-responsive table-ergon">
-                        <table style="width: 100%;" id="example"
-                            class="table table-hover" role="grid"
+                        <table style="width: 100%;" id="example" class="table table-hover" role="grid"
                             aria-describedby="example_info">
                             <thead>
                                 <tr role="row">
@@ -60,7 +59,11 @@
                                     <th>Aluno</th>
                                     <th>Cod. Matric</th>
                                     <th>Legenda</th>
-                                    <th><a href="" title="Adicionar Frequência">08/02</a></th>
+                                    <th>
+                                        <a type="button" class="btn link-ergon" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Aqui vai o texto">
+                                            08/02
+                                        </a>
+                                    </th>
                                     <th><a href="">09/02</a></th>
                                     <th><a href="">10/02</a></th>
                                     <th><a href="">11/02</a></th>
@@ -191,18 +194,22 @@
                     <!-- Opções -->
                     <div class="options-buttom">
                         <button class="mb-2 mr-2 btn-pill btn btn-ergon btn-shadow">Nova Aula</button>
-                        
+
                         <!-- Example single danger button -->
                         <div class="btn-group dropup">
-                            <button type="button" class="mb-2 mr-2 btn-pill btn btn-option btn-shadow dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                            Opções
+                            <button type="button" class="mb-2 mr-2 btn-pill btn btn-option btn-shadow dropdown-toggle"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Opções
                             </button>
                             <ul class="dropdown-menu">
-                            <li><a class="dropdown-item link-ergon" href="#">Ver total de faltas e Presenças</a></li>
-                            <li><a class="dropdown-item link-ergon" href="#">Presença para todos os alunos</a></li>
-                            <li><a class="dropdown-item link-ergon" href="#">Presença geral por período</a></li>
-                            <li><hr class="dropdown-divider link-ergon"></li>
-                            <li><a class="dropdown-item link-ergon" href="#">Frequência Geral por aluno</a></li>
+                                <li><a class="dropdown-item link-ergon" href="#">Ver total de faltas e Presenças</a>
+                                </li>
+                                <li><a class="dropdown-item link-ergon" href="#">Presença para todos os alunos</a></li>
+                                <li><a class="dropdown-item link-ergon" href="#">Presença geral por período</a></li>
+                                <li>
+                                    <hr class="dropdown-divider link-ergon">
+                                </li>
+                                <li><a class="dropdown-item link-ergon" href="#">Frequência Geral por aluno</a></li>
                             </ul>
                         </div>
                     </div>
@@ -214,7 +221,16 @@
     </div>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <script>
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+            return new bootstrap.Popover(popoverTriggerEl)
+        })
+    </script>
 </body>
 
 </html>
