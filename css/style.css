@@ -1,0 +1,181 @@
+/**
+ * GEP Style
+ *
+ * Standard Layout (all parts) for GEP System
+ *
+ * This style has been designed by Wellysson N Rocha. It reflects
+ * the composition of colors through the years of the
+ * customers project as well as the boldness it implies.
+ *
+ * @project   FrontEnd GEP System
+ * @version   1.0.0
+ * @package   html-css
+ * @author    Wellysson N Rocha
+ * @copyright 2022 by the author
+ * @cssdoc    version 1.0-pre
+ * @license   GPL v3
+ *
+ * @colordef  #4D228A; Primary 2
+ * @colordef  #6F31AD; Primary 1
+ * @fontdef   Poppins; PRINCIPAL POPPINS
+ * @fontdef   Kalam; SECUNDARIA KALAM
+*/
+
+/* 23/02/2021 - ERGON - Author: Wellysson Rocha */
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
+
+/* padrão figma */
+* {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 32px;
+    font-size: 18px;
+    line-height: 32px;
+}
+
+/* padrão de resolução até 1518 */
+@media only screen and (max-width: 1518px) {
+    * {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+    }
+}
+
+body a {
+    color: #AB58B9;
+    text-decoration: none;
+}
+
+.link-ergon{
+    color: #AB58B9;
+    font-weight: bold;
+}
+
+.link-ergon:hover{
+    color: #6F31AD;
+}
+
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    padding: .25rem 1rem;
+    margin-bottom: 0;
+    list-style: none;
+    background: #F3F5F7;
+    border-radius: .25rem;
+    --bs-breadcrumb-divider: '>';
+}
+
+.school-attendance-content {
+    width: 95%;
+    margin: 2% auto;
+}
+
+.school-attendance-content .title {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: #6F31AD;
+}
+
+.school-attendance-content .title span {
+    /* position: relative;
+    top: 1px; */
+}
+
+.school-attendance-content .record-type {
+    margin-top: 4%;
+}
+
+.school-attendance-content .form-control {
+    border-color: #6F31AD;
+    text-align: center;
+}
+
+.school-attendance-content .table-responsive {
+    margin-top: 1%;
+}
+
+/* 24/02/2022 - ERGON - Author: Wellysson Rocha */
+.record-type .table-ergon{
+    white-space: nowrap;
+}
+
+.record-type .table-ergon td{
+    border: 1px solid #828282;
+    box-sizing: border-box;
+}
+
+.record-type .table-responsive .table tr th {
+    background: #D6E3EA;
+    border: 1px solid #828282;
+    font-weight: 600;
+}
+
+.record-type .table-responsive .table tr th a {
+    font-weight: 600;
+}
+
+.record-type .table-responsive .table tr th a:hover {
+    color: #AB58B9;
+}
+
+/* tabela de resolução até 1518px */
+@media only screen and (max-width: 1518px) {
+    
+}
+
+/* resolução 1229px */
+@media only screen and (max-width: 1229px) {
+
+
+}
+
+/* btn ergon */
+.btn-ergon {
+    color: #fff;
+    background-color: #AB58B9;
+    border-color: #AB58B9;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 24px;
+}
+
+.btn-ergon:hover {
+    background-color: #7D3989;
+    color: #fff;
+}
+
+.btn-option{
+    color: #AB58B9;
+    background-color: #fff;
+    border: 1px solid #AB58B9;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 24px;
+}
+
+.btn-option:hover{
+    color: #7D3989;
+}
+
+.btn-shadow {
+    box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.4),
+     0 0.03rem 0.1rem rgba(42, 11, 54, 0.5);
+}
+
+.options-buttom {
+    float: right;
+}
+
+.record-type .dropup .dropdown-toggle::after{
+    content: none;
+}
+
+/* 23/02/2021 - ERGON - Author: Wellysson Rocha */
