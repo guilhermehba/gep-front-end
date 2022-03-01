@@ -53,74 +53,92 @@
                         </div>
                     </div>
 
-                    <div id="modal">
+                    <div id="modal-attendance">
                         <!-- Modal include_contents_two_steps -->
-                        <div class="modal fade" id="exampleModalToggle" aria-hidden="true"
-                            aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                        <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">&nbsp &nbsp &nbsp &nbsp &nbsp
-                                            &nbsp &nbsp &nbsp &nbsp Lançamento de Conteúdos</h5>
-                                        <button type="button" class="btn" data-bs-dismiss="modal"
-                                            aria-label="Close"><img src="image/x-close.png" alt=""></button>
+                                        <p class="modal-title title-ergon-black" id="exampleModalLabel">Incluir Conteúdo</p>
+                                        
                                     </div>
-                                    <div class="modal-body">
-                                        <div class="row">
-                                            <div class="column" style="width: 50%;">
-                                                <a id="">Componente Curricular</a>
-                                                <hr>
-                                                <a id="subjects">Portugues</a>
-                                                <hr>
-                                                <a id="subjects">Matemática</a>
-                                                <hr>
-                                                <a id="subjects">história</a>
-                                                <hr>
-                                                <a id="subjects">Geografia</a>
-                                                <hr>
-                                                <a id="subjects">Ciencias</a>
-                                            </div>
-                                            <div class="column" style="width: 50%;">
-                                                <a id="">Aula</a>
-                                                <hr>
-                                                <div class="line_count_elements">
-                                                    <a class="btn lce_remove">-</a>
+                                    <div class="modal-body attendance-modal-content">
+                                        <table class="table ">
+                                            <thead>
+                                              <tr>
+                                                <th scope="col">Componente Curricular</th>
+                                                <th scope="col" style="text-align: center;">Aula</th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <tr>
+                                                <th scope="row">Língua Portuguesa</th>
+                                                <td class="line_count_elements">
+                                                    <a href="#" class="link-ergon lce_remove" onclick="subtrairAula()"><i class="bi bi-dash-circle"></i></a>
                                                     <span class="lce_number">1</span>
-                                                    <a class="btn lce_add">+</a>
-                                                </div>
-                                            </div>
-                                            <script>
-
-                                                var n_place = $('.lce_number');
-                                                $('.line_count_elements').on('click', '.lce_add', function () {
-                                                    var n = parseInt(n_place.text(), 10);
-                                                    n_place.empty().append(n + 1);
-                                                });
-                                                $('.line_count_elements').on('click', '.lce_remove', function () {
-                                                    var n = parseInt(n_place.text(), 10);
-                                                    n_place.empty().append(Math.max(0, n - 1));
-                                                });
-
-                                            </script>
-                                        </div>
+                                                    <a href="#" class="link-ergon lce_add" onclick="somaAula()"><i class="bi bi-plus-circle"></i></a>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">Matemática</th>
+                                                <td class="line_count_elements">
+                                                    <a href="#" class="link-ergon lce_remove"><i class="bi bi-dash-circle"></i></a>
+                                                    <span class="lce_number">1</span>
+                                                    <a href="#" class="link-ergon lce_add"><i class="bi bi-plus-circle"></i></a>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">Ciência</th>
+                                                <td class="line_count_elements">
+                                                    <a href="#" class="link-ergon lce_remove"><i class="bi bi-dash-circle"></i></a>
+                                                    <span class="lce_number">1</span>
+                                                    <a href="#" class="link-ergon lce_add"><i class="bi bi-plus-circle"></i></a>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">História</th>
+                                                <td class="line_count_elements">
+                                                    <a href="#" class="link-ergon lce_remove"><i class="bi bi-dash-circle"></i></a>
+                                                    <span class="lce_number">1</span>
+                                                    <a href="#" class="link-ergon lce_add"><i class="bi bi-plus-circle"></i></a>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">Geografia</th>
+                                                <td class="line_count_elements">
+                                                    <a href="#" class="link-ergon lce_remove"><i class="bi bi-dash-circle"></i></a>
+                                                    <span class="lce_number">1</span>
+                                                    <a href="#" class="link-ergon lce_add"><i class="bi bi-plus-circle"></i></a>
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
                                     </div>
                                     <div class="modal-footer">
-                                        <button class="btn btn-primary" data-bs-target="#exampleModalToggle2"
-                                            data-bs-toggle="modal" data-bs-dismiss="modal"
-                                            style="background: #AB58B9; border-radius: 32px;">Avançar</button>
+                                        <button class="btn btn-ergon btn-ergon-modal-large btn-shadow" data-bs-target="#exampleModalToggle2"
+                                            data-bs-toggle="modal" data-bs-dismiss="modal">Avançar</button>
                                     </div>
+                                    <div class="modal-breadcrumb">
+                                        <!-- migalha de pão -->
+                                            <nav style="--bs-breadcrumb-divider: '\F27B';" class="breadcrumb" aria-label="breadcrumb">
+                                                <ol class="breadcrumb">
+                                                    <li class="breadcrumb-item active" aria-current="page">Incluir conteúdos</li>
+                                                </ol>
+                                            </nav>
+                                    </div>
+                                    <a href="" type="button" class="link-ergon attendance-modal-button-close" data-bs-dismiss="modal"
+                                            aria-label="Close"><i class="bi bi-x-circle"></i></a>
                                 </div>
                             </div>
+                            <div class="attendance-alert"></div>
                         </div>
+                        <!--/segundo modal -->
                         <div class="modal fade" id="exampleModalToggle2" aria-hidden="true"
                             aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">&nbsp &nbsp &nbsp &nbsp &nbsp
-                                            &nbsp &nbsp &nbsp &nbsp Lançamento de Conteúdos</h5>
-                                        <button type="button" class="btn" data-bs-dismiss="modal"
-                                            aria-label="Close"><img src="image/x-close.png" alt=""></button>
+                                        <h5 class="modal-title" id="exampleModalLabel">Lançamento de Conteúdos</h5>
                                     </div>
                                     <div class="modal-body">
                                         <div>
@@ -141,11 +159,23 @@
                                         </div>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-primary"
-                                            style="background: #AB58B9; border-radius: 32px;">Salvar</button>
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
-                                            style="border-radius: 32px;">Fechar</button>
+                                        <button type="button" class="btn btn-ergon btn-ergon-modal-large btn-shadow">Salvar</button>
                                     </div>
+                                    <div class="modal-breadcrumb">
+                                        <!-- migalha de pão -->
+                                            <nav style="--bs-breadcrumb-divider: '\F27B';" class="breadcrumb" aria-label="breadcrumb">
+                                                <ol class="breadcrumb">
+                                                    <li class="breadcrumb-item"><a href="attendance.html" class="link-ergon">Incluir conteúdos</a></li>
+                                                    <li class="breadcrumb-item active" aria-current="page">Registro de conteúdos</li>
+                                                </ol>
+                                            </nav>
+                                    </div>
+                                    <a href="" type="button" class="link-ergon attendance-modal-button-close" data-bs-dismiss="modal"
+                                            aria-label="Close"><i class="bi bi-x-circle"></i></a>
+                                    <a href="" class="link-ergon attendance-modal-button-back" data-bs-target="#exampleModalToggle"
+                                            data-bs-toggle="modal" data-bs-dismiss="modal">
+                                            <i class="bi bi-arrow-left-circle"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
