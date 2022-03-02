@@ -57,12 +57,12 @@ body a:hover {
     color: #6F31AD;
 }
 
-.link-ergon{
+.link-ergon {
     color: #AB58B9;
     font-weight: bold;
 }
 
-.link-ergon:hover{
+.link-ergon:hover {
     color: #6F31AD;
 }
 
@@ -91,7 +91,7 @@ body a:hover {
     color: #6F31AD;
 }
 
-.school-attendance-content .title-ergon-black{
+.school-attendance-content .title-ergon-black {
     font-family: Poppins;
     font-style: normal;
     font-weight: 500;
@@ -119,40 +119,64 @@ body a:hover {
 }
 
 /* 24/02/2022 - ERGON - Author: Wellysson Rocha */
-.record-type .table-ergon{
+.record-type .table-ergon {
     white-space: nowrap;
     margin-bottom: 1%;
+    padding: 0;
+}
+
+.record-type .table-ergon * {
+    font-size: 14px;
 }
 
 /* table-scroll */
-.table-scroll {
-	position:relative;
-	overflow:hidden;
-}
 .table-wrap {
-	overflow:auto;
+    overflow: auto;
 }
-.table-scroll table {
-	width:100%;
-	border-collapse:separate;
-	border-spacing:0;
+
+.table-wrap::-webkit-scrollbar {
+    width: 12px;
+    /* width of the entire scrollbar */
+    height: 10px;
 }
+
+.table-wrap::-webkit-scrollbar-track {
+    background: #D6E3EA;
+    border-radius: 24px;
+    /* color of the tracking area */
+}
+
+.table-wrap::-webkit-scrollbar-thumb {
+    background-color: #C4C4C4;
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+    transition: 0.3ms;
+}
+.table-wrap::-webkit-scrollbar-thumb:hover {
+    background-color: #AB58B9;
+    /* color of the scroll thumb */
+}
+
 .fixed-table {
-	position:absolute;
-	top:0;
-	left:0;
-	pointer-events:none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
 }
+
 .fixed-table th, .fixed-table td {
-	visibility:hidden
+    visibility: hidden
 }
+
 .fixed-table .fixed-side {
-	background:#fff;
-	visibility:visible;
+    background: #fff;
+    visibility: visible;
 }
+
 /* ^ table scroll */
 
-.record-type .table-ergon td{
+.record-type .table-ergon td {
     border: 1px solid #828282;
     box-sizing: border-box;
 }
@@ -172,15 +196,10 @@ body a:hover {
 }
 
 /* tabela de resolução até 1518px */
-@media only screen and (max-width: 1518px) {
-    
-}
+@media only screen and (max-width: 1518px) {}
 
 /* resolução 1229px */
-@media only screen and (max-width: 1229px) {
-
-
-}
+@media only screen and (max-width: 1229px) {}
 
 /* btn ergon */
 .btn-ergon {
@@ -197,7 +216,7 @@ body a:hover {
     color: #fff;
 }
 
-.btn-option{
+.btn-option {
     color: #AB58B9;
     background-color: #fff;
     border: 1px solid #AB58B9;
@@ -206,20 +225,20 @@ body a:hover {
     border-radius: 24px;
 }
 
-.btn-option:hover{
+.btn-option:hover {
     color: #7D3989;
 }
 
 .btn-shadow {
     box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.4),
-     0 0.03rem 0.1rem rgba(42, 11, 54, 0.5);
+        0 0.03rem 0.1rem rgba(42, 11, 54, 0.5);
 }
 
 .options-buttom {
     float: right;
 }
 
-.record-type .dropup .dropdown-toggle::after{
+.record-type .dropup .dropdown-toggle::after {
     content: none;
 }
 
@@ -232,18 +251,18 @@ body a:hover {
 
 /* 25/02/2021 - ERGON - Author: Guilherme 1.0 */
 /* 01/03/2021 - ERGON - Author: Wellysson N Rocha 1.1 */
-#modal-attendance *{
+#modal-attendance * {
     font-weight: bold;
 }
 
-@media (min-width: 576px){
+@media (min-width: 576px) {
     #exampleModalToggle2 .modal-dialog {
         max-width: 50%;
         margin: 1.75rem auto;
     }
 }
 
-#modal-attendance th{
+#modal-attendance th {
     font-size: 16px;
 }
 
@@ -261,81 +280,81 @@ body a:hover {
     color: #000000;
 }
 
-#modal-attendance .attendance-modal-content>table{
+#modal-attendance .attendance-modal-content>table {
     border: 1px solid rgba(130, 130, 130, 0.5);
 }
 
-#modal-attendance .attendance-modal-content>table>thead{
+#modal-attendance .attendance-modal-content>table>thead {
     background-color: #D6E3EA;
     border: 1px solid rgba(130, 130, 130, 0.5);
 }
 
-#modal-attendance .line_count_elements i{
+#modal-attendance .line_count_elements i {
     font-size: 24px;
 }
 
-#modal-attendance .modal-header{
+#modal-attendance .modal-header {
     border: none !important;
 }
 
-#modal-attendance .attendance-modal-content{
+#modal-attendance .attendance-modal-content {
     width: 80%;
     margin: auto;
 }
 
-#modal-attendance .attendance-modal-button-close{
+#modal-attendance .attendance-modal-button-close {
     position: absolute;
     top: 18px;
     right: 15px;
 }
 
-#modal-attendance .attendance-modal-button-back{
+#modal-attendance .attendance-modal-button-back {
     position: absolute;
     top: 18px;
     left: 15px;
 }
 
-#modal-attendance i{
+#modal-attendance i {
     font-size: 24px;
-    font-weight: bolder important!;
+    font-weight: bolder important !;
 }
 
-#modal-attendance th{
+#modal-attendance th {
     padding-bottom: 0;
     padding-top: 0;
     vertical-align: middle;
 }
 
-#modal-attendance td{
+#modal-attendance td {
     vertical-align: middle;
 }
 
-#modal-attendance .line_count_elements{
+#modal-attendance .line_count_elements {
     text-align: center;
 }
 
-#modal-attendance .modal-header>.modal-title{
+#modal-attendance .modal-header>.modal-title {
     margin: auto;
 }
 
-#modal-attendance .modal-footer{
+#modal-attendance .modal-footer {
     border: none;
 }
 
-#modal-attendance .btn-ergon-modal-large{
+#modal-attendance .btn-ergon-modal-large {
     margin: auto;
     width: 50%;
 }
 
-#modal-attendance .modal-content{
+#modal-attendance .modal-content {
     border-radius: 24px !important;
 }
 
-#modal-attendance .modal-breadcrumb .breadcrumb{
+#modal-attendance .modal-breadcrumb .breadcrumb {
     background-color: white;
 }
 
-#modal-attendance .modal-breadcrumb *{
+#modal-attendance .modal-breadcrumb * {
     font-family: Poppins;
     font-weight: 400 !important;
     font-size: 18px !important;
@@ -343,17 +362,17 @@ body a:hover {
     text-align: center;
 }
 
-#modal-attendance .modal-breadcrumb nav{
+#modal-attendance .modal-breadcrumb nav {
     border-radius: 0 0 24px 24px !important;
 }
 
-#modal-attendance .modal-breadcrumb .breadcrumb{
+#modal-attendance .modal-breadcrumb .breadcrumb {
     margin: auto;
 }
 
 /* modal de resolução até 1518px */
 @media only screen and (max-width: 1518px) {
-    #modal-attendance th{
+    #modal-attendance th {
         font-size: 14px;
     }
 
@@ -362,20 +381,17 @@ body a:hover {
         height: 28px;
         font-size: 18px;
         font-size: 20px;
-    
+
         color: #000000;
     }
 
-    #modal-attendance .modal-breadcrumb *{
+    #modal-attendance .modal-breadcrumb * {
         font-size: 14px !important;
     }
 }
 
 /* resolução 1229px */
-@media only screen and (max-width: 1229px) {
-
-
-}
+@media only screen and (max-width: 1229px) {}
 
 /* buttom circle */
 .xyz {
@@ -383,6 +399,7 @@ body a:hover {
     text-align: center;
     padding-top: 100px;
 }
+
 .btn-circle.btn-sm {
     width: 30px;
     height: 30px;
@@ -391,6 +408,7 @@ body a:hover {
     font-size: 8px;
     text-align: center;
 }
+
 .btn-circle.btn-md {
     width: 50px;
     height: 50px;
@@ -399,6 +417,7 @@ body a:hover {
     font-size: 10px;
     text-align: center;
 }
+
 .btn-circle.btn-xl {
     width: 70px;
     height: 70px;
