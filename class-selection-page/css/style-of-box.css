@@ -1,29 +1,3 @@
-
-/**
- * GEP Style
- *
- * Standard Layout (all parts) for GEP System
- *
- * This style has been designed by Guilherme H B Araújo. It reflects
- * the composition of colors through the years of the
- * customers project as well as the boldness it implies.
- *
- * @project   FrontEnd GEP System
- * @version   1.0.0
- * @package   html-css
- * @author    Guilherme H B Araújo
- * @copyright 2022 by the author
- * @cssdoc    version 1.0-pre
- * @license   GPL v3
- *
- * @colordef  #4D228A; Primary 2
- * @colordef  #6F31AD; Primary 1
- * @fontdef   Poppins; PRINCIPAL POPPINS
- * @fontdef   Kalam; SECUNDARIA KALAM
-*/
-
-/* 02/03/2021 - ERGON - Author: Guilherme H B Araújo */
-
 *{
     font-family: Poppins;
 }
@@ -62,23 +36,7 @@ header, .wrapper, #bimestre-and-filter{
         background: #FFFDFD;
         box-sizing: border-box;
         border-radius: 8px;
-        border: 1px solid #AB58B9;
-
 }
-#drop_list{
-    width: 25%;
-}
-/*nav*/
-#nav{
-    line-height: 32px;
-    font-size: 18px;
-    line-height: 32px;
- 
-}
-#inicio{
-    color: #AB58B9;
-}
-/*nav*/
 /*div bimestre*/
 /*box config*/
     #ident_class{
@@ -177,12 +135,8 @@ header, .wrapper, #bimestre-and-filter{
     .disciplinas{
     text-align: center;
     font-size: 15px;
-    text-decoration: none;
-    color: #AB58B9;
     }
-    .disciplinas:hover{
-        color: #6F31AD;
-    }
+    
 }
 @media (max-width:970px) {
     .wrapper {
@@ -242,71 +196,3 @@ header, .wrapper, #bimestre-and-filter{
     }
    
 }
-
-    #modalFilter{
-        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
-        border-radius: 24px;
-    }
-    .modal-content  {
-        border-radius: 25px !important;
-        font-family: Poppins;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 14px;
-    }
-    #dropdown_series{
-        background: #FFFDFD;
-        border: 1px solid #6F31AD;
-        box-sizing: border-box;
-        border-radius: 8px;
-    }
-    #dropdown_turmas{
-        background: #FFFDFD;
-        border: 1px solid #6F31AD;
-        box-sizing: border-box;
-        border-radius: 8px;
-    }
-    
-    /*=======diario fim=======*/
-        
-    /*============CONFIRMATION MODAL=================*/
-    #modal_confirmation_content{
-        width: 774px;
-    }
-    #confirmation_content{
-        width: 100%;
-
-        font-family: Poppins;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 16px;
-
-        align-items: center;
-        text-align: center;
-
-        color: #000000;
-    }
-    #lock_icon{
-        top: 100%;
-        font-size: 24px;
-    }
-    #manual_btn{
-        background: #AB58B9;
-        border-radius: 24px;
-        border: none;
-        width: 40%;
-        height: 48px;
-
-        left: 0%;
-        right: 0%;
-        top: 0%;
-        bottom: 0%;
-
-        color: #ffffff;
-    }
-    #close_warning{
-            border-radius: 24px;
-            border: 0.5px solid darkgrey;
-            width: 40%;
-            color: #AB58B9;
-    }
