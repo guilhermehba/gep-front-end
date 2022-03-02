@@ -1,0 +1,54 @@
+#exampleModal{
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
+    border-radius: 24px;
+}
+#add_content_by_subjects{
+    background: #AB58B9;
+    border-radius: 32px;
+    top: 15%;
+    bottom: 75%;
+    left: 45%;
+    right: 45%;
+    position: absolute;
+    text-align: center;
+}
+#include_contents_two_steps{
+    background: #AB58B9;
+    border-radius: 32px;
+    top: 35%;
+    bottom: 55%;
+    left: 45%;
+    right: 45%;
+    position: absolute;
+    text-align: center;
+}
+#include_by_date{
+    background: #AB58B9;
+    border-radius: 32px;
+    top: 55%;
+    bottom: 35%;
+    left: 45%;
+    right: 45%;
+    position: absolute;
+    text-align: center;
+}
+#subjects{
+    font-size: 20px;
+}
+.line_count_elements span {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.lce_add, .lce_remove {
+    cursor: pointer;
+    border: 3px solid #AB58B9;
+    border-radius:15px;
+    color: #AB58B9;
+}
+.lce_number{
+    border: none;
+}
