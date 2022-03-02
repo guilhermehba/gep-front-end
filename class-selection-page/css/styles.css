@@ -1,0 +1,486 @@
+
+/**
+ * GEP Style
+ *
+ * Standard Layout (all parts) for GEP System
+ *
+ * This style has been designed by Wellysson N Rocha. It reflects
+ * the composition of colors through the years of the
+ * customers project as well as the boldness it implies.
+ *
+ * @project   FrontEnd GEP System
+ * @version   1.0.0
+ * @package   html-css
+ * @author    Wellysson N Rocha
+ * @copyright 2022 by the author
+ * @cssdoc    version 1.0-pre
+ * @license   GPL v3
+ *
+ * @colordef  #4D228A; Primary 2
+ * @colordef  #6F31AD; Primary 1
+ * @fontdef   Poppins; PRINCIPAL POPPINS
+ * @fontdef   Kalam; SECUNDARIA KALAM
+*/
+
+/* 02/03/2021 - ERGON - Author: Guilherme Henrique Batista Araújo */
+
+* {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 32px;
+    font-size: 18px;
+    line-height: 32px;
+}
+@media (max-width:1440px) {
+    .wrapper {
+        display: flex;
+        flex-flow: row wrap;
+        align-content: space-between;
+        justify-content: space-between;
+    }
+    .line-break {
+        width: 100%;
+      }
+    #block{
+
+        position: relative;
+        float: left;
+
+        left: 10px;
+        right: 30px;
+        top: 50px;
+
+        background: #FFFFFf;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 16px;
+    
+    }
+    #block_top{
+        position: relative;
+        width: 326px;
+        height: 48px;
+        background: #FFFFFF;
+       
+    }
+    #ident_class{
+        position: relative;
+        width: 90px;
+        height: 16px;
+        left: 10px;
+        top: 10px;
+    
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 16px;
+        /* identical to box height, or 100% */
+    
+        display: flex;
+        align-items: center;
+    
+        color: #AB58B9;
+    }
+    #class_cod{
+        position: relative;
+    width: 75px;
+    height: 8px;
+    left: 10px;
+    top: 17px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 8px;
+    line-height: 8px;
+    /* identical to box height, or 100% */
+    
+    display: flex;
+    align-items: center;
+    
+    color: #4F4F4F;
+    }
+    #student_icon{
+        position: relative;
+    
+        left: 68%;
+        right: 06.67%;
+        top: -55%;
+        bottom: 0%;
+    
+        color: #AB58B9;
+    
+        font-size: 18px;
+    
+    }
+    #dot{
+        position: relative;
+        width: 3px;
+        height: 3px;
+        left: 218px;
+        top: -35px;
+        font-size: 24px;
+        color: #AB58B9;
+    }
+    #student_count{
+        position: relative;
+        width: 20px;
+        height: 16px;
+        left: 250px;
+        top: -52px;
+    
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 16px;
+        /* identical to box height, or 100% */
+    
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #AB58B9;
+    
+    }
+    #class_lock{
+        position: relative;
+        left: 86%;
+        right: 5.47%;
+        top: -80px;
+    
+        font-family: Material Icons;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 24px;
+        
+        color: #AB58B9;
+    }
+    #material{
+        position: relative;
+        width: 280px;
+        height: 50px;
+        left: 15px;
+    
+    
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        /* or 150% */
+    
+        display: flex;
+        align-items: center;
+        text-align: center;
+    
+        color: #AB58B9;
+    }
+    #hr{
+        border: 0.1px solid; color: aliceblue;
+    }
+    .progress{
+        width: 98%;
+        margin-left: 1%;
+        margin-bottom: 2%;
+    }
+    
+    .progress-bar{
+        width: 70%;
+    }
+    
+    #progress_bar_tittle{
+        position: relative;
+        width: 180px;
+        height: 8px;
+        left: 30px;
+    
+    
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 8px;
+        line-height: 8px;
+        /* identical to box height, or 100% */
+    
+        display: flex;
+        align-items: center;
+    
+        color: #4F4F4F;
+    }
+    #aulas_previstas{
+        font-size: 12px;
+        font-family: Poppins;
+        width: 50%;
+        
+    }
+}
+@media only screen and (max-width: 1518px) {
+    
+}
+
+/* resolução 1229px */
+@media only screen and (max-width: 1229px) {
+
+
+}
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    padding: .25rem 1rem;
+    margin-bottom: 0;
+    list-style: none;
+    background: #F3F5F7;
+    border-radius: .25rem;
+    --bs-breadcrumb-divider: '>';
+}
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/*=======nav=======*/
+    #nav{
+        position: relative;
+        width: 100%;
+        height: 48px;
+        background: #F3F5F7;
+        margin: 10px;
+    }
+
+    #inicio{
+        position: relative;
+
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+
+
+        color: #6F31AD;
+    }
+    #next{
+        position: relative;
+        top: 10px;
+        left: 1.4%;
+        font-family: 'Material Icons';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 28px;
+        line-height: 0px;
+        color: #6F31AD;   
+
+    }
+    #class_selection{
+        position: relative;
+        width: 170px;
+
+        left: 1%;
+        top: 5%;
+
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 32px;
+        
+    }
+    /*=======nav=======*/
+    /*=======filter=======*/
+    #filter_buttom{
+        position: relative;
+        float: right;
+        top: 45px;
+        width: 136px;
+        right: 10px;
+
+        border-radius: 24px;
+        background-color: #AB58B9;
+    }
+    #img{
+        position: relative;
+        float: left;
+        left: 10px;
+        top: 5px;
+
+        color: #FFFFFF;
+    }
+    #filter_text{
+        position: relative;
+        float: right;
+        
+        right: 10px;
+        top: 1px;
+
+
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 32px;
+        /* identical to box height, or 200% */
+
+        display: flex;
+        align-items: center;
+
+        color: #FFFFFF;
+
+    }
+    #close_filter{
+        background: #FFFFFF;
+        border: 1px solid #AB58B9;
+        box-sizing: border-box;
+        border-radius: 24px;
+        color: #AB58B9;
+        width: 30%;
+    }
+    #apply_filter{
+        background: #AB58B9;
+        border-radius: 24px;
+        border: none;
+        width: 30%;
+    }
+    /*=======filter end=======*/
+    /*=======bimestre=======*/
+    #bimestre_title{
+        position: relative;
+        width: 88px;
+        height: 26px;
+        left: 25px;
+        top: 20px;
+
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 24px;
+        /* or 133% */
+
+        display: flex;
+        align-items: center;
+    }
+    #bimestre_dropdown{
+        position: relative;
+        width: 238px;
+        height: 45px;
+        left: 25px;
+        top: 25px;
+
+        background: #FFFDFD;
+        border: 1px solid #6F31AD;
+        box-sizing: border-box;
+        border-radius: 8px;
+    }
+    /*=======bimestre fim=======*/
+    /*=======diario=======*/
+    #diario_title{
+        position: relative;
+        width: 100%;
+        height: 22px;
+        left: 15px;
+        right: 30px;;
+        top: 35px;
+
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 24px;
+        /* or 133% */
+
+        display: flex;
+        align-items: center;
+
+        color: #333333;
+
+    }
+    #class{
+        position: relative;
+        width: 100%;
+        height: 32px;
+        left: 10px;
+        right: 30px;
+        top: 40px;
+
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 32px;
+        /* identical to box height, or 229% */
+
+        display: flex;
+        align-items: center;
+
+        color: #4F4F4F;
+        background: #D6E3EA;
+        border-radius: 2px 2px 0px 0px;
+    }
+    #modalFilter{
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
+        border-radius: 24px;
+    }
+    .modal-content  {
+        border-radius: 25px !important;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+    }
+    #dropdown_series{
+        background: #FFFDFD;
+        border: 1px solid #6F31AD;
+        box-sizing: border-box;
+        border-radius: 8px;
+    }
+    #dropdown_turmas{
+        background: #FFFDFD;
+        border: 1px solid #6F31AD;
+        box-sizing: border-box;
+        border-radius: 8px;
+    }
+    
+    /*=======diario fim=======*/
+        
+    /*============CONFIRMATION MODAL=================*/
+    #modal_confirmation_content{
+        width: 774px;
+    }
+    #confirmation_content{
+        width: 100%;
+
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+
+        align-items: center;
+        text-align: center;
+
+        color: #000000;
+    }
+    #lock_icon{
+        top: 100%;
+        font-size: 24px;
+    }
+    #manual_btn{
+        background: #AB58B9;
+        border-radius: 24px;
+        border: none;
+        width: 40%;
+        height: 48px;
+
+        left: 0%;
+        right: 0%;
+        top: 0%;
+        bottom: 0%;
+
+        color: #ffffff;
+    }
+    #close_warning{
+            border-radius: 24px;
+            border: 0.5px solid darkgrey;
+            width: 40%;
+            color: #AB58B9;
+    }
