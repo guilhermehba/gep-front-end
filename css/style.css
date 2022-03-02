@@ -25,6 +25,9 @@
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
 
+/* reset css */
+/*^ reset css */
+
 /* padrão figma */
 * {
     font-family: Poppins;
@@ -48,6 +51,10 @@
 body a {
     color: #AB58B9;
     text-decoration: none;
+}
+
+body a:hover {
+    color: #6F31AD;
 }
 
 .link-ergon{
@@ -114,7 +121,36 @@ body a {
 /* 24/02/2022 - ERGON - Author: Wellysson Rocha */
 .record-type .table-ergon{
     white-space: nowrap;
+    margin-bottom: 1%;
 }
+
+/* table-scroll */
+.table-scroll {
+	position:relative;
+	overflow:hidden;
+}
+.table-wrap {
+	overflow:auto;
+}
+.table-scroll table {
+	width:100%;
+	border-collapse:separate;
+	border-spacing:0;
+}
+.fixed-table {
+	position:absolute;
+	top:0;
+	left:0;
+	pointer-events:none;
+}
+.fixed-table th, .fixed-table td {
+	visibility:hidden
+}
+.fixed-table .fixed-side {
+	background:#fff;
+	visibility:visible;
+}
+/* ^ table scroll */
 
 .record-type .table-ergon td{
     border: 1px solid #828282;
