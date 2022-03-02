@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <link rel="stylesheet"type="text/css" href="class-selection-page/css/styles.css" >
+    <link rel="stylesheet" href="class-selection-page/css/style-of-box.css">
     <link rel="stylesheet" href="class-selection-page/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="class-selection-page/css/poppins.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="class-selection-page/css/styles-of-modals.css">
     
     <script src="class-selection-page/js/bootstrap.bundle.min.js"></script>
     <script src="class-selection-page/js/bootstrap.min.js"></script>
@@ -20,227 +22,205 @@
     </head>
     <body>
         <header>
-            <div >
-                <nav id="nav" style="--bs-breadcrumb-divider: '\F27B';" class="breadcrumb" aria-label="breadcrumb">
-                    <ol  class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="" id="inicio">Inicio</a></li>
-                        <li class="breadcrumb-item active" aria-current="page"><a>Seleção de Turmas</a></li>
-                    </ol>
-                </nav>
-            </div>
+            <nav id="nav" style="--bs-breadcrumb-divider: '\F27B';" class="breadcrumb" aria-label="breadcrumb">
+                <ol  class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="" id="inicio">Inicio</a></li>
+                    <li class="breadcrumb-item active" aria-current="page"><a>Seleção de Turmas</a></li>
+                </ol>
+            </nav>
         </header>
-        <div id="bimestre">
-            <div>
-                <div id="filter_buttom" class="btn" data-bs-toggle="modal" data-bs-target="#modalFilter">
-                    <img id="img" src="class-selection-page/image/filter_alt_off.png" alt="">
-                        <a id="filter_text">Filtrar</a>
-                </div>
-                
-                <a  id="bimestre_title">Bimestre</a>
-            </div>
-            <div id="bimestre_dropdown" class="dropdown">
-                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                  Selecione o Bimestre
+        <p></p>
+        <div id="bimestre-and-filter">
+            <h2>Bimestre</h2>
+            <div class="dropdown">
+                <button id="drop_bimestre" class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                   <li><a class="dropdown-item" href="#">1º Bimestre</a></li>
                   <li><a class="dropdown-item" href="#">2º Bimestre</a></li>
                   <li><a class="dropdown-item" href="#">3º Bimestre</a></li>
-                  <li><a class="dropdown-item" href="#">4º Bimestre</a></li>
+                  <li><a class="dropdown-item" href="#">4º Bimestre</a></li>              
                 </ul>
-              </div>
-        </div>
-       
-            <a id="diario_title">Diários/Turmas</a>
-            <div id="class">ENSINO FUNDAMENTAL ANOS INICIAIS - MATUTINO</div>
-       </div>
-        <div class="wrapper">
-            <!--div block-->
-                <div class="block" id="block">
-                    <div id="block_top">
-                        <a id="ident_class">6 º ANO - A</a>
-                        <a id="class_cod">Cod: 183877</a>
-                        <span id="student_icon" class="material-icons">person_outline</span>
-                        <a id="dot">.</a>
-                        <a id="student_count">30</a>
-                        <span id="class_lock" class="material-icons btn" data-bs-toggle="modal" data-bs-target="#modal_confirmation">lock_open</span>
-                    </div>
-                    <div id="block_body">
-                        <a id="material" class="btn" href="attendance-page.html">LÍNGUA PORTUGUESA, MATEMÁTICA, 
-                            CIÊNCIAS, HISTÓRIA, GEOGRAFIA
-                        </a>
-                        <hr id="hr">
-                        <a id="line_block_class"></a>
-                        <a id="progress_bar_tittle">AULAS DADAS X AULAS PREVISTAS</a>
-                        
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-
-                </div>
-            <!--div block-->
-            <!--div block-->
-                <div class="block" id="block">
-                    <div id="block_top">
-                        <a id="ident_class">6 º ANO - A</a>
-                        <a id="class_cod">Cod: 183877</a>
-                        <span id="student_icon" class="material-icons">person_outline</span>
-                        <a id="dot">.</a>
-                        <a id="student_count">30</a>
-                        <span id="class_lock" class="material-icons btn" onclick="clicked_on()">https</span>
-                    </div>
-                    <div id="block_body">
-                        <a id="material" class="btn" href="attendance-page.html">LÍNGUA PORTUGUESA, MATEMÁTICA, 
-                            CIÊNCIAS, HISTÓRIA, GEOGRAFIA
-                        </a>
-                        <hr id="hr">
-                        <a id="line_block_class"></a>
-                        <a id="progress_bar_tittle">AULAS DADAS X AULAS PREVISTAS</a>
-                        
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-
-                </div>
-            <!--div block-->
-            
-            <!--div block-->
-                <div class="block" id="block">
-                    <div id="block_top">
-                        <a id="ident_class">6 º ANO - A</a>
-                        <a id="class_cod">Cod: 183877</a>
-                        <span id="student_icon" class="material-icons">person_outline</span>
-                        <a id="dot">.</a>
-                        <a id="student_count">30</a>
-                        <span id="class_lock" class="material-icons btn" onclick="clicked_on()">lock_open</span>
-                    </div>
-                    <div id="block_body">
-                        <a id="material" class="btn" href="attendance-page.html">LÍNGUA PORTUGUESA, MATEMÁTICA, 
-                            CIÊNCIAS, HISTÓRIA, GEOGRAFIA
-                        </a>
-                        <hr id="hr">
-                        <a id="line_block_class"></a>
-                        <a id="progress_bar_tittle">AULAS DADAS X AULAS PREVISTAS</a>
-                        
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-
-                </div>
-            <!--div block-->
-            <!--div block-->
-                <div class="block" id="block">
-                    <div id="block_top">
-                        <a id="ident_class">6 º ANO - A</a>
-                        <a id="class_cod">Cod: 183877</a>
-                        <span id="student_icon" class="material-icons">person_outline</span>
-                        <a id="dot">.</a>
-                        <a id="student_count">30</a>
-                        <span id="class_lock" class="material-icons btn" onclick="clicked_on()">https</span>
-                    </div>
-                    <div id="block_body">
-                        <a id="material" class="btn" href="attendance-page.html">LÍNGUA PORTUGUESA, MATEMÁTICA, 
-                            CIÊNCIAS, HISTÓRIA, GEOGRAFIA
-                        </a>
-                        <hr id="hr">
-                        <a id="line_block_class"></a>
-                        <a id="progress_bar_tittle">AULAS DADAS X AULAS PREVISTAS</a>
-                        
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-
-                </div>
-            <!--div block-->
-        </div>
-        <!-- Modal filter -->
-            <div class="modal fade" id="modalFilter" tabindex="-1" aria-labelledby="modalFilterLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modalFilterLabel" style="text-align: center; border: none; margin: 0 auto;">Selecione as opções desejadas</h5>
-                    </div>
-                    <div class="modal-body" style="text-align: center;">
-                        <div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                <label class="form-check-label" for="inlineRadio1">Todos</label>
-                              </div>
-                              <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                <label class="form-check-label" for="inlineRadio2">Em digitação</label>
-                              </div>
-                              <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                <label class="form-check-label" for="inlineRadio2">Concluídos</label>
-                              </div>
-                              <p>&nbsp</p>
-                              <div class="dropdown">
-                                <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdown_series" data-bs-toggle="dropdown" aria-expanded="false">
-                                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dropdown_series">
-                                  <li><a class="dropdown-item" href="#">Série</a></li>
-                                  <li><a class="dropdown-item" href="#">Série</a></li>
-                                  <li><a class="dropdown-item" href="#">Série</a></li>
-                                </ul>
-                              </div>
-                              <p></p>
-                              <div class="dropdown">
-                                <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdown_turmas" data-bs-toggle="dropdown" aria-expanded="false">
-                                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dropdown_turmas">
-                                  <li><a class="dropdown-item" href="#">turma</a></li>
-                                  <li><a class="dropdown-item" href="#">turma</a></li>
-                                  <li><a class="dropdown-item" href="#">turma</a></li>
-                                </ul>
-                              </div>
-                        </div>
-                        <p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</p>
-                        <div style="text-align: center;">
-                            <button id="apply_filter" type="button" class="btn btn-secondary">OK</button>
-                        <p></p>
-                        <button id="close_filter" type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Fechar</button>
-                        </div>
-                        <p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</p>
-                    </div>
-                    </div>
+                <div id="filter_buttom" class="btn" data-bs-toggle="modal" data-bs-target="#modalFilter">
+                    <img id="img" src="class-selection-page/image/filter_alt_off.png" alt="">
+                        <a id="filter_text">Filtrar</a>
                 </div>
             </div>
-        <!--modal filter end-->
+            <p></p>
+    
+            <h2>Diarios/Turmas</h2>
+        </div>
+        <p></p>
+        <div id="class"> &nbsp ENSINO FUNDAMENTAL ANOS INICIAIS - MATUTINO</div>
+        <div class="wrapper">
+            <div class="box a">
+                <div>
+                    <a id="ident_class" style="position: relative; float: left;">
+                    6 º ANO - A
+                    </a>
+                    <span id="class_lock" class="material-icons" style="position: relative; float: right;" data-bs-toggle="modal" data-bs-target="#modal_confirmation">lock_open</span>
+                </div>
+                
+                <div id="cont_div">
+                    <span id="student_icon" class="material-icons">person_outline</span>
+                    <span id="dot" class="material-icons">&bull;</span>
+                    <a id="student_count">30 &nbsp </a>
+                </div>
+                <p id="class_cod">Cod: 183877</p>
+                <div><hr></div>
+    
+                <h3 class="disciplinas">LÍNGUA PORTUGUESA, MATEMÁTICA, CIÊNCIAS, HISTÓRIA, GEOGRAFIA</h3>
+                <hr style="width: 100%;">
+                <p id="progress_bar_tittle">AULAS DADAS X AULAS PREVISTAS</p>
+                <div class="progress">
+                    <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="70" style="width: 38.5%"></div>
+                </div>
+            </div>
+            <div class="box a">
+                <div><a id="ident_class" style="position: relative; float: left;">6 º ANO - A </a><span id="class_lock" class="material-icons" style="position: relative; float: right;">lock_open</span></div>
+                
+                <div id="cont_div"><span id="student_icon" class="material-icons">person_outline</span><span id="dot" class="material-icons">&bull;</span><a id="student_count">30 &nbsp </a></div>
+                <p id="class_cod">Cod: 183877</p>
+                <div><hr></div>
+    
+                <h3 class="disciplinas">LÍNGUA PORTUGUESA, MATEMÁTICA, CIÊNCIAS, HISTÓRIA, GEOGRAFIA</h3>
+                <hr style="width: 100%;">
+                <p id="progress_bar_tittle">AULAS DADAS X AULAS PREVISTAS</p>
+                <div class="progress">
+                    <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="70" style="width: 38.5%"></div>
+                </div>
+            </div>
+            <div class="box a">
+                <div><a id="ident_class" style="position: relative; float: left;">6 º ANO - A </a><span id="class_lock" class="material-icons" style="position: relative; float: right;">lock_open</span></div>
+                
+                <div id="cont_div"><span id="student_icon" class="material-icons">person_outline</span><span id="dot" class="material-icons">&bull;</span><a id="student_count">30 &nbsp </a></div>
+                <p id="class_cod">Cod: 183877</p>
+                <div><hr></div>
+    
+                <h3 class="disciplinas">LÍNGUA PORTUGUESA, MATEMÁTICA, CIÊNCIAS, HISTÓRIA, GEOGRAFIA</h3>
+                <hr style="width: 100%;">
+                <p id="progress_bar_tittle">AULAS DADAS X AULAS PREVISTAS</p>
+                <div class="progress">
+                    <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="70" style="width: 38.5%"></div>
+                </div>
+            </div>
+            <div class="box a">
+                <div><a id="ident_class" style="position: relative; float: left;">6 º ANO - A </a><span id="class_lock" class="material-icons" style="position: relative; float: right;">lock_open</span></div>
+                
+                <div id="cont_div"><span id="student_icon" class="material-icons">person_outline</span><span id="dot" class="material-icons">&bull;</span><a id="student_count">30 &nbsp </a></div>
+                <p id="class_cod">Cod: 183877</p>
+                <div><hr></div>
+    
+                <h3 class="disciplinas">LÍNGUA PORTUGUESA, MATEMÁTICA, CIÊNCIAS, HISTÓRIA, GEOGRAFIA</h3>
+                <hr style="width: 100%;">
+                <p id="progress_bar_tittle">AULAS DADAS X AULAS PREVISTAS</p>
+                <div class="progress">
+                    <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="70" style="width: 38.5%"></div>
+                </div>
+            </div>
+            <div class="box a">
+                <div><a id="ident_class" style="position: relative; float: left;">6 º ANO - A </a><span id="class_lock" class="material-icons" style="position: relative; float: right;">lock_open</span></div>
+                
+                <div id="cont_div"><span id="student_icon" class="material-icons">person_outline</span><span id="dot" class="material-icons">&bull;</span><a id="student_count">30 &nbsp </a></div>
+                <p id="class_cod">Cod: 183877</p>
+                <div><hr></div>
+    
+                <h3 class="disciplinas">LÍNGUA PORTUGUESA, MATEMÁTICA, CIÊNCIAS, HISTÓRIA, GEOGRAFIA</h3>
+                <hr style="width: 100%;">
+                <p id="progress_bar_tittle">AULAS DADAS X AULAS PREVISTAS</p>
+                <div class="progress">
+                    <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="70" style="width: 38.5%"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+                <!---->
+                <!--modal filter-->
+                <div class="modal fade" id="modalFilter" tabindex="-1" aria-labelledby="modalFilterLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalFilterLabel" style="text-align: center; border: none; margin: 0 auto;">Selecione as opções desejadas</h5>
+                        </div>
+                        <div class="modal-body" style="text-align: center;">
+                            <div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                    <label class="form-check-label" for="inlineRadio1">Todos</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2">Em digitação</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2">Concluídos</label>
+                                </div>
+                                <p>&nbsp</p>
+                                <div class="dropdown">
+                                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdown_series" data-bs-toggle="dropdown" aria-expanded="false">
+                                        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdown_series">
+                                    <li><a class="dropdown-item" href="#">Série</a></li>
+                                    <li><a class="dropdown-item" href="#">Série</a></li>
+                                    <li><a class="dropdown-item" href="#">Série</a></li>
+                                    </ul>
+                                </div>
+                                <p></p>
+                                <div class="dropdown">
+                                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdown_turmas" data-bs-toggle="dropdown" aria-expanded="false">
+                                        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdown_turmas">
+                                    <li><a class="dropdown-item" href="#">turma</a></li>
+                                    <li><a class="dropdown-item" href="#">turma</a></li>
+                                    <li><a class="dropdown-item" href="#">turma</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</p>
+                            <div style="text-align: center;">
+                                <button id="apply_filter" type="button" class="btn btn-secondary">OK</button>
+                                <p></p>
+                                <button id="close_filter" type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Fechar</button>
+                            </div>
+                            <p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <!--modal filter-->
                 <!-- Modal confirmação -->
                 <div class="modal fade" id="modal_confirmation" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
-                    <div id="modal_confirmation_content" class="modal-content">
-                        <div class="modal-header">
-                        <h5 class="modal-title text-center" id="exampleModalLabel"  style="margin: 0 auto; text-align: center;"><strong>ATENÇÃO!</strong></h5>
+                        <div id="modal_confirmation_content" class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title text-center" id="exampleModalLabel"  style="margin: 0 auto; text-align: center;"><strong>ATENÇÃO!</strong></h5>
+                            </div>
+                            <div class="modal-body">
+                                <div id="confirmation_content">
+                                    <strong>Seu diário do (5º ano - Lingua portuguêsa, matemática...) será concluído!</strong>
+                        
+                                        Depois de concluir o diário não será permitido mais nenhuma alteração!
+                                        Todas as Presenças, Conteúdos e Contextos, Notas e Habilidades Já foram Lançadas?
+                                        só o seu coordenador(a) poderá retornar ao status (<span id="lock_icon" class="material-icons">lock_open</span> <strong>EM DIGITAÇÃO</strong>).
+                                        <p></p>
+                                        <p><strong>Confirma?</strong></p>
+                                </div>
+                                <p></p>
+                            </div>
+                            <div style="text-align: center;">
+                                <a id="manual_btn" class="btn btn-primary" data-bs-dismiss="modal" onclick="clicked_on()">Confirmar</a>
+                                <p></p>
+                                <button id="close_warning" type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                <p></p>
+                            </div>
                         </div>
-                        <div class="modal-body">
-                        <div id="confirmation_content">
-                        <strong>Seu diário do (5º ano - Lingua portuguêsa, matemática...) será concluído!</strong>
-            
-                            Depois de concluir o diário não será permitido mais nenhuma alteração!
-                            Todas as Presenças, Conteúdos e Contextos, Notas e Habilidades Já foram Lançadas?
-                            só o seu coordenador(a) poderá retornar ao status (<span id="lock_icon" class="material-icons">lock_open</span> <strong>EM DIGITAÇÃO</strong>).
-                            <p></p>
-                            <p><strong>Confirma?</strong></p>
-                        </div>
-                        <p></p>
-                        </div>
-                        <div style="text-align: center;">
-                        <button id="manual_btn" class="btn btn-primary" onclick="clicked_on()" data-bs-dismiss="modal">Confirmar</button>
-                        <p></p>
-                        <button id="close_warning" type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
-                        <p></p>
-                        </div>
-                    </div>
                     </div>
                 </div>
-    </body>
+                <!-- Modal confirmação -->
+                <!---->
 
 </html>
