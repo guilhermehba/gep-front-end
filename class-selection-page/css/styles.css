@@ -4,14 +4,14 @@
  *
  * Standard Layout (all parts) for GEP System
  *
- * This style has been designed by Wellysson N Rocha. It reflects
+ * This style has been designed by Guilherme H B Araújo. It reflects
  * the composition of colors through the years of the
  * customers project as well as the boldness it implies.
  *
  * @project   FrontEnd GEP System
  * @version   1.0.0
  * @package   html-css
- * @author    Wellysson N Rocha
+ * @author    Guilherme H B Araújo
  * @copyright 2022 by the author
  * @cssdoc    version 1.0-pre
  * @license   GPL v3
@@ -22,7 +22,7 @@
  * @fontdef   Kalam; SECUNDARIA KALAM
 */
 
-/* 02/03/2021 - ERGON - Author: Guilherme Henrique Batista Araújo */
+/* 02/03/2021 - ERGON - Author: Guilherme H B Araújo */
 
 *{
     font-family: Poppins;
@@ -62,7 +62,23 @@ header, .wrapper, #bimestre-and-filter{
         background: #FFFDFD;
         box-sizing: border-box;
         border-radius: 8px;
+        border: 1px solid #AB58B9;
+
 }
+#drop_list{
+    width: 25%;
+}
+/*nav*/
+#nav{
+    line-height: 32px;
+    font-size: 18px;
+    line-height: 32px;
+ 
+}
+#inicio{
+    color: #AB58B9;
+}
+/*nav*/
 /*div bimestre*/
 /*box config*/
     #ident_class{
@@ -161,8 +177,12 @@ header, .wrapper, #bimestre-and-filter{
     .disciplinas{
     text-align: center;
     font-size: 15px;
+    text-decoration: none;
+    color: #AB58B9;
     }
-    
+    .disciplinas:hover{
+        color: #6F31AD;
+    }
 }
 @media (max-width:970px) {
     .wrapper {

@@ -138,3 +138,15 @@ border-radius: 8px;
     top: 100%;
     font-size: 24px;
 }
+#apply_filter{
+    background: #AB58B9;
+    border-radius: 24px;
+    width: 35%;
+}
+#close_filter{
+    background: #FFFFFF;
+    border: 1px solid #AB58B9;
+    box-sizing: border-box;
+    border-radius: 24px;
+    width: 35%;
+}
