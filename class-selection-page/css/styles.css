@@ -26,10 +26,18 @@
 
 *{
     font-family: Poppins;
+    font-style: normal;
+    font-weight: normal; 
+    font-size: 18px;
+    text-decoration: none;
+
 }
-header, .wrapper, #bimestre-and-filter{
-    margin: 8px 8px 8px 8px;
+body, .wrapper, #bimestre-and-filter, #back_class_bar{
+    margin: 2px 15px 15px 15px
 }
+
+
+/*nav*/
 .breadcrumb {
     display: flex;
     flex-wrap: wrap;
@@ -40,7 +48,25 @@ header, .wrapper, #bimestre-and-filter{
     border-radius: .25rem;
     --bs-breadcrumb-divider: '>';
 }
+#list{
+    color: #AB58B9;
+    padding-top: 8px;
+    font-size: 16px;
+    line-height: 32px;
+    padding-left: 15px;
+    cursor: pointer;
+}
+
+/*nav*/
 /*div bimestre*/
+#bimestre{
+    font-size: 18px;
+    line-height: 24px;
+}
+#diario-turma{
+    font-size: 18px;
+    line-height: 24px;
+}
 #filter_buttom{
         border-radius: 24px;
         background-color: #AB58B9;
@@ -50,35 +76,50 @@ header, .wrapper, #bimestre-and-filter{
         font-size: 16px;
         float: right;
 }
+#back_class_bar{
+    background: #D6E3EA;
+    border-radius: 2px 2px 0px 0px;
+    height: 40px;
+
+}
 #class{
+        width: 348px;
+        height: 32px;
+        left: 86px;
+        padding-top: 12px;
+    
         font-family: Poppins;
         font-style: normal;
         font-weight: 600;
-        font-size: 16px;
+        font-size: 14px;
         color: #4F4F4F;
         background: #D6E3EA;
+
 }
 #drop_bimestre{
         background: #FFFDFD;
+        border: 1px solid #6F31AD;
         box-sizing: border-box;
         border-radius: 8px;
-        border: 1px solid #AB58B9;
+        width: 228px;
+        color: #AB58B9;
+        height: 48px;
+
+}
+#drop_bimestre:hover{
+    background: #FFFDFD;
+    border: 1px solid #6F31AD;
+    box-sizing: border-box;
+    border-radius: 8px;
+    width: 228px;
+    color: #6F31AD;
 
 }
 #drop_list{
     width: 25%;
 }
-/*nav*/
-#nav{
-    line-height: 32px;
-    font-size: 18px;
-    line-height: 32px;
- 
-}
-#inicio{
-    color: #AB58B9;
-}
-/*nav*/
+
+
 /*div bimestre*/
 /*box config*/
     #ident_class{
@@ -91,7 +132,8 @@ header, .wrapper, #bimestre-and-filter{
         color: #AB58B9;
     }
     #cont_div{
-        text-align: right;
+        text-align:end;
+        
     }
     #class_cod{
       
@@ -109,20 +151,16 @@ header, .wrapper, #bimestre-and-filter{
     #student_icon{
         color: #AB58B9;
         font-size: 18px;
-        
+        text-indent: 1em;
+        cursor: pointer;
     }
     #dot{
         color: #AB58B9;
-
+      
     }
     #student_count{
-    
-        font-style: normal;
-        font-weight: normal;
-        font-size: 18px;
-        /* identical to box height, or 100% */
-    
-    
+
+        font-size: 16px;
         color: #AB58B9;
     
     }
@@ -175,16 +213,50 @@ header, .wrapper, #bimestre-and-filter{
         width: 50%;
     }
     .disciplinas{
-    text-align: center;
-    font-size: 15px;
-    text-decoration: none;
-    color: #AB58B9;
+        text-align: center;
+        font-size: 15px;
+        text-decoration: none;
+        color: #AB58B9;
     }
     .disciplinas:hover{
         color: #6F31AD;
     }
 }
 @media (max-width:970px) {
+    .wrapper {
+        grid-template-columns: repeat(3, 1fr);
+        display: grid;
+        grid-gap: 20px;
+        background-color: none;
+        color: #444;
+    }
+
+    .box {
+        background-color: none;
+        color: black;
+        border-radius: 5px;
+        padding: 10px;
+        text-align: center;
+        background: #FFFFFf;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 16px;
+    }
+
+    .progress-bar{
+        width: 50%;
+    }
+    .disciplinas{
+        text-align: center;
+        font-size: 15px;
+        text-decoration: none;
+        color: #AB58B9;
+        }
+        .disciplinas:hover{
+            color: #6F31AD;
+        }
+   
+}
+@media (max-width:770px) {
     .wrapper {
         grid-template-columns: repeat(2, 1fr);
         display: grid;
@@ -210,103 +282,52 @@ header, .wrapper, #bimestre-and-filter{
     .disciplinas{
         text-align: center;
         font-size: 15px;
-    }
-   
-}
-@media (max-width:670px) {
-    .wrapper {
-        grid-template-columns: repeat(1, 1fr);
-        display: grid;
-        grid-gap: 20px;
-        background-color: none;
-        color: #444;
-    }
-
-    .box {
-        background-color: none;
-        color: black;
-        border-radius: 5px;
-        padding: 10px;
-        text-align: center;
-        background: #FFFFFf;
-        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
-        border-radius: 16px;
-    }
-
-    .progress-bar{
-        width: 50%;
-    }
-    .disciplinas{
-        text-align: center;
-        font-size: 15px;
-    }
+        text-decoration: none;
+        color: #AB58B9;
+        }
+        .disciplinas:hover{
+            color: #6F31AD;
+        }
    
 }
 
-    #modalFilter{
-        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
-        border-radius: 24px;
-    }
-    .modal-content  {
-        border-radius: 25px !important;
-        font-family: Poppins;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 14px;
-    }
-    #dropdown_series{
-        background: #FFFDFD;
-        border: 1px solid #6F31AD;
-        box-sizing: border-box;
-        border-radius: 8px;
-    }
-    #dropdown_turmas{
-        background: #FFFDFD;
-        border: 1px solid #6F31AD;
-        box-sizing: border-box;
-        border-radius: 8px;
+    /*=======diario fim=======*/
+   
+    @media (max-width:570px) {
+        .wrapper {
+            grid-template-columns: repeat(1, 1fr);
+            display: grid;
+            grid-gap: 20px;
+            background-color: none;
+            color: #444;
+        }
+    
+        .box {
+            background-color: none;
+            color: black;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            background: #FFFFFf;
+            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+            border-radius: 16px;
+        }
+    
+        .progress-bar{
+            width: 50%;
+        }
+        .disciplinas{
+            text-align: center;
+            font-size: 15px;
+            text-decoration: none;
+            color: #AB58B9;
+            }
+            .disciplinas:hover{
+                color: #6F31AD;
+            }
+       
     }
     
-    /*=======diario fim=======*/
         
-    /*============CONFIRMATION MODAL=================*/
-    #modal_confirmation_content{
-        width: 774px;
-    }
-    #confirmation_content{
-        width: 100%;
-
-        font-family: Poppins;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 16px;
-
-        align-items: center;
-        text-align: center;
-
-        color: #000000;
-    }
-    #lock_icon{
-        top: 100%;
-        font-size: 24px;
-    }
-    #manual_btn{
-        background: #AB58B9;
-        border-radius: 24px;
-        border: none;
-        width: 40%;
-        height: 48px;
-
-        left: 0%;
-        right: 0%;
-        top: 0%;
-        bottom: 0%;
-
-        color: #ffffff;
-    }
-    #close_warning{
-            border-radius: 24px;
-            border: 0.5px solid darkgrey;
-            width: 40%;
-            color: #AB58B9;
-    }
+        /*=======diario fim=======*/
+         
