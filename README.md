@@ -17,8 +17,9 @@ Línguagens utilizadas:
 
 | Nome | Papel |
 | --- | --- |
-| [Wellysson Nascimento Rocha](#Wellysson) | Desenvolvedor |
 | [Guilherme Henrique Batista Araújo](#Guilherme) | Desenvolvedor |
+| [Wellysson Nascimento Rocha](#Wellysson) | Desenvolvedor |
+
 
 ### Recursos
 
@@ -36,6 +37,19 @@ Línguagens utilizadas:
 <hr>
 
 ![Ergon Sistemas](https://ergonsistemas.com.br/wp-content/uploads/logo@2x-222x48.png)
+<span id="Guilherme"></span>
+
+#### Guilherme Henrique
+
+<div>
+<a href="https://github.com/seu-usuário-aqui">
+<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=guilhermehba&layout=compact&langs_count=7&theme=dracula"/>
+<img height="180em" src="https://github-readme-stats.vercel.app/api?username=guilhermehba&show_icons=true&theme=dracula&include_all_commits=true&count_private=true"/>
+</a>
+</div>
+
+[![Guilherme](https://img.shields.io/badge/LinkedIn-guilherme-blue.svg)](https://www.linkedin.com/in/https://www.linkedin.com/in/guilherme-henrique-batista-ara%C3%BAjo/)
+
 <span id="Wellysson"></span>
 #### Wellysson Nascimento Rocha
 
@@ -49,15 +63,4 @@ Línguagens utilizadas:
 [![Wellysson](https://img.shields.io/badge/LinkedIn-wellysson-blue.svg)](https://www.linkedin.com/in/wellyssonrocha/)
 [![Wellysson](https://img.shields.io/badge/GitHub-wellysson-lightgrey.svg)](https://github.com/Werisu/)
 
-<span id="Guilherme"></span>
 
-#### Guilherme Henrique
-
-<div>
-<a href="https://github.com/seu-usuário-aqui">
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=guilhermehba&layout=compact&langs_count=7&theme=dracula"/>
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=guilhermehba&show_icons=true&theme=dracula&include_all_commits=true&count_private=true"/>
-</a>
-</div>
-
-[![Guilherme](https://img.shields.io/badge/LinkedIn-guilherme-blue.svg)](https://www.linkedin.com/in/https://www.linkedin.com/in/guilherme-henrique-batista-ara%C3%BAjo/)
