@@ -17,8 +17,9 @@ Línguagens utilizadas:
 
 | Nome | Papel |
 | --- | --- |
-| [Wellysson Nascimento Rocha](#Wellysson) | Desenvolvedor |
 | [Guilherme Henrique Batista Araújo](#Guilherme) | Desenvolvedor |
+| [Wellysson Nascimento Rocha](#Wellysson) | Desenvolvedor |
+
 
 ### Recursos
 
