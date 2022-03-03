@@ -33,7 +33,7 @@
             <a id="bimestre">Bimestre</a>
             <div class="dropdown">
                 <button id="drop_bimestre" class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+                    1º Bimestre
                 </button>
                 <ul id="drop_list" class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                   <li><a class="dropdown-item" href="#">1º Bimestre</a></li>
@@ -143,7 +143,7 @@
         </div>
         <!--wrapper end-->
         <!--wrapper-->
-        <div id="class"> &nbsp ENSINO FUNDAMENTAL ANOS INICIAIS - MATUTINO</div>
+        <div id="back_class_bar"><h6 id="class">&nbsp ENSINO FUNDAMENTAL ANOS INICIAIS - MATUTINO</h6></div>
         <div class="wrapper">
             <!--wrapper content-->
             <div class="box a">
@@ -236,67 +236,95 @@
     </body>
     <!--modals list-->
         <!--modal filter-->
-        <div class="modal fade" id="modalFilter" tabindex="-1" aria-labelledby="modalFilterLabel" aria-hidden="true">
+        <div class="modal fade" id="modalFilter" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalFilterLabel" style="text-align: center; border: none; margin: 0 auto;">Selecione as opções desejadas</h5>
+                    <h5 class="modal-title" id="ModalLabel" >Selecione as opções desejadas</h5>
                 </div>
-                <div class="modal-body" style="text-align: center;">
+                <div class="modal-body">
                     <div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
-                            <label class="form-check-label" for="inlineRadio1">Todos</label>
+                        <div  id="center_align_div">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
+                                <label class="form-check-label" for="inlineRadio1">Todos</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                <label class="form-check-label" for="inlineRadio2">Em digitação</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option2">
+                                <label class="form-check-label" for="inlineRadio3">Concluídos</label>
+                            </div>
                         </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                            <label class="form-check-label" for="inlineRadio2">Em digitação</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                            <label class="form-check-label" for="inlineRadio2">Concluídos</label>
-                        </div>
-                        <p>&nbsp</p>
-                        <div class="dropdown">
-                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdown_series" data-bs-toggle="dropdown" aria-expanded="false">
-                                &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdown_series">
-                            <li><a class="dropdown-item" href="#">Série</a></li>
-                            <li><a class="dropdown-item" href="#">Série</a></li>
-                            <li><a class="dropdown-item" href="#">Série</a></li>
-                            </ul>
+                            <p>&nbsp</p>
+                            <label id="lbl_drop_filters" for="dropdown_professor">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Professor</label>
+                            <div class="dropdown" id="center_align_div">  
+                                <button class="btn btn-outline dropdown-toggle" type="button" id="dropdown_professor" data-bs-toggle="dropdown" aria-expanded="false">
+                                    
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdown_professor">
+                                <li><a class="dropdown-item" href="#">Professor A</a></li>
+                                <li><a class="dropdown-item" href="#">Professor B</a></li>
+                                <li><a class="dropdown-item" href="#">Professor C</a></li>
+                                </ul>
+                            </div>
+                            <p></p>
+                            <label id="lbl_drop_filters" for="dropdown_professor">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Bimestre</label>
+                            <div class="dropdown" id="center_align_div"> 
+                                <button class="btn btn-outline dropdown-toggle" type="button" id="dropdown_bimestre" data-bs-toggle="dropdown" aria-expanded="false">
+                                    
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdown_bimestre">
+                                <li><a class="dropdown-item" href="#">Bimestre/Periodo</a></li>
+                                <li><a class="dropdown-item" href="#">Bimestre/Periodo</a></li>
+                                <li><a class="dropdown-item" href="#">Bimestre/Periodo</a></li>
+                                </ul>
+                            </div>
+                            <p></p>
+                            <label id="lbl_drop_filters" for="dropdown_professor">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Série</label>
+                            <div class="dropdown" id="center_align_div"> 
+                                <button class="btn btn-outline dropdown-toggle" type="button" id="dropdown_series" data-bs-toggle="dropdown" aria-expanded="false">
+
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdown_series">
+                                <li><a class="dropdown-item" href="#">Série</a></li>
+                                <li><a class="dropdown-item" href="#">Série</a></li>
+                                <li><a class="dropdown-item" href="#">Série</a></li>
+                                </ul>
+                            </div>
+                            <p></p>
+                            <label id="lbl_drop_filters" for="dropdown_professor">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Turma</label>
+                            <div class="dropdown" id="center_align_div"> 
+                                <button class="btn btn-outline dropdown-toggle" type="button" id="dropdown_turmas" data-bs-toggle="dropdown" aria-expanded="false">
+
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdown_turmas">
+                                <li><a class="dropdown-item" href="#">turma</a></li>
+                                <li><a class="dropdown-item" href="#">turma</a></li>
+                                <li><a class="dropdown-item" href="#">turma</a></li>
+                                </ul>
+                            </div>
                         </div>
                         <p></p>
-                        <div class="dropdown">
-                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdown_turmas" data-bs-toggle="dropdown" aria-expanded="false">
-                                &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdown_turmas">
-                            <li><a class="dropdown-item" href="#">turma</a></li>
-                            <li><a class="dropdown-item" href="#">turma</a></li>
-                            <li><a class="dropdown-item" href="#">turma</a></li>
-                            </ul>
+                        <div id="center_align_div">
+                            <button id="apply_filter" type="button" class="btn btn-secondary">OK</button>
+                            <p></p>
+                            <button id="close_filter" type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Fechar</button>
                         </div>
-                    </div>
-                    <p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</p>
-                    <div style="text-align: center;">
-                        <button id="apply_filter" type="button" class="btn btn-secondary">OK</button>
                         <p></p>
-                        <button id="close_filter" type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Fechar</button>
                     </div>
-                    <p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</p>
-                </div>
                 </div>
             </div>
         </div>
         <!--modal filter-->
         <!-- Modal confirmation -->
-        <div class="modal fade" id="modal_confirmation" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="modal_confirmation" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
                 <div id="modal_confirmation_content" class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title text-center" id="exampleModalLabel"  style="margin: 0 auto; text-align: center;"><strong>ATENÇÃO!</strong></h5>
+                        <h5 class="modal-title text-center" id="ModalLabel">ATENÇÃO!</h5>
                     </div>
                     <div class="modal-body">
                         <div id="confirmation_content">
@@ -310,7 +338,7 @@
                         </div>
                         <p></p>
                     </div>
-                    <div style="text-align: center;">
+                    <div id="center_align_div">
                         <a id="manual_btn" class="btn btn-primary" data-bs-dismiss="modal" onclick="clicked_on()">SIM</a>
                         <p></p>
                         <a id="close_warning" class="btn btn-outline" data-bs-dismiss="modal">NÃO</a>

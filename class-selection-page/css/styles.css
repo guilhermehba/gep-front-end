@@ -100,6 +100,17 @@ body, .wrapper, #bimestre-and-filter, #back_class_bar{
         border: 1px solid #6F31AD;
         box-sizing: border-box;
         border-radius: 8px;
+        width: 228px;
+        color: #AB58B9;
+
+}
+#drop_bimestre:hover{
+    background: #FFFDFD;
+    border: 1px solid #6F31AD;
+    box-sizing: border-box;
+    border-radius: 8px;
+    width: 228px;
+    color: #6F31AD;
 
 }
 #drop_list{
@@ -243,7 +254,7 @@ body, .wrapper, #bimestre-and-filter, #back_class_bar{
         }
    
 }
-@media (max-width:670px) {
+@media (max-width:770px) {
     .wrapper {
         grid-template-columns: repeat(2, 1fr);
         display: grid;
@@ -278,73 +289,8 @@ body, .wrapper, #bimestre-and-filter, #back_class_bar{
    
 }
 
-    #modalFilter{
-        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
-        border-radius: 24px;
-    }
-    .modal-content  {
-        border-radius: 25px !important;
-        font-family: Poppins;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 14px;
-    }
-    #dropdown_series{
-        background: #FFFDFD;
-        border: 1px solid #6F31AD;
-        box-sizing: border-box;
-        border-radius: 8px;
-    }
-    #dropdown_turmas{
-        background: #FFFDFD;
-        border: 1px solid #6F31AD;
-        box-sizing: border-box;
-        border-radius: 8px;
-    }
-    
     /*=======diario fim=======*/
-        
-    /*============CONFIRMATION MODAL=================*/
-    #modal_confirmation_content{
-        width: 774px;
-    }
-    #confirmation_content{
-        width: 100%;
-
-        font-family: Poppins;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 16px;
-
-        align-items: center;
-        text-align: center;
-
-        color: #000000;
-    }
-    #lock_icon{
-        top: 100%;
-        font-size: 24px;
-    }
-    #manual_btn{
-        background: #AB58B9;
-        border-radius: 24px;
-        border: none;
-        width: 40%;
-        height: 48px;
-
-        left: 0%;
-        right: 0%;
-        top: 0%;
-        bottom: 0%;
-
-        color: #ffffff;
-    }
-    #close_warning{
-            border-radius: 24px;
-            border: 0.5px solid darkgrey;
-            width: 40%;
-            color: #AB58B9;
-    }
+   
     @media (max-width:570px) {
         .wrapper {
             grid-template-columns: repeat(1, 1fr);
@@ -380,67 +326,6 @@ body, .wrapper, #bimestre-and-filter, #back_class_bar{
        
     }
     
-        #modalFilter{
-            box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
-            border-radius: 24px;
-        }
-        .modal-content  {
-            border-radius: 25px !important;
-            font-family: Poppins;
-            font-style: normal;
-            font-weight: 600;
-            font-size: 14px;
-        }
-        #dropdown_series{
-            background: #FFFDFD;
-            border: 1px solid #6F31AD;
-            box-sizing: border-box;
-            border-radius: 8px;
-        }
-        #dropdown_turmas{
-            background: #FFFDFD;
-            border: 1px solid #6F31AD;
-            box-sizing: border-box;
-            border-radius: 8px;
-        }
         
         /*=======diario fim=======*/
-            
-        /*============CONFIRMATION MODAL=================*/
-
-        #confirmation_content{
-    
-            font-family: Poppins;
-            font-style: normal;
-            font-weight: 600;
-            font-size: 16px;
-    
-            align-items: center;
-            text-align: center;
-    
-            color: #000000;
-        }
-        #lock_icon{
-            top: 100%;
-            font-size: 24px;
-        }
-        #manual_btn{
-            background: #AB58B9;
-            border-radius: 24px;
-            border: none;
-            width: 40%;
-            height: 48px;
-    
-            left: 0%;
-            right: 0%;
-            top: 0%;
-            bottom: 0%;
-    
-            color: #ffffff;
-        }
-        #close_warning{
-                border-radius: 24px;
-                border: 0.5px solid darkgrey;
-                width: 40%;
-                color: #AB58B9;
-        }
+         
