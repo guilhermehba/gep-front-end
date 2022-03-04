@@ -23,17 +23,20 @@
 
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- grade table javascript -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
 </head>
 
 <body>
-    <div class="attendance-alert-head"></div>
     <div class="content col-12">
+        <div class="attendance-alert-head"></div>
 
         <!-- migalha de pão -->
         <div id="fundo-navegação">
             <nav style="--bs-breadcrumb-divider: '\F27B';" class="breadcrumb" aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="attendance-page.html">Início</a></li>
+                    <li class="breadcrumb-item"><a href="index.html">Início</a></li>
                     <li class="breadcrumb-item"><a href="class-selection.html">Seleção de turmas</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Registro de chamada</li>
                 </ol>
@@ -236,67 +239,8 @@
                                             <th class="fixed-side col-4">Legenda</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="fixed-side">1</td>
-                                            <td class="fixed-side">Wellysson Silva e Silva</td>
-                                            <td class="fixed-side">0000</td>
-                                            <td class="fixed-side">Lorem</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="fixed-side">2</td>
-                                            <td class="fixed-side">Lukas Silva e Silva da Rocha Lima</td>
-                                            <td class="fixed-side">0000</td>
-                                            <td class="fixed-side">TRF 11/02/2022</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="fixed-side">3</td>
-                                            <td class="fixed-side">Brenda Débora Camila Almeida</td>
-                                            <td class="fixed-side">0000</td>
-                                            <td class="fixed-side">TE 01/02/2022</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="fixed-side">4</td>
-                                            <td class="fixed-side">Murilo Benício Sérgio Barros</td>
-                                            <td class="fixed-side">0000</td>
-                                            <td class="fixed-side"></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="fixed-side">5</td>
-                                            <td class="fixed-side">Jéssica Jéssica Fernanda Gonçalves</td>
-                                            <td class="fixed-side">0000</td>
-                                            <td class="fixed-side"></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="fixed-side">6</td>
-                                            <td class="fixed-side">Eloá Joana Araújo</td>
-                                            <td class="fixed-side">0000</td>
-                                            <td class="fixed-side"></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="fixed-side">7</td>
-                                            <td class="fixed-side">Bento Emanuel Pedro Henrique Souza</td>
-                                            <td class="fixed-side">0000</td>
-                                            <td class="fixed-side"></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="fixed-side">8</td>
-                                            <td class="fixed-side">Cauã Sebastião Oliveira</td>
-                                            <td class="fixed-side">0000</td>
-                                            <td class="fixed-side"></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="fixed-side">9</td>
-                                            <td class="fixed-side">Benedito Lucas Marcelo Ramos</td>
-                                            <td class="fixed-side">0000</td>
-                                            <td class="fixed-side"></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="fixed-side">10</td>
-                                            <td class="fixed-side">Edson Ian Corte Real</td>
-                                            <td class="fixed-side">0000</td>
-                                            <td class="fixed-side"></td>
-                                        </tr>
+                                    <tbody class="table-attendance-array">
+                                        
                                     </tbody>
                                 </table>
                             </div>
@@ -671,6 +615,9 @@
 
         // body.appendChild(clone);
     </script>
+
+    <!-- grade table javascript -->
+    <script src="js/table-attendance.js"></script>
 </body>
 
 </html>

@@ -2,7 +2,7 @@
     "Alunos":[
         {
             "id": 1,
-            "nome": "Wellysson Silva e Silva",
+            "nome": "Wellysson Silva e Sousa",
             "matricula": "0001",
             "a": 9,
             "b": 9,
@@ -10,7 +10,8 @@
             "d": 9,
             "media": 9,
             "historico": "aprovado(a)",
-            "ft": 0
+            "ft": 0,
+            "legenda": "TRF 11/02/2022"
           },
           {
             "id": 2,
