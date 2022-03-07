@@ -1,0 +1,221 @@
+
+#ModalLabel{
+    text-align: center; 
+    border: none; 
+    margin: 0 auto;
+    font-weight: 600;
+}
+.modal-content{
+    border-radius: 25px !important;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+}
+#center_align_div{
+    text-align: center;
+}
+#lbl_drop_filters{
+    text-align: left;
+}
+#dropdown_prontuario{
+    width: 100%;
+    height: 48px;
+    left: calc(50% - 496px/2 - 7px);
+    top: 320px;
+
+    background: #FFFDFD;
+    border: 1px solid #6F31AD;
+    box-sizing: border-box;
+    border-radius: 8px;
+    color: #AB58B9;
+}
+#dropdown_ocorrencia{
+    width: 100%;
+    height: 48px;
+    left: calc(50% - 496px/2);
+    top: 408px;
+    
+    background: #FFFDFD;
+    border: 1px solid #6F31AD;
+    box-sizing: border-box;
+    border-radius: 8px;
+    color: #AB58B9;
+}
+#dropdown_gravidade{
+    width: 100%;
+    height: 48px;
+    left: calc(50% - 496px/2);
+    top: 408px;
+    
+    background: #FFFDFD;
+    border: 1px solid #6F31AD;
+    box-sizing: border-box;
+    border-radius: 8px;
+    color: #AB58B9;
+}
+#dropdown_evolucao{
+    width: 100%;
+    height: 48px;
+    left: calc(50% - 496px/2);
+    top: 408px;
+    
+    background: #FFFDFD;
+    border: 1px solid #6F31AD;
+    box-sizing: border-box;
+    border-radius: 8px;
+    color: #AB58B9;
+}
+#detalhe_ocorrencia{
+    width: 100%;
+    height: 135px;
+    left: calc(50% - 496px/2);
+    top: 588px;
+
+    background: #FFFDFD;
+    border: 1px solid #AB58B9;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+.dropdown-menu{
+    width: 25%;
+    border: darkgrey 0.5px solid;
+}
+#save_prontuario{
+    background: #AB58B9;
+    border-radius: 24px;
+}
+#cancel_changes{
+
+    border-radius: 24px;
+}
+
+/*===============WARNING CONTENT===================*/
+#warning_content{
+    width: 454px;
+    height: 152px;
+    left: calc(50% - 454px/2);
+    top: 385px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    /* or 150% */
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+}
+#manual_btn{
+        background: #AB58B9;
+        border-radius: 24px;
+        border: none;
+        width: 40%;
+        height: 48px;
+
+        left: 0%;
+        right: 0%;
+        top: 0%;
+        bottom: 0%;
+
+        color: #ffffff;
+}
+#close_warning{
+        border-radius: 24px;
+        border: 0.5px solid darkgrey;
+        width: 40%;
+        color: #AB58B9;
+}
+
+/*============CONFIRMATION MODAL=================*/
+
+#confirmation_content{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+}
+#lock_icon{
+    top: 100%;
+    font-size: 24px;
+}
+
+
+#manual_btn{
+    background: #AB58B9;
+    border-radius: 24px;
+    border: none;
+    width: 40%;
+    height: 48px;
+
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+
+    color: #ffffff;
+}
+#close_warning{
+        border-radius: 24px;
+        border: 0.5px solid darkgrey;
+        width: 40%;
+        color: #AB58B9;
+}
+/*========filter modal=========*/
+#modalFilter{
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
+    border-radius: 24px;
+}
+#dropdown_professor{
+    background: #FFFDFD;
+    border: 1px solid #6F31AD;
+    box-sizing: border-box;
+    border-radius: 8px;
+    width: 276px;
+    text-align: right;
+}
+#dropdown_bimestre{
+    background: #FFFDFD;
+    border: 1px solid #6F31AD;
+    box-sizing: border-box;
+    border-radius: 8px;
+    width: 276px;
+    text-align: right;
+}
+#dropdown_series{
+    background: #FFFDFD;
+    border: 1px solid #6F31AD;
+    box-sizing: border-box;
+    border-radius: 8px;
+    width: 276px;
+    text-align: right;
+}
+#dropdown_turmas{
+    background: #FFFDFD;
+    border: 1px solid #6F31AD;
+    box-sizing: border-box;
+    border-radius: 8px;
+    width: 276px;
+    text-align: right;
+}
+
+#apply_filter{
+    background: #AB58B9;
+    border-radius: 24px;
+    width: 35%;
+}
+#close_filter{
+    background: #FFFFFF;
+    border: 1px solid #AB58B9;
+    box-sizing: border-box;
+    border-radius: 24px;
+    width: 35%;
+}
+/*========filter modal=========*/
