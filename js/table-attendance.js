@@ -41,7 +41,7 @@ function name(params) {
 }
 
 $(function () {
-    $("td").dblclick(function () {
+    $(".table-ergon td").dblclick(function () {
         conteudoOriginal = $(this).text();
 
         $(this).addClass("celulaEmEdicao");

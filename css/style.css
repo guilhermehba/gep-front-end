@@ -186,30 +186,30 @@ body a:hover {
 }
 
 /* table-scroll */
-.table-wrap {
+.table-ergon {
     overflow: auto;
 }
 
-.table-wrap::-webkit-scrollbar {
+.table-ergon::-webkit-scrollbar {
     width: 12px;
     /* width of the entire scrollbar */
     height: 10px;
 }
 
-.table-wrap::-webkit-scrollbar-track {
+.table-ergon::-webkit-scrollbar-track {
     background: #D6E3EA;
     border-radius: 24px;
     /* color of the tracking area */
 }
 
-.table-wrap::-webkit-scrollbar-thumb {
+.table-ergon::-webkit-scrollbar-thumb {
     background-color: #C4C4C4;
     /* color of the scroll thumb */
     border-radius: 20px;
     /* roundness of the scroll thumb */
     transition: 0.3ms;
 }
-.table-wrap::-webkit-scrollbar-thumb:hover {
+.table-ergon::-webkit-scrollbar-thumb:hover {
     background-color: #828282;
     /* color of the scroll thumb */
 }
@@ -529,3 +529,20 @@ body a:hover {
 }
 
 /* 03/03/2021 - ERGON - Author: Wellysson Rocha */
+    
+    [title-label]::after {
+    content: attr(title-label);
+    display: none;
+    position: absolute;
+    top: 5px;
+    left: -60px;
+    z-index: 5000;
+    padding: 1% 5%;
+    color: #fff;
+    background: rgba(0,0,0,0.4);
+    border-radius: 24px;
+    }
+    
+    [title-label]:hover::after {
+    display: block;
+    }
