@@ -23,9 +23,7 @@
   and (device-width: 360px) 
   and (device-height: 640px) 
   and (-webkit-device-pixel-ratio: 2) {
-    .grid, .list{
-      display: none;
-    }
+   
 }
 * {
     box-sizing: border-box;
