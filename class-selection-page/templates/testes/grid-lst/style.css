@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+/* For desktop: */
+.col-1 {width: 8%;}
+.col-2 {width: 16%;}
+.col-3 {width: 326px;}
+.col-4 {width: 30%;}
+.col-5 {width: 40%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58%;}
+.col-8 {width: 66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83%;}
+.col-11 {width: 92%;}
+.col-12 {width: 100%;}
+
+.grid, .list{
+  display: none;
+}
+
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 2) {
+    .grid, .list{
+      display: none;
+    }
+}
+* {
+    box-sizing: border-box;
+
+
+    font-family: Poppins;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  #box {
+    background-color: none;
+    color: black;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    background: #FFFFFf;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 16px;
+}
+  /*profile picture*/
+  #profile_picture{
+    height:150px; 
+    border-radius: 50%; 
+  }
+  #resp{
+    text-align: left;
+  }
+  /* Create two equal columns that floats next to each other */
+  .row{
+    text-align: center;
+    margin:0 auto;
+    
+    
+  }
+  .column {
+    display:inline-block;
+    vertical-align: middle;
+    float: none;
+    text-align: center;
+    background: #FEFEFE;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 16px;
+    /*    word-wrap:break-word;   */
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  /* Style the buttons */
+  .btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    color: #4D228A;
+  }
+  
+  .btn:hover {
+    background-color: #ddd;
+    color: #6F31AD;
+  }
+  
+  .btn.active {
+    background-color: #666;
+    color: white;
+  }
+  .material-icons-outlined{
+    font-family: Material Icons;
+    font-size: 40px;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 50px;
+    background-color: #AB58B9;
+  }
+  .material-icons{
+    color: #AB58B9;
+    border-radius: 10px;
+ 
+    
+  }
+  img {
+    object-fit: cover;
+    width: 80px;
+    height: 80px;
+    border-radius: 50% solid;
+    z-index: 0;
+  }
+  #file{
+    display: none;
+  }
+  
+
+  /*identificações de campos individualmente*/
+
+  #nome{
+    font-weight: bold;
+  }
+  #mae{
+    font-weight: bold;
+    text-align: left;
+  }
+  #pai{
+    font-weight: bold;
+    text-align: left;
+  }
+  #responsavel{
+    font-weight: bold;
+    text-align: left;
+  }
+  #tel{
+    font-weight: bold;
+    text-align: left;
+  }
+
+  /*++++++++++++++++++++++++++++++++++++*/
+
+  /*box config*/
+  #ident_class{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+
+    /* identical to box height, or 100% */
+    color: #AB58B9;
+}
+
+#class_cod{
+  
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 8px;
+    text-align: justify;
+    color: #4F4F4F;
+    margin: 10px;
+  }
+/*student icon, dot and count number*/
+#student_icon{
+    color: #AB58B9;
+    font-size: 20px;
+    cursor: pointer;
+}
+#dot{
+    color: #AB58B9;
+    font-size: 20px;
+  
+}
+#student_count{
+
+    font-size: 20px;
+    color: #AB58B9;
+
+}
+/*student icon, dot and count number*/
+#class_lock{
+        font-family: Material Icons;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 24px;
+        cursor: pointer;
+        
+        color: #AB58B9;
+}
+#cont_div{
+  text-align:end;
+  margin: 1% 0% 0% 0%;
+  
+}
+*{
+  text-decoration: none;
+}
+#progress_bar_tittle{
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 8px;
+  /* identical to box height, or 100% */
+  align-items: left;
+
+  color: #4F4F4F;
+}
+.progress-bar{
+  width: 50%;
+}
