@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles-of-modals.css">
     <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/poppins.css">
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -15,12 +15,12 @@
 </head>
 <body>
     <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal_prontuario">
     Abrir Prontuário do Aluno
   </button>
   
   <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="modal_prontuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -89,10 +89,11 @@
       </div>
     </div>
   </div>
-  <!-- Button trigger modal -->
+  <!-- Button trigger modal atenção -->
     <button id="warning_remote" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal_warning">
       <strong>ATENÇÃO</strong>
     </button>
+    <!-- Button trigger modal atenção -->
 
     <!-- Modal atenção -->
     <div class="modal fade" id="modal_warning" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -120,37 +121,70 @@
         </div>
       </div>
     </div>
+    <!-- Modal atenção fim -->
+    <!-- Button trigger modal confirmação -->
     <button id="warning_remote" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal_confirmation">
       <strong>CONFIRMAÇÃO</strong>
     </button>
+    <!-- Button trigger modal confirmação -->
 
     <!-- Modal confirmação -->
-    <div class="modal fade" id="modal_confirmation" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div id="modal_confirmation_content" class="modal-content">
+    <div class="modal fade" id="modal_confirmation" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+          <div id="modal_confirmation_content" class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title text-center" id="ModalLabel">ATENÇÃO!</h5>
+              </div>
+              <div class="modal-body">
+                  <div id="confirmation_content">
+                      <label><strong>Seu diário do (5º ano - Lingua portuguêsa, matemática...) será concluído!</strong></label>
+                          <p></p>
+                          <li><label>Depois de concluir o diário não será permitido mais nenhuma alteração!</label></li>
+                          <li>Todas as Presenças, Conteúdos e Contextos, Notas e Habilidades Já foram Lançadas?</li>
+                          <li>só o seu coordenador(a) poderá retornar ao status (<span id="lock_icon" class="material-icons">lock_open</span> <strong>EM DIGITAÇÃO</strong>).</li>
+                          <p></p>
+                          <p><strong>Confirma?</strong></p>
+                  </div>
+                  <p></p>
+              </div>
+              <div id="center_align_div">
+                  <a id="manual_btn" class="btn btn-primary" data-bs-dismiss="modal" onclick="clicked_on_lock()">SIM</a>
+                  <p></p>
+                  <a id="close_warning" class="btn btn-outline" data-bs-dismiss="modal">NÃO</a>
+                  <p></p>
+              </div>
+          </div>
+      </div>
+  </div>
+    <!-- Modal confirmação -->
+    <!-- Button trigger modal nova aula -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Nova Aula Alerta
+    </button>
+    <!-- Button trigger modal nova aula -->
+    <!-- Modal Nova Aula -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title text-center" id="exampleModalLabel"  style="margin: 0 auto; text-align: center;"><strong>ATENÇÃO!</strong></h5>
+            <span type="button" class="material-icons-outlined btn-close" data-bs-dismiss="modal" aria-label="Close"></span>
           </div>
           <div class="modal-body">
-            <div id="confirmation_content">
-            <strong>Seu diário do (5º ano - Lingua portuguêsa, matemática...) será concluído!</strong>
-
-              Depois de concluir o diário não será permitido mais nenhuma alteração!
-              Todas as Presenças, Conteúdos e Contextos, Notas e Habilidades Já foram Lançadas?
-              só o seu coordenador(a) poderá retornar ao status (<span id="lock_icon" class="material-icons">lock_open</span> <strong>EM DIGITAÇÃO</strong>).
-              <p></p>
-              <p><strong>Confirma?</strong></p>
-            </div>
+           
+            <p>Você ainda não cadastrou nenhuma aula.</p>
+            <p>Clique no botão <a id="nova_aula" class="btn">Nova aula</a></p>
+            <p>para adicionar Aulas/ Disciplinas</p>
             <p></p>
+            <a id="nova_aula" class="btn">Nova aula</a>
+            <p></p>
+            <p style="text-align: left;"><img id="img_mascote" src="img/mascote-professor.png" alt=""></p>
           </div>
-          <div style="text-align: center;">
-            <a id="manual_btn" class="btn btn-primary" data-bs-dismiss="modal">Confirmar</a>
-            <p></p>
-            <button id="close_warning" type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
-            <p></p>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
     </div>
+    <!-- Modal Nova Aula -->
 </body>
 </html>
