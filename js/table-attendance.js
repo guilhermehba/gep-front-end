@@ -1,3 +1,7 @@
+$('table').on('scroll', function () {
+    $("table > *").width($("table").width() + $("table").scrollLeft());
+});
+
 var alunos;
 var aluno;
 
@@ -17,7 +21,7 @@ xhttp.onload = async function () {
     if (this.readyState == 4 && this.status == 200) {
         for (const a in aluno) {
             document.querySelector('.table-attendance-array').innerHTML += `
-            <tr>
+            <tr class="${aluno[a].legenda == 'TRF 11/02/2022' ? 'table-warning':''}">
                 <td class="fixed-side">${aluno[a].id}</td>
                 <td class="fixed-side">${aluno[a].nome}</td>
                 <td class="fixed-side">${aluno[a].matricula}</td>
@@ -32,12 +36,16 @@ xhttp.onload = async function () {
 xhttp.open("GET", "./js/json/alunos.json");
 xhttp.send();
 
+function name(params) {
+    
+}
+
 $(function () {
     $("td").dblclick(function () {
         conteudoOriginal = $(this).text();
 
         $(this).addClass("celulaEmEdicao");
-        $(this).html("<input type='text' value='" + conteudoOriginal + "' />");
+        $(this).html(`<input type='text' style='padding: 0; font-size: 13px;' ${conteudoOriginal=='*' ? 'size=1' : ''} value='${conteudoOriginal}' />`);
         $(this).children().first().focus();
 
         $(this).children().first().keypress(function (e) {

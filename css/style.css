@@ -25,6 +25,59 @@
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
 
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+}
+
+@keyframes identifier {
+    from { margin-top: 50px;
+        margin-bottom: 100px; }
+ to   { margin-top: 150px !important; /* ignored */
+        margin-bottom: 50px; }
+}
+
+@keyframes bottomToTop {
+    from{
+        /* right: -255px; */
+        bottom: -10%;
+    }
+}
+
+@keyframes topToBottom {
+    from{
+        /* right: -255px; */
+        top: -200%;
+    }
+}
+
+@keyframes fade {
+    from{
+        /* right: -255px; */
+        opacity: 0.1;
+    } to {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomWH {
+    from{
+        width: 0px;
+    }
+}
+
+.fixed-bottom{
+    animation-name: bottomToTop;
+    animation-duration: 0.5s;
+}
+
 /* reset css */
 /*^ reset css */
 
@@ -75,6 +128,8 @@ body a:hover {
     background: #F3F5F7;
     border-radius: .25rem;
     --bs-breadcrumb-divider: '>';
+    /* animation-name: identifier;
+    animation-duration: 4s; */
 }
 
 .school-attendance-content {

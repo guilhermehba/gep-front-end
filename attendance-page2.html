@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Notas</title>
+    <title>Frequência</title>
 
     <!-- grade table javascript -->
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
@@ -26,11 +26,13 @@
 
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
 </head>
 
 <body>
-    <div class="attendance-alert-head"></div>
     <div class="content col-12">
+        <div class="attendance-alert-head"></div>
 
         <!-- migalha de pão -->
         <div id="fundo-navegação">
@@ -49,9 +51,9 @@
 
                 <div class="row header-school-attendance">
                     <div class="title col-11">
-                        <span class="material-icons">lock_open</span> 1º Bimestre  |  6º ano - D - Língua portuguêsa 
+                        <span class="material-icons">lock_open</span> 1º Bimestre | 6º ano - D
                         <div class="sub-title">
-                            LÍNGUA PORTUGUESA
+                            LÍNGUA PORTUGUESA, MATEMÁTICA, CIÊNCIAS, HISTÓRIA, GEOGRAFIA
                         </div>
                     </div>
                     <div class="help-top col-1">
@@ -63,18 +65,15 @@
 
                 <div class="record-type col-12">
 
-                    <!-- Select -->
                     <div class="row g-3 align-items-center">
-                        <div class="col-auto select-ergon">
-                            <select class="form-select select-ergon-select" aria-label="Default select example">
-                                <option selected>1º Bimestre</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </select>
+                        <div class="col-auto">
+                            <label for="inputRecordType" class="col-form-label">Tipo de Registro:</label>
+                        </div>
+                        <div class="col-auto">
+                            <input type="text" size="1" id="inputRecordType" class="form-control"
+                                aria-describedby="recordTypeHelpInline">
                         </div>
                     </div>
-                    <!--/ Fim Select -->
 
                     <div id="modal-attendance">
                         <!-- Modal include_contents_two_steps -->
@@ -230,43 +229,44 @@
                     <!-- Tabela divida em uma linha -->
                     <div class="row tabela-content">
                         <!-- Tabela de frequência -->
-                        <div class="table-responsive table-ergon col-5" id="table-scroll">
+                        <div class="table-responsive table-ergon col-12" id="table-scroll" style="height: 60vh;">
                             <div class="table-wrap">
-                                <table style="width: 100%;" id="example" class="table table-hover main-table"
+                                <table style="width: 100%;" id="example" class="table table-hover main-table table table-striped"
                                     role="grid" aria-describedby="example_info">
                                     <thead>
-                                        <tr role="row" style="text-align: center;">
+                                        <tr role="row">
                                             <th class="fixed-side col-1">#</th>
                                             <th class="fixed-side col-7">Aluno</th>
-                                            <th class="fixed-side col-4">Matricula</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="table-array">
-                                        
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                        <!--/ Fim da tabela de frequência -->
-                        <!-- Tabela de frequência -->
-                        <div class="table-responsive table-ergon col-7" id="table-scroll">
-                            <div class="table-wrap">
-                                <table style="width: 100%;" id="example" class="table table-hover main-table"
-                                    role="grid" aria-describedby="example_info">
-                                    <thead>
-                                        <tr role="row" style="text-align: center;">
+                                            <th class="fixed-side col-4">Cod. Matric</th>
+                                            <th class="fixed-side col-4">Legenda</th>
                                             <th>
-                                                <a href="#" data-placement="top" data-toggle="popover">A</a>
+                                                <a href="#" data-placement="top" data-toggle="popover">08/02</a>
                                             </th>
-                                            <th><a href="">B</a></th>
-                                            <th><a href="">C</a></th>
-                                            <th><a href="">D</a></th>
-                                            <th><a href="">MD</a></th>
-                                            <th><a href="">Histórico</a></th>
-                                            <th><a href="">FT</a></th>
+                                            <th><a href="">09/02</a></th>
+                                            <th><a href="">10/02</a></th>
+                                            <th><a href="">11/02</a></th>
+                                            <th><a href="">12/02</a></th>
+                                            <th><a href="">13/02</a></th>
+                                            <th><a href="">14/02</a></th>
+                                            <th><a href="">15/02</a></th>
+                                            <th><a href="">16/02</a></th>
+                                            <th><a href="">17/02</a></th>
+                                            <th><a href="">18/02</a></th>
+                                            <th><a href="">19/02</a></th>
+                                            <th><a href="">09/02</a></th>
+                                            <th><a href="">10/02</a></th>
+                                            <th><a href="">11/02</a></th>
+                                            <th><a href="">12/02</a></th>
+                                            <th><a href="">13/02</a></th>
+                                            <th><a href="">14/02</a></th>
+                                            <th><a href="">15/02</a></th>
+                                            <th><a href="">16/02</a></th>
+                                            <th><a href="">17/02</a></th>
+                                            <th><a href="">18/02</a></th>
+                                            <th><a href="">19/02</a></th>
                                         </tr>
                                     </thead>
-                                    <tbody class="table-array-2">
+                                    <tbody class="table-attendance-array">
                                         
                                     </tbody>
                                 </table>
@@ -279,6 +279,7 @@
                     <!-- Opções no rodapé -->
                     <div class="footer-options fixed-bottom">
                         <div class="options-buttom">
+                            <button class="mb-2 mr-2 btn-pill btn btn-ergon btn-shadow">Nova Aula</button>
     
                             <!-- Example single danger button -->
                             <div class="btn-group dropup">
@@ -340,20 +341,8 @@
         });
     </script>
 
-    <!-- table fixed -->
-    <script>
-        // const table = document.querySelector('.main-table');
-
-        // let clone = table.cloneNode(true);
-        // clone.className += " fixed-table";
-
-        // let body = document.getElementById('table-scroll');
-
-        // body.appendChild(clone);
-    </script>
-
     <!-- grade table javascript -->
-    <script src="js/table-grade.js"></script>
+    <script src="js/table-attendance.js"></script>
 </body>
 
 </html>
