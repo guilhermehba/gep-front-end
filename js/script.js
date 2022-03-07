@@ -1,3 +1,13 @@
+function isPhone() {
+    $(window).on('load resize', function () {
+        if ($(window).width() < 950) {
+            window.location = "mobile/attendance-page-mobile.html"
+        }
+    });
+}
+
+isPhone();
+
 var numero = 0;
 
 function somaAula() {
