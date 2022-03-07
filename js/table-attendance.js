@@ -7,6 +7,7 @@ var aluno;
 
 var html = document.querySelector('.table-attendance-array');
 
+var selectedFormErgon;
 var conteudoOriginal;
 var novoConteudo;
 
@@ -22,33 +23,33 @@ xhttp.onload = async function () {
         for (const a in aluno) {
             document.querySelector('.table-attendance-array').innerHTML += `
             <tr class="${aluno[a].legenda == 'TRF 11/02/2022' ? 'table-warning':''}">
-                <td class="fixed-side">${aluno[a].id}</td>
-                <td class="fixed-side">${aluno[a].nome}</td>
-                <td class="fixed-side">${aluno[a].matricula}</td>
-                <td class="fixed-side">${aluno[a].legenda ? aluno[a].legenda : "Não existe"}</td>
-                <td class="fixed-side" title-label="${aluno[a].nome}">*</td>
-                <td class="fixed-side" title-label="${aluno[a].nome}">*</td>
-                <td class="fixed-side" title-label="${aluno[a].nome}">*</td>
-                <td class="fixed-side" title-label="${aluno[a].nome}">*</td>
-                <td class="fixed-side" title-label="${aluno[a].nome}">*</td>
-                <td class="fixed-side" title-label="${aluno[a].nome}">*</td>
-                <td class="fixed-side" title-label="${aluno[a].nome}">*</td>
-                <td class="fixed-side" title-label="${aluno[a].nome}">*</td>
-                <td class="fixed-side" title-label="${aluno[a].nome}">*</td>
-                <td class="fixed-side" title-label="${aluno[a].nome}">*</td>
-                <td class="fixed-side" title-label="${aluno[a].nome}">*</td>
-                <td class="fixed-side" title-label="${aluno[a].nome}">*</td>
-                <td class="fixed-side" title-label="${aluno[a].nome}">*</td>
-                <td class="fixed-side" title-label="${aluno[a].nome}">*</td>
-                <td class="fixed-side" title-label="${aluno[a].nome}">*</td>
-                <td class="fixed-side" title-label="${aluno[a].nome}">*</td>
-                <td class="fixed-side" title-label="${aluno[a].nome}">*</td>
-                <td class="fixed-side" title-label="${aluno[a].nome}">*</td>
-                <td class="fixed-side" title-label="${aluno[a].nome}">*</td>
-                <td class="fixed-side" title-label="${aluno[a].nome}">*</td>
-                <td class="fixed-side" title-label="${aluno[a].nome}">*</td>
-                <td class="fixed-side" title-label="${aluno[a].nome}">*</td>
-                <td class="fixed-side" title-label="${aluno[a].nome}">*</td>
+                <td class="">${aluno[a].id}</td>
+                <td class="">${aluno[a].nome}</td>
+                <td class="">${aluno[a].matricula}</td>
+                <td class="">${aluno[a].legenda ? aluno[a].legenda : "Não existe"}</td>
+                <td class="status-attendance" title-label="${aluno[a].nome}">*</td>
+                <td class="status-attendance" title-label="${aluno[a].nome}">*</td>
+                <td class="status-attendance" title-label="${aluno[a].nome}">*</td>
+                <td class="status-attendance" title-label="${aluno[a].nome}">*</td>
+                <td class="status-attendance" title-label="${aluno[a].nome}">*</td>
+                <td class="status-attendance" title-label="${aluno[a].nome}">*</td>
+                <td class="status-attendance" title-label="${aluno[a].nome}">*</td>
+                <td class="status-attendance" title-label="${aluno[a].nome}">*</td>
+                <td class="status-attendance" title-label="${aluno[a].nome}">*</td>
+                <td class="status-attendance" title-label="${aluno[a].nome}">*</td>
+                <td class="status-attendance" title-label="${aluno[a].nome}">*</td>
+                <td class="status-attendance" title-label="${aluno[a].nome}">*</td>
+                <td class="status-attendance" title-label="${aluno[a].nome}">*</td>
+                <td class="status-attendance" title-label="${aluno[a].nome}">*</td>
+                <td class="status-attendance" title-label="${aluno[a].nome}">*</td>
+                <td class="status-attendance" title-label="${aluno[a].nome}">*</td>
+                <td class="status-attendance" title-label="${aluno[a].nome}">*</td>
+                <td class="status-attendance" title-label="${aluno[a].nome}">*</td>
+                <td class="status-attendance" title-label="${aluno[a].nome}">*</td>
+                <td class="status-attendance" title-label="${aluno[a].nome}">*</td>
+                <td class="status-attendance" title-label="${aluno[a].nome}">*</td>
+                <td class="status-attendance" title-label="${aluno[a].nome}">*</td>
+                <td class="status-attendance" title-label="${aluno[a].nome}">*</td>
             </tr>
             `;
         }
@@ -59,31 +60,19 @@ xhttp.onload = async function () {
 xhttp.open("GET", "./js/json/alunos.json");
 xhttp.send();
 
-function name(params) {
-    
-}
-
 $(function () {
-    $(".table-ergon td").dblclick(function () {
+    $(".table-ergon .status-attendance").dblclick(function () {
         conteudoOriginal = $(this).text();
+        selectedFormErgon = $('.select-ergon-select').val();
 
-        $(this).addClass("celulaEmEdicao");
-        $(this).html(`<input type='text' style='padding: 0; font-size: 13px;' ${conteudoOriginal=='*' ? 'size=1' : ''} value='${conteudoOriginal}' />`);
+        $(this).html(`
+        ${selectedFormErgon == 'falta' ? "<span style='color: red; font-weight: 600;'>F</span>":""}
+        ${selectedFormErgon == 'falta justificada' ? "<span style='color: #AB58B9; font-weight: 600;'>FJ</span>":""}
+        ${selectedFormErgon == 'presente' ? "<span style='color: #089944; font-weight: 600;'>*</span>":""}
+        `);
         $(this).children().first().focus();
 
-        $(this).children().first().keypress(function (e) {
-            if (e.which == 13) {
-                novoConteudo = $(this).val();
-                $(this).parent().text(novoConteudo);
-                $(this).parent().removeClass("celulaEmEdicao");
-                salvar();
-            }
-        });
-
-        $(this).children().first().blur(function () {
-            $(this).parent().text(conteudoOriginal);
-            $(this).parent().removeClass("celulaEmEdicao");
-        });
+        novoConteudo = selectedFormErgon;
     });
 });
 
@@ -108,4 +97,8 @@ function mostrarConteudoNovo(params) {
 
 function listarAlunos() {
     return alunos;
+}
+
+function mostrar() {
+    return selectedFormErgon;
 }
