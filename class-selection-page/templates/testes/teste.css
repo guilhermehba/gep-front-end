@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+* {
+font-family: Poppins;
+font-style: normal;
+font-size: 16px;
+line-height: 24px;
+}
+.col-3{
+  width: 326px;
+}
+
+.card-header{
+  border-radius: 16px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+}
+.card {
+
+vertical-align: middle;
+float: none;
+text-align: center;
+background: #FEFEFE;
+box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+border-radius: 16px;
+/*    word-wrap:break-word;   */
+}
+
+/* Style the buttons */
+img {
+object-fit: cover;
+width: 80px;
+height: 80px;
+border-radius: 50% solid;
+z-index: 0;
+}
+#file{
+display: none;
+}
+
+
+/*identificações de campos individualmente*/
+
+#nome{
+font-weight: bold;
+}
+#mae{
+font-weight: bold;
+text-align: left;
+}
+#pai{
+font-weight: bold;
+text-align: left;
+}
+#responsavel{
+font-weight: bold;
+text-align: left;
+}
+#tel{
+font-weight: bold;
+text-align: left;
+}
+
+/*++++++++++++++++++++++++++++++++++++*/
+
+/*box config*/
+#ident_class{
+font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+
+/* identical to box height, or 100% */
+color: #AB58B9;
+}
+
+#class_cod{
+
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 8px;
+text-align: justify;
+color: #4F4F4F;
+
+}
+/*student icon, dot and count number*/
+#student_icon{
+color: #AB58B9;
+font-size: 20px;
+cursor: pointer;
+
+font-family: Material Icons;
+cursor: pointer;
+border-radius: 50px;
+text-decoration: none;
+}
+#dot{
+color: #AB58B9;
+font-size: 20px;
+
+font-family: Material Icons;
+cursor: pointer;
+border-radius: 50px;
+text-decoration: none;
+}
+#student_count{
+
+font-size: 20px;
+color: #AB58B9;
+
+font-family: Material Icons;
+cursor: pointer;
+border-radius: 50px;
+text-decoration: none;
+
+}
+  /*student icon, dot and count number*/
+#class_lock{
+      font-family: Material Icons;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 24px;
+      cursor: pointer;
+      
+      color: #AB58B9;
+}
+#cont_div1{
+ height: 25px;
+ float: left;
+  
+}
+#cont_div2{
+  height: 25px;
+  text-align: right;
+  padding-top: 4px;
+  float: left;
+ 
+ }
+ #cont_div3{
+  height: 25px;
+  float: right;
+ 
+ }
+*{
+text-decoration: none;
+}
+#progress_bar_tittle{
+font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 8px;
+/* identical to box height, or 100% */
+align-items: left;
+
+color: #4F4F4F;
+}
+.progress-bar{
+width: 50%;
+}
