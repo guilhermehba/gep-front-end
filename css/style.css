@@ -25,6 +25,60 @@
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
 
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+}
+
+@keyframes identifier {
+    from { margin-top: 50px;
+        margin-bottom: 100px; }
+ to   { margin-top: 150px !important; /* ignored */
+        margin-bottom: 50px; }
+}
+
+@keyframes bottomToTop {
+    from{
+        /* right: -255px; */
+        bottom: -10%;
+    }
+}
+
+@keyframes topToBottom {
+    from{
+        /* right: -255px; */
+        top: -200%;
+    }
+}
+
+@keyframes fade {
+    from{
+        /* right: -255px; */
+        opacity: 0.1;
+    } to {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomWH {
+    from{
+        width: 0px;
+    }
+}
+
+.fixed-bottom{
+    animation-name: bottomToTop;
+    animation-duration: 0.5s;
+    background-color: white;
+}
+
 /* reset css */
 /*^ reset css */
 
@@ -75,6 +129,8 @@ body a:hover {
     background: #F3F5F7;
     border-radius: .25rem;
     --bs-breadcrumb-divider: '>';
+    /* animation-name: identifier;
+    animation-duration: 4s; */
 }
 
 .school-attendance-content {
@@ -131,30 +187,30 @@ body a:hover {
 }
 
 /* table-scroll */
-.table-wrap {
-    overflow: auto;
+.table-ergon {
+    /* overflow-y: scroll; */
 }
 
-.table-wrap::-webkit-scrollbar {
-    width: 12px;
+.table-ergon::-webkit-scrollbar {
+    width: 0;
     /* width of the entire scrollbar */
     height: 10px;
 }
 
-.table-wrap::-webkit-scrollbar-track {
+.table-ergon::-webkit-scrollbar-track {
     background: #D6E3EA;
     border-radius: 24px;
     /* color of the tracking area */
 }
 
-.table-wrap::-webkit-scrollbar-thumb {
+.table-ergon::-webkit-scrollbar-thumb {
     background-color: #C4C4C4;
     /* color of the scroll thumb */
     border-radius: 20px;
     /* roundness of the scroll thumb */
     transition: 0.3ms;
 }
-.table-wrap::-webkit-scrollbar-thumb:hover {
+.table-ergon::-webkit-scrollbar-thumb:hover {
     background-color: #828282;
     /* color of the scroll thumb */
 }
@@ -474,3 +530,19 @@ body a:hover {
 }
 
 /* 03/03/2021 - ERGON - Author: Wellysson Rocha */
+
+[title-label]::after {
+    content: attr(title-label);
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    padding: 0 0.5%;
+    color: #fff;
+    background: rgba(0,0,0,0.4);
+    border-radius: 24px;
+    }
+    
+    [title-label]:hover::after {
+    display: block;
+    }
