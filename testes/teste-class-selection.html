@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/teste.css">
+        <link rel="stylesheet" href="css/styles-of-modals.css">
+        
+        <script src="bootstrap.bundle.min.js"></script>
+        <script src="bootstrap.min.js"></script>
+    <title>teste-card-grid</title>
+</head>
+<header>
+  <nav style="--bs-breadcrumb-divider: '\F27B';" class="breadcrumb" aria-label="breadcrumb">
+      <ol id="list" class="breadcrumb">
+          <li class="breadcrumb-item"><a>Frequência</a></li>
+          <li class="breadcrumb-item" aria-current="page"><a>Seleção de turmas</a></li>
+      </ol>
+  </nav>
+</header>
+<p></p>
+<div id="bimestre-and-filter" class="row">
+  <label id="bimestre">Bimestre</label>
+  <div class="dropdown col-sm-10">
+      <div id="bimestre_drop_btn">
+          <button id="drop_bimestre" class="btn btn-outline dropdown-toggle" type="button" id="drop_bim" data-bs-toggle="dropdown" aria-expanded="false">
+              1º Bimestre
+          </button>
+          <ul id="drop_list" class="dropdown-menu" aria-labelledby="drop_bim">
+          <li><a class="dropdown-item" href="#">1º Bimestre</a></li>
+          <li><a class="dropdown-item" href="#">2º Bimestre</a></li>
+          <li><a class="dropdown-item" href="#">3º Bimestre</a></li>
+          <li><a class="dropdown-item" href="#">4º Bimestre</a></li>              
+          </ul>
+      </div>
+  </div>
+
+  <div class="col-sm-1" id="bimestre_filter_btn">
+      <div id="filter_buttom" class="btn" data-bs-toggle="modal" data-bs-target="#modalFilter">
+        <div id="icon_fil"><span class="material-icons">filter_alt_off</span></div>
+        <div id="filter_text"><label>Filtrar</label></div>
+      </div>
+  </div>
+</div>
+<p>&nbsp</p>
+<div id="class">
+  <div>
+    <label id="diario-turma">Diarios/Turmas</label>
+  </div>
+    <div class="col-12" id="back_class_bar">&nbsp ENSINO FUNDAMENTAL ANOS INICIAIS - MATUTINO
+  </div>
+</div>
+<body>
+  <div class="container">
+    <div class="row">
+        <!--card-->
+        <div class="col-3">
+          <div class="card">
+            <h5 class="card-header">
+              <div id="cont_div1" class="col-auto"><label id="ident_class">6º ANO - A</label></div>
+              <div  id="cont_div2"class="col-7">
+                  <a id="student_icon" class="material-icons" href="student_list.html">perm_identity</a><span id="dot" class="material-icons">&bull;</span><span id="student_count" class="material-icons">30fps</span>
+              </div>
+              <div id="cont_div3" class="col-sm-1">
+                  <span id="class_lock" class="material-icons" data-bs-toggle="modal" data-bs-target="#modal_confirmation">lock_open</span>
+              </div>
+            </h5>
+            <div class="card-body">
+              <div class="card-title"></div>
+                <p class="card-text"><a class="disciplinas" href="attendance-page.html">LÍNGUA PORTUGUESA, MATEMÁTICA, CIÊNCIAS, HISTÓRIA, GEOGRAFIA</a></p>
+                <div class="col-12"><hr></div>
+                <div class="col-12">
+                    <label id="progress_bar_tittle">AULAS DADAS X AULAS PREVISTAS</label>
+                    <div class="progress">
+                        <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="70" style="width: 38.5%"></div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <!--card-->
+        <!--card-->
+        <div class="col-3">
+          <div class="card">
+            <h5 class="card-header">
+              <div id="cont_div1" class="col-auto"><label id="ident_class">6º ANO - A</label></div>
+              <div  id="cont_div2"class="col-7">
+                  <a id="student_icon" class="material-icons" href="student_list.html">perm_identity</a><span id="dot" class="material-icons">&bull;</span><span id="student_count" class="material-icons">30fps</span>
+              </div>
+              <div id="cont_div3" class="col-sm-1">
+                  <span id="class_lock" class="material-icons" data-bs-toggle="modal" data-bs-target="#modal_confirmation">lock_open</span>
+              </div>
+            </h5>
+            <div class="card-body">
+              <div class="card-title"></div>
+                <p class="card-text"><a class="disciplinas" href="attendance-page.html">LÍNGUA PORTUGUESA, MATEMÁTICA, CIÊNCIAS, HISTÓRIA, GEOGRAFIA</a></p>
+                <div class="col-12"><hr></div>
+                <div class="col-12">
+                    <label id="progress_bar_tittle">AULAS DADAS X AULAS PREVISTAS</label>
+                    <div class="progress">
+                        <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="70" style="width: 38.5%"></div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <!--card-->
+        <!--card-->
+        <div class="col-3">
+          <div class="card">
+            <h5 class="card-header">
+              <div id="cont_div1" class="col-auto"><label id="ident_class">6º ANO - A</label></div>
+              <div  id="cont_div2"class="col-7">
+                  <a id="student_icon" class="material-icons" href="student_list.html">perm_identity</a><span id="dot" class="material-icons">&bull;</span><span id="student_count" class="material-icons">30fps</span>
+              </div>
+              <div id="cont_div3" class="col-sm-1">
+                  <span id="class_lock" class="material-icons" data-bs-toggle="modal" data-bs-target="#modal_confirmation">lock_open</span>
+              </div>
+            </h5>
+            <div class="card-body">
+              <div class="card-title"></div>
+                <p class="card-text"><a class="disciplinas" href="attendance-page.html">LÍNGUA PORTUGUESA, MATEMÁTICA, CIÊNCIAS, HISTÓRIA, GEOGRAFIA</a></p>
+                <div class="col-12"><hr></div>
+                <div class="col-12">
+                    <label id="progress_bar_tittle">AULAS DADAS X AULAS PREVISTAS</label>
+                    <div class="progress">
+                        <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="70" style="width: 38.5%"></div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      <!--card-->
+      <!--card-->
+      <div class="col-3">
+        <div class="card">
+          <h5 class="card-header">
+            <div id="cont_div1" class="col-auto"><label id="ident_class">6º ANO - A</label></div>
+            <div  id="cont_div2"class="col-7">
+                <a id="student_icon" class="material-icons" href="student_list.html">perm_identity</a><span id="dot" class="material-icons">&bull;</span><span id="student_count" class="material-icons">30fps</span>
+            </div>
+            <div id="cont_div3" class="col-sm-1">
+                <span id="class_lock" class="material-icons" data-bs-toggle="modal" data-bs-target="#modal_confirmation">lock_open</span>
+            </div>
+          </h5>
+          <div class="card-body">
+            <div class="card-title"></div>
+              <p class="card-text"><a class="disciplinas" href="attendance-page.html">LÍNGUA PORTUGUESA, MATEMÁTICA, CIÊNCIAS, HISTÓRIA, GEOGRAFIA</a></p>
+              <div class="col-12"><hr></div>
+              <div class="col-12">
+                  <label id="progress_bar_tittle">AULAS DADAS X AULAS PREVISTAS</label>
+                  <div class="progress">
+                      <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="70" style="width: 38.5%"></div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <!--card-->
+    </div>
+  </div>
+</body>
+</html>
+
+<!--modals list-->
+        <!--modal filter-->
+        <div class="modal fade" id="modalFilter" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+              <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="ModalLabel" >Selecione as opções desejadas</h5>
+              </div>
+              <div class="modal-body">
+                  <div>
+                      <div  id="center_align_div">
+                          <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
+                              <label class="form-check-label" for="inlineRadio1">Todos</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                              <label class="form-check-label" for="inlineRadio2">Em digitação</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option2">
+                              <label class="form-check-label" for="inlineRadio3">Concluídos</label>
+                          </div>
+                      </div>
+                          <p>&nbsp</p>
+                          <label id="lbl_drop_filters" for="dropdown_professor">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Professor</label>
+                          <div class="dropdown" id="center_align_div">  
+                              <button class="btn btn-outline dropdown-toggle" type="button" id="dropdown_professor" data-bs-toggle="dropdown" aria-expanded="false">
+                                  
+                              </button>
+                              <ul class="dropdown-menu" aria-labelledby="dropdown_professor">
+                              <li><a class="dropdown-item" href="#">Professor A</a></li>
+                              <li><a class="dropdown-item" href="#">Professor B</a></li>
+                              <li><a class="dropdown-item" href="#">Professor C</a></li>
+                              </ul>
+                          </div>
+                          <p></p>
+                          <label id="lbl_drop_filters" for="dropdown_professor">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Bimestre</label>
+                          <div class="dropdown" id="center_align_div"> 
+                              <button class="btn btn-outline dropdown-toggle" type="button" id="dropdown_bimestre" data-bs-toggle="dropdown" aria-expanded="false">
+                                  
+                              </button>
+                              <ul class="dropdown-menu" aria-labelledby="dropdown_bimestre">
+                              <li><a class="dropdown-item" href="#">Bimestre/Periodo</a></li>
+                              <li><a class="dropdown-item" href="#">Bimestre/Periodo</a></li>
+                              <li><a class="dropdown-item" href="#">Bimestre/Periodo</a></li>
+                              </ul>
+                          </div>
+                          <p></p>
+                          <label id="lbl_drop_filters" for="dropdown_professor">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Série</label>
+                          <div class="dropdown" id="center_align_div"> 
+                              <button class="btn btn-outline dropdown-toggle" type="button" id="dropdown_series" data-bs-toggle="dropdown" aria-expanded="false">
+
+                              </button>
+                              <ul class="dropdown-menu" aria-labelledby="dropdown_series">
+                              <li><a class="dropdown-item" href="#">Série</a></li>
+                              <li><a class="dropdown-item" href="#">Série</a></li>
+                              <li><a class="dropdown-item" href="#">Série</a></li>
+                              </ul>
+                          </div>
+                          <p></p>
+                          <label id="lbl_drop_filters" for="dropdown_professor">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Turma</label>
+                          <div class="dropdown" id="center_align_div"> 
+                              <button class="btn btn-outline dropdown-toggle" type="button" id="dropdown_turmas" data-bs-toggle="dropdown" aria-expanded="false">
+
+                              </button>
+                              <ul class="dropdown-menu" aria-labelledby="dropdown_turmas">
+                              <li><a class="dropdown-item" href="#">turma</a></li>
+                              <li><a class="dropdown-item" href="#">turma</a></li>
+                              <li><a class="dropdown-item" href="#">turma</a></li>
+                              </ul>
+                          </div>
+                      </div>
+                      <p></p>
+                      <div id="center_align_div">
+                          <button id="apply_filter" type="button" class="btn btn-secondary">OK</button>
+                          <p></p>
+                          <button id="close_filter" type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                      <p></p>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!--modal filter-->
+      <!-- Modal confirmation -->
+      <div class="modal fade" id="modal_confirmation" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+              <div id="modal_confirmation_content" class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title text-center" id="ModalLabel">ATENÇÃO!</h5>
+                  </div>
+                  <div class="modal-body">
+                      <div id="confirmation_content">
+                          <label><strong>Seu diário do (5º ano - Lingua portuguêsa, matemática...) será concluído!</strong></label>
+                              <p></p>
+                              <li><label>Depois de concluir o diário não será permitido mais nenhuma alteração!</label></li>
+                              <li>Todas as Presenças, Conteúdos e Contextos, Notas e Habilidades Já foram Lançadas?</li>
+                              <li>só o seu coordenador(a) poderá retornar ao status (<span id="lock_icon" class="material-icons">lock_open</span> <strong>EM DIGITAÇÃO</strong>).</li>
+                              <p></p>
+                              <p><strong>Confirma?</strong></p>
+                      </div>
+                      <p></p>
+                  </div>
+                  <div id="center_align_div">
+                      <a id="manual_btn" class="btn btn-primary" data-bs-dismiss="modal" onclick="clicked_on_lock()">SIM</a>
+                      <p></p>
+                      <a id="close_warning" class="btn btn-outline" data-bs-dismiss="modal">NÃO</a>
+                      <p></p>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- Modal confirmação -->
+  <!--modals list-->
