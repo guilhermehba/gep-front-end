@@ -90,7 +90,7 @@ text-decoration: none;
 font-size: 20px;
 color: #AB58B9;
 
-font-family: Material Icons;
+font-family: Poppins;
 cursor: pointer;
 border-radius: 50px;
 text-decoration: none;
@@ -115,8 +115,8 @@ text-decoration: none;
 #cont_div2{
   height: 25px;
   text-align: right;
-  padding-top: 4px;
   float: left;
+  padding-right: 5px;
  
  }
  #cont_div3{
