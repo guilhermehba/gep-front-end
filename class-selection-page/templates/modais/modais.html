@@ -14,177 +14,176 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal_prontuario">
-    Abrir Prontuário do Aluno
-  </button>
-  
-  <!-- Modal -->
-  <div class="modal fade" id="modal_prontuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title text-center" id="exampleModalLabel" style="text-align: center; border: none; margin: 0 auto;">Prontuário do Aluno</h5>
-        </div>
-        <p style="text-align: center;"><strong>LUKAS SILVA E SILVA</strong></p>
-        <div class="modal-body">
-            <div  class="dropdown">
-                <h7>Prontuário</h7>
-                <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdown_prontuario" data-bs-toggle="dropdown" aria-expanded="false">
-                    Prontuário
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdown_prontuario">
-                  <li><a class="dropdown-item" href="#">PRONTUÁRIO A</a></li>
-                  <li><a class="dropdown-item" href="#">PRONTUÁRIO B</a></li>
-                  <li><a class="dropdown-item" href="#">PRONTUÁRIO C</a></li>
-                </ul>
-            </div>
-            <p></p>
-            <div  class="dropdown">
-                <h7>Ocorrência do Prontuário</h7>
-                <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdown_ocorrencia" data-bs-toggle="dropdown" aria-expanded="false">
-                    Ocorrência do Prontuário
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdown_ocorrencia">
-                  <li><a class="dropdown-item" href="#">Ocorrência do Prontuário A</a></li>
-                  <li><a class="dropdown-item" href="#">Ocorrência do Prontuário B</a></li>
-                  <li><a class="dropdown-item" href="#">Ocorrência do Prontuário C</a></li>
-                </ul>
-            </div>
-            <p></p>
-            <div>
-                <div  class="dropdown" style="width: 45%; float: left; width: 50%;">
-                    <h7>Gravidade</h7>
-                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdown_gravidade" data-bs-toggle="dropdown" aria-expanded="false">
-                        Gravidade
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdown_gravidade">
-                      <li><a class="dropdown-item" href="#">Gravidade A</a></li>
-                      <li><a class="dropdown-item" href="#">Gravidade B</a></li>
-                      <li><a class="dropdown-item" href="#">Gravidade C</a></li>
-                    </ul>
-                </div>
-                <div  class="dropdown" style="width: 45%; float: right;">
-                    <h7>Evolução</h7>
-                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdown_evolucao" data-bs-toggle="dropdown" aria-expanded="false">
-                        Evolução
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdown_evolucao">
-                      <li><a class="dropdown-item" href="#">Evolução A</a></li>
-                      <li><a class="dropdown-item" href="#">Evolução B</a></li>
-                      <li><a class="dropdown-item" href="#">Evolução C</a></li>
-                    </ul>
-                </div>
-            </div>
-            <p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</p>
-            <h7>Detalhes da Ocorrência:</h7>
-            <textarea id="detalhe_ocorrencia" name="" id="" cols="30" rows="10" style="width: 100%;"></textarea>
-        </div>
-            <div style="text-align: center;">
-                <button id="save_prontuario" type="button" class="btn btn-outline" style="width: 30%;">salvar</button>
-                <p></p>
-                <button id="cancel_changes" type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal" style="width: 30%;">Cancelar</button>
-                <p></p>
-            </div>
-      </div>
-    </div>
-  </div>
-  <!-- Button trigger modal atenção -->
-    <button id="warning_remote" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal_warning">
-      <strong>ATENÇÃO</strong>
+    <!-- Button trigger modal prontuário -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal_prontuario">
+      Abrir Prontuário do Aluno
     </button>
-    <!-- Button trigger modal atenção -->
-
-    <!-- Modal atenção -->
-    <div class="modal fade" id="modal_warning" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- Button trigger modal prontuário -->
+    <!-- Modal prontuário -->
+    <div class="modal fade" id="modal_prontuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title text-center" id="exampleModalLabel"  style="margin: 0 auto; text-align: center;"><strong>ATENÇÃO</strong></h5>
+            <h5 class="modal-title text-center" id="exampleModalLabel" style="text-align: center; border: none; margin: 0 auto;">Prontuário do Aluno</h5>
           </div>
+          <p style="text-align: center;"><strong>LUKAS SILVA E SILVA</strong></p>
           <div class="modal-body">
-            <div id="warning_content">
-                O diário selecionado este em acesso pelo <strong>aplicativo</strong> 
-                se precisar acessar pelo computador habilite o uso
-                no computador em seu aplicativo <strong>GEP - Diário Escolar.</strong>
-
-                Caso não saiba como habilitar o uso no computador
-                Acesse um manual explicativo clicando no botão abaixo.
-            </div>
-          </div>
-          <div style="text-align: center;">
-            <a id="manual_btn" class="btn btn-primary">Acessar Manual</a>
-            <p></p>
-            <button id="close_warning" type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Fechar</button>
-            <p></p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal atenção fim -->
-    <!-- Button trigger modal confirmação -->
-    <button id="warning_remote" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal_confirmation">
-      <strong>CONFIRMAÇÃO</strong>
-    </button>
-    <!-- Button trigger modal confirmação -->
-
-    <!-- Modal confirmação -->
-    <div class="modal fade" id="modal_confirmation" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg">
-          <div id="modal_confirmation_content" class="modal-content">
-              <div class="modal-header">
-                  <h5 class="modal-title text-center" id="ModalLabel">ATENÇÃO!</h5>
+              <div  class="dropdown">
+                  <h7>Prontuário</h7>
+                  <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdown_prontuario" data-bs-toggle="dropdown" aria-expanded="false">
+                      Prontuário
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdown_prontuario">
+                    <li><a class="dropdown-item" href="#">PRONTUÁRIO A</a></li>
+                    <li><a class="dropdown-item" href="#">PRONTUÁRIO B</a></li>
+                    <li><a class="dropdown-item" href="#">PRONTUÁRIO C</a></li>
+                  </ul>
               </div>
-              <div class="modal-body">
-                  <div id="confirmation_content">
-                      <label><strong>Seu diário do (5º ano - Lingua portuguêsa, matemática...) será concluído!</strong></label>
-                          <p></p>
-                          <li><label>Depois de concluir o diário não será permitido mais nenhuma alteração!</label></li>
-                          <li>Todas as Presenças, Conteúdos e Contextos, Notas e Habilidades Já foram Lançadas?</li>
-                          <li>só o seu coordenador(a) poderá retornar ao status (<span id="lock_icon" class="material-icons">lock_open</span> <strong>EM DIGITAÇÃO</strong>).</li>
-                          <p></p>
-                          <p><strong>Confirma?</strong></p>
+              <p></p>
+              <div  class="dropdown">
+                  <h7>Ocorrência do Prontuário</h7>
+                  <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdown_ocorrencia" data-bs-toggle="dropdown" aria-expanded="false">
+                      Ocorrência do Prontuário
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdown_ocorrencia">
+                    <li><a class="dropdown-item" href="#">Ocorrência do Prontuário A</a></li>
+                    <li><a class="dropdown-item" href="#">Ocorrência do Prontuário B</a></li>
+                    <li><a class="dropdown-item" href="#">Ocorrência do Prontuário C</a></li>
+                  </ul>
+              </div>
+              <p></p>
+              <div>
+                  <div  class="dropdown" style="width: 45%; float: left; width: 50%;">
+                      <h7>Gravidade</h7>
+                      <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdown_gravidade" data-bs-toggle="dropdown" aria-expanded="false">
+                          Gravidade
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdown_gravidade">
+                        <li><a class="dropdown-item" href="#">Gravidade A</a></li>
+                        <li><a class="dropdown-item" href="#">Gravidade B</a></li>
+                        <li><a class="dropdown-item" href="#">Gravidade C</a></li>
+                      </ul>
                   </div>
+                  <div  class="dropdown" style="width: 45%; float: right;">
+                      <h7>Evolução</h7>
+                      <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdown_evolucao" data-bs-toggle="dropdown" aria-expanded="false">
+                          Evolução
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdown_evolucao">
+                        <li><a class="dropdown-item" href="#">Evolução A</a></li>
+                        <li><a class="dropdown-item" href="#">Evolução B</a></li>
+                        <li><a class="dropdown-item" href="#">Evolução C</a></li>
+                      </ul>
+                  </div>
+              </div>
+              <p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</p>
+              <h7>Detalhes da Ocorrência:</h7>
+              <textarea id="detalhe_ocorrencia" name="" id="" cols="30" rows="10" style="width: 100%;"></textarea>
+          </div>
+              <div style="text-align: center;">
+                  <button id="save_prontuario" type="button" class="btn btn-outline" style="width: 30%;">salvar</button>
+                  <p></p>
+                  <button id="cancel_changes" type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal" style="width: 30%;">Cancelar</button>
                   <p></p>
               </div>
-              <div id="center_align_div">
-                  <a id="manual_btn" class="btn btn-primary" data-bs-dismiss="modal" onclick="clicked_on_lock()">SIM</a>
-                  <p></p>
-                  <a id="close_warning" class="btn btn-outline" data-bs-dismiss="modal">NÃO</a>
-                  <p></p>
-              </div>
-          </div>
-      </div>
-  </div>
-    <!-- Modal confirmação -->
-    <!-- Button trigger modal nova aula -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      Nova Aula Alerta
-    </button>
-    <!-- Button trigger modal nova aula -->
-    <!-- Modal Nova Aula -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <span type="button" class="material-icons-outlined btn-close" data-bs-dismiss="modal" aria-label="Close"></span>
-          </div>
-          <div class="modal-body">
-           
-            <p>Você ainda não cadastrou nenhuma aula.</p>
-            <p>Clique no botão <a id="nova_aula" class="btn">Nova aula</a></p>
-            <p>para adicionar Aulas/ Disciplinas</p>
-            <p></p>
-            <a id="nova_aula" class="btn">Nova aula</a>
-            <p></p>
-            <p style="text-align: left;"><img id="img_mascote" src="img/mascote-professor.png" alt=""></p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          </div>
         </div>
       </div>
     </div>
-    <!-- Modal Nova Aula -->
+    <!-- Modal prontuário -->
+    <!-- Button trigger modal atenção -->
+      <button id="warning_remote" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal_warning">
+        <strong>ATENÇÃO</strong>
+      </button>
+      <!-- Button trigger modal atenção -->
+
+      <!-- Modal atenção -->
+      <div class="modal fade" id="modal_warning" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-center" id="exampleModalLabel"  style="margin: 0 auto; text-align: center;"><strong>ATENÇÃO</strong></h5>
+            </div>
+            <div class="modal-body">
+              <div id="warning_content">
+                  O diário selecionado este em acesso pelo <strong>aplicativo</strong> 
+                  se precisar acessar pelo computador habilite o uso
+                  no computador em seu aplicativo <strong>GEP - Diário Escolar.</strong>
+
+                  Caso não saiba como habilitar o uso no computador
+                  Acesse um manual explicativo clicando no botão abaixo.
+              </div>
+            </div>
+            <div style="text-align: center;">
+              <a id="manual_btn" class="btn btn-primary">Acessar Manual</a>
+              <p></p>
+              <button id="close_warning" type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Fechar</button>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal atenção fim -->
+      <!-- Button trigger modal confirmação -->
+      <button id="warning_remote" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal_confirmation">
+        <strong>CONFIRMAÇÃO</strong>
+      </button>
+      <!-- Button trigger modal confirmação -->
+
+      <!-- Modal confirmação -->
+      <div class="modal fade" id="modal_confirmation" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div id="modal_confirmation_content" class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-center" id="ModalLabel">ATENÇÃO!</h5>
+                </div>
+                <div class="modal-body">
+                    <div id="confirmation_content">
+                        <label><strong>Seu diário do <a id="">(5º ano - Lingua portuguêsa, matemática...)</a> será concluído!</strong></label>
+                            <p></p>
+                            <ul>
+                              <li>Depois de concluir o diário não será permitido mais nenhuma alteração!</li>
+                              <li>Todas as Presenças, Conteúdos e Contextos, Notas e Habilidades Já foram Lançadas?</li>
+                              <li>só o seu coordenador(a) poderá retornar ao status (<span class="material-icons">lock_open</span> <strong>EM DIGITAÇÃO</strong>).</li>
+                            </ul>
+                            <p></p>
+                            <p><strong>Confirma?</strong></p>
+                    </div>
+                    <p></p>
+                </div>
+                <div id="center_align_div">
+                    <a id="manual_btn" class="btn btn-primary" data-bs-dismiss="modal" onclick="clicked_on_lock()">SIM</a>
+                    <p></p>
+                    <a id="close_warning" class="btn btn-outline" data-bs-dismiss="modal">NÃO</a>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+      <!-- Modal confirmação -->
+      <!-- Button trigger modal nova aula -->
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Nova Aula Alerta
+      </button>
+      <!-- Button trigger modal nova aula -->
+      <!-- Modal Nova Aula -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <span type="button" class="material-icons-outlined" data-bs-dismiss="modal" aria-label="Close">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp highlight_off</span>
+            </div>
+            <div class="modal-body">
+              <label>Você ainda não cadastrou nenhuma aula.</label>
+              <label>Clique no botão<a style="color: #6F31AD; font-weight: 600;" class="btn">Nova aula</a></label>
+              <label>para adicionar Aulas/ Disciplinas</label>
+              <p></p>
+              <a id="nova_aula" class="btn">Nova aula</a>
+              <p></p>
+              <p style="text-align: left; position: relative;"><img id="img_mascote" src="img/mascote-professor.png" alt=""></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal Nova Aula -->
 </body>
 </html>

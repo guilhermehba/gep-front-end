@@ -3,7 +3,9 @@
 
 .material-icons-outlined{
     font-family: Material Icons;
-    font-size: 35px;
+    font-size: 50px;
+    color: #6F31AD;
+    text-align: right;
 }
 #ModalLabel{
     text-align: center; 
@@ -253,5 +255,5 @@
     font-size: 16px;
 }
 #img_mascote{
-    width: 50%;
+    width: 65%;
 }
