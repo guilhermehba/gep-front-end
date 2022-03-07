@@ -1,0 +1,96 @@
+
+
+    <!DOCTYPE html>
+
+    <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Navegador em tabela HTML</title>
+        <link rel="stylesheet" type="text/css" href="estilo.css" />
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+        
+    </head>
+
+    <body>
+        <table class="tabelaEditavel">
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Telefone</th>
+                </tr>
+            </thead>
+            <tbody class="table-array">
+                
+            </tbody>
+        </table>
+
+        <script>
+
+            var nome = ["william", 'bruna', 'fernando', 'yasmin'];
+
+            var personas = [
+                {id:001, nome: "Wellysson Rocha", email:"wr.ergon@gmail.com", telefone: "(62) 99251-0372"},
+                {id:002, nome: "Maria Silva", email:"mariasilva@mail.com", telefone: "(81) 8787-8686"},
+                {id:003, nome: "José Pedro", email:"zepedro@meuemail.com", telefone: "(84) 3232-3232"}
+            ];
+
+            personas.push({id:004, nome: "José", email:"zepedro@meuemail.com", telefone: "(84) 3232-3232"});
+
+            var html = document.querySelector('.table-array');
+
+            var conteudoOriginal;
+            var novoConteudo;
+
+            for (const p in personas) {
+                html.innerHTML += '<tr> <td>'+ personas[p].id +'</td> <td>'+ personas[p].nome +'</td> <td>'+personas[p].email+'</td> <td>'+personas[p].telefone+'</td> </tr>';
+            }
+
+            $(function () {
+                $("td").dblclick(function () {
+                    conteudoOriginal = $(this).text();
+    
+                    $(this).addClass("celulaEmEdicao");
+                    $(this).html("<input type='text' value='" + conteudoOriginal + "' />");
+                    $(this).children().first().focus();
+    
+                    $(this).children().first().keypress(function (e) {
+                        if (e.which == 13) {
+                            novoConteudo = $(this).val();
+                            $(this).parent().text(novoConteudo);
+                            $(this).parent().removeClass("celulaEmEdicao");
+                            salvar();
+                        }
+                    });
+    
+                    $(this).children().first().blur(function () {
+                        $(this).parent().text(conteudoOriginal);
+                        $(this).parent().removeClass("celulaEmEdicao");
+                    });
+                });
+            });
+
+            function salvar() {
+                for (const key in personas) {
+                        if(personas[key].nome == conteudoOriginal){
+                            personas[key].nome = novoConteudo;
+                        }
+                        else{
+                            return false;
+                        }
+                    }
+            }
+
+            function mostrarConteudoOriginal() {
+                return conteudoOriginal;
+            }
+
+            function mostrarConteudoNovo(params) {
+                return novoConteudo;
+            }
+        </script>
+</body>
+
+</html>

@@ -8,20 +8,34 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
 
-    <style>
-
-    </style>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="yourPath/animatedModal.min.js"></script>
 </head>
 
 <body>
+    <!--Call your modal-->
+    <a id="demo01" href="#animatedModal">DEMO01</a>
+
+    <!--DEMO01-->
+    <div id="animatedModal">
+        <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID  class="close-animatedModal" -->
+        <div class="close-animatedModal"> 
+            CLOSE MODAL
+        </div>
+            
+        <div class="modal-content">
+                  <!--Your modal content goes here-->
+        </div>
+    </div>
     <table class="table">
         <thead>
             <tr>
-                <th>#</th>
-                <th>First</th>
-                <th>Last</th>
-                <th>Handle</th>
+                <th class="col-1">#</th>
+                <th class="col-7">First</th>
+                <th class="col-4">Last</th>
+                <th class="col-4">Handle</th>
             </tr>
         </thead>
         <tbody>

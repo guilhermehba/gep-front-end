@@ -23,16 +23,20 @@
 
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- grade table javascript -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
 </head>
 
 <body>
     <div class="content col-12">
+        <div class="attendance-alert-head"></div>
 
         <!-- migalha de pão -->
         <div id="fundo-navegação">
             <nav style="--bs-breadcrumb-divider: '\F27B';" class="breadcrumb" aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="attendance-page.html">Início</a></li>
+                    <li class="breadcrumb-item"><a href="index.html">Início</a></li>
                     <li class="breadcrumb-item"><a href="class-selection.html">Seleção de turmas</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Registro de chamada</li>
                 </ol>
@@ -43,10 +47,17 @@
         <div id="school-attendance" class="col-12">
             <div class="school-attendance-content col-12">
 
-                <div class="title col-12">
-                    <span class="material-icons">lock_open</span> 1º Bimestre | 6º ano - D
-                    <div class="sub-title">
-                        LÍNGUA PORTUGUESA, MATEMÁTICA, CIÊNCIAS, HISTÓRIA, GEOGRAFIA
+                <div class="row header-school-attendance">
+                    <div class="title col-11">
+                        <span class="material-icons">lock_open</span> 1º Bimestre | 6º ano - D
+                        <div class="sub-title">
+                            LÍNGUA PORTUGUESA, MATEMÁTICA, CIÊNCIAS, HISTÓRIA, GEOGRAFIA
+                        </div>
+                    </div>
+                    <div class="help-top col-1">
+                        <a href="#" class="link-ergon" onclick="notificationGEP('Tela de frêquencia!', 'bottom')"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-question-circle-fill" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247zm2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z"/>
+                        </svg></a>
                     </div>
                 </div>
 
@@ -69,9 +80,17 @@
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <p class="modal-title title-ergon-black" id="exampleModalLabel">Incluir Conteúdo
-                                        </p>
-
+                                        <p class="modal-title title-ergon-black" id="exampleModalLabel">Incluir Conteúdo</p>
+                                    </div>
+                                    <div class="modal-breadcrumb">
+                                        <!-- migalha de pão -->
+                                        <nav style="--bs-breadcrumb-divider: '\F27B';" class="breadcrumb"
+                                            aria-label="breadcrumb">
+                                            <ol class="breadcrumb">
+                                                <li class="breadcrumb-item active" aria-current="page">Incluir conteúdos
+                                                </li>
+                                            </ol>
+                                        </nav>
                                     </div>
                                     <div class="modal-body attendance-modal-content">
                                         <table class="table ">
@@ -88,7 +107,7 @@
                                                         <a href="#" class="link-ergon lce_remove"
                                                             onclick="subtrairAula()"><i
                                                                 class="bi bi-dash-circle"></i></a>
-                                                        <span class="lce_number">1</span>
+                                                        <span class="lce_number">0</span>
                                                         <a href="#" class="link-ergon lce_add" onclick="somaAula()"><i
                                                                 class="bi bi-plus-circle"></i></a>
                                                     </td>
@@ -98,7 +117,7 @@
                                                     <td class="line_count_elements">
                                                         <a href="#" class="link-ergon lce_remove"><i
                                                                 class="bi bi-dash-circle"></i></a>
-                                                        <span class="lce_number">1</span>
+                                                        <span class="lce_number">0</span>
                                                         <a href="#" class="link-ergon lce_add"><i
                                                                 class="bi bi-plus-circle"></i></a>
                                                     </td>
@@ -108,7 +127,7 @@
                                                     <td class="line_count_elements">
                                                         <a href="#" class="link-ergon lce_remove"><i
                                                                 class="bi bi-dash-circle"></i></a>
-                                                        <span class="lce_number">1</span>
+                                                        <span class="lce_number">0</span>
                                                         <a href="#" class="link-ergon lce_add"><i
                                                                 class="bi bi-plus-circle"></i></a>
                                                     </td>
@@ -118,7 +137,7 @@
                                                     <td class="line_count_elements">
                                                         <a href="#" class="link-ergon lce_remove"><i
                                                                 class="bi bi-dash-circle"></i></a>
-                                                        <span class="lce_number">1</span>
+                                                        <span class="lce_number">0</span>
                                                         <a href="#" class="link-ergon lce_add"><i
                                                                 class="bi bi-plus-circle"></i></a>
                                                     </td>
@@ -128,7 +147,7 @@
                                                     <td class="line_count_elements">
                                                         <a href="#" class="link-ergon lce_remove"><i
                                                                 class="bi bi-dash-circle"></i></a>
-                                                        <span class="lce_number">1</span>
+                                                        <span class="lce_number">0</span>
                                                         <a href="#" class="link-ergon lce_add"><i
                                                                 class="bi bi-plus-circle"></i></a>
                                                     </td>
@@ -141,16 +160,7 @@
                                             data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"
                                             data-bs-dismiss="modal">Avançar</button>
                                     </div>
-                                    <div class="modal-breadcrumb">
-                                        <!-- migalha de pão -->
-                                        <nav style="--bs-breadcrumb-divider: '\F27B';" class="breadcrumb"
-                                            aria-label="breadcrumb">
-                                            <ol class="breadcrumb">
-                                                <li class="breadcrumb-item active" aria-current="page">Incluir conteúdos
-                                                </li>
-                                            </ol>
-                                        </nav>
-                                    </div>
+                                    
                                     <a href="" type="button" class="link-ergon attendance-modal-button-close"
                                         data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-circle"></i></a>
                                 </div>
@@ -164,6 +174,19 @@
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <h5 class="modal-title" id="exampleModalLabel">Lançamento de Conteúdos</h5>
+                                    </div>
+                                    <div class="modal-breadcrumb">
+                                        <!-- migalha de pão -->
+                                        <nav style="--bs-breadcrumb-divider: '\F27B';" class="breadcrumb"
+                                            aria-label="breadcrumb">
+                                            <ol class="breadcrumb">
+                                                <li class="breadcrumb-item"><a href="" class="link-ergon"
+                                                        data-bs-target="#exampleModalToggle"
+                                                        data-bs-toggle="modal">Incluir conteúdos</a></li>
+                                                <li class="breadcrumb-item active" aria-current="page">Registro de
+                                                    conteúdos</li>
+                                            </ol>
+                                        </nav>
                                     </div>
                                     <div class="modal-body">
                                         <div>
@@ -187,19 +210,7 @@
                                         <button type="button"
                                             class="btn btn-ergon btn-ergon-modal-large btn-shadow">Salvar</button>
                                     </div>
-                                    <div class="modal-breadcrumb">
-                                        <!-- migalha de pão -->
-                                        <nav style="--bs-breadcrumb-divider: '\F27B';" class="breadcrumb"
-                                            aria-label="breadcrumb">
-                                            <ol class="breadcrumb">
-                                                <li class="breadcrumb-item"><a href="" class="link-ergon"
-                                                        data-bs-target="#exampleModalToggle"
-                                                        data-bs-toggle="modal">Incluir conteúdos</a></li>
-                                                <li class="breadcrumb-item active" aria-current="page">Registro de
-                                                    conteúdos</li>
-                                            </ol>
-                                        </nav>
-                                    </div>
+                                    
                                     <a href="" type="button" class="link-ergon attendance-modal-button-close"
                                         data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-circle"></i></a>
                                     <a href="" class="link-ergon attendance-modal-button-back"
@@ -213,7 +224,8 @@
                         <!--Modal include_contents_two_steps end-->
                     </div>
 
-                    <div class="row">
+                    <!-- Tabela divida em uma linha -->
+                    <div class="row tabela-content">
                         <!-- Tabela de frequência -->
                         <div class="table-responsive table-ergon col-5" id="table-scroll">
                             <div class="table-wrap">
@@ -221,25 +233,14 @@
                                     role="grid" aria-describedby="example_info">
                                     <thead>
                                         <tr role="row">
-                                            <th class="fixed-side">#</th>
-                                            <th class="fixed-side">Aluno</th>
-                                            <th class="fixed-side">Cod. Matric</th>
-                                            <th class="fixed-side">Legenda</th>
+                                            <th class="fixed-side col-1">#</th>
+                                            <th class="fixed-side col-7">Aluno</th>
+                                            <th class="fixed-side col-4">Cod. Matric</th>
+                                            <th class="fixed-side col-4">Legenda</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="fixed-side">1</td>
-                                            <td class="fixed-side">Wellysson Silva e Silva</td>
-                                            <td class="fixed-side">2017030222</td>
-                                            <td class="fixed-side">Lorem</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="fixed-side">2</td>
-                                            <td class="fixed-side">Lukas Silva e Silva da Rocha Lima</td>
-                                            <td class="fixed-side">2017030222</td>
-                                            <td class="fixed-side">Lorem</td>
-                                        </tr>
+                                    <tbody class="table-attendance-array">
+                                        
                                     </tbody>
                                 </table>
                             </div>
@@ -330,42 +331,245 @@
                                             <td style="text-align: center;">*</td>
                                             <td style="text-align: center;">*</td>
                                         </tr>
+                                        <tr>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                            <td style="text-align: center;">*</td>
+                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
                         </div>
                         <!--/ Fim da tabela de frequência -->
                     </div>
+                    <!--/ Fim Tabela divida em uma linha -->
 
-                    <!-- Opções -->
-                    <div class="options-buttom">
-                        <button class="mb-2 mr-2 btn-pill btn btn-ergon btn-shadow">Nova Aula</button>
-
-                        <!-- Example single danger button -->
-                        <div class="btn-group dropup">
-                            <button type="button" class="mb-2 mr-2 btn-pill btn btn-option btn-shadow dropdown-toggle"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Opções
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item link-ergon" href="#">Ver total de faltas e Presenças</a>
-                                </li>
-                                <li>
-                                    <hr class="dropdown-divider link-ergon">
-                                </li>
-                                <li><a class="dropdown-item link-ergon" href="#">Presença para todos os alunos</a></li>
-                                <li>
-                                    <hr class="dropdown-divider link-ergon">
-                                </li>
-                                <li><a class="dropdown-item link-ergon" href="#">Presença geral por período</a></li>
-                                <li>
-                                    <hr class="dropdown-divider link-ergon">
-                                </li>
-                                <li><a class="dropdown-item link-ergon" href="#">Frequência Geral por aluno</a></li>
-                            </ul>
+                    <!-- Opções no rodapé -->
+                    <div class="footer-options fixed-bottom">
+                        <div class="options-buttom">
+                            <button class="mb-2 mr-2 btn-pill btn btn-ergon btn-shadow">Nova Aula</button>
+    
+                            <!-- Example single danger button -->
+                            <div class="btn-group dropup">
+                                <button type="button" class="mb-2 mr-2 btn-pill btn btn-option btn-shadow dropdown-toggle"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Opções
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item link-ergon" href="#">Ver total de faltas e Presenças</a>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider link-ergon">
+                                    </li>
+                                    <li><a class="dropdown-item link-ergon" href="#">Presença para todos os alunos</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider link-ergon">
+                                    </li>
+                                    <li><a class="dropdown-item link-ergon" href="#">Presença geral por período</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider link-ergon">
+                                    </li>
+                                    <li><a class="dropdown-item link-ergon" href="#">Frequência Geral por aluno</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <!--/ Fim opções-->
+                    <!--/ Fim opções no rodapé-->
                 </div>
             </div>
         </div>
@@ -411,6 +615,9 @@
 
         // body.appendChild(clone);
     </script>
+
+    <!-- grade table javascript -->
+    <script src="js/table-attendance.js"></script>
 </body>
 
 </html>
