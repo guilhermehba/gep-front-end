@@ -57,9 +57,12 @@
                         </div>
                     </div>
                     <div class="help-top col-1">
-                        <a href="#" class="link-ergon" onclick="notificationGEP('Tela de frêquencia!', 'bottom')"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-question-circle-fill" viewBox="0 0 16 16">
-                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247zm2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z"/>
-                        </svg></a>
+                        <a href="#" class="link-ergon" onclick="notificationGEP('Tela de frêquencia!', 'bottom')"><svg
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                class="bi bi-question-circle-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247zm2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z" />
+                            </svg></a>
                     </div>
                 </div>
 
@@ -69,9 +72,13 @@
                         <div class="col-auto">
                             <label for="inputRecordType" class="col-form-label">Tipo de Registro:</label>
                         </div>
-                        <div class="col-auto">
-                            <input type="text" size="1" id="inputRecordType" class="form-control"
-                                aria-describedby="recordTypeHelpInline">
+                        <div class="col-auto select-ergon">
+                            <select class="form-select select-ergon-select" aria-label="Default select example">
+                                <option selected="">Selecione</option>
+                                <option value="1">*</option>
+                                <option value="2">F</option>
+                                <option value="3">FJ</option>
+                            </select>
                         </div>
                     </div>
 
@@ -82,7 +89,8 @@
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <p class="modal-title title-ergon-black" id="exampleModalLabel">Incluir Conteúdo</p>
+                                        <p class="modal-title title-ergon-black" id="exampleModalLabel">Incluir Conteúdo
+                                        </p>
                                     </div>
                                     <div class="modal-breadcrumb">
                                         <!-- migalha de pão -->
@@ -162,7 +170,7 @@
                                             data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"
                                             data-bs-dismiss="modal">Avançar</button>
                                     </div>
-                                    
+
                                     <a href="" type="button" class="link-ergon attendance-modal-button-close"
                                         data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-circle"></i></a>
                                 </div>
@@ -212,7 +220,7 @@
                                         <button type="button"
                                             class="btn btn-ergon btn-ergon-modal-large btn-shadow">Salvar</button>
                                     </div>
-                                    
+
                                     <a href="" type="button" class="link-ergon attendance-modal-button-close"
                                         data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-circle"></i></a>
                                     <a href="" class="link-ergon attendance-modal-button-back"
@@ -227,34 +235,28 @@
                     </div>
 
                     <!-- Tabela divida em uma linha -->
+                    <style>
+                        .tabela-content {
+                            position: relative;
+                        }
+
+                        thead>tr>th {
+                            position: sticky;
+                            top: -1px;
+                        }
+                    </style>
                     <div class="row tabela-content">
                         <!-- Tabela de frequência -->
-                        <div class="table-responsive table-ergon col-5" id="table-scroll">
-                            <div class="table-wrap">
-                                <table style="width: 100%;" id="example" class="table table-hover main-table table table-striped"
-                                    role="grid" aria-describedby="example_info">
+                        <div class="table-responsive table-ergon col-12" id="table-scroll" style="height: 80vh;">
+                            <div class="">
+                                <table id="example" class="table table-hover main-table table table-striped" role="grid"
+                                    aria-describedby="example_info">
                                     <thead>
                                         <tr role="row">
                                             <th class="fixed-side col-1">#</th>
                                             <th class="fixed-side col-7">Aluno</th>
                                             <th class="fixed-side col-4">Cod. Matric</th>
                                             <th class="fixed-side col-4">Legenda</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="table-attendance-array">
-                                        
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                        <!--/ Fim da tabela de frequência -->
-                        <!-- Tabela de frequência -->
-                        <div class="table-responsive table-ergon col-7" id="table-scroll">
-                            <div class="table-wrap">
-                                <table style="width: 100%;" id="example" class="table table-hover main-table table table-striped"
-                                    role="grid" aria-describedby="example_info">
-                                    <thead>
-                                        <tr role="row">
                                             <th>
                                                 <a href="#" data-placement="top" data-toggle="popover">08/02</a>
                                             </th>
@@ -282,432 +284,8 @@
                                             <th><a href="">19/02</a></th>
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                            <td style="text-align: center;">*</td>
-                                        </tr>
+                                    <tbody class="table-attendance-array">
+
                                     </tbody>
                                 </table>
                             </div>
@@ -720,10 +298,11 @@
                     <div class="footer-options fixed-bottom">
                         <div class="options-buttom">
                             <button class="mb-2 mr-2 btn-pill btn btn-ergon btn-shadow">Nova Aula</button>
-    
+
                             <!-- Example single danger button -->
                             <div class="btn-group dropup">
-                                <button type="button" class="mb-2 mr-2 btn-pill btn btn-option btn-shadow dropdown-toggle"
+                                <button type="button"
+                                    class="mb-2 mr-2 btn-pill btn btn-option btn-shadow dropdown-toggle"
                                     data-bs-toggle="dropdown" aria-expanded="false">
                                     Opções
                                 </button>
@@ -733,7 +312,8 @@
                                     <li>
                                         <hr class="dropdown-divider link-ergon">
                                     </li>
-                                    <li><a class="dropdown-item link-ergon" href="#">Presença para todos os alunos</a></li>
+                                    <li><a class="dropdown-item link-ergon" href="#">Presença para todos os alunos</a>
+                                    </li>
                                     <li>
                                         <hr class="dropdown-divider link-ergon">
                                     </li>

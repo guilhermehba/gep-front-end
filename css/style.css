@@ -76,6 +76,7 @@
 .fixed-bottom{
     animation-name: bottomToTop;
     animation-duration: 0.5s;
+    background-color: white;
 }
 
 /* reset css */
@@ -187,11 +188,11 @@ body a:hover {
 
 /* table-scroll */
 .table-ergon {
-    overflow: auto;
+    /* overflow-y: scroll; */
 }
 
 .table-ergon::-webkit-scrollbar {
-    width: 12px;
+    width: 0;
     /* width of the entire scrollbar */
     height: 10px;
 }
@@ -529,15 +530,14 @@ body a:hover {
 }
 
 /* 03/03/2021 - ERGON - Author: Wellysson Rocha */
-    
-    [title-label]::after {
+
+[title-label]::after {
     content: attr(title-label);
     display: none;
     position: absolute;
-    top: 5px;
-    left: -60px;
-    z-index: 5000;
-    padding: 1% 5%;
+    top: 0;
+    left: 5px;
+    padding: 0 0.5%;
     color: #fff;
     background: rgba(0,0,0,0.4);
     border-radius: 24px;

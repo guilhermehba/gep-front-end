@@ -26,6 +26,29 @@ xhttp.onload = async function () {
                 <td class="fixed-side">${aluno[a].nome}</td>
                 <td class="fixed-side">${aluno[a].matricula}</td>
                 <td class="fixed-side">${aluno[a].legenda ? aluno[a].legenda : "Não existe"}</td>
+                <td class="fixed-side" title-label="${aluno[a].nome}">*</td>
+                <td class="fixed-side" title-label="${aluno[a].nome}">*</td>
+                <td class="fixed-side" title-label="${aluno[a].nome}">*</td>
+                <td class="fixed-side" title-label="${aluno[a].nome}">*</td>
+                <td class="fixed-side" title-label="${aluno[a].nome}">*</td>
+                <td class="fixed-side" title-label="${aluno[a].nome}">*</td>
+                <td class="fixed-side" title-label="${aluno[a].nome}">*</td>
+                <td class="fixed-side" title-label="${aluno[a].nome}">*</td>
+                <td class="fixed-side" title-label="${aluno[a].nome}">*</td>
+                <td class="fixed-side" title-label="${aluno[a].nome}">*</td>
+                <td class="fixed-side" title-label="${aluno[a].nome}">*</td>
+                <td class="fixed-side" title-label="${aluno[a].nome}">*</td>
+                <td class="fixed-side" title-label="${aluno[a].nome}">*</td>
+                <td class="fixed-side" title-label="${aluno[a].nome}">*</td>
+                <td class="fixed-side" title-label="${aluno[a].nome}">*</td>
+                <td class="fixed-side" title-label="${aluno[a].nome}">*</td>
+                <td class="fixed-side" title-label="${aluno[a].nome}">*</td>
+                <td class="fixed-side" title-label="${aluno[a].nome}">*</td>
+                <td class="fixed-side" title-label="${aluno[a].nome}">*</td>
+                <td class="fixed-side" title-label="${aluno[a].nome}">*</td>
+                <td class="fixed-side" title-label="${aluno[a].nome}">*</td>
+                <td class="fixed-side" title-label="${aluno[a].nome}">*</td>
+                <td class="fixed-side" title-label="${aluno[a].nome}">*</td>
             </tr>
             `;
         }
