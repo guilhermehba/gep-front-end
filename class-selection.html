@@ -10,55 +10,58 @@
         <link rel="stylesheet" href="class-selection-page/css/styles-of-modals.css">
         
         <script src="class-selection-page/JS/bootstrap.bundle.min.js"></script>
-        <script src="class-selection-page/JS/bootstrap.min.js"></script>
+        
         <script src="class-selection-page/JS/close_class_edit.js"></script>
+        <script src="class-selection-page/JS/scripts.js"></script>
     <title>Seleção de turmas</title>
 </head>
-<header>
-  <nav style="--bs-breadcrumb-divider: '\F27B';" class="breadcrumb" aria-label="breadcrumb">
-      <ol id="list" class="breadcrumb">
-          <li class="breadcrumb-item"><a>Frequência</a></li>
-          <li class="breadcrumb-item" aria-current="page"><a>Seleção de turmas</a></li>
-      </ol>
-  </nav>
-  
-</header>
-<p></p>
-<div id="bimestre-and-filter" class="row">
-  <label id="bimestre">Bimestre</label>
-  <div class="dropdown col-sm-10">
-      <div id="bimestre_drop_btn">
-          <button id="drop_bimestre" class="btn btn-outline dropdown-toggle" type="button" id="drop_bim" data-bs-toggle="dropdown" aria-expanded="false">
-              1º Bimestre
-          </button>
-          <ul id="drop_list" class="dropdown-menu" aria-labelledby="drop_bim">
-          <li><a class="dropdown-item" href="#">1º Bimestre</a></li>
-          <li><a class="dropdown-item" href="#">2º Bimestre</a></li>
-          <li><a class="dropdown-item" href="#">3º Bimestre</a></li>
-          <li><a class="dropdown-item" href="#">4º Bimestre</a></li>              
-          </ul>
-      </div>
-  </div>
 
-  <div class="col-sm-1" id="bimestre_filter_btn"  data-bs-toggle="modal" data-bs-target="#modalFilter">
-      <div id="filter_buttom" class="btn">
+<body>
+    <!-- migalha de pão -->
+    <div id="fundo-navegação">
+        <nav style="--bs-breadcrumb-divider: '\F27B';" class="breadcrumb" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Início</a></li>
+                <li class="breadcrumb-item active" aria-current="page"><a>Seleção de turmas</a></li>
+            </ol>
+        </nav>
+    </div>
+
+    <p></p>
+    <div id="bimestre-and-filter" class="row">
+    <label id="bimestre">Bimestre</label>
+    <div class="dropdown col-sm-10">
+        <div id="bimestre_drop_btn">
+            <button id="drop_bimestre" class="btn btn-outline dropdown-toggle" type="button" id="drop_bim" data-bs-toggle="dropdown" aria-expanded="false">
+                1º Bimestre
+            </button>
+            <ul id="drop_list" class="dropdown-menu" aria-labelledby="drop_bim">
+            <li><a class="dropdown-item" href="#">1º Bimestre</a></li>
+            <li><a class="dropdown-item" href="#">2º Bimestre</a></li>
+            <li><a class="dropdown-item" href="#">3º Bimestre</a></li>
+            <li><a class="dropdown-item" href="#">4º Bimestre</a></li>              
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-sm-1" id="bimestre_filter_btn"  data-bs-toggle="modal" data-bs-target="#modalFilter">
+        <div id="filter_buttom" class="btn">
         <div id="icon_fil"><span class="material-icons">filter_alt</span></div>
         <div id="filter_text"><label data-bs-toggle="modal" data-bs-target="#modalFilter">Filtrar</label></div>
-      </div>
-  </div>
-</div>
+        </div>
+    </div>
+    </div>
 
-<div >
-  <div id="class_title">
+    <div >
+    <div id="class_title">
     <label id="diario-turma">Diarios/Turmas</label>
-  </div>
+    </div>
     <div class="col-12" id="back_class_bar">ENSINO FUNDAMENTAL ANOS INICIAIS - MATUTINO</div> 
-  </div>
-</div>
-<body>
-  <div class="row">
+    </div>
+    </div>
+    <div class="row">
       <!--card-->
-      <div class="col-3">
+      <div class="col-3 mx-auto">
         <div class="card">
           <h5 class="card-header">
             <div id="cont_div1" class="col-auto"><label id="ident_class">6º ANO - A</label></div>
@@ -73,17 +76,99 @@
             <div class="card-title"></div>
               <p class="card-text"><a class="disciplinas" href="attendance-page.html">LÍNGUA PORTUGUESA, MATEMÁTICA, CIÊNCIAS, HISTÓRIA, GEOGRAFIA</a></p>
               <div class="col-12"><hr></div>
-              <div class="col-12">
-                  <label id="progress_bar_tittle">AULAS DADAS X AULAS PREVISTAS</label>
+              <div class="col-12" id="teacher"><label id="teacher">Prof: Jane Cooper</label></div>
+              <div class="col-12" id="progress_bar_tittle">
+                  <a id="progress_bar_tittle">AULAS DADAS X AULAS PREVISTAS</a>
                   <div class="progress">
                       <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="70" style="width: 38.5%"></div>
                   </div>
               </div>
-          </div>
+            </div>
+            </div>
         </div>
-      </div>
-      <!--card-->
-  </div>
+        <!--card-->
+        <!--card-->
+        <div class="col-3 mx-auto">
+            <div class="card">
+            <h5 class="card-header">
+                <div id="cont_div1" class="col-auto"><label id="ident_class">6º ANO - A</label></div>
+                <div  id="cont_div2"class="col-7">
+                    <a id="student_icon" class="material-icons" href="class-selection-page/templates/testes/grid-lst/index.html">perm_identity</a><span id="dot" class="material-icons">&bull;</span><label id="student_count">30</label>
+                </div>
+                <div id="cont_div3" class="col-sm-1">
+                    <span id="class_lock" class="material-icons" data-bs-toggle="modal" data-bs-target="#modal_confirmation">lock_open</span>
+                </div>
+            </h5>
+            <div class="card-body">
+                <div class="card-title"></div>
+                <p class="card-text"><a class="disciplinas" href="attendance-page.html">LÍNGUA PORTUGUESA, MATEMÁTICA, CIÊNCIAS, HISTÓRIA, GEOGRAFIA</a></p>
+                <div class="col-12"><hr></div>
+                    <div class="col-12" id="teacher"><label id="teacher">Prof: Jane Cooper</label></div>
+                    <div class="col-12" id="progress_bar_tittle">
+                        <a id="progress_bar_tittle">AULAS DADAS X AULAS PREVISTAS</a>
+                        <div class="progress">
+                            <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="70" style="width: 38.5%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--card-->
+        <!--card-->
+        <div class="col-3 mx-auto">
+            <div class="card">
+            <h5 class="card-header">
+                <div id="cont_div1" class="col-auto"><label id="ident_class">6º ANO - A</label></div>
+                <div  id="cont_div2"class="col-7">
+                    <a id="student_icon" class="material-icons" href="class-selection-page/templates/testes/grid-lst/index.html">perm_identity</a><span id="dot" class="material-icons">&bull;</span><label id="student_count">30</label>
+                </div>
+                <div id="cont_div3" class="col-sm-1">
+                    <span id="class_lock" class="material-icons" data-bs-toggle="modal" data-bs-target="#modal_confirmation">lock_open</span>
+                </div>
+            </h5>
+            <div class="card-body">
+                <div class="card-title"></div>
+                <p class="card-text"><a class="disciplinas" href="attendance-page.html">LÍNGUA PORTUGUESA, MATEMÁTICA, CIÊNCIAS, HISTÓRIA, GEOGRAFIA</a></p>
+                <div class="col-12"><hr></div>
+                    <div class="col-12" id="teacher"><label id="teacher">Prof: Jane Cooper</label></div>
+                    <div class="col-12" id="progress_bar_tittle">
+                        <a id="progress_bar_tittle">AULAS DADAS X AULAS PREVISTAS</a>
+                        <div class="progress">
+                            <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="70" style="width: 38.5%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--card-->
+        <!--card-->
+        <div class="col-3 mx-auto">
+            <div class="card">
+            <h5 class="card-header">
+                <div id="cont_div1" class="col-auto"><label id="ident_class">6º ANO - A</label></div>
+                <div  id="cont_div2"class="col-7">
+                    <a id="student_icon" class="material-icons" href="class-selection-page/templates/testes/grid-lst/index.html">perm_identity</a><span id="dot" class="material-icons">&bull;</span><label id="student_count">30</label>
+                </div>
+                <div id="cont_div3" class="col-sm-1">
+                    <span id="class_lock" class="material-icons" data-bs-toggle="modal" data-bs-target="#modal_confirmation">lock_open</span>
+                </div>
+            </h5>
+            <div class="card-body">
+                <div class="card-title"></div>
+                <p class="card-text"><a class="disciplinas" href="attendance-page.html">LÍNGUA PORTUGUESA, MATEMÁTICA, CIÊNCIAS, HISTÓRIA, GEOGRAFIA</a></p>
+                <div class="col-12"><hr></div>
+                    <div class="col-12" id="teacher"><label id="teacher">Prof: Jane Cooper</label></div>
+                    <div class="col-12" id="progress_bar_tittle">
+                        <a id="progress_bar_tittle">AULAS DADAS X AULAS PREVISTAS</a>
+                        <div class="progress">
+                            <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="70" style="width: 38.5%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--card-->
+    </div>
 </body>
 </html>
 

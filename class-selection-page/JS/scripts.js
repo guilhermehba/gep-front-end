@@ -1,38 +1,27 @@
-document.addEventListener("DOMContentLoaded", function(event) {
-
-    const showNavbar = (toggleId, navId, bodyId, headerId) =>{
-    const toggle = document.getElementById(toggleId),
-    nav = document.getElementById(navId),
-    bodypd = document.getElementById(bodyId),
-    headerpd = document.getElementById(headerId)
-    
-    // Validate that all variables exist
-    if(toggle && nav && bodypd && headerpd){
-    toggle.addEventListener('click', ()=>{
-    // show navbar
-    nav.classList.toggle('show')
-    // change icon
-    toggle.classList.toggle('bx-x')
-    // add padding to body
-    bodypd.classList.toggle('body-pd')
-    // add padding to header
-    headerpd.classList.toggle('body-pd')
-    })
-    }
-    }
-    
-    showNavbar('header-toggle','nav-bar','body-pd','header')
-    
-    /*===== LINK ACTIVE =====*/
-    const linkColor = document.querySelectorAll('.nav_link')
-    
-    function colorLink(){
-    if(linkColor){
-    linkColor.forEach(l=> l.classList.remove('active'))
-    this.classList.add('active')
-    }
-    }
-    linkColor.forEach(l=> l.addEventListener('click', colorLink))
-    
-    // Your code to run since DOM is loaded and ready
+/* JS for load another html with Resize Window */
+function mobile() {
+    $(window).on('load resize', function () {
+        if ($(window).width() < 950) {
+            window.location = "class-selection-page/mobile/class-selection-mobile.html"
+        }
+    });
+}
+mobile();
+/* JS for load another html with Resize Window - end */
+/* alter status for 'diario' */
+function clicked_on(){
+    document.getElementById('class_lock').innerHTML = 'https';
+}
+/* alter status for 'diario' - end */
+/*count subjects*/
+$(function(products_counter){
+    var n = parseInt($('.lce_number').text());
+    var n_place = $('.lce_number');
+    $('.lce_add').live('click', function(){
+       $('.lce_number').text(parseInt($('.lce_number').text())+1);
+    });
+    $('.lce_remove').live('click', function(){
+         $('.lce_number').text(parseInt($('.lce_number').text())-1);
+    });
 });
+/*count subjects - end */
