@@ -18,7 +18,53 @@
 .grid, .list{
   display: none;
 }
+body a{
+  text-decoration: none;
+}
 
+/*container class id and close buttom*/
+.container {
+  
+  display:flex;
+}
+.fixed {
+ font-family: Poppins;
+  width: 200px;
+  font-size: 24px;
+  font-weight: 600;
+}
+.flex-item {
+ color: #6F31AD;
+  flex-grow: 1;
+}
+
+
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  padding: .25rem 1rem;
+  margin-bottom: 0;
+  list-style: none;
+  background: #F3F5F7;
+  border-radius: .25rem;
+  --bs-breadcrumb-divider: '>';
+
+  /* animation-name: identifier;
+  animation-duration: 4s; */
+}
+#cancel{
+  font-family: Material Icons;
+    font-size: 50px;
+    color:#4D228A;
+    cursor: pointer;
+    border: none;
+    
+}
+.ident-and-close{
+  background-color: none !important;
+  background: none !important;
+}
 @media screen 
   and (device-width: 360px) 
   and (device-height: 640px) 
