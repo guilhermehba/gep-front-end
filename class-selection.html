@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!--CSS Bootstrap 5-->
         <link rel="stylesheet" href="class-selection-page/css/bootstrap.min.css">
-        <link rel="stylesheet" href="class-selection-page/css/teste.css">
-        <link rel="stylesheet" href="class-selection-page/css/styles-of-modals.css">
-        
+        <!--CSS Class Selection Page-->
+        <link rel="stylesheet" href="class-selection-page/css/styles.css">
+
+        <!--Js Bootstrap 5-->
         <script src="class-selection-page/JS/bootstrap.bundle.min.js"></script>
-        
-        <script src="class-selection-page/JS/close_class_edit.js"></script>
+        <!--JS Class Selection Page-->
         <script src="class-selection-page/JS/scripts.js"></script>
     <title>Seleção de turmas</title>
 </head>
@@ -28,8 +28,10 @@
     </div>
 
     <p></p>
+    <!--Div's Bimestre e Filtro-->
     <div id="bimestre-and-filter" class="row">
     <label id="bimestre">Bimestre</label>
+    <!--Dropdown Bimestre-->
     <div class="dropdown col-sm-10">
         <div id="bimestre_drop_btn">
             <button id="drop_bimestre" class="btn btn-outline dropdown-toggle" type="button" id="drop_bim" data-bs-toggle="dropdown" aria-expanded="false">
@@ -43,7 +45,7 @@
             </ul>
         </div>
     </div>
-
+    <!--Botão Filtro-->
     <div class="col-sm-1" id="bimestre_filter_btn"  data-bs-toggle="modal" data-bs-target="#modalFilter">
         <div id="filter_buttom" class="btn">
         <div id="icon_fil"><span class="material-icons">filter_alt</span></div>
@@ -51,15 +53,16 @@
         </div>
     </div>
     </div>
-
-    <div >
-    <div id="class_title">
-    <label id="diario-turma">Diarios/Turmas</label>
+    <!--Diario Titulo e Turma Titulo-->
+    <div>
+        <div id="class_title">
+        <label id="diario-turma">Diarios/Turmas</label>
+        </div>
+            <div class="col-12" id="back_class_bar">ENSINO FUNDAMENTAL ANOS INICIAIS - MATUTINO</div> 
+        </div>
     </div>
-    <div class="col-12" id="back_class_bar">ENSINO FUNDAMENTAL ANOS INICIAIS - MATUTINO</div> 
-    </div>
-    </div>
-    <div class="row">
+    <!--Card Grid Diários-->
+    <div class="row" id="myItems">
       <!--card-->
       <div class="col-3 mx-auto">
         <div class="card">
@@ -76,7 +79,7 @@
             <div class="card-title"></div>
               <p class="card-text"><a class="disciplinas" href="attendance-page.html">LÍNGUA PORTUGUESA, MATEMÁTICA, CIÊNCIAS, HISTÓRIA, GEOGRAFIA</a></p>
               <div class="col-12"><hr></div>
-              <div class="col-12" id="teacher"><label id="teacher">Prof: Jane Cooper</label></div>
+              <div class="col-12" id="teacher"><label id="teacher">Prof: James Bond</label></div>
               <div class="col-12" id="progress_bar_tittle">
                   <a id="progress_bar_tittle">AULAS DADAS X AULAS PREVISTAS</a>
                   <div class="progress">
@@ -91,7 +94,7 @@
         <div class="col-3 mx-auto">
             <div class="card">
             <h5 class="card-header">
-                <div id="cont_div1" class="col-auto"><label id="ident_class">6º ANO - A</label></div>
+                <div id="cont_div1" class="col-auto"><label id="ident_class">6º ANO - B</label></div>
                 <div  id="cont_div2"class="col-7">
                     <a id="student_icon" class="material-icons" href="class-selection-page/templates/testes/grid-lst/index.html">perm_identity</a><span id="dot" class="material-icons">&bull;</span><label id="student_count">30</label>
                 </div>
@@ -118,7 +121,7 @@
         <div class="col-3 mx-auto">
             <div class="card">
             <h5 class="card-header">
-                <div id="cont_div1" class="col-auto"><label id="ident_class">6º ANO - A</label></div>
+                <div id="cont_div1" class="col-auto"><label id="ident_class">5º ANO - A</label></div>
                 <div  id="cont_div2"class="col-7">
                     <a id="student_icon" class="material-icons" href="class-selection-page/templates/testes/grid-lst/index.html">perm_identity</a><span id="dot" class="material-icons">&bull;</span><label id="student_count">30</label>
                 </div>
@@ -130,7 +133,7 @@
                 <div class="card-title"></div>
                 <p class="card-text"><a class="disciplinas" href="attendance-page.html">LÍNGUA PORTUGUESA, MATEMÁTICA, CIÊNCIAS, HISTÓRIA, GEOGRAFIA</a></p>
                 <div class="col-12"><hr></div>
-                    <div class="col-12" id="teacher"><label id="teacher">Prof: Jane Cooper</label></div>
+                    <div class="col-12" id="teacher"><label id="teacher">Prof: Willian Cooperfield</label></div>
                     <div class="col-12" id="progress_bar_tittle">
                         <a id="progress_bar_tittle">AULAS DADAS X AULAS PREVISTAS</a>
                         <div class="progress">
@@ -145,7 +148,7 @@
         <div class="col-3 mx-auto">
             <div class="card">
             <h5 class="card-header">
-                <div id="cont_div1" class="col-auto"><label id="ident_class">6º ANO - A</label></div>
+                <div id="cont_div1" class="col-auto"><label id="ident_class">5º ANO - B</label></div>
                 <div  id="cont_div2"class="col-7">
                     <a id="student_icon" class="material-icons" href="class-selection-page/templates/testes/grid-lst/index.html">perm_identity</a><span id="dot" class="material-icons">&bull;</span><label id="student_count">30</label>
                 </div>
@@ -157,7 +160,7 @@
                 <div class="card-title"></div>
                 <p class="card-text"><a class="disciplinas" href="attendance-page.html">LÍNGUA PORTUGUESA, MATEMÁTICA, CIÊNCIAS, HISTÓRIA, GEOGRAFIA</a></p>
                 <div class="col-12"><hr></div>
-                    <div class="col-12" id="teacher"><label id="teacher">Prof: Jane Cooper</label></div>
+                    <div class="col-12" id="teacher"><label id="teacher">Prof: Maria da Silva</label></div>
                     <div class="col-12" id="progress_bar_tittle">
                         <a id="progress_bar_tittle">AULAS DADAS X AULAS PREVISTAS</a>
                         <div class="progress">
@@ -183,6 +186,11 @@
               <div class="modal-body">
                   <div>
                       <div  id="center_align_div">
+                        <div class="row">
+                            <div class="col-sm-12 mb-3">
+                              <input type="text" id="myFilter" class="form-control" onkeyup="myFunction()" placeholder="Search for names..">
+                            </div>
+                          </div>
                           <div class="form-check form-check-inline">
                               <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
                               <label class="form-check-label" for="inlineRadio1">Todos</label>
@@ -203,9 +211,10 @@
                                   
                               </button>
                               <ul class="dropdown-menu" aria-labelledby="dropdown_professor">
-                              <li><a class="dropdown-item" href="#">Professor A</a></li>
-                              <li><a class="dropdown-item" href="#">Professor B</a></li>
-                              <li><a class="dropdown-item" href="#">Professor C</a></li>
+                              <li><a class="dropdown-item" href="#">James Bond</a></li>
+                              <li><a class="dropdown-item" href="#">Jane Cooper</a></li>
+                              <li><a class="dropdown-item" href="#">Willian Cooperfield</a></li>
+                              <li><a class="dropdown-item" href="#">Maria da Silva</a></li>
                               </ul>
                           </div>
                           <p></p>
@@ -215,9 +224,10 @@
                                   
                               </button>
                               <ul class="dropdown-menu" aria-labelledby="dropdown_bimestre">
-                              <li><a class="dropdown-item" href="#">Bimestre/Periodo</a></li>
-                              <li><a class="dropdown-item" href="#">Bimestre/Periodo</a></li>
-                              <li><a class="dropdown-item" href="#">Bimestre/Periodo</a></li>
+                              <li><a class="dropdown-item" href="#">1º Bimestre</a></li>
+                              <li><a class="dropdown-item" href="#">2º Bimestre</a></li>
+                              <li><a class="dropdown-item" href="#">3º Bimestre</a></li>
+                              <li><a class="dropdown-item" href="#">4º Bimestre</a></li>
                               </ul>
                           </div>
                           <p></p>
@@ -227,9 +237,10 @@
 
                               </button>
                               <ul class="dropdown-menu" aria-labelledby="dropdown_series">
-                              <li><a class="dropdown-item" href="#">Série</a></li>
-                              <li><a class="dropdown-item" href="#">Série</a></li>
-                              <li><a class="dropdown-item" href="#">Série</a></li>
+                              <li><a class="dropdown-item" href="#">6º ANO</a></li>
+
+                              <li><a class="dropdown-item" href="#">5º ANO</a></li>
+
                               </ul>
                           </div>
                           <p></p>
@@ -239,9 +250,9 @@
 
                               </button>
                               <ul class="dropdown-menu" aria-labelledby="dropdown_turmas">
-                              <li><a class="dropdown-item" href="#">turma</a></li>
-                              <li><a class="dropdown-item" href="#">turma</a></li>
-                              <li><a class="dropdown-item" href="#">turma</a></li>
+                              <li><a class="dropdown-item" href="#">A</a></li>
+                              <li><a class="dropdown-item" href="#">B</a></li>
+
                               </ul>
                           </div>
                       </div>

@@ -249,9 +249,9 @@ width: 25%;
 #back_class_bar{
   background: #D6E3EA;
   border-radius: 2px 2px 0px 0px;
-  height: 42px;
+  
   left: 86px;
-  padding-top: 7px;
+  padding-top: 2px;
   font-family: Poppins;
   font-style: normal;
   font-weight: 600;
@@ -287,7 +287,7 @@ width: 25%;
   text-align: center;
 }
 #lbl_drop_filters{
-  text-align: left;
+ margin-left: 10%;
 }
 #dropdown_prontuario{
   width: 100%;
