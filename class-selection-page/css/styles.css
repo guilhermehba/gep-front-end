@@ -509,3 +509,6 @@ body{
   width: 35%;
 }
 /*========filter modal=========*/
+#myFilter{
+  display: block;
+}

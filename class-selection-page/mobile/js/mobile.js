@@ -1,7 +1,7 @@
 function test() {
     $(window).on('load resize', function () {
         if ($(window).width() > 950) {
-            window.location = "../index.html"
+            window.location = "../class-selection.html"
         }
     });
 }
