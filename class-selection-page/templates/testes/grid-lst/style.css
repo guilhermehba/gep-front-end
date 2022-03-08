@@ -30,9 +30,11 @@ body a{
 .fixed {
  font-family: Poppins;
   width: 200px;
+  font-size: 24px;
+  font-weight: 600;
 }
 .flex-item {
- 
+ color: #6F31AD;
   flex-grow: 1;
 }
 
