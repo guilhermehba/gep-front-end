@@ -9,7 +9,7 @@ function mobile() {
 mobile();
 /* JS for load another html with Resize Window - end */
 /* alter status for 'diario' */
-function clicked_on(){
+function clicked_on_lock(){
     document.getElementById('class_lock').innerHTML = 'https';
 }
 /* alter status for 'diario' - end */
