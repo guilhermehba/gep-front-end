@@ -1,12 +1,78 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
-header, #bimestre-and-filter, #class{margin: 5px 5px 5px 5px;}
 * {
 font-family: Poppins;
 font-style: normal;
-font-size: 16px;
+font-size: 15px;
 line-height: 24px;
+text-decoration: none;
 }
+@keyframes slidein {
+  from {
+      margin-left: 100%;
+      width: 300%;
+  }
+
+  to {
+      margin-left: 0%;
+      width: 100%;
+  }
+}
+
+@keyframes identifier {
+  from {
+      margin-top: 50px;
+      margin-bottom: 100px;
+  }
+
+  to {
+      margin-top: 150px !important;
+      /* ignored */
+      margin-bottom: 50px;
+  }
+}
+
+@keyframes bottomToTop {
+  from {
+      /* right: -255px; */
+      bottom: -10%;
+      opacity: 0.1;
+  }
+}
+
+@keyframes topToBottom {
+  from {
+      /* right: -255px; */
+      top: -200%;
+  }
+}
+
+@keyframes fade {
+  from {
+      /* right: -255px; */
+      opacity: 0.1;
+  }
+
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes zoomWH {
+  from {
+      width: 0px;
+  }
+}
+
+body a {
+  color: #6F31AD;
+  text-decoration: none;
+}
+
+body a:hover {
+  color: #6F31AD;
+}
+
 .col-3{
   width: 326px;
 }
@@ -17,9 +83,12 @@ label{
   border-radius: 16px;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
 }
+.row{
+  margin-left: 15px;
+
+}
 .card {
 
-vertical-align: middle;
 float: none;
 text-align: center;
 background: #FEFEFE;
@@ -87,7 +156,7 @@ text-decoration: none;
 font-size: 20px;
 color: #AB58B9;
 
-font-family: Material Icons;
+font-family: Poppins;
 cursor: pointer;
 border-radius: 50px;
 text-decoration: none;
@@ -112,8 +181,8 @@ text-decoration: none;
 #cont_div2{
   height: 25px;
   text-align: right;
-  padding-top: 4px;
   float: left;
+  padding-right: 5px;
  
  }
  #cont_div3{
@@ -121,8 +190,15 @@ text-decoration: none;
   float: right;
  
  }
-*{
-text-decoration: none;
+ #teacher{
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 10px;
+
+  text-align: left;
+
+  color: #4F4F4F;
 }
 #progress_bar_tittle{
 font-family: Poppins;
@@ -174,6 +250,7 @@ width: 50%;
 #bimestre{
   font-size: 18px;
   line-height: 24px;
+  
 }
 
 #diario-turma{
@@ -191,6 +268,7 @@ width: 50%;
   width: 228px;
   height: 48px;
   color: #AB58B9;
+  
   
 
 }
@@ -220,10 +298,10 @@ width: 25%;
       font-style: normal;
       font-weight: 600;
       font-size: 16px;
-      width: 136px;
+      width: 126px;
       height: 48px;
       text-align: justify;
-      margin: 5px 5px 5px 5px;
+
       cursor: pointer;
       
 }
@@ -238,7 +316,7 @@ width: 25%;
   color: black;
   width: 70%;
   float: right;
-  padding-top: 8px;
+  margin-top: 5px;
   cursor: pointer;
 }
 #back_class_bar{
@@ -246,8 +324,9 @@ width: 25%;
   border-radius: 2px 2px 0px 0px;
   height: 40px;
   left: 86px;
-  margin: auto auto;
   padding-top: 7px;
+  padding-left: 7px;
+  margin-bottom: 7px;
   font-family: Poppins;
   font-style: normal;
   font-weight: 600;
@@ -257,6 +336,9 @@ width: 25%;
 }
 
 
+body{
+  margin: 0 20px 20px 20px;
+}
 
 
 /*=========bimestre=========*/
