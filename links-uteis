@@ -1,0 +1,14 @@
+GET
+http://apialuno.ergonsistemas.com.br:7073/SELECT?database=GEP_TESTE&TABELA=V_API_TurmasDiario&FILTRO=cdescola=21145660 and exerc=2018 and cpf='012.311.273-76'
+
+================
+
+DELETE
+http://apialuno.ergonsistemas.com.br:7073/DELETE?database=GEP_TESTE&TABELA=SEC_DIARIOCAB&FILTRO=cdescola=21145660 and SEQUENCIAL=1
+
+===============
+POST
+http://apialuno.ergonsistemas.com.br:7073/INS_UPD?database=GEP_TESTE&TABELA=SEC_DIARIOCAB&FILTRO=cdescola|sequencial
+
+user gepmobile
+senha @#gepmobile#@
