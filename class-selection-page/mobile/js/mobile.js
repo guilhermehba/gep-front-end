@@ -1,9 +1,13 @@
-function mobile() {
+function test() {
     $(window).on('load resize', function () {
         if ($(window).width() > 950) {
-            window.location = "./class-selection-page.html"
+            window.location = "../index.html"
         }
     });
 }
 
-mobile();
+test();
+
+function clicked_on_lock(){
+    document.getElementById('class_lock').innerHTML = 'https';
+}

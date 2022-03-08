@@ -1,30 +1,20 @@
 /* JS for load another html with Resize Window */
-function mobile() {
+function test() {
     $(window).on('load resize', function () {
         if ($(window).width() < 950) {
-            window.location = "class-selection-page/mobile/class-selection-mobile.html"
+            window.location = "mobile/class-selection-mobile.html"
         }
     });
 }
-mobile();
+
+test();
 /* JS for load another html with Resize Window - end */
 /* alter status for 'diario' */
 function clicked_on_lock(){
     document.getElementById('class_lock').innerHTML = 'https';
 }
 /* alter status for 'diario' - end */
-/*count subjects*/
-$(function(products_counter){
-    var n = parseInt($('.lce_number').text());
-    var n_place = $('.lce_number');
-    $('.lce_add').live('click', function(){
-       $('.lce_number').text(parseInt($('.lce_number').text())+1);
-    });
-    $('.lce_remove').live('click', function(){
-         $('.lce_number').text(parseInt($('.lce_number').text())-1);
-    });
-});
-/*count subjects - end */
+
 /* filter test */
 function myFunction() {
     var input, filter, cards, cardContainer, h5, title, i;
