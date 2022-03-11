@@ -112,7 +112,7 @@
 }
 
 body a {
-    color: #6F31AD;
+    color: #6F31AD !important;
     text-decoration: none;
 }
 
@@ -500,7 +500,7 @@ body a:hover {
 
 .help-top svg {
     float: right;
-    width: 50px;
+    width: 100%;
 }
 
 /* help top resolução 767px */
@@ -554,4 +554,15 @@ body a:hover {
 
 .status-attendance{
     color: #089944 !important;
+}
+
+/* 10/03/2021 - ERGON - Author: Wellysson Rocha */
+.help-top{
+    width: 38px;
+    position: absolute;
+    right: 16px;
+}
+
+#fundo-navegação{
+    position: relative;
 }

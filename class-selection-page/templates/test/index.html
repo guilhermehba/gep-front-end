@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<link rel="stylesheet" href="css/style.css" />
+<script type="text/javascript" src="jquery-3.6.0.min.js"> </script>
+<script type="text/javascript" src="test.json"> </script>
+</head>
+<body>
+    
+    <div id="dados">
+
+    </div>
+</body>
+</html>
+<script>
+    $('#filtro').keyup(function () {
+        var yourtext = $(this).val();
+        if (yourtext.length > 0) {
+            var abc = $("section").filter(function () {
+                var str = $(this).text();
+                var re = new RegExp(yourtext, "i");
+                var result = re.test(str);
+                if (!result) {
+                    return $(this);
+                }
+            }).hide();
+        } else {
+            $("section").show();
+        }
+    });
+
+    window.onload=function(){
+    data = {
+            "PROFESSOR":[
+                        {
+                        "CDESCOLA": 21145660,
+                        "EXERC": 2018,
+                        "DSESCOLA": "ESCOLA DO JEFFINHO",
+                        "SEQUENCIAL": 1653,
+                        "CDCURSO": 6,
+                        "CDTUR": 1,
+                        "CDSERIE": 17,
+                        "CDDISC": 76,
+                        "CDTURMA": "B",
+                        "BIMESTRE": 1,
+                        "CPF": "012.311.273-76",
+                        "FATORCALCULO": 1,
+                        "CURSO": "ENSINO FUNDAMENTAL 1º/5º ANOS",
+                        "TURNO": "MATUTINO",
+                        "GRUPO": "ENSINO FUNDAMENTAL 1º/5º ANOS - MATUTINO",
+                        "SERIETURMA": "1º ANO - B",
+                        "SERIE": "1º ANO",
+                        "DISCIPLINA": "LÍNGUA PORTUGUESA,ARTE,EDUCAÇÃO FÍSICA,MATEMÁTICA,CIÊNCIAS,ENSINO RELIGIOSO",
+                        "STATUSDIARIO": 1,
+                        "DIAS_AULA": 1,
+                        "STATUS": "Em Digitação",
+                        "EXPORTADO": "0",
+                        "DATAINICIO1UNI": "19/02/2018 00:00:00",
+                        "DATAFINAL1UNI": "03/05/2018 00:00:00",
+                        "DATAINICIO2UNI": "04/05/2018 00:00:00",
+                        "DATAFINAL2UNI": "13/07/2018 00:00:00",
+                        "DATAINICIO3UNI": "31/07/2018 00:00:00",
+                        "DATAFINAL3UNI": "09/10/2018 00:00:00",
+                        "DATAINICIO4UNI": "10/10/2018 00:00:00",
+                        "DATAFINAL4UNI": "21/12/2018 00:00:00",
+                        "ABERTURA": "19/02/2018 00:00:00",
+                        "ENCERRAMENTO": "03/05/2018 00:00:00",
+                        "PROFESSOR": "CLEUDIMAR SANTOS DE MORAES              ",
+                        "FLAGIMPRESSAO": null,
+                        "EXER_DIASLETPREV": 160,
+                        "EXER_DIASLETDADOS": null,
+                        "BIM_DIASLETPREV": 40,
+                        "BIM_DIASLETDADOS": null,
+                        "DIVERSAS": "S",
+                        "DATAATUALIZADO": "17/11/2020 20:29:58",
+                        "ID_TURMA": 75,
+                        "CONTEUDOPORDISCIPLINA": "N"
+        }
+    ]
+    }
+    ;
+    
+    data.PROFESSOR.forEach(function(p){ 
+    
+      var post = "<section><span><a href='#'></a>"+p.DSESCOLA+"</span><p></p><span><a>"+p.DISCIPLINA+"</a></span><p></p><span><a>"+p.SERIETURMA+"</a></span></section>";
+    
+      document.querySelector('#dados').innerHTML += post;
+    
+    });
+    }
+    
+    </script>

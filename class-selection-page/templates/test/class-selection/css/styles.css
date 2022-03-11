@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
-@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css');
 * {
 font-family: Poppins;
 font-style: normal;
@@ -11,26 +10,17 @@ text-decoration: none;
 }
 
 body a {
+  color: #6F31AD;
   text-decoration: none;
 }
 
-a{
-  color: #AB58B9;
-}
-.row a{
-  color: #AB58B9 !important;
-}
-.row a:hover{
-  color: #6F31AD !important;
-}
-a:hover{
+body a:hover {
   color: #6F31AD;
 }
+
 .col-3{
   width: 326px;
-
 }
-
 label{
   cursor: pointer;
 }
@@ -45,7 +35,6 @@ text-align: center;
 background: #FEFEFE;
 box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
 border-radius: 16px;
-margin: 15px 15px;
 /*    word-wrap:break-word;   */
 }
 
@@ -63,7 +52,15 @@ display: none;
 
 /*******************card css***************************/
 /*box config*/
+#ident_class{
+font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
 
+/* identical to box height, or 100% */
+color: #AB58B9;
+}
 
 #class_cod{
 
@@ -89,8 +86,6 @@ text-decoration: none;
 #dot{
 color: #AB58B9;
 font-size: 20px;
-
-margin: 2px 2px 2px 2px;
 
 font-family: Material Icons;
 cursor: pointer;
@@ -119,19 +114,11 @@ text-decoration: none;
       
       color: #AB58B9;
 }
-#SERIETURMA{
-  height: 25px;
-  float: left;
- 
-  font-family: Poppins;
-   font-style: normal;
-   font-weight: 600;
-   font-size: 16px;
- 
-   /* identical to box height, or 100% */
-   color: #AB58B9;
-   
- }
+#cont_div1{
+ height: 25px;
+ float: left;
+  
+}
 #cont_div2{
   height: 25px;
   text-align: right;
@@ -167,13 +154,13 @@ color: #4F4F4F;
 .progress-bar{
 width: 50%;
 }
-.disciplinas{
+.DISCIPLINA{
   text-align: center;
   font-size: 15px;
   text-decoration: none;
   color: #AB58B9;
   }
-  .disciplinas:hover{
+  .DISCIPLINA:hover{
       color: #6F31AD;
   }
 /*******************card css***************************/
@@ -181,7 +168,16 @@ width: 50%;
 
 /*******************header css***************************/
 /*=========nav=========*/
-
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  padding: .25rem 1rem;
+  margin-bottom: 0;
+  list-style: none;
+  background: #F3F5F7;
+  border-radius: .25rem;
+  --bs-breadcrumb-divider: '>';
+}
 #list{
   color: #AB58B9;
   padding-top: 8px;
@@ -192,25 +188,25 @@ width: 50%;
 }
 /*=========nav=========*/
 /*=========bimestre=========*/
-#bimestre-and-filter{
-  margin: 10px 0 0 10px;
-}
-
-
 #bimestre{
   font-size: 18px;
   line-height: 24px;
   
 }
 
+#diario-turma{
+  font-size: 18px;
+  line-height: 24px;
+  width: 100%;
 
+}
 
 #drop_bimestre{
   background: #FFFDFD;
   border: 1px solid #6F31AD;
   box-sizing: border-box;
   border-radius: 8px;
-  width: 235px;
+  width: 228px;
   height: 48px;
   color: #AB58B9;
   
@@ -222,16 +218,12 @@ background: #FFFDFD;
 border: 1px solid #6F31AD;
 box-sizing: border-box;
 border-radius: 8px;
-width: 235px;
+width: 228px;
 color: #6F31AD;
 
 }
 #drop_list{
 width: 25%;
-
-}
-#drop_list:hover{
-  background-color: #7D3989;
 }
 /**/
 #bimestre_filter_btn{
@@ -249,8 +241,8 @@ width: 25%;
       font-size: 16px;
       width: 126px;
       height: 48px;
-      text-align: center;
-      
+      text-align: justify;
+
       cursor: pointer;
       
 }
@@ -268,15 +260,6 @@ width: 25%;
   margin-top: 5px;
   cursor: pointer;
 }
-
-#diario-turma{
-  font-size: 18px;
-  line-height: 24px;
-  width: 100%;
-  margin:  0 0 10px 25px;
-
-}
-
 #back_class_bar{
   background: #D6E3EA;
   border-radius: 2px 2px 0px 0px;
@@ -284,13 +267,18 @@ width: 25%;
   left: 86px;
   padding-top: 7px;
   padding-left: 7px;
-  margin:  10px 0 10px 25px;
+  margin-bottom: 7px;
   font-family: Poppins;
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
   color: #4F4F4F;
   background: #D6E3EA;
+}
+
+
+body{
+  margin: 0 20px 20px 20px;
 }
 
 
@@ -467,47 +455,41 @@ width: 25%;
       color: #AB58B9;
 }
 /*========filter modal=========*/
-.form-check-input:checked{
-background-color: #6F31AD;
-border: #6F31AD solid;
-border-inline-color: #6F31AD;
-}
-
 #modalFilter{
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
   border-radius: 24px;
 }
-#dropdown_professor_filtro{
+#dropdown_professor{
   background: #FFFDFD;
   border: 1px solid #6F31AD;
   box-sizing: border-box;
   border-radius: 8px;
   width: 276px;
-  
+  text-align: right;
 }
-#dropdown_bimestre_filtro{
+#dropdown_bimestre{
   background: #FFFDFD;
   border: 1px solid #6F31AD;
   box-sizing: border-box;
   border-radius: 8px;
   width: 276px;
-  
+  text-align: right;
 }
-#dropdown_serie_filtro{
+#dropdown_series{
   background: #FFFDFD;
   border: 1px solid #6F31AD;
   box-sizing: border-box;
   border-radius: 8px;
   width: 276px;
-  
+  text-align: right;
 }
-#dropdown_turma_filtro{
+#dropdown_turmas{
   background: #FFFDFD;
   border: 1px solid #6F31AD;
   box-sizing: border-box;
   border-radius: 8px;
   width: 276px;
-  
+  text-align: right;
 }
 
 #apply_filter{
@@ -525,198 +507,4 @@ border-inline-color: #6F31AD;
 /*========filter modal=========*/
 #myFilter{
   display: block;
-}
-
-
-
-/*=================================================*/
-/*=================================================*/
-/*=================================================*/
-/*=================================================*/
-/*=================================================*/
-/*=================================================*/
-/*=================================================*/
-/*=================================================*/
-/*=================================================*/
-/*=================================================*/
-/*=================================================*/
-/*=================================================*/
-/*=================================================*/
-/*=================================================*/
-/*=================================================*/
-/*=================================================*/
-/*=================================================*/
-
-.link-ergon {
-  color: #AB58B9;
-  font-weight: bold;
-}
-
-.link-ergon:hover {
-  color: #6F31AD;
-}
-
-.breadcrumb {
-  display: flex;
-  flex-wrap: wrap;
-  padding: .25rem 1rem;
-  margin-bottom: 0;
-  list-style: none;
-  background: #F3F5F7;
-  border-radius: .25rem;
-  --bs-breadcrumb-divider: '>';
-  /* animation-name: identifier;
-  animation-duration: 4s; */
-  
-
-  
-}
-
-/* btn ergon */
-.btn-ergon {
-  color: #fff;
-  background-color: #AB58B9;
-  border-color: #AB58B9;
-  font-weight: 600;
-  font-size: 16px;
-  border-radius: 24px;
-}
-
-.btn-ergon:hover {
-  background-color: #7D3989;
-  color: #fff;
-}
-
-.btn-option {
-  color: #AB58B9;
-  background-color: #fff;
-  border: 1px solid #AB58B9;
-  font-weight: 600;
-  font-size: 16px;
-  border-radius: 24px;
-}
-
-.btn-shadow {
-  box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.4),
-      0 0.03rem 0.1rem rgba(42, 11, 54, 0.5);
-}
-
-.options-buttom {
-  float: right;
-  margin: 1% 3%;
-}
-
-.record-type .dropup .dropdown-toggle::after {
-  content: none;
-}
-
-/* 25/02/2021 - ERGON - Author: Wellysson Rocha */
-.dropdown-item.active, .dropdown-item:active {
-  color: #fff;
-  text-decoration: none;
-  background-color: #6F31AD;
-}
-
-
-/* buttom circle */
-.xyz {
-  background-size: auto;
-  text-align: center;
-  padding-top: 100px;
-}
-
-.btn-circle.btn-sm {
-  width: 30px;
-  height: 30px;
-  padding: 6px 0px;
-  border-radius: 15px;
-  font-size: 8px;
-  text-align: center;
-}
-
-.btn-circle.btn-md {
-  width: 50px;
-  height: 50px;
-  padding: 7px 10px;
-  border-radius: 25px;
-  font-size: 10px;
-  text-align: center;
-}
-
-.btn-circle.btn-xl {
-  width: 70px;
-  height: 70px;
-  padding: 10px 16px;
-  border-radius: 35px;
-  font-size: 12px;
-  text-align: center;
-}
-
-.help-top svg {
-  float: right;
-  width: 100%;
-}
-
-/* help top resolução 767px */
-@media only screen and (max-width: 1229px) {
-  .help-top svg {
-      float: right;
-      width: 30px;
-  }
-}
-
-.tabela-content {
-  width: 100%;
-  margin: auto;
-}
-
-#liveToast {
-  transition: 0.09s;
-}
-
-/* .select-ergon{
-  border-radius: 8px;
-  border: 1px solid #6F31AD;
-} */
-
-.select-ergon>.select-ergon-select {
-  border-radius: 8px;
-  border: 1px solid #6F31AD;
-}
-
-.select-ergon>.select-ergon-select option[selected] {
-  color: #828282;
-}
-
-/* 03/03/2021 - ERGON - Author: Wellysson Rocha */
-
-[title-label]::after {
-  content: attr(title-label);
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 5px;
-  padding: 0 0.5%;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 24px;
-}
-
-[title-label]:hover::after {
-  display: block;
-}
-
-.status-attendance{
-  color: #089944 !important;
-}
-
-/* 10/03/2021 - ERGON - Author: Wellysson Rocha */
-.help-top{
-  width: 38px;
-  position: absolute;
-  right: 16px;
-}
-
-#fundo-navegação{
-  position: relative;
 }

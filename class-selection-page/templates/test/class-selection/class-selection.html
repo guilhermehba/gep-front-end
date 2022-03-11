@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+        <link rel="stylesheet" href="css/styles.css">
+        
+        <script src="JS/bootstrap.bundle.min.js"></script>
+    
+        <script src="JS/scripts.js"></script>
+    
+    </head>
+
+<body>
+    <div class="content">
+        <!-- migalha de pão -->
+        <div id="fundo-navegação">
+            <nav style="--bs-breadcrumb-divider: '\F27B';" class="breadcrumb" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Início</a></li>
+                    <li class="breadcrumb-item active" aria-current="page"><a>Seleção de turmas</a></li>
+                </ol>
+            </nav>
+        </div>
+
+        <p></p>
+        <!--Div's Bimestre e Filtro-->
+        <div id="bimestre-and-filter" class="row">
+        <label id="bimestre">Bimestre</label>
+        <!--Dropdown Bimestre-->
+        <div class="dropdown col-sm-10">
+            <div id="bimestre_drop_btn">
+                <button id="drop_bimestre" class="btn btn-outline dropdown-toggle" type="button" id="drop_bim" data-bs-toggle="dropdown" aria-expanded="false">
+                    1º Bimestre
+                </button>
+                <ul id="drop_list" class="dropdown-menu" aria-labelledby="drop_bim">
+                <li><a class="dropdown-item" href="#">1º Bimestre</a></li>
+                <li><a class="dropdown-item" href="#">2º Bimestre</a></li>
+                <li><a class="dropdown-item" href="#">3º Bimestre</a></li>
+                <li><a class="dropdown-item" href="#">4º Bimestre</a></li>              
+                </ul>
+            </div>
+        </div>
+        <!--Botão Filtro-->
+        <div class="col-sm-1" id="bimestre_filter_btn"  data-bs-toggle="modal" data-bs-target="#modalFilter">
+            <div id="filter_buttom" class="btn">
+            <div id="icon_fil"><span class="material-icons">filter_alt</span></div>
+            <div id="filter_text"><label data-bs-toggle="modal" data-bs-target="#modalFilter">Filtrar</label></div>
+            </div>
+        </div>
+        </div>
+        <!--Diario Titulo e Turma Titulo-->
+        <div>
+            <div id="class_title">
+            <label id="diario-turma">Diarios/Turmas</label>
+            </div>
+                <div class="col-12" id="back_class_bar">ENSINO FUNDAMENTAL ANOS INICIAIS - MATUTINO</div> 
+            </div>
+        </div>
+        <!--Card Grid Diários-->
+        <div class="row" id="myItems">
+        <!--card-->
+        <div class="col-3 mx-auto">
+            <div class="card">
+            <h5 class="card-header">
+                <div id="cont_div1" class="col-auto"><label id="ident_class">6º ANO - A</label></div>
+                <div  id="cont_div2"class="col-7">
+                    <a id="student_icon" class="material-icons" href="class-selection-page/templates/testes/grid-lst/index.html">perm_identity</a><span id="dot" class="material-icons">&bull;</span><label id="student_count">30</label>
+                </div>
+                <div id="cont_div3" class="col-sm-1">
+                    <span id="class_lock" class="material-icons" data-bs-toggle="modal" data-bs-target="#modal_confirmation">lock_open</span>
+                </div>
+            </h5>
+            <div class="card-body">
+                <div class="card-title"></div>
+                <p class="card-text"><a class="DISCIPLINA">  </a></p>
+                <div class="col-12"><hr></div>
+                <div class="col-12" id="teacher"><label id="teacher">Prof: James Bond</label></div>
+                <div class="col-12" id="progress_bar_tittle">
+                    <a id="progress_bar_tittle">AULAS DADAS X AULAS PREVISTAS</a>
+                    <div class="progress">
+                        <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="70" style="width: 38.5%"></div>
+                    </div>
+                </div>
+                </div>
+                </div>
+            </div>
+            <!--card-->
+            <!--card-->
+            <div class="col-3 mx-auto">
+                <div class="card">
+                <h5 class="card-header">
+                    <div id="cont_div1" class="col-auto"><label id="ident_class">6º ANO - B</label></div>
+                    <div  id="cont_div2"class="col-7">
+                        <a id="student_icon" class="material-icons" href="class-selection-page/templates/testes/grid-lst/index.html">perm_identity</a><span id="dot" class="material-icons">&bull;</span><label id="student_count">30</label>
+                    </div>
+                    <div id="cont_div3" class="col-sm-1">
+                        <span id="class_lock" class="material-icons" data-bs-toggle="modal" data-bs-target="#modal_confirmation">lock_open</span>
+                    </div>
+                </h5>
+                <div class="card-body">
+                    <div class="card-title"></div>
+                    <p class="card-text"><a class="disciplinas" href="../attendance-page.html">LÍNGUA PORTUGUESA, MATEMÁTICA, CIÊNCIAS, HISTÓRIA, GEOGRAFIA</a></p>
+                    <div class="col-12"><hr></div>
+                        <div class="col-12" id="teacher"><label id="teacher">Prof: Jane Cooper</label></div>
+                        <div class="col-12" id="progress_bar_tittle">
+                            <a id="progress_bar_tittle">AULAS DADAS X AULAS PREVISTAS</a>
+                            <div class="progress">
+                                <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="70" style="width: 38.5%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--card-->
+            <!--card-->
+            <div class="col-3 mx-auto">
+                <div class="card">
+                <h5 class="card-header">
+                    <div id="cont_div1" class="col-auto"><label id="ident_class">5º ANO - A</label></div>
+                    <div  id="cont_div2"class="col-7">
+                        <a id="student_icon" class="material-icons" href="class-selection-page/templates/testes/grid-lst/index.html">perm_identity</a><span id="dot" class="material-icons">&bull;</span><label id="student_count">30</label>
+                    </div>
+                    <div id="cont_div3" class="col-sm-1">
+                        <span id="class_lock" class="material-icons" data-bs-toggle="modal" data-bs-target="#modal_confirmation">lock_open</span>
+                    </div>
+                </h5>
+                <div class="card-body">
+                    <div class="card-title"></div>
+                    <p class="card-text"><a class="disciplinas" href="../attendance-page.html">LÍNGUA PORTUGUESA, MATEMÁTICA, CIÊNCIAS, HISTÓRIA, GEOGRAFIA</a></p>
+                    <div class="col-12"><hr></div>
+                        <div class="col-12" id="teacher"><label id="teacher">Prof: Willian Cooperfield</label></div>
+                        <div class="col-12" id="progress_bar_tittle">
+                            <a id="progress_bar_tittle">AULAS DADAS X AULAS PREVISTAS</a>
+                            <div class="progress">
+                                <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="70" style="width: 38.5%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--card-->
+            <!--card-->
+            <div class="col-3 mx-auto">
+                <div class="card">
+                <h5 class="card-header">
+                    <div id="cont_div1" class="col-auto"><label id="ident_class">5º ANO - B</label></div>
+                    <div  id="cont_div2"class="col-7">
+                        <a id="student_icon" class="material-icons" href="class-selection-page/templates/testes/grid-lst/index.html">perm_identity</a><span id="dot" class="material-icons">&bull;</span><label id="student_count">30</label>
+                    </div>
+                    <div id="cont_div3" class="col-sm-1">
+                        <span id="class_lock" class="material-icons" data-bs-toggle="modal" data-bs-target="#modal_confirmation">lock_open</span>
+                    </div>
+                </h5>
+                <div class="card-body">
+                    <div class="card-title"></div>
+                    <p class="card-text"><a class="disciplinas" href="../attendance-page.html">LÍNGUA PORTUGUESA, MATEMÁTICA, CIÊNCIAS, HISTÓRIA, GEOGRAFIA</a></p>
+                    <div class="col-12"><hr></div>
+                        <div class="col-12" id="teacher"><label id="teacher">Prof: Maria da Silva</label></div>
+                        <div class="col-12" id="progress_bar_tittle">
+                            <a id="progress_bar_tittle">AULAS DADAS X AULAS PREVISTAS</a>
+                            <div class="progress">
+                                <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="70" style="width: 38.5%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--card-->
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    $('#filtro').keyup(function () {
+        var yourtext = $(this).val();
+        if (yourtext.length > 0) {
+            var abc = $("section").filter(function () {
+                var str = $(this).text();
+                var re = new RegExp(yourtext, "i");
+                var result = re.test(str);
+                if (!result) {
+                    return $(this);
+                }
+            }).hide();
+        } else {
+            $("section").show();
+        }
+    });
+
+    window.onload=function(){
+    data = {
+            "PROFESSOR":[
+                        {
+                        "CDESCOLA": 21145660,
+                        "EXERC": 2018,
+                        "DSESCOLA": "ESCOLA DO JEFFINHO",
+                        "SEQUENCIAL": 1653,
+                        "CDCURSO": 6,
+                        "CDTUR": 1,
+                        "CDSERIE": 17,
+                        "CDDISC": 76,
+                        "CDTURMA": "B",
+                        "BIMESTRE": 1,
+                        "CPF": "012.311.273-76",
+                        "FATORCALCULO": 1,
+                        "CURSO": "ENSINO FUNDAMENTAL 1º/5º ANOS",
+                        "TURNO": "MATUTINO",
+                        "GRUPO": "ENSINO FUNDAMENTAL 1º/5º ANOS - MATUTINO",
+                        "SERIETURMA": "1º ANO - B",
+                        "SERIE": "1º ANO",
+                        "DISCIPLINA": "LÍNGUA PORTUGUESA,ARTE,EDUCAÇÃO FÍSICA,MATEMÁTICA,CIÊNCIAS,ENSINO RELIGIOSO",
+                        "STATUSDIARIO": 1,
+                        "DIAS_AULA": 1,
+                        "STATUS": "Em Digitação",
+                        "EXPORTADO": "0",
+                        "DATAINICIO1UNI": "19/02/2018 00:00:00",
+                        "DATAFINAL1UNI": "03/05/2018 00:00:00",
+                        "DATAINICIO2UNI": "04/05/2018 00:00:00",
+                        "DATAFINAL2UNI": "13/07/2018 00:00:00",
+                        "DATAINICIO3UNI": "31/07/2018 00:00:00",
+                        "DATAFINAL3UNI": "09/10/2018 00:00:00",
+                        "DATAINICIO4UNI": "10/10/2018 00:00:00",
+                        "DATAFINAL4UNI": "21/12/2018 00:00:00",
+                        "ABERTURA": "19/02/2018 00:00:00",
+                        "ENCERRAMENTO": "03/05/2018 00:00:00",
+                        "PROFESSOR": "CLEUDIMAR SANTOS DE MORAES              ",
+                        "FLAGIMPRESSAO": null,
+                        "EXER_DIASLETPREV": 160,
+                        "EXER_DIASLETDADOS": null,
+                        "BIM_DIASLETPREV": 40,
+                        "BIM_DIASLETDADOS": null,
+                        "DIVERSAS": "S",
+                        "DATAATUALIZADO": "17/11/2020 20:29:58",
+                        "ID_TURMA": 75,
+                        "CONTEUDOPORDISCIPLINA": "N"
+        }
+    ]
+    }
+    ;
+    
+    data.PROFESSOR.forEach(function(p){ 
+    
+      var post = '<p class="card-text"><a class="DISCIPLINA">'+p.DISCIPLINA+'</a></p>';
+    
+      document.querySelector('#dados').innerHTML += post;
+    
+    });
+    }
+    
+    </script>

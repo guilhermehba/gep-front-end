@@ -1,6 +1,6 @@
 function isPhone() {
     $(window).on('load resize', function () {
-        if ($(window).width() < 950) {
+        if ($(window).width() < 450) {
             window.location = "mobile/attendance-page-mobile.html"
         }
     });
