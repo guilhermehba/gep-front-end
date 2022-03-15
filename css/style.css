@@ -27,26 +27,32 @@
 
 @keyframes slidein {
     from {
-        margin-left: 100%;
-        width: 300%;
+        opacity: 0.1;
+        font-size: 1px;
+        padding: 0;
+        margin: 0;
     }
-
-    to {
-        margin-left: 0%;
-        width: 100%;
+    to{
+        opacity: 1;
     }
 }
 
-@keyframes identifier {
-    from {
-        margin-top: 50px;
-        margin-bottom: 100px;
+@keyframes surgir {
+    from{
+        width: 30px;
     }
+}
 
-    to {
-        margin-top: 150px !important;
-        /* ignored */
-        margin-bottom: 50px;
+@keyframes surgirUp {
+    from{
+        height: 10px;
+    }
+}
+
+@keyframes sizeUP {
+    from{
+        font-size: 1px;
+        opacity: 0;
     }
 }
 
@@ -55,30 +61,6 @@
         /* right: -255px; */
         bottom: -10%;
         opacity: 0.1;
-    }
-}
-
-@keyframes topToBottom {
-    from {
-        /* right: -255px; */
-        top: -200%;
-    }
-}
-
-@keyframes fade {
-    from {
-        /* right: -255px; */
-        opacity: 0.1;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes zoomWH {
-    from {
-        width: 0px;
     }
 }
 
@@ -112,7 +94,7 @@
 }
 
 body a {
-    color: #6F31AD !important;
+    color: #AB58B9;
     text-decoration: none;
 }
 
@@ -121,7 +103,7 @@ body a:hover {
 }
 
 .link-ergon {
-    color: #AB58B9;
+    color: #AB58B9 !important;
     font-weight: bold;
 }
 
@@ -140,6 +122,10 @@ body a:hover {
     --bs-breadcrumb-divider: '>';
     /* animation-name: identifier;
     animation-duration: 4s; */
+}
+
+.breadcrumb a{
+    color: #6F31AD;
 }
 
 .school-attendance-content {
@@ -516,10 +502,6 @@ body a:hover {
     margin: auto;
 }
 
-#liveToast {
-    transition: 0.09s;
-}
-
 /* .select-ergon{
     border-radius: 8px;
     border: 1px solid #6F31AD;
@@ -565,4 +547,75 @@ body a:hover {
 
 #fundo-navegação{
     position: relative;
+}
+
+.animation-left-right .toast{
+    animation-name: surgir;
+    animation-duration: 0.5s;
+    background-color: rgba(171, 88, 185, 0.8);
+    border-radius: 24px;
+}
+
+.animation-left-right .toast *{
+    animation-name: sizeUP;
+    animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+    animation-duration: 0.6s;
+}
+
+.nav-pills a{
+    color: #6F31AD;
+
+}
+
+.nav-pills a:focus{
+    color: #AB58B9;
+}
+
+.nav-pills a:hover{
+    color: #7D3989;
+}
+
+/* calendar */
+@media only screen and (max-width: 1518px){
+    input[type="date"]{
+        background-color: #6F31AD;
+        color: #ffffff;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        padding: 1%;
+    }    
+}
+input[type="date"]{
+    background-color: #6F31AD;
+        color: #ffffff;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        padding: 1%;
+}
+
+::-webkit-calendar-picker-indicator{
+    background-color: white;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-right: 1%;
+}
+
+/* modal de filtro de datas */
+#filterModalDateButton{
+    margin: auto;
+}
+
+#filterModalDateButton button{
+    width: 125px !important;
+}
+
+.modal-date-filter .attendance-modal-content{
+    width: 100% !important;
+}
+
+.modal-date-filter .attendance-modal-content *{
+    text-align: center;
 }

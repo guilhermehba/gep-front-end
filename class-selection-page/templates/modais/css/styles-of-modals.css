@@ -26,7 +26,7 @@
 #lbl_drop_filters{
     text-align: left;
 }
-#dropdown_prontuario{
+.btn-prontuario{
     width: 100%;
     height: 48px;
     left: calc(50% - 496px/2 - 7px);
@@ -38,7 +38,7 @@
     border-radius: 8px;
     color: #AB58B9;
 }
-#dropdown_ocorrencia{
+.btn-ocorrencia{
     width: 100%;
     height: 48px;
     left: calc(50% - 496px/2);
@@ -50,7 +50,7 @@
     border-radius: 8px;
     color: #AB58B9;
 }
-#dropdown_gravidade{
+.btn-gravidade{
     width: 100%;
     height: 48px;
     left: calc(50% - 496px/2);
@@ -62,7 +62,7 @@
     border-radius: 8px;
     color: #AB58B9;
 }
-#dropdown_evolucao{
+.btn-evolucao{
     width: 100%;
     height: 48px;
     left: calc(50% - 496px/2);
@@ -97,6 +97,7 @@
 
     border-radius: 24px;
 }
+
 
 /*===============WARNING CONTENT===================*/
 #warning_content{

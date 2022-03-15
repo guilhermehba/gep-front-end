@@ -2,187 +2,220 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 @import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css');
-* {
-font-family: Poppins;
-font-style: normal;
-font-size: 15px;
-line-height: 24px;
-text-decoration: none;
-}
 
-body a {
+* {
+  font-family: Poppins;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 24px;
   text-decoration: none;
 }
 
-a{
+a {
   color: #AB58B9;
 }
-.row a{
+
+.row a {
   color: #AB58B9 !important;
 }
-.row a:hover{
+
+.row a:hover {
   color: #6F31AD !important;
 }
-a:hover{
+
+a:hover {
   color: #6F31AD;
 }
-.col-3{
-  width: 326px;
 
-}
 
-label{
+label {
   cursor: pointer;
 }
-.card-header{
+
+.card-header {
   border-radius: 16px;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
 }
-.card {
 
-float: none;
-text-align: center;
-background: #FEFEFE;
-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
-border-radius: 16px;
-margin: 15px 15px;
-/*    word-wrap:break-word;   */
+.card-erg {
+  float: none;
+  background: #FEFEFE;
+  border-radius: 16px;
 }
+
+.border-radios-erg {
+  border-radius: 16px 16px 0 0 !important;
+  position: relative;
+  top: 0;
+}
+
+.card-erg .cod-serie {
+  color: #808080;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 0;
+  font-size: 8px !important;
+}
+
 
 /* Style the buttons */
 img {
-object-fit: cover;
-width: 80px;
-height: 80px;
-border-radius: 50% solid;
-z-index: 0;
+  object-fit: cover;
+  width: 80px;
+  height: 80px;
+  border-radius: 50% solid;
+  z-index: 0;
 }
-#file{
-display: none;
+
+#file {
+  display: none;
 }
 
 /*******************card css***************************/
 /*box config*/
 
 
-#class_cod{
+#class_cod {
 
-font-family: Poppins;
-font-style: normal;
-font-weight: normal;
-font-size: 8px;
-text-align: justify;
-color: #4F4F4F;
-
-}
-/*student icon, dot and count number*/
-#student_icon{
-color: #AB58B9;
-font-size: 20px;
-cursor: pointer;
-
-font-family: Material Icons;
-cursor: pointer;
-border-radius: 50px;
-text-decoration: none;
-}
-#dot{
-color: #AB58B9;
-font-size: 20px;
-
-margin: 2px 2px 2px 2px;
-
-font-family: Material Icons;
-cursor: pointer;
-border-radius: 50px;
-text-decoration: none;
-}
-#student_count{
-
-font-size: 20px;
-color: #AB58B9;
-
-font-family: Poppins;
-cursor: pointer;
-border-radius: 50px;
-text-decoration: none;
-
-}
-  /*student icon, dot and count number*/
-#class_lock{
-      font-family: Material Icons;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 24px;
-      line-height: 24px;
-      cursor: pointer;
-      
-      color: #AB58B9;
-}
-#SERIETURMA{
-  height: 25px;
-  float: left;
- 
   font-family: Poppins;
-   font-style: normal;
-   font-weight: 600;
-   font-size: 16px;
- 
-   /* identical to box height, or 100% */
-   color: #AB58B9;
-   
- }
-#cont_div2{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 8px;
+  text-align: justify;
+  color: #4F4F4F;
+
+}
+
+/*student icon, dot and count number*/
+#student_icon {
+  color: #AB58B9;
+  cursor: pointer;
+  border-radius: 50px;
+  position: absolute;
+  top: 11px;
+  right: 66px;
+  font-size: 20px;
+}
+
+#dot {
+  color: #AB58B9;
+  width: 4px;
+  position: absolute;
+  top: 6px;
+  right: 60px;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+#student_count {
+  position: absolute;
+  top: 6px;
+  right: 36px;
+  color: #AB58B9;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 50px;
+  text-decoration: none;
+
+}
+
+/*student icon, dot and count number*/
+#class_lock {
+  cursor: pointer;
+  color: #AB58B9;
+  position: absolute;
+  top: 6px;
+  right: 0;
+  font-size: 28px;
+}
+
+#SERIETURMA {
   height: 25px;
-  text-align: right;
   float: left;
-  padding-right: 5px;
- 
- }
- #cont_div3{
-  height: 25px;
-  float: right;
- 
- }
- #teacher{
+
   font-family: Poppins;
   font-style: normal;
   font-weight: 600;
-  font-size: 10px;
+  font-size: 16px;
 
-  text-align: left;
+  /* identical to box height, or 100% */
+  color: #AB58B9;
+
+}
+
+#cont_div2 {
+  position: relative;
+  bottom: 0px;
+}
+
+#cont_div3 {
+  position: relative;
+  bottom: 0;
+}
+
+#teacher {
+  font-weight: 700;
+  font-size: 8px;
+}
+
+#progress_bar_tittle {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 8px;
+  /* identical to box height, or 100% */
+  align-items: left;
 
   color: #4F4F4F;
 }
-#progress_bar_tittle{
-font-family: Poppins;
-font-style: normal;
-font-weight: 600;
-font-size: 8px;
-/* identical to box height, or 100% */
-align-items: left;
 
-color: #4F4F4F;
+.progress-bar-ergon {
+  text-align: left;
+  font-size: 12px;
+  border-radius: 20px;
+  padding-left: 2%;
 }
-.progress-bar{
-width: 50%;
+
+#max_aulas {
+  font-size: 12px;
+  margin-left: 55px;
 }
-.disciplinas{
+
+.progress-ergon {
+  background-color: #ffffff;
+  color: #000000;
+  text-align: right;
+  border: 1px solid #828282;
+  border-radius: 20px;
+}
+
+.bg-missing{
+  background-color: #ffffff;
+  border-radius: 0px;
+  color: #000000;
+  text-align: right;
+  padding-right: 2%;
+}
+
+.disciplinas {
   text-align: center;
   font-size: 15px;
   text-decoration: none;
   color: #AB58B9;
-  }
-  .disciplinas:hover{
-      color: #6F31AD;
-  }
+}
+
+.disciplinas:hover {
+  color: #6F31AD;
+}
+
 /*******************card css***************************/
 
 
 /*******************header css***************************/
 /*=========nav=========*/
 
-#list{
+#list {
   color: #AB58B9;
   padding-top: 8px;
   font-size: 16px;
@@ -190,22 +223,23 @@ width: 50%;
   padding-left: 15px;
   cursor: pointer;
 }
+
 /*=========nav=========*/
 /*=========bimestre=========*/
-#bimestre-and-filter{
+#bimestre-and-filter {
   margin: 10px 0 0 10px;
 }
 
 
-#bimestre{
+#bimestre {
   font-size: 18px;
   line-height: 24px;
-  
+
 }
 
 
 
-#drop_bimestre{
+#drop_bimestre {
   background: #FFFDFD;
   border: 1px solid #6F31AD;
   box-sizing: border-box;
@@ -213,54 +247,60 @@ width: 50%;
   width: 235px;
   height: 48px;
   color: #AB58B9;
-  
-  
+  margin-left: 20px;
+
 
 }
-#drop_bimestre:hover{
-background: #FFFDFD;
-border: 1px solid #6F31AD;
-box-sizing: border-box;
-border-radius: 8px;
-width: 235px;
-color: #6F31AD;
+
+#drop_bimestre:hover {
+  background: #FFFDFD;
+  border: 1px solid #6F31AD;
+  box-sizing: border-box;
+  border-radius: 8px;
+  width: 235px;
+  color: #6F31AD;
 
 }
-#drop_list{
-width: 25%;
+
+#drop_list {
+  width: 25%;
 
 }
-#drop_list:hover{
+
+#drop_list:hover {
   background-color: #7D3989;
 }
+
 /**/
-#bimestre_filter_btn{
+#bimestre_filter_btn {
   float: right;
   cursor: pointer;
 }
 
 /**/
-#filter_buttom{
-      border-radius: 24px;
-      background-color: #AB58B9;
-      font-family: Poppins, Material icons;
-      font-style: normal;
-      font-weight: 600;
-      font-size: 16px;
-      width: 126px;
-      height: 48px;
-      text-align: center;
-      
-      cursor: pointer;
-      
+#filter_buttom {
+  border-radius: 24px;
+  background-color: #AB58B9;
+  font-family: Poppins, Material icons;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  width: 126px;
+  height: 48px;
+  text-align: center;
+  margin-right: -20px;
+  cursor: pointer;
+
 }
-#icon_fil{
+
+#icon_fil {
   padding-top: 5px;
   width: 30%;
   float: left;
   cursor: pointer;
 }
-#filter_text{
+
+#filter_text {
   text-decoration: none;
   color: black;
   width: 70%;
@@ -269,54 +309,47 @@ width: 25%;
   cursor: pointer;
 }
 
-#diario-turma{
-  font-size: 18px;
-  line-height: 24px;
-  width: 100%;
-  margin:  0 0 10px 25px;
-
+#diario-turma {
+  font-weight: 400;
+  font-size: 16px;
 }
 
-#back_class_bar{
-  background: #D6E3EA;
-  border-radius: 2px 2px 0px 0px;
-  height: 40px;
-  left: 86px;
-  padding-top: 7px;
-  padding-left: 7px;
-  margin:  10px 0 10px 25px;
-  font-family: Poppins;
-  font-style: normal;
+#back_class_bar {
   font-weight: 600;
   font-size: 14px;
   color: #4F4F4F;
   background: #D6E3EA;
+  border-radius: 2px 2px 0px 0px;
 }
 
 
 /*=========bimestre=========*/
 
-#ModalLabel{
-  text-align: center; 
-  border: none; 
+#ModalLabel {
+  text-align: center;
+  border: none;
   margin: 0 auto;
   font-weight: 600;
 }
-.modal-content{
+
+.modal-content {
   border-radius: 25px !important;
   font-family: Poppins;
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
 }
-#center_align_div{
+
+#center_align_div {
   text-align: center;
 }
-#lbl_drop_filters{
+
+#lbl_drop_filters {
   margin-left: 20%;
 
 }
-#dropdown_prontuario{
+
+#dropdown_prontuario {
   width: 100%;
   height: 48px;
   left: calc(50% - 496px/2 - 7px);
@@ -328,43 +361,47 @@ width: 25%;
   border-radius: 8px;
   color: #AB58B9;
 }
-#dropdown_ocorrencia{
+
+#dropdown_ocorrencia {
   width: 100%;
   height: 48px;
   left: calc(50% - 496px/2);
   top: 408px;
-  
+
   background: #FFFDFD;
   border: 1px solid #6F31AD;
   box-sizing: border-box;
   border-radius: 8px;
   color: #AB58B9;
 }
-#dropdown_gravidade{
+
+#dropdown_gravidade {
   width: 100%;
   height: 48px;
   left: calc(50% - 496px/2);
   top: 408px;
-  
+
   background: #FFFDFD;
   border: 1px solid #6F31AD;
   box-sizing: border-box;
   border-radius: 8px;
   color: #AB58B9;
 }
-#dropdown_evolucao{
+
+#dropdown_evolucao {
   width: 100%;
   height: 48px;
   left: calc(50% - 496px/2);
   top: 408px;
-  
+
   background: #FFFDFD;
   border: 1px solid #6F31AD;
   box-sizing: border-box;
   border-radius: 8px;
   color: #AB58B9;
 }
-#detalhe_ocorrencia{
+
+#detalhe_ocorrencia {
   width: 100%;
   height: 135px;
   left: calc(50% - 496px/2);
@@ -375,21 +412,24 @@ width: 25%;
   box-sizing: border-box;
   border-radius: 8px;
 }
-.dropdown-menu{
+
+.dropdown-menu {
   width: auto;
   border: darkgrey 0.5px solid;
 }
-#save_prontuario{
+
+#save_prontuario {
   background: #AB58B9;
   border-radius: 24px;
 }
-#cancel_changes{
+
+#cancel_changes {
 
   border-radius: 24px;
 }
 
 /*===============WARNING CONTENT===================*/
-#warning_content{
+#warning_content {
   width: 454px;
   height: 152px;
   left: calc(50% - 454px/2);
@@ -406,47 +446,8 @@ width: 25%;
 
   color: #000000;
 }
-#manual_btn{
-      background: #AB58B9;
-      border-radius: 24px;
-      border: none;
-      width: 40%;
-      height: 48px;
 
-      left: 0%;
-      right: 0%;
-      top: 0%;
-      bottom: 0%;
-
-      color: #ffffff;
-}
-#close_warning{
-      border-radius: 24px;
-      border: 0.5px solid darkgrey;
-      width: 40%;
-      color: #AB58B9;
-}
-
-/*============CONFIRMATION MODAL=================*/
-
-#confirmation_content{
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-
-  align-items: center;
-  text-align: center;
-
-  color: #000000;
-}
-#lock_icon{
-  top: 100%;
-  font-size: 24px;
-}
-
-
-#manual_btn{
+#manual_btn {
   background: #AB58B9;
   border-radius: 24px;
   border: none;
@@ -460,70 +461,120 @@ width: 25%;
 
   color: #ffffff;
 }
-#close_warning{
-      border-radius: 24px;
-      border: 0.5px solid darkgrey;
-      width: 40%;
-      color: #AB58B9;
-}
-/*========filter modal=========*/
-.form-check-input:checked{
-background-color: #6F31AD;
-border: #6F31AD solid;
-border-inline-color: #6F31AD;
+
+#close_warning {
+  border-radius: 24px;
+  border: 0.5px solid darkgrey;
+  width: 40%;
+  color: #AB58B9;
 }
 
-#modalFilter{
+/*============CONFIRMATION MODAL=================*/
+
+#confirmation_content {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+}
+
+#lock_icon {
+  top: 100%;
+  font-size: 24px;
+}
+
+
+#manual_btn {
+  background: #AB58B9;
+  border-radius: 24px;
+  border: none;
+  width: 40%;
+  height: 48px;
+
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+
+  color: #ffffff;
+}
+
+#close_warning {
+  border-radius: 24px;
+  border: 0.5px solid darkgrey;
+  width: 40%;
+  color: #AB58B9;
+}
+
+/*========filter modal=========*/
+.form-check-input:checked {
+  background-color: #6F31AD;
+  border: #6F31AD solid;
+  border-inline-color: #6F31AD;
+}
+
+#modalFilter {
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
   border-radius: 24px;
 }
-#dropdown_professor_filtro{
+
+#dropdown_professor_filtro {
   background: #FFFDFD;
   border: 1px solid #6F31AD;
   box-sizing: border-box;
   border-radius: 8px;
   width: 276px;
-  
-}
-#dropdown_bimestre_filtro{
-  background: #FFFDFD;
-  border: 1px solid #6F31AD;
-  box-sizing: border-box;
-  border-radius: 8px;
-  width: 276px;
-  
-}
-#dropdown_serie_filtro{
-  background: #FFFDFD;
-  border: 1px solid #6F31AD;
-  box-sizing: border-box;
-  border-radius: 8px;
-  width: 276px;
-  
-}
-#dropdown_turma_filtro{
-  background: #FFFDFD;
-  border: 1px solid #6F31AD;
-  box-sizing: border-box;
-  border-radius: 8px;
-  width: 276px;
-  
+
 }
 
-#apply_filter{
+#dropdown_bimestre_filtro {
+  background: #FFFDFD;
+  border: 1px solid #6F31AD;
+  box-sizing: border-box;
+  border-radius: 8px;
+  width: 276px;
+
+}
+
+#dropdown_serie_filtro {
+  background: #FFFDFD;
+  border: 1px solid #6F31AD;
+  box-sizing: border-box;
+  border-radius: 8px;
+  width: 276px;
+
+}
+
+#dropdown_turma_filtro {
+  background: #FFFDFD;
+  border: 1px solid #6F31AD;
+  box-sizing: border-box;
+  border-radius: 8px;
+  width: 276px;
+
+}
+
+#apply_filter {
   background: #AB58B9;
   border-radius: 24px;
   width: 35%;
 }
-#close_filter{
+
+#close_filter {
   background: #FFFFFF;
   border: 1px solid #AB58B9;
   box-sizing: border-box;
   border-radius: 24px;
   width: 35%;
 }
+
 /*========filter modal=========*/
-#myFilter{
+#myFilter {
   display: block;
 }
 
@@ -560,16 +611,14 @@ border-inline-color: #6F31AD;
   display: flex;
   flex-wrap: wrap;
   padding: .25rem 1rem;
-  margin-bottom: 0;
+
   list-style: none;
   background: #F3F5F7;
   border-radius: .25rem;
   --bs-breadcrumb-divider: '>';
   /* animation-name: identifier;
   animation-duration: 4s; */
-  
 
-  
 }
 
 /* btn ergon */
@@ -598,7 +647,7 @@ border-inline-color: #6F31AD;
 
 .btn-shadow {
   box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.4),
-      0 0.03rem 0.1rem rgba(42, 11, 54, 0.5);
+    0 0.03rem 0.1rem rgba(42, 11, 54, 0.5);
 }
 
 .options-buttom {
@@ -660,8 +709,8 @@ border-inline-color: #6F31AD;
 /* help top resolução 767px */
 @media only screen and (max-width: 1229px) {
   .help-top svg {
-      float: right;
-      width: 30px;
+    float: right;
+    width: 30px;
   }
 }
 
@@ -706,17 +755,28 @@ border-inline-color: #6F31AD;
   display: block;
 }
 
-.status-attendance{
+.status-attendance {
   color: #089944 !important;
 }
 
-/* 10/03/2021 - ERGON - Author: Wellysson Rocha */
-.help-top{
+/* 10/03/2021 - ERGON - Author: Wellysson N Rocha */
+.help-top {
   width: 38px;
   position: absolute;
   right: 16px;
 }
 
-#fundo-navegação{
+#fundo-navegação {
   position: relative;
+}
+
+/* 15/03/2021 - ERGON -Author: Wellysson N Rocha */
+.aulas-porcentagem{
+  width: 100%;
+  font-weight: 600;
+  font-size: 8px !important;
+}
+
+.card-footer-ergon{
+  border-radius: 0 0 16px 16px !important;
 }

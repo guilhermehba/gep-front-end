@@ -10,14 +10,19 @@ line-height: 24px;
 body a{
   text-decoration: none;
 }
+.corpo{
+  margin-top: 60px;
+}
 a{
   color: #AB58B9 ;
 }
 a:hover{
   color: #6F31AD ;
 }
+
 .col-3{
-  width: 356px;
+  width: 100%;
+  margin: 5px auto;
 }
 
 .card-header{
@@ -33,6 +38,7 @@ background: #FEFEFE;
 box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
 border-radius: 16px;
 /*    word-wrap:break-word;   */
+
 }
 
 /* Style the buttons */
@@ -125,14 +131,15 @@ text-decoration: none;
 #cont_div2{
   height: 25px;
   text-align: right;
-  padding-top: 4px;
+
   float: left;
+  margin-right: 20px;
  
  }
  #cont_div3{
   height: 25px;
   float: right;
- 
+
  }
 *{
 text-decoration: none;
@@ -160,6 +167,13 @@ color: #4F4F4F;
 }
 .progress-bar{
 width: 50%;
+text-align: left;
+font-weight: 500;
+}
+#max_aulas{
+  font-size: 16px; 
+  margin-top: -3px; 
+  margin-left: 105px;
 }
 .disciplinas{
   text-align: center;

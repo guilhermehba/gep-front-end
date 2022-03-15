@@ -19,14 +19,40 @@ function somaAula() {
     }
 }
 
-function notificationGEP(msg, position) {
-    var html = '<div class="position-fixed '+position+'-0 end-0 p-3" style="z-index: 9999"> <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true"> <div class="toast-header"> <img src="http://teste.ergonsistemas.com.br/gepweb_d.dll/cache/gepweb_e_exe/n0/favicon.ico" class="rounded me-2" alt="logo-ergon"> <strong class="me-auto">GEP</strong> <small>'+ 'Agora' +'</small> <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button> </div> <div class="toast-body"> '+msg+' </div> </div> </div>';
+function notificationGEP(msg, position, tagName) {
+    var html = '<div class="position-fixed '+position+'-0 end-0 p-3" style="z-index: 9999"> <div id="'+tagName+'" class="toast" role="alert" aria-live="assertive" aria-atomic="true"> <div class="toast-header"> <img src="http://teste.ergonsistemas.com.br/gepweb_d.dll/cache/gepweb_e_exe/n0/favicon.ico" class="rounded me-2" alt="logo-ergon"> <strong class="me-auto">GEP</strong> <small>'+ 'Agora' +'</small> <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button> </div> <div class="toast-body"> '+msg+' </div> </div> </div>';
 
     document.querySelector('.attendance-alert-head').innerHTML += html;
-    var toastLiveExample = document.getElementById('liveToast')
+    var toastLiveExample = document.getElementById(tagName)
     var toast = new bootstrap.Toast(toastLiveExample)
         
     toast.show();
+    return toast;
+}
+
+function alertGEP(msg, position, tagName) {
+
+    var html2 = `
+    
+    <div class="toast-container position-absolute ${position}-0 end-0 p-3 animation-left-right" style="z-index: 9999">
+    <div id="${tagName}" class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
+    
+    <div class="d-flex">
+        <div class="toast-body text-white">
+            ${msg}
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+    </div>
+    </div>
+    `;
+
+    document.querySelector('.attendance-alert-head').innerHTML += html2;
+    var toastLiveExample = document.getElementById(tagName)
+    var toast = new bootstrap.Toast(toastLiveExample)
+        
+    toast.show();
+    return toast;
 }
 
 function subtrairAula() {

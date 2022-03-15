@@ -8,12 +8,11 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
         <link rel="stylesheet" href="css/bootstrap.min.css">
-    
-        <link rel="stylesheet" href="css/styles.css">
         
         <script src="JS/bootstrap.bundle.min.js"></script>
     
         <script src="JS/scripts.js"></script>
+        <link rel="stylesheet" href="css/styles.css">
     
     </head>
 
@@ -64,115 +63,40 @@
             </div>
         </div>
         <!--Card Grid Diários-->
-        <div class="row" id="myItems">
-        <!--card-->
-        <div class="col-3 mx-auto">
-            <div class="card">
-            <h5 class="card-header">
-                <div id="cont_div1" class="col-auto"><label id="ident_class">6º ANO - A</label></div>
-                <div  id="cont_div2"class="col-7">
-                    <a id="student_icon" class="material-icons" href="class-selection-page/templates/testes/grid-lst/index.html">perm_identity</a><span id="dot" class="material-icons">&bull;</span><label id="student_count">30</label>
-                </div>
-                <div id="cont_div3" class="col-sm-1">
-                    <span id="class_lock" class="material-icons" data-bs-toggle="modal" data-bs-target="#modal_confirmation">lock_open</span>
-                </div>
-            </h5>
-            <div class="card-body">
-                <div class="card-title"></div>
-                <p class="card-text"><a class="disciplinas" href="../attendance-page.html">LÍNGUA PORTUGUESA, MATEMÁTICA, CIÊNCIAS, HISTÓRIA, GEOGRAFIA</a></p>
-                <div class="col-12"><hr></div>
-                <div class="col-12" id="teacher"><label id="teacher">Prof: James Bond</label></div>
-                <div class="col-12" id="progress_bar_tittle">
-                    <a id="progress_bar_tittle">AULAS DADAS X AULAS PREVISTAS</a>
-                    <div class="progress">
-                        <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="70" style="width: 38.5%"></div>
-                    </div>
-                </div>
-                </div>
-                </div>
-            </div>
-            <!--card-->
-            <!--card-->
-            <div class="col-3 mx-auto">
-                <div class="card">
-                <h5 class="card-header">
-                    <div id="cont_div1" class="col-auto"><label id="ident_class">6º ANO - B</label></div>
-                    <div  id="cont_div2"class="col-7">
-                        <a id="student_icon" class="material-icons" href="class-selection-page/templates/testes/grid-lst/index.html">perm_identity</a><span id="dot" class="material-icons">&bull;</span><label id="student_count">30</label>
-                    </div>
-                    <div id="cont_div3" class="col-sm-1">
-                        <span id="class_lock" class="material-icons" data-bs-toggle="modal" data-bs-target="#modal_confirmation">lock_open</span>
-                    </div>
-                </h5>
-                <div class="card-body">
-                    <div class="card-title"></div>
-                    <p class="card-text"><a class="disciplinas" href="../attendance-page.html">LÍNGUA PORTUGUESA, MATEMÁTICA, CIÊNCIAS, HISTÓRIA, GEOGRAFIA</a></p>
-                    <div class="col-12"><hr></div>
-                        <div class="col-12" id="teacher"><label id="teacher">Prof: Jane Cooper</label></div>
-                        <div class="col-12" id="progress_bar_tittle">
-                            <a id="progress_bar_tittle">AULAS DADAS X AULAS PREVISTAS</a>
-                            <div class="progress">
-                                <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="70" style="width: 38.5%"></div>
+        <div class="diario">
+            <div class="row">
+            
+                <script type="text/template" id="diarioTemplate">
+                
+                    <!-- Template para os diarios -->            
+                    <div class="col-3 mx-auto">
+                        <div class="card">
+                            <h5 class="card-header">
+                            <div id="SERIETURMA" class="col-auto SERIETURMA"></div>
+                            <div  id="cont_div2"class="col-7">
+                                <a id="student_icon" class="material-icons" href="class-selection-page/templates/testes/grid-lst/index.html">perm_identity</a><span id="dot" class="material-icons">&bull;</span><label class="CDSERIE" id="student_count">30</label>
+                            </div>
+                            <div id="cont_div3" class="col-sm-1">
+                                <span id="class_lock" class="material-icons" data-bs-toggle="modal" data-bs-target="#modal_confirmation">lock_open</span>
+                            </div>
+                            </h5>
+                            <div class="card-body">
+                            <div class="card-title"></div>
+                                <div class="card-text"><a class="DISCIPLINA" href="attendance-page.html"></a></div>
+                                <div class="col-12"><hr></div>
+                                <div class="col-12" id="teacher"><label class="PROFESSOR" id="teacher"></label></div>
+                                <div class="col-12" id="progress_bar_tittle">
+                                    <a id="progress_bar_tittle">AULAS DADAS X AULAS PREVISTAS</a>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="70" style="width: 38.5%">55</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+        
+                </script>
             </div>
-            <!--card-->
-            <!--card-->
-            <div class="col-3 mx-auto">
-                <div class="card">
-                <h5 class="card-header">
-                    <div id="cont_div1" class="col-auto"><label id="ident_class">5º ANO - A</label></div>
-                    <div  id="cont_div2"class="col-7">
-                        <a id="student_icon" class="material-icons" href="class-selection-page/templates/testes/grid-lst/index.html">perm_identity</a><span id="dot" class="material-icons">&bull;</span><label id="student_count">30</label>
-                    </div>
-                    <div id="cont_div3" class="col-sm-1">
-                        <span id="class_lock" class="material-icons" data-bs-toggle="modal" data-bs-target="#modal_confirmation">lock_open</span>
-                    </div>
-                </h5>
-                <div class="card-body">
-                    <div class="card-title"></div>
-                    <p class="card-text"><a class="disciplinas" href="../attendance-page.html">LÍNGUA PORTUGUESA, MATEMÁTICA, CIÊNCIAS, HISTÓRIA, GEOGRAFIA</a></p>
-                    <div class="col-12"><hr></div>
-                        <div class="col-12" id="teacher"><label id="teacher">Prof: Willian Cooperfield</label></div>
-                        <div class="col-12" id="progress_bar_tittle">
-                            <a id="progress_bar_tittle">AULAS DADAS X AULAS PREVISTAS</a>
-                            <div class="progress">
-                                <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="70" style="width: 38.5%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--card-->
-            <!--card-->
-            <div class="col-3 mx-auto">
-                <div class="card">
-                <h5 class="card-header">
-                    <div id="cont_div1" class="col-auto"><label id="ident_class">5º ANO - B</label></div>
-                    <div  id="cont_div2"class="col-7">
-                        <a id="student_icon" class="material-icons" href="class-selection-page/templates/testes/grid-lst/index.html">perm_identity</a><span id="dot" class="material-icons">&bull;</span><label id="student_count">30</label>
-                    </div>
-                    <div id="cont_div3" class="col-sm-1">
-                        <span id="class_lock" class="material-icons" data-bs-toggle="modal" data-bs-target="#modal_confirmation">lock_open</span>
-                    </div>
-                </h5>
-                <div class="card-body">
-                    <div class="card-title"></div>
-                    <p class="card-text"><a class="disciplinas" href="../attendance-page.html">LÍNGUA PORTUGUESA, MATEMÁTICA, CIÊNCIAS, HISTÓRIA, GEOGRAFIA</a></p>
-                    <div class="col-12"><hr></div>
-                        <div class="col-12" id="teacher"><label id="teacher">Prof: Maria da Silva</label></div>
-                        <div class="col-12" id="progress_bar_tittle">
-                            <a id="progress_bar_tittle">AULAS DADAS X AULAS PREVISTAS</a>
-                            <div class="progress">
-                                <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="70" style="width: 38.5%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--card-->
         </div>
     </div>
 </body>

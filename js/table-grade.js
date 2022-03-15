@@ -11,31 +11,33 @@ var novoConteudo;
 const xhttp = new XMLHttpRequest();
 
 // Define a callback function
-xhttp.onload = async function () {
-    alunos = await JSON.parse(this.responseText);
-    aluno = alunos['Alunos'];
+xhttp.onload = async function tabela () {
+    dados = await JSON.parse(this.responseText);
+    data = dados['Alunos'];
+    console.log(data);
     if (this.readyState == 4 && this.status == 200) {
-        for (const a in aluno) {
-            document.querySelector('.table-array').innerHTML += `
-            <tr>
-                <td class="fixed-side">${aluno[a].id}</td>
-                <td class="fixed-side">${aluno[a].nome}</td>
-                <td class="fixed-side">${aluno[a].matricula}</td>
-            </tr>
-            `;
+        orderByOrder();
+    }
+}
 
-            document.querySelector('.table-array-2').innerHTML += `
-            <tr>
-                <td style="text-align: center;">${aluno[a].a}</td>
-                <td style="text-align: center;">${aluno[a].b}</td>
-                <td style="text-align: center;">${aluno[a].c}</td>
-                <td style="text-align: center;">${aluno[a].d}</td>
-                <td style="text-align: center;">${aluno[a].media}</td>
-                <td style="text-align: center;">${aluno[a].historico}</td>
-                <td style="text-align: center;">${aluno[a].ft}</td>
-            </tr>
-            `;
-        }
+function headerTable(data) {
+    document.querySelector('.table-array').innerHTML = ``;
+    for (const a in data) {
+        document.querySelector('.table-array').innerHTML += `
+        <tr>
+            <td class="fixed-side">${data[a].id}</td>
+            <td class="fixed-side">${data[a].nome}</td>
+            <td class="fixed-side">${data[a].matricula}</td>
+            <td class="fixed-side">${data[a].legenda}</td>
+            <td style="text-align: center;">${data[a].notas.a}</td>
+            <td style="text-align: center;">${data[a].notas.b}</td>
+            <td style="text-align: center;">${data[a].notas.c}</td>
+            <td style="text-align: center;">${data[a].notas.d}</td>
+            <td style="text-align: center;">${data[a].notas.media}</td>
+            <td style="text-align: center;">${data[a].notas.historico}</td>
+            <td style="text-align: center;">${data[a].notas.ft}</td>
+        </tr>
+        `;
     }
 }
 
@@ -43,49 +45,55 @@ xhttp.onload = async function () {
 xhttp.open("GET", "./js/json/alunos.json");
 xhttp.send();
 
-$(function () {
-    $("td").dblclick(function () {
-        conteudoOriginal = $(this).text();
+// ordenação
 
-        $(this).addClass("celulaEmEdicao");
-        $(this).html("<input type='text' value='" + conteudoOriginal + "' />");
-        $(this).children().first().focus();
+var ordenado;
+var ctrue = true;
+var ordenadoAux;
+var toast;
 
-        $(this).children().first().keypress(function (e) {
-            if (e.which == 13) {
-                novoConteudo = $(this).val();
-                $(this).parent().text(novoConteudo);
-                $(this).parent().removeClass("celulaEmEdicao");
-                salvar();
-            }
+function orderByName() {
+    if (ordenado != "name") {
+        data.sort(function (obj1, obj2) {
+            return obj1.nome < obj2.nome ? -1 :
+                (obj1.nome > obj2.nome ? 1 : 0);
         });
-
-        $(this).children().first().blur(function () {
-            $(this).parent().text(conteudoOriginal);
-            $(this).parent().removeClass("celulaEmEdicao");
-        });
-    });
-});
-
-function salvar() {
-    for (const key in personas) {
-        if (personas[key].nome == conteudoOriginal) {
-            personas[key].nome = novoConteudo;
-        }
-        else {
-            return false;
-        }
+        headerTable(data);
+        ordenado = "name";
+        if(toast){ toast.hide(); }
+        toast = alertGEP('Ordenado por nome!', 'bottom', 'inamen');
+        
+    } else{
+        orderByOrder();
     }
 }
 
-function mostrarConteudoOriginal() {
-    return conteudoOriginal;
+function orderByOrder(){
+    if (ordenado != "order") {
+        data.sort(function (obj1, obj2) {
+            return obj1.id < obj2.id ? -1 :
+                (obj1.id > obj2.id ? 1 : 0);
+        });
+        headerTable(data);
+        ordenado = "order";
+        if(toast) { toast.hide(); toast = alertGEP('Ordenado por ordem numérica!', 'bottom', 'ordemNumerica'); }
+    }
 }
 
-function mostrarConteudoNovo(params) {
-    return novoConteudo;
-}
-
-function listarAlunos() {
-    return alunos;
+function clickTrue() {
+    if (ctrue) {
+        $(".i"+ordenado).css("color", "#AB58B9");
+        $(".i"+ordenado).css("textShadow", "0.1em 0.1em 0.2em #da00ff");
+        $(".i"+ordenadoAux).css("color", "#212529");
+        $(".i"+ordenadoAux).css("textShadow", "none");
+        ctrue = false;
+        ordenadoAux = ordenado;
+    }else{
+        $(".i"+ordenado).css("color", "#AB58B9");
+        $(".i"+ordenado).css("textShadow", "0.1em 0.1em 0.2em #da00ff");
+        $(".i"+ordenadoAux).css("color", "#212529");
+        $(".i"+ordenadoAux).css("textShadow", "none");
+        ctrue = true;
+        ordenadoAux = ordenado;
+    }
 }

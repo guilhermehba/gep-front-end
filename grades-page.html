@@ -37,9 +37,16 @@
             <nav style="--bs-breadcrumb-divider: '\F27B';" class="breadcrumb" aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html">Início</a></li>
-                    <li class="breadcrumb-item"><a href="class-selection.html">Seleção de turmas</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Registro de chamada</li>
+                    <li class="breadcrumb-item active" aria-current="page">Seleção de turmas</li>
                 </ol>
+                <div class="help-top">
+                    <a href="#" class="link-ergon" onclick="notificationGEP('Tela de frêquencia!', 'bottom')"><svg
+                            xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            class="bi bi-question-circle-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247zm2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z" />
+                        </svg></a>
+                </div>
             </nav>
         </div>
 
@@ -54,11 +61,6 @@
                             LÍNGUA PORTUGUESA
                         </div>
                     </div>
-                    <div class="help-top col-1">
-                        <a href="#" class="link-ergon" onclick="notificationGEP('Tela de frêquencia!', 'bottom')"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-question-circle-fill" viewBox="0 0 16 16">
-                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247zm2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z"/>
-                        </svg></a>
-                    </div>
                 </div>
 
                 <div class="record-type col-12">
@@ -68,6 +70,15 @@
                         <div class="col-auto select-ergon">
                             <select class="form-select select-ergon-select" aria-label="Default select example">
                                 <option selected>1º Bimestre</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+
+                        <div class="col-auto select-ergon">
+                            <select class="form-select select-ergon-select" aria-label="Default select example">
+                                <option selected>Língua Portuguesa</option>
                                 <option value="1">One</option>
                                 <option value="2">Two</option>
                                 <option value="3">Three</option>
@@ -228,46 +239,41 @@
                     </div>
 
                     <!-- Tabela divida em uma linha -->
+                    <style>
+                        .tabela-content {
+                            position: relative;
+                        }
+
+                        thead>tr>th {
+                            position: sticky;
+                            top: -1px;
+                        }
+                    </style>
                     <div class="row tabela-content">
                         <!-- Tabela de frequência -->
-                        <div class="table-responsive table-ergon col-5" id="table-scroll">
-                            <div class="table-wrap">
-                                <table style="width: 100%;" id="example" class="table table-hover main-table"
-                                    role="grid" aria-describedby="example_info">
+                        <div class="table-responsive table-ergon col-12" id="table-scroll" style="height: 80vh;">
+                            <div class="">
+                                <table id="example" class="table table-hover main-table table" role="grid"
+                                    aria-describedby="example_info">
                                     <thead>
-                                        <tr role="row" style="text-align: center;">
-                                            <th class="fixed-side col-1">#</th>
-                                            <th class="fixed-side col-7">Aluno</th>
-                                            <th class="fixed-side col-4">Matricula</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="table-array">
-                                        
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                        <!--/ Fim da tabela de frequência -->
-                        <!-- Tabela de frequência -->
-                        <div class="table-responsive table-ergon col-7" id="table-scroll">
-                            <div class="table-wrap">
-                                <table style="width: 100%;" id="example" class="table table-hover main-table"
-                                    role="grid" aria-describedby="example_info">
-                                    <thead>
-                                        <tr role="row" style="text-align: center;">
-                                            <th>
+                                        <tr role="row">
+                                            <th># <span style="float: right;" onclick="orderByOrder(), clickTrue()"><i class="bi bi-chevron-expand iorder"></i></span></th>
+                                            <th class="col-3 ordained-students">Aluno <span style="float: right;" onclick="orderByName(), clickTrue()"><i class="bi bi-chevron-expand iname"></i></span></th>
+                                            <th>Matricula</th>
+                                            <th>Legenda</th>
+                                            <th style="background-color: #E5E5E5; text-align: center;">
                                                 <a href="#" data-placement="top" data-toggle="popover">A</a>
                                             </th>
-                                            <th><a href="">B</a></th>
-                                            <th><a href="">C</a></th>
-                                            <th><a href="">D</a></th>
-                                            <th><a href="">MD</a></th>
-                                            <th><a href="">Histórico</a></th>
-                                            <th><a href="">FT</a></th>
+                                            <th style="background-color: #E5E5E5; text-align: center;"><a href="">B</a></th>
+                                            <th style="background-color: #E5E5E5; text-align: center;"><a href="">C</a></th>
+                                            <th style="background-color: #E5E5E5; text-align: center;"><a href="">D</a></th>
+                                            <th style="text-align: center;"><a href="">MD</a></th>
+                                            <th style="text-align: center;"><a href="">Histórico</a></th>
+                                            <th style="text-align: center;"><a href="">FT</a></th>
                                         </tr>
                                     </thead>
-                                    <tbody class="table-array-2">
-                                        
+                                    <tbody class="table-array" style="white-space: pre-line;">
+
                                     </tbody>
                                 </table>
                             </div>
@@ -328,7 +334,7 @@
             popoverPropriety.popover({
                 title: '',
                 html: true,
-                content: '<a href="#" class="link-ergon" id="include_contents_two_steps" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Digitar conteúdo <i class="bi bi-pen-fill"></i></a>',
+                content: '<a href="#" class="link-ergon" id="include_contents_two_steps" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">A <i class="bi bi-pen-fill"></i></a>',
                 placement: "top",
                 trigger: "click"
             });
