@@ -619,3 +619,60 @@ input[type="date"]{
 .modal-date-filter .attendance-modal-content *{
     text-align: center;
 }
+
+.text-color-ergon{
+    color: rgba(77, 34, 138, 1);
+}
+
+.font-weight-bold-ergon{
+    font-weight: 600 !important;
+}
+.text-14px td, th{
+    font-size: 14px !important;
+}
+
+.text-14px i{
+    font-size: 22px !important;
+}
+
+.thead-add-class{
+    border: 1px solid #828282;
+    background-color: #D6E3EA;
+    border-radius: 24px !important;
+}
+
+.content-add-class{
+    background: rgba(243, 245, 247, 1);
+}
+
+.table-add-class{
+
+}
+
+.rounded-16px{
+    border-radius: 16px;
+}
+
+.rounded-bottom-16px{
+    border-radius: 0 0 16px 16px;
+}
+
+.table-add-class .title{
+    font-size: 18px;
+    color: #606162;
+    font-weight: 600;
+}
+
+.table-add-class .sub-title{
+    font-size: 12px;
+    color: #606162;
+}
+
+.swal-button{
+    background-color: #AB58B9;
+    border-radius: 24px;
+}
+
+.swal-button:hover{
+    background-color: #6F31AD !important;
+}

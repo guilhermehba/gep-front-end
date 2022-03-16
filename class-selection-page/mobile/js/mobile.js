@@ -1,5 +1,5 @@
 function main2() {
-    var url = "http://apialuno.ergonsistemas.com.br:7073/SELECT?database=GEP_TESTE&TABELA=V_API_TurmasDiario&FILTRO=cdescola=21145660 and exerc=2018 and cpf='012.311.273-76'"
+    var url = "http://apialuno.ergonsistemas.com.br:7073/SELECT?database=GEP_TESTE_AUX&TABELA=V_API_TurmasDiario&FILTRO=cdescola=17000000 and exerc=2021 and cpf='648.578.671-68'"
     var postData;
 
     const xhttp = new XMLHttpRequest();

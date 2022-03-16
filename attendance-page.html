@@ -15,6 +15,11 @@
 
     <!-- grade table javascript -->
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- caledário -->
+    <link rel="stylesheet" href="calendar-ergon/css/mobiscroll.jquery.min.css">
+    <script src="/calendar-ergon/js/mobiscroll.jquery.min.js"></script>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -31,28 +36,29 @@
 
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <header>
     <!-- migalha de pão -->
-        <div id="fundo-navegação">
-            <nav style="--bs-breadcrumb-divider: '\F27B';" class="breadcrumb" aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">Início</a></li>
-                    <li class="breadcrumb-item"><a href="class-selection.html">Seleção de turmas</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Registro de chamada</li>
-                </ol>
-                <div class="help-top">
-                    <a href="#" class="link-ergon"
-                        onclick="notificationGEP('Tela de Seleção de Turmas!', 'bottom')"><svg
-                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-question-circle-fill"
-                            viewBox="0 0 16 16">
-                            <path
-                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247zm2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z" />
-                        </svg></a>
-                </div>
-            </nav>
-        </div>
+    <div id="fundo-navegação">
+        <nav style="--bs-breadcrumb-divider: '\F27B';" class="breadcrumb" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Início</a></li>
+                <li class="breadcrumb-item"><a href="class-selection.html">Seleção de turmas</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Registro de chamada</li>
+            </ol>
+            <div class="help-top">
+                <a href="#" class="link-ergon" onclick="notificationGEP('Tela de Seleção de Turmas!', 'bottom')"><svg
+                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-question-circle-fill"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247zm2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z" />
+                    </svg></a>
+            </div>
+        </nav>
+    </div>
 </header>
 
 <body>
@@ -96,13 +102,14 @@
                                             <div class="modal-body modal-date-filter-content attendance-modal-content">
                                                 <div class="row">
                                                     <div class="col-md-6 startDateInput">
-                                                        <label for="startDate">Data de Inicio: 
-                                                        <input id="startDate" class="border-stylized" type="date" name="startDate" id="">
+                                                        <label for="startDate">Data de Inicio:
+                                                            <input id="startDate" class="border-stylized" type="date"
+                                                                name="startDate" id="">
                                                         </label>
                                                     </div>
                                                     <div class="col-md-6 endDateInput">
-                                                        <label for="endDate">Data de Final: 
-                                                        <input id="endDate" type="date" name="endDate" id="">
+                                                        <label for="endDate">Data de Final:
+                                                            <input id="endDate" type="date" name="endDate" id="">
                                                         </label>
                                                     </div>
                                                 </div>
@@ -110,8 +117,12 @@
 
                                             <div class="modal-footer">
                                                 <div id="filterModalDateButton">
-                                                    <button type="button"  onclick="filterDate()" class="mb-2 mr-2 btn-pill btn btn-ergon btn-shadow" data-bs-dismiss="modal" aria-label="Close">Ok</button>
-                                                    <button type="button" data-bs-dismiss="modal" class="mb-2 mr-2 btn-pill btn btn-option btn-shadow" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+                                                    <button type="button" onclick="filterDate()"
+                                                        class="mb-2 mr-2 btn-pill btn btn-ergon btn-shadow"
+                                                        data-bs-dismiss="modal" aria-label="Close">Ok</button>
+                                                    <button type="button" data-bs-dismiss="modal"
+                                                        class="mb-2 mr-2 btn-pill btn btn-option btn-shadow"
+                                                        data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
                                                 </div>
                                             </div>
                                         </form>
@@ -360,10 +371,115 @@
                     </div>
                     <!--/ Fim Tabela divida em uma linha -->
 
+                    <!-- Modal nova aula -->
+                    <div class="modal fade" id="addClassModal" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-xl" role="document">
+                            <div class="modal-content rounded-16px">
+                                <div class="modal-header">
+                                    <span class="text-color-ergon font-weight-bold-ergon">Cadastrar Aulas</span>
+                                    <a href="" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                        <i class="bi bi-x-circle" style="font-size: 1.5rem;"></i>
+                                    </a>
+                                </div>
+                                <div class="modal-body rounded-bottom-16px content-add-class">
+                                    <div class="container">
+                                        <div class="row hidden-md-up">
+                                            <div class="col-md-4">
+                                                <div class="card p-2 table-add-class bg-white rounded-16px text-center">
+                                                    <span class="font-weight-bold-ergon text-color-ergon">Aulas
+                                                        Cadastradas</span>
+
+                                                    <table class="table table-bordered text-14px">
+                                                        <thead class="thead-add-class">
+                                                            <tr>
+                                                                <th scope="col">#</th>
+                                                                <th scope="col">Data</th>
+                                                                <th scope="col">Excluir</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th scope="row">1</th>
+                                                                <td>31/01/2021</td>
+                                                                <td class="text-center">
+                                                                    <button class="btn pb-0" onclick="deleteClass('Tem ceteza que quer excluir?','top', 'toastDelete');">
+                                                                        <span
+                                                                            class="material-icons text-color-ergon">delete_outline</span>
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">2</th>
+                                                                <td>01/02/2021</td>
+                                                                <td class="text-center"><button class="btn pb-0">
+                                                                        <span
+                                                                            class="material-icons text-color-ergon">delete_outline</span>
+                                                                    </button></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">3</th>
+                                                                <td>02/02/2021</td>
+                                                                <td class="text-center"><button class="btn pb-0">
+                                                                        <span
+                                                                            class="material-icons text-color-ergon">delete_outline</span>
+                                                                    </button></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-5">
+                                                <div class="card p-2 table-add-class bg-white rounded-16px text-center">
+                                                    <div>
+                                                        <span class="d-block title p-0 m-0">1º Bimestre</span>
+                                                        <span class="d-block sub-title p-0 m-0">25/02/2022 A
+                                                            30/04/2022</span>
+                                                    </div>
+
+                                                    <div mbsc-page class="demo-multiple-months">
+                                                        <div style="height:100%">
+                                                          <div id="demo-2-months"></div>
+                                                        </div>
+                                                      </div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <div class="card p-2 table-add-class bg-white rounded-16px text-center">
+                                                    <span class="font-weight-bold-ergon text-color-ergon">Aulas
+                                                        selecionadas</span>
+
+                                                    <div class="list-selected-classes">
+                                                        <ul class="list-group">
+                                                            <li class="list-group" aria-current="true">31/01/2021</li>
+                                                            <li class="list-group">01/02/2021</li>
+                                                            <li class="list-group">02/02/2021</li>
+                                                            <li class="list-group">03/02/2021</li>
+                                                            <li class="list-group">04/02/2021</li>
+                                                        </ul>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Opções no rodapé -->
                     <div class="footer-options fixed-bottom">
                         <div class="options-buttom">
-                            <button class="mb-2 mr-2 btn-pill btn btn-ergon btn-shadow">Nova Aula</button>
+                            <!-- Button trigger modal -->
+                            <button class="btn mb-2 mr-2 btn-pill btn-ergon btn-shadow" data-bs-toggle="modal"
+                                data-bs-target="#addClassModal">
+                                Nova Aula
+                            </button>
 
                             <!-- Example single danger button -->
                             <div class="btn-group dropup">
@@ -404,7 +520,25 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+                                                  
+        mobiscroll.setOptions({
+            locale: mobiscroll.localePtBR,  // Specify language like: locale: mobiscroll.localePl or omit setting to use default
+            theme: 'ios',                   // Specify theme like: theme: 'ios' or omit setting to use default
+                themeVariant: 'light'       // More info about themeVariant: https://docs.mobiscroll.com/5-15-1/calendar#opt-themeVariant
+        });
+        
+        $(function () {
+            // Mobiscroll Calendar initialization
+            $('#demo-2-months').mobiscroll().datepicker({
+                controls: ['calendar'],     // More info about controls: https://docs.mobiscroll.com/5-15-1/calendar#opt-controls
+                display: 'inline',          // Specify display mode like: display: 'bottom' or omit setting to use default
+                calendarType: 'month',
+                pages: 1,
+                selectMultiple: true,
+            });
+        });
+    </script>
 
     <script>
         //'<a id="include_contents_two_steps" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Digitar conteúdo <i class="bi bi-pen-fill"></i></a>'
@@ -434,6 +568,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.js"></script>
 
     <script src="js/filter.js"></script>
+
+    <script src="js/attendance.js"></script>
 </body>
 
 </html>

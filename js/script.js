@@ -19,8 +19,8 @@ function somaAula() {
     }
 }
 
-function notificationGEP(msg, position, tagName) {
-    var html = '<div class="position-fixed '+position+'-0 end-0 p-3" style="z-index: 9999"> <div id="'+tagName+'" class="toast" role="alert" aria-live="assertive" aria-atomic="true"> <div class="toast-header"> <img src="http://teste.ergonsistemas.com.br/gepweb_d.dll/cache/gepweb_e_exe/n0/favicon.ico" class="rounded me-2" alt="logo-ergon"> <strong class="me-auto">GEP</strong> <small>'+ 'Agora' +'</small> <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button> </div> <div class="toast-body"> '+msg+' </div> </div> </div>';
+function notificationGEP(msg, position, tagName, optionalbg) {
+    var html = '<div class="position-fixed '+position+'-0 end-0 p-3" style="z-index: 9999"> <div id="'+tagName+'" class="toast '+optionalbg+'" role="alert" aria-live="assertive" aria-atomic="true"> <div class="toast-header"> <img src="http://teste.ergonsistemas.com.br/gepweb_d.dll/cache/gepweb_e_exe/n0/favicon.ico" class="rounded me-2" alt="logo-ergon"> <strong class="me-auto">GEP </strong> <small>'+ 'Agora' +'</small> <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button> </div> <div class="toast-body"> '+msg+' </div> </div> </div>';
 
     document.querySelector('.attendance-alert-head').innerHTML += html;
     var toastLiveExample = document.getElementById(tagName)
@@ -78,3 +78,27 @@ function subtrairAula() {
 //         document.querySelector('.record-type').innerHTML += conteudos[i];
 //     }
 // }
+
+
+// função de inatividade
+
+function inactivityTime () {
+    let time;
+    // reset timer
+    window.onload = resetTimer;
+    document.onmousemove = resetTimer;
+    document.onkeydown = resetTimer;
+    function doSomething() {
+        // do something when user is inactive
+        swal('Alerta de inatividade', 'Você está inativo a mais de 5 segundos', 'warning');
+        // notificationGEP("Alerta de inatividade!","Você está inativo a mais de 5 segundos", "top", "alertInativid")
+    }
+    function resetTimer() {
+        clearTimeout(time);
+        time = setTimeout(doSomething, 900000)
+    }
+
+    console.log("tempo" + time);
+};
+
+inactivityTime();
