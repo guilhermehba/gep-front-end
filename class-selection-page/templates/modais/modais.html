@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles-of-modals.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/poppins.css">
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    
     <title>Document</title>
 </head>
 <body>
@@ -20,76 +24,76 @@
     </button>
     <!-- Button trigger modal prontuário -->
     <!-- Modal prontuário -->
-    <div class="modal fade" id="modal_prontuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title text-center" id="exampleModalLabel" style="text-align: center; border: none; margin: 0 auto;">Prontuário do Aluno</h5>
-          </div>
-          <p style="text-align: center;"><strong>LUKAS SILVA E SILVA</strong></p>
-          <div class="modal-body">
-              <div  class="dropdown">
-                  <h7>Prontuário</h7>
-                  <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdown_prontuario" data-bs-toggle="dropdown" aria-expanded="false">
-                      Prontuário
-                  </button>
-                  <ul class="dropdown-menu" aria-labelledby="dropdown_prontuario">
-                    <li><a class="dropdown-item" href="#">PRONTUÁRIO A</a></li>
-                    <li><a class="dropdown-item" href="#">PRONTUÁRIO B</a></li>
-                    <li><a class="dropdown-item" href="#">PRONTUÁRIO C</a></li>
-                  </ul>
-              </div>
-              <p></p>
-              <div  class="dropdown">
-                  <h7>Ocorrência do Prontuário</h7>
-                  <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdown_ocorrencia" data-bs-toggle="dropdown" aria-expanded="false">
-                      Ocorrência do Prontuário
-                  </button>
-                  <ul class="dropdown-menu" aria-labelledby="dropdown_ocorrencia">
-                    <li><a class="dropdown-item" href="#">Ocorrência do Prontuário A</a></li>
-                    <li><a class="dropdown-item" href="#">Ocorrência do Prontuário B</a></li>
-                    <li><a class="dropdown-item" href="#">Ocorrência do Prontuário C</a></li>
-                  </ul>
-              </div>
-              <p></p>
-              <div>
-                  <div  class="dropdown" style="width: 45%; float: left; width: 50%;">
-                      <h7>Gravidade</h7>
-                      <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdown_gravidade" data-bs-toggle="dropdown" aria-expanded="false">
-                          Gravidade
-                      </button>
-                      <ul class="dropdown-menu" aria-labelledby="dropdown_gravidade">
-                        <li><a class="dropdown-item" href="#">Gravidade A</a></li>
-                        <li><a class="dropdown-item" href="#">Gravidade B</a></li>
-                        <li><a class="dropdown-item" href="#">Gravidade C</a></li>
-                      </ul>
-                  </div>
-                  <div  class="dropdown" style="width: 45%; float: right;">
-                      <h7>Evolução</h7>
-                      <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdown_evolucao" data-bs-toggle="dropdown" aria-expanded="false">
-                          Evolução
-                      </button>
-                      <ul class="dropdown-menu" aria-labelledby="dropdown_evolucao">
-                        <li><a class="dropdown-item" href="#">Evolução A</a></li>
-                        <li><a class="dropdown-item" href="#">Evolução B</a></li>
-                        <li><a class="dropdown-item" href="#">Evolução C</a></li>
-                      </ul>
-                  </div>
-              </div>
-              <p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</p>
-              <h7>Detalhes da Ocorrência:</h7>
-              <textarea id="detalhe_ocorrencia" name="" id="" cols="30" rows="10" style="width: 100%;"></textarea>
-          </div>
-              <div style="text-align: center;">
-                  <button id="save_prontuario" type="button" class="btn btn-outline" style="width: 30%;">salvar</button>
-                  <p></p>
-                  <button id="cancel_changes" type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal" style="width: 30%;">Cancelar</button>
-                  <p></p>
-              </div>
-        </div>
+<div class="modal fade" id="modal_prontuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center" id="exampleModalLabel" style="text-align: center; border: none; margin: 0 auto;">Prontuário do Aluno</h5>
       </div>
+      <p style="text-align: center;"><strong>LUKAS SILVA E SILVA</strong></p>
+      <div class="modal-body">
+          <div  class="dropdown">
+              <label>Prontuário</label>
+              <button class="btn btn-outline-secondary dropdown-toggle btn-prontuario" type="button" id="dropdown_prontuario" data-bs-toggle="dropdown" aria-expanded="false">
+                  Prontuário
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdown_prontuario">
+                <li><a class="dropdown-item" href="#">PRONTUÁRIO A</a></li>
+                <li><a class="dropdown-item" href="#">PRONTUÁRIO B</a></li>
+                <li><a class="dropdown-item" href="#">PRONTUÁRIO C</a></li>
+              </ul>
+          </div>
+          <br>
+          <div  class="dropdown">
+              <label>Ocorrência do Prontuário</label>
+              <button class="btn btn-outline-secondary dropdown-toggle btn-ocorrencia" type="button" id="dropdown_ocorrencia" data-bs-toggle="dropdown" aria-expanded="false">
+                  Ocorrência do Prontuário
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdown_ocorrencia">
+                <li><a class="dropdown-item" href="#">Ocorrência do Prontuário A</a></li>
+                <li><a class="dropdown-item" href="#">Ocorrência do Prontuário B</a></li>
+                <li><a class="dropdown-item" href="#">Ocorrência do Prontuário C</a></li>
+              </ul>
+          </div>
+          <br>
+          <div>
+              <div  class="dropdown" style="width: 45%; float: left; width: 50%;">
+                  <label>Gravidade</label>
+                  <button class="btn btn-outline-secondary dropdown-toggle btn-gravidade" type="button" id="dropdown_gravidade" data-bs-toggle="dropdown" aria-expanded="false">
+                      Gravidade
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdown_gravidade">
+                    <li><a class="dropdown-item" href="#">Gravidade A</a></li>
+                    <li><a class="dropdown-item" href="#">Gravidade B</a></li>
+                    <li><a class="dropdown-item" href="#">Gravidade C</a></li>
+                  </ul>
+              </div>
+              <div  class="dropdown" style="width: 45%; float: right;">
+                  <label>Evolução</label>
+                  <button class="btn btn-outline-secondary dropdown-toggle btn-evolucao" type="button" id="dropdown_evolucao" data-bs-toggle="dropdown" aria-expanded="false">
+                      Evolução
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdown_evolucao">
+                    <li><a class="dropdown-item" href="#">Evolução A</a></li>
+                    <li><a class="dropdown-item" href="#">Evolução B</a></li>
+                    <li><a class="dropdown-item" href="#">Evolução C</a></li>
+                  </ul>
+              </div>
+          </div>
+          <p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</p>
+          <label>Detalhes da Ocorrência:</label>
+          <textarea id="detalhe_ocorrencia" name="" id="" cols="30" rows="10" style="width: 100%;"></textarea>
+      </div>
+          <div style="text-align: center;">
+              <button id="save_prontuario" type="button" class="btn btn-outline" style="width: 30%;">salvar</button>
+              <p></p>
+              <button id="cancel_changes" type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal" style="width: 30%;">Cancelar</button>
+              <p></p>
+          </div>
     </div>
-    <!-- Modal prontuário -->
+  </div>
+</div>
+<!-- Modal prontuário -->
     <!-- Button trigger modal atenção -->
       <button id="warning_remote" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal_warning">
         <strong>ATENÇÃO</strong>
@@ -209,6 +213,43 @@
     </div>
   </div>
 </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
       <!-- Modal Observações-->
+      <!-- Sweet alert confirmation -->
+      <div class="row sweetalert2">
+        <div class="col-5">
+          <button class="btn btn-success" onclick="acionar(), document.getElementById('random_numero').innerHTML = getRndInteger(0,699999)">
+            Sweet Alert
+          </button>
+          <br>
+          <br>
+          <br>
+          <div id="random_numero"></div>
+        </div>
+       
+        <div class="col-5">
+          <button class="btn btn-danger" onclick="teste()">
+            teste
+          </button>
+        </div>
+  
+        
+      </div>
+      
+      <!-- Sweet alert confirmation -->
 </body>
 </html>

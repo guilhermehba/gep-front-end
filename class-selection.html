@@ -18,7 +18,8 @@
     <script src="class-selection-page/JS/bootstrap.bundle.min.js"></script>
 
     <!--JS Class Selection Page-->
-    <script src="class-selection-page/JS/scripts.js"></script>
+    <!-- <script src="class-selection-page/JS/scripts.js"></script> -->
+    <script src="class-selection-page/JS/javascript.js"></script>
 
 
     <title>Seleção de turmas</title>
@@ -92,48 +93,49 @@
                     <!--Card Grid Diários-->
 
                     <div class="row diario">
-                        <div class="col-12 mb-3 pt-1 pb-1" id="back_class_bar">ENSINO FUNDAMENTAL ANOS INICIAIS - MATUTINO</div>
+                        
                             <script src="class-selection-page/JS/scripts.js" type="text/template" id="diarioTemplate">
-                                <!-- Template para os diarios -->
-                                <div class="col-md-3 col-diario">
-                                    <div class="card card-erg">
-                                        <div class="card-header border-radios-erg pb-4 pt-1">    
-                                            <div class="float-start">
-                                                <span id="SERIETURMA" class="SERIETURMA d-block"></span>
-                                                <span id="COD" class="d-block cod-serie">Cod: 183877</span>
-                                            </div> 
-                                            <div id="cont_div3" class="float-end">
-                                                <span id="class_lock" class="material-icons" data-bs-toggle="modal"
-                                                    data-bs-target="#modal_confirmation">lock_open</span>
-                                            </div>
-                                            <div id="cont_div2" class="float-end">
-                                                <a id="student_icon" class="material-icons" href="class-selection-page/templates/grid-lst/grid-students.html">perm_identity</a>
-                                                <span id="dot" class="material-icons">&bull;</span><span class="CDSERIE"
-                                                    id="student_count"></span>
-                                            </div>
-                                        </div>
-                                        <div class="card-body pb-0">
-                                            <div class="card-title"></div>
-                                            <div class="card-text text-center"><a class="DISCIPLINA" href="attendance-page.html"></a></div>
-                                            <div class="col-12">
-                                            </div>
-                                            <div class="col-12" id="teacher"><label class="PROFESSOR" id="teacher"></label>
-                                            </div>
-                                        </div>
-                                        <div class="card-footer card-footer-ergon bg-white">
-                                            <div class="aulas-porcentagem">AULAS DADAS X AULAS PREVISTAS</div>
-                                            <div class="col-12" id="progress_bar">
-                                                <div class="progress progress-ergon">
-                                                    <div id="EXER_DIASLETDADOS" class="progress-bar progress-bar-ergon bg-success" role="progressbar" aria-valuenow="55"
-                                                        aria-valuemin="0" aria-valuemax="100" style="width: 70%;">70</div>
-                                                        <div id="EXER_DIASLETPREV" class="progress-bar progress-bar-ergon bg-missing" role="progressbar" aria-valuenow="55"
-                                                        aria-valuemin="0" aria-valuemax="100" style="width: 30%;">30</div>
+                                <div class="col-12 mb-3 pt-1 pb-1" id="GRUPO"><a class="GRUPO"></a></div>
+                                    <!-- Template para os diarios -->
+                                    <div class="col-md-3 col-diario">
+                                        <div class="card card-erg">
+                                            <div class="card-header border-radios-erg pb-4 pt-1">    
+                                                <div class="float-start">
+                                                    <span id="SERIETURMA" class="SERIETURMA d-block"></span>
+                                                    &nbsp
+                                                    <span id="COD" class="d-block cod-serie">Cod: 183877</span>
+                                                    <span class="d-block PROFESSOR" id="teacher"></span>
+                                                </div> 
+                                                <div id="cont_div3" class="">
+                                                    <span id="class_lock" class="material-icons" data-bs-toggle="modal"
+                                                        data-bs-target="#modal_confirmation">lock_open</span>
                                                 </div>
+                                                <div id="cont_div2" class="float-end">
+                                                    <a id="student_icon" class="material-icons" href="class-selection-page/templates/grid-lst/grid-students.html">perm_identity</a>
+                                                    <span id="dot" class="material-icons">&bull;</span><span class="CDSERIE"
+                                                        id="student_count"></span>
+                                                </div>
+                                            </div>
+                                            <div class="card-body pb-0">
+                                                <div class="card-title"></div>
+                                                    <div class="card-text text-center"><a class="DISCIPLINA" href="attendance-page.html"></a></div>
+                                                <div class="col-12"></div>
+                                                
+                                            </div>
+                                            <div class="card-footer card-footer-ergon bg-white">
+                                                <div class="aulas-porcentagem">AULAS DADAS X AULAS PREVISTAS</div>
+                                                <div class="col-12" id="progress_bar">
+                                                    <div class="progress progress-ergon">
+                                                        <div id="BIM_DIASLETDADOS" class="progress-bar progress-bar-ergon bg-success" role="progressbar" aria-valuenow="55"
+                                                            aria-valuemin="0" aria-valuemax="100" style="width: 70%;">70</div>
+                                                            <div id="BIM_DIASLETPREV" class="progress-bar progress-bar-ergon bg-missing" role="progressbar" aria-valuenow="55"
+                                                            aria-valuemin="0" aria-valuemax="100" style="width: 30%;">30</div>
+                                                    </div>
 
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
                             </script>
                         </div>
                     </div>

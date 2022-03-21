@@ -1,227 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        
-        <script src="JS/bootstrap.bundle.min.js"></script>
-    
-        <script src="JS/scripts.js"></script>
-        <link rel="stylesheet" href="css/styles.css">
-    
-    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--JS AJAX-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!--CSS Bootstrap 5-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!--CSS Class Selection Page-->
+    <link rel="stylesheet" href="class-selection-page/css/styles.css">
+
+    <!--Js Bootstrap 5-->
+    <script src="class-selection-page/JS/bootstrap.bundle.min.js"></script>
+
+    <!--JS Class Selection Page-->
+    <script src="class-selection-page/JS/scripts.js"></script>
+
+
+    <title>Seleção de turmas</title>
+
+    <!-- ERGON CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- ERGON JS -->
+    <script src="js/script.js"></script>
+
+    <!-- alerta de inatividade -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<header>
+    <!-- migalha de pão -->
+    <div id="fundo-navegação">
+        <nav style="--bs-breadcrumb-divider: '\F27B';" class="breadcrumb" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html" style="color: #6F31AD !important;">Início</a></li>
+                <li class="breadcrumb-item active" aria-current="page"><a>Seleção de turmas</a></li>
+            </ol>
+            <div class="help-top">
+                <a href="#" class="link-ergon" onclick="notificationGEP('Diário de Turmas!', 'bottom')"><svg
+                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-question-circle-fill"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247zm2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z" />
+                    </svg></a>
+            </div>
+        </nav>
+    </div>
+</header>
 
 <body>
     <div class="content">
-        <!-- migalha de pão -->
-        <div id="fundo-navegação">
-            <nav style="--bs-breadcrumb-divider: '\F27B';" class="breadcrumb" aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">Início</a></li>
-                    <li class="breadcrumb-item active" aria-current="page"><a>Seleção de turmas</a></li>
-                </ol>
-            </nav>
-        </div>
+        <div class="class-selection-alert-head">
 
-        <p></p>
-        <!--Div's Bimestre e Filtro-->
-        <div id="bimestre-and-filter" class="row">
-        <label id="bimestre">Bimestre</label>
-        <!--Dropdown Bimestre-->
-        <div class="dropdown col-sm-10">
-            <div id="bimestre_drop_btn">
-                <button id="drop_bimestre" class="btn btn-outline dropdown-toggle" type="button" id="drop_bim" data-bs-toggle="dropdown" aria-expanded="false">
-                    1º Bimestre
-                </button>
-                <ul id="drop_list" class="dropdown-menu" aria-labelledby="drop_bim">
-                <li><a class="dropdown-item" href="#">1º Bimestre</a></li>
-                <li><a class="dropdown-item" href="#">2º Bimestre</a></li>
-                <li><a class="dropdown-item" href="#">3º Bimestre</a></li>
-                <li><a class="dropdown-item" href="#">4º Bimestre</a></li>              
-                </ul>
-            </div>
-        </div>
-        <!--Botão Filtro-->
-        <div class="col-sm-1" id="bimestre_filter_btn"  data-bs-toggle="modal" data-bs-target="#modalFilter">
-            <div id="filter_buttom" class="btn">
-            <div id="icon_fil"><span class="material-icons">filter_alt</span></div>
-            <div id="filter_text"><label data-bs-toggle="modal" data-bs-target="#modalFilter">Filtrar</label></div>
-            </div>
-        </div>
-        </div>
-        <!--Diario Titulo e Turma Titulo-->
-        <div>
-            <div id="class_title">
-            <label id="diario-turma">Diarios/Turmas</label>
-            </div>
-                <div class="col-12" id="back_class_bar">ENSINO FUNDAMENTAL ANOS INICIAIS - MATUTINO</div> 
-            </div>
-        </div>
-        <!--Card Grid Diários-->
-        <div class="diario">
-            <div class="row">
-            
-                <script type="text/template" id="diarioTemplate">
-                
-                    <!-- Template para os diarios -->            
-                    <div class="col-3 mx-auto">
-                        <div class="card">
-                            <h5 class="card-header">
-                            <div id="SERIETURMA" class="col-auto SERIETURMA"></div>
-                            <div  id="cont_div2"class="col-7">
-                                <a id="student_icon" class="material-icons" href="class-selection-page/templates/testes/grid-lst/index.html">perm_identity</a><span id="dot" class="material-icons">&bull;</span><label class="CDSERIE" id="student_count">30</label>
+            <div id="school-attendance" class="col-12">
+                <div class="school-attendance-content col-12">
+                    <!--Div's Bimestre e Filtro-->
+                    <div class="header-school-attendance">
+
+                        <h5>Bimestre</h5>
+
+                        <!-- Select -->
+                        <div class="row align-items-center">
+                            <div class="col-md-2 select-ergon">
+                                <select class="form-select select-ergon-select" aria-label="Default select example">
+                                    <option selected>Selecione o Período</option>
+                                    <option value="1">1º Bimestre</option>
+                                    <option value="2">2º Bimestre</option>
+                                    <option value="3">3º Bimestre</option>
+                                    <option value="4">4º Bimestre</option>
+                                </select>
                             </div>
-                            <div id="cont_div3" class="col-sm-1">
-                                <span id="class_lock" class="material-icons" data-bs-toggle="modal" data-bs-target="#modal_confirmation">lock_open</span>
-                            </div>
-                            </h5>
-                            <div class="card-body">
-                            <div class="card-title"></div>
-                                <div class="card-text"><a class="DISCIPLINA" href="attendance-page.html"></a></div>
-                                <div class="col-12"><hr></div>
-                                <div class="col-12" id="teacher"><label class="PROFESSOR" id="teacher"></label></div>
-                                <div class="col-12" id="progress_bar_tittle">
-                                    <a id="progress_bar_tittle">AULAS DADAS X AULAS PREVISTAS</a>
-                                    <div class="progress">
-                                        <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="70" style="width: 38.5%">55</div>
-                                    </div>
-                                </div>
+                            <!--/ Fim Select -->
+                            <!-- botão modal filter -->
+                            <div class="col-md-10 filter-data">
+                                <button class="btn btn-ergon btn-shadow float-end" data-bs-toggle="modal"
+                                    data-bs-target="#modalFilter"><i class="bi bi-funnel-fill"></i> Filtrar</button>
                             </div>
                         </div>
                     </div>
-        
-                </script>
+
+                    <!--Diario Titulo e Turma Titulo-->
+                    <div>
+                        <div id="class_title">
+                            <label id="diario-turma">Diarios/Turmas</label>
+                        </div>
+                    </div>
+                    <!--Card Grid Diários-->
+
+                    <div class="row diario">
+                        
+                            <script src="class-selection-page/JS/scripts.js" type="text/template" id="diarioTemplate">
+                                <div class="col-12 mb-3 pt-1 pb-1" id="GRUPO"><a class="GRUPO"></a></div>
+                                    <!-- Template para os diarios -->
+                                    <div class="col-md-3 col-diario">
+                                        <div class="card card-erg">
+                                            <div class="card-header border-radios-erg pb-4 pt-1">    
+                                                <div class="float-start">
+                                                    <span id="SERIETURMA" class="SERIETURMA d-block"></span>
+                                                    &nbsp
+                                                    <span id="COD" class="d-block cod-serie">Cod: 183877</span>
+                                                    <span class="d-block PROFESSOR" id="teacher"></span>
+                                                </div> 
+                                                <div id="cont_div3" class="">
+                                                    <span id="class_lock" class="material-icons" data-bs-toggle="modal"
+                                                        data-bs-target="#modal_confirmation">lock_open</span>
+                                                </div>
+                                                <div id="cont_div2" class="float-end">
+                                                    <a id="student_icon" class="material-icons" href="class-selection-page/templates/grid-lst/grid-students.html">perm_identity</a>
+                                                    <span id="dot" class="material-icons">&bull;</span><span class="CDSERIE"
+                                                        id="student_count"></span>
+                                                </div>
+                                            </div>
+                                            <div class="card-body pb-0">
+                                                <div class="card-title"></div>
+                                                    <div class="card-text text-center"><a class="DISCIPLINA" href="attendance-page.html"></a></div>
+                                                <div class="col-12"></div>
+                                                
+                                            </div>
+                                            <div class="card-footer card-footer-ergon bg-white">
+                                                <div class="aulas-porcentagem">AULAS DADAS X AULAS PREVISTAS</div>
+                                                <div class="col-12" id="progress_bar">
+                                                    <div class="progress progress-ergon">
+                                                        <div id="BIM_DIASLETDADOS" class="progress-bar progress-bar-ergon bg-success" role="progressbar" aria-valuenow="55"
+                                                            aria-valuemin="0" aria-valuemax="100" style="width: 70%;">70</div>
+                                                            <div id="BIM_DIASLETPREV" class="progress-bar progress-bar-ergon bg-missing" role="progressbar" aria-valuenow="55"
+                                                            aria-valuemin="0" aria-valuemax="100" style="width: 30%;">30</div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </script>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </body>
+
 </html>
-
 <!--modals list-->
-        <!--modal filter-->
-        <div class="modal fade" id="modalFilter" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-              <div class="modal-content">
-              <div class="modal-header">
-                  <h5 class="modal-title" id="ModalLabel" >Selecione as opções desejadas</h5>
-              </div>
-              <div class="modal-body">
-                  <div>
-                      <div  id="center_align_div">
+<!--modal filter-->
+<div class="modal fade" id="modalFilter" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ModalLabel">Selecione as opções desejadas</h5>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <div id="center_align_div">
                         <div class="row">
-                            <div class="col-sm-12 mb-3">
-                              <input type="text" id="myFilter" class="form-control" onkeyup="myFunction()" placeholder="Search for names..">
-                            </div>
-                          </div>
-                          <div class="form-check form-check-inline">
-                              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
-                              <label class="form-check-label" for="inlineRadio1">Todos</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                              <label class="form-check-label" for="inlineRadio2">Em digitação</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option2">
-                              <label class="form-check-label" for="inlineRadio3">Concluídos</label>
-                          </div>
-                      </div>
-                          <p>&nbsp</p>
-                          <label id="lbl_drop_filters" for="dropdown_professor">Professor</label>
-                          <div class="dropdown" id="center_align_div">  
-                              <button class="btn btn-outline dropdown-toggle" type="button" id="dropdown_professor" data-bs-toggle="dropdown" aria-expanded="false">
-                                  
-                              </button>
-                              <ul class="dropdown-menu" aria-labelledby="dropdown_professor">
-                              <li><a class="dropdown-item" href="#">James Bond</a></li>
-                              <li><a class="dropdown-item" href="#">Jane Cooper</a></li>
-                              <li><a class="dropdown-item" href="#">Willian Cooperfield</a></li>
-                              <li><a class="dropdown-item" href="#">Maria da Silva</a></li>
-                              </ul>
-                          </div>
-                          <p></p>
-                          <label id="lbl_drop_filters" for="dropdown_professor">Bimestre</label>
-                          <div class="dropdown" id="center_align_div"> 
-                              <button class="btn btn-outline dropdown-toggle" type="button" id="dropdown_bimestre" data-bs-toggle="dropdown" aria-expanded="false">
-                                  
-                              </button>
-                              <ul class="dropdown-menu" aria-labelledby="dropdown_bimestre">
-                              <li><a class="dropdown-item" href="#">1º Bimestre</a></li>
-                              <li><a class="dropdown-item" href="#">2º Bimestre</a></li>
-                              <li><a class="dropdown-item" href="#">3º Bimestre</a></li>
-                              <li><a class="dropdown-item" href="#">4º Bimestre</a></li>
-                              </ul>
-                          </div>
-                          <p></p>
-                          <label id="lbl_drop_filters" for="dropdown_professor">Série</label>
-                          <div class="dropdown" id="center_align_div"> 
-                              <button class="btn btn-outline dropdown-toggle" type="button" id="dropdown_series" data-bs-toggle="dropdown" aria-expanded="false">
 
-                              </button>
-                              <ul class="dropdown-menu" aria-labelledby="dropdown_series">
-                              <li><a class="dropdown-item" href="#">6º ANO</a></li>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                value="option1" checked>
+                            <label class="form-check-label" for="inlineRadio1">Todos</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                value="option2">
+                            <label class="form-check-label" for="inlineRadio2">Em digitação</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+                                value="option2">
+                            <label class="form-check-label" for="inlineRadio3">Concluídos</label>
+                        </div>
+                    </div>
+                    <br>
+                    <label id="lbl_drop_filters" for="dropdown_professor_filtro">Professor</label>
+                    <div class="dropdown" id="center_align_div">
 
-                              <li><a class="dropdown-item" href="#">5º ANO</a></li>
+                        <select name="" id="dropdown_professor_filtro" class="btn">
+                            <option id="drop_list" value="opt_professor">-- Selecione o Professor --</option>
+                            <option id="drop_list" value="opt_professor_1">Professor 1</option>
+                            <option id="drop_list" value="opt_professor_2">Professor 2</option>
+                            <option id="drop_list" value="opt_professor_3">Professor 3</option>
+                            <option id="drop_list" value="opt_professor_4">Professor 4</option>
 
-                              </ul>
-                          </div>
-                          <p></p>
-                          <label id="lbl_drop_filters" for="dropdown_professor">Turma</label>
-                          <div class="dropdown" id="center_align_div"> 
-                              <button class="btn btn-outline dropdown-toggle" type="button" id="dropdown_turmas" data-bs-toggle="dropdown" aria-expanded="false">
+                        </select>
+                    </div>
+                    <p></p>
+                    <label id="lbl_drop_filters" for="dropdown_bimestre_filtro">Bimestre</label>
+                    <div class="dropdown" id="center_align_div">
+                        <select name="" id="dropdown_bimestre_filtro" class="btn">
+                            <option id="drop_list" value="opt_bimestre">--Selecione o Bimestre--</option>
+                            <option id="drop_list" value="opt_bimestre_1">Bimestre 1</option>
+                            <option id="drop_list" value="opt_bimestre_2">Bimestre 2</option>
+                            <option id="drop_list" value="opt_bimestre_3">Bimestre 3</option>
+                            <option id="drop_list" value="opt_bimestre_4">Bimestre 4</option>
 
-                              </button>
-                              <ul class="dropdown-menu" aria-labelledby="dropdown_turmas">
-                              <li><a class="dropdown-item" href="#">A</a></li>
-                              <li><a class="dropdown-item" href="#">B</a></li>
+                        </select>
+                    </div>
+                    <br>
+                    <label id="lbl_drop_filters" for="dropdown_serie_filtro">Série</label>
+                    <div class="dropdown" id="center_align_div">
+                        <select name="" id="dropdown_serie_filtro" class="btn">
 
-                              </ul>
-                          </div>
-                      </div>
-                      <p></p>
-                      <div id="center_align_div">
-                          <button id="apply_filter" type="button" class="btn btn-secondary" data-bs-dismiss="modal">OK</button>
-                          <p></p>
-                          <button id="close_filter" type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Fechar</button>
-                      </div>
-                      <p></p>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <!--modal filter-->
-      <!-- Modal confirmation -->
-      <div class="modal fade" id="modal_confirmation" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-lg">
-              <div id="modal_confirmation_content" class="modal-content">
-                  <div class="modal-header">
-                      <h5 class="modal-title text-center" id="ModalLabel">ATENÇÃO!</h5>
-                  </div>
-                  <div class="modal-body">
-                      <div id="confirmation_content">
-                          <label><strong>Seu diário do (5º ano - Lingua portuguêsa, matemática...) será concluído!</strong></label>
-                              <p></p>
-                              <li><label>Depois de concluir o diário não será permitido mais nenhuma alteração!</label></li>
-                              <li>Todas as Presenças, Conteúdos e Contextos, Notas e Habilidades Já foram Lançadas?</li>
-                              <li>só o seu coordenador(a) poderá retornar ao status (<span id="lock_icon" class="material-icons">lock_open</span> <strong>EM DIGITAÇÃO</strong>).</li>
-                              <p></p>
-                              <p><strong>Confirma?</strong></p>
-                      </div>
-                      <p></p>
-                  </div>
-                  <div id="center_align_div">
-                      <a id="manual_btn" class="btn btn-primary" data-bs-dismiss="modal" onclick="clicked_on_lock()">SIM</a>
-                      <p></p>
-                      <a id="close_warning" class="btn btn-outline" data-bs-dismiss="modal">NÃO</a>
-                      <p></p>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <!-- Modal confirmação -->
-  <!--modals list-->
+                            <option id="drop_list" value="opt_serie">--Selecione a Série--</option>
+                            <option id="drop_list" value="opt_serie_1">Série 1</option>
+                            <option id="drop_list" value="opt_serie_2">Série 2</option>
+                            <option id="drop_list" value="opt_serie_3">Série 3</option>
+                            <option id="drop_list" value="opt_serie_4">Série 4</option>
+
+                        </select>
+                    </div>
+                    <br>
+                    <label id="lbl_drop_filters" for="dropdown_turma_filtro">Turma</label>
+                    <div class="dropdown" id="center_align_div">
+                        <select name="" id="dropdown_turma_filtro" class="btn">
+
+                            <option id="drop_list" value="opt_turma">--Selecione a Turma--</option>
+                            <option id="drop_list" value="opt_turma_1">Turma 1</option>
+                            <option id="drop_list" value="opt_turma_2">Turma 2</option>
+                            <option id="drop_list" value="opt_turma_3">Turma 3</option>
+                            <option id="drop_list" value="opt_turma_4">Turma 4</option>
+
+                        </select>
+                    </div>
+                </div>
+                <br>
+                <div id="center_align_div">
+                    <button id="apply_filter" type="button" class="btn btn-secondary">OK</button>
+                    <p></p>
+                    <button id="close_filter" type="button" class="btn btn-outline-secondary"
+                        data-bs-dismiss="modal">Fechar</button>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+</div>
+<!--modal filter-->
+<!-- Modal confirmation -->
+<div class="modal fade" id="modal_confirmation" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div id="modal_confirmation_content" class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-center" id="ModalLabel">ATENÇÃO!</h5>
+            </div>
+            <div class="modal-body">
+                <div id="confirmation_content">
+                    <label><strong>Seu diário do (5º ano - Lingua portuguêsa, matemática...) será
+                            concluído!</strong></label>
+                    <p></p>
+                    <li><label>Depois de concluir o diário não será permitido mais nenhuma alteração!</label></li>
+                    <li>Todas as Presenças, Conteúdos e Contextos, Notas e Habilidades Já foram Lançadas?</li>
+                    <li>só o seu coordenador(a) poderá retornar ao status (<span id="lock_icon"
+                            class="material-icons">lock_open</span> <strong>EM DIGITAÇÃO</strong>).</li>
+                    <p></p>
+                    <p><strong>Confirma?</strong></p>
+                </div>
+                <p></p>
+            </div>
+            <div id="center_align_div">
+                <a id="manual_btn" class="btn btn-primary" data-bs-dismiss="modal" onclick="clicked_on_lock()">SIM</a>
+                <p></p>
+                <a id="close_warning" class="btn btn-outline" data-bs-dismiss="modal">NÃO</a>
+                <p></p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal confirmação -->
+<!--modals list-->

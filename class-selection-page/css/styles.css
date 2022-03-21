@@ -5,16 +5,19 @@
 @media(max-width: 1440px){
   .col-diario{
     width: 320px;
+    
   }
 }
 @media(max-width: 1320px){
   .col-diario{
     width: 380px;
+    
   }
 }
 @media(max-width: 1200px){
   .col-diario{
     width: 480px;
+   
   }
 }
 * {
@@ -49,12 +52,20 @@ label {
 .card-header {
   border-radius: 16px;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+  height: 70px;
+}
+.card-body{
+  height: 150px;
+  overflow-y: scroll;
+  
+
 }
 
 .card-erg {
   float: none;
   background: #FEFEFE;
   border-radius: 16px;
+  margin: 10px 2px 2px 2px;
 }
 
 .border-radios-erg {
@@ -67,7 +78,7 @@ label {
   color: #808080;
   margin: 0;
   padding: 0;
-  position: absolute;
+  position: relative;
   bottom: 0;
   font-size: 8px !important;
 }
@@ -106,24 +117,24 @@ img {
   color: #AB58B9;
   cursor: pointer;
   border-radius: 50px;
-  position: absolute;
-  top: 11px;
-  right: 66px;
+  position: relative ;
+  top: 9px;
+  right: 36px;
   font-size: 20px;
 }
 
 #dot {
   color: #AB58B9;
   width: 4px;
-  position: absolute;
+  position: relative;
   top: 6px;
-  right: 60px;
+  right: 42px;
   cursor: pointer;
   border-radius: 50px;
 }
 
 #student_count {
-  position: absolute;
+  position: relative;
   top: 6px;
   right: 36px;
   color: #AB58B9;
@@ -139,13 +150,14 @@ img {
   cursor: pointer;
   color: #AB58B9;
   position: absolute;
-  top: 6px;
-  right: 0;
-  font-size: 28px;
+  top: 10px;
+  right: -10px;
+  
+  font-size: 40px;
 }
 
 #SERIETURMA {
-  height: 25px;
+  height: 20px;
   float: left;
 
   font-family: Poppins;
@@ -171,6 +183,10 @@ img {
 #teacher {
   font-weight: 700;
   font-size: 8px;
+  position: relative;
+  margin-top: -20px;
+  
+
 }
 
 #progress_bar_tittle {
@@ -328,7 +344,7 @@ img {
   font-size: 16px;
 }
 
-#back_class_bar {
+#GRUPO {
   font-weight: 600;
   font-size: 14px;
   color: #4F4F4F;
@@ -745,6 +761,7 @@ img {
 .select-ergon>.select-ergon-select {
   border-radius: 8px;
   border: 1px solid #6F31AD;
+  font-size: 16px;
 }
 
 .select-ergon>.select-ergon-select option[selected] {
