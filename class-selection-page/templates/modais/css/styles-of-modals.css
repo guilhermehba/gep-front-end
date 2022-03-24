@@ -258,66 +258,155 @@
 #img_mascote{
     width: 65%;
 }
-
-
-/* ==========================================================SWEET ALERT CSS============================================================= */
-
-
-.swal-text {
-    font-size: 18px;
-    position: relative;
-    float: none;
-    line-height: normal;
-    vertical-align: top;
-    text-align: center;
-    display: inline-block;
-    margin: 0;
-    padding: 0 10px;
-    font-weight: 600;
-    color: rgba(0,0,0,.64);
-    max-width: calc(100% - 20px);
-    overflow-wrap: break-word;
-    box-sizing: border-box;
-}
-.swal-footer{
-    margin-top: 13px;
-    padding: 13px 16px;
-}
-.swal-button--confirmButtonText {
-    font-family: Poppins;
+/* ==========================================================confirm code CSS============================================================= */
+#enviar_cod{
     width: 118px;
     height: 48px;
+    left: calc(50% - 118px/2 - 67.5px);
+    top: calc(50% - 48px/2 + 80px);
+    
     background: #AB58B9;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 24px;
-  }
-  .swal-button--cancel{
-    font-family: Poppins;
+}
+#cancelar_envio{
     width: 116px;
     height: 48px;
-  
-
+    left: 0px;
+    top: 0px;
+    
     background: #FFFFFF;
     border: 1px solid #AB58B9;
     box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 24px;
-  }
-  
-  .swal-content__input{
+}
+#input_code{
     width: 248px;
+height: 48px;
+left: calc(50% - 248px/2);
+top: calc(50% - 48px/2 + 8px);
+
+background: #FFFFFF;
+border: 1px solid #AB58B9;
+box-sizing: border-box;
+box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+border-radius: 8px;
+}
+/* ==========================================================confirm code CSS============================================================= */
+/* ==========================================================Mural ALERT CSS============================================================= */
+.campoTexto{
+    margin-left: 625px;
+    width: 585px;
+    text-align: center;
+    
+}
+
+.lupaBuscaTurma{
+    font-family: Material Icons;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.buscaCompleto{
+    background: #FFFFFF;
+   
+    border-radius: 8px;
+    width: 645px;
+    height: 48px;
+    text-align: center;
+    margin-left: 570px;
+}
+.botao-busca{
+    width: 224px;
     height: 48px;
 
-    margin-left: 20%;
-    margin-right: 20%;
-    background: #FFFFFF;
+    background: #AB58B9;
     border: 1px solid #AB58B9;
     box-sizing: border-box;
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
-    border-radius: 8px;
-  }
-  .swal-content__input:focus{
-      border: 1px solid #AB58B9;
-      box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.30);
-  }
-.swal-modal{
-    border-radius: 25px;
+    border-radius: 0px 8px 8px 0px;
+    color: #FFFFFF;
 }
+.campo-busca{
+    width: 393px;
+    height: 48px;
+    border: 1px solid #AB58B9;
+    border-radius: 8px 0px 0px 8px;
+    outline: none !important;
+    margin-left: 54px;
+}
+.assunto{
+    width: 587px;
+    height: 48px;
+
+    top: 218.98px;
+
+    background: #FFFFFF;
+    border: 1px solid #AB58B9;
+    margin-left: -40px;
+    border-radius: 8px;
+}
+/* ==========================================================Mural ALERT CSS============================================================= */
+/* ==========================================================SWEET ALERT CSS============================================================= */
+
+.swal-overlay--show-modal .swal-modal{
+    border-radius: 25px;
+    width: 435px;
+    height: 216px;
+    text-align: center;
+
+    
+}
+
+/* ==========================================================NETWORK ALERT CSS============================================================= */
+.networkError{
+font-family: Material Icons;
+font-size: 200px;
+font-weight: 700;
+
+color: #FFFFFF;
+text-align: center;
+
+display: flex;
+
+margin-top: 250px;
+margin-left: 100px;
+}
+.networkFailTxt{
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+
+
+width: 404px;
+height: 24px;
+left: 518px;
+top: 580px;
+/* identical to box height, or 100% */
+
+
+text-align: center;
+
+color: #FFFFFF;
+}
+.networkReconnect{
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+
+
+width: 350px;
+height: 24px;
+margin-left: 25px;
+top: 684px;
+/* identical to box 
+height, or 100% */
+
+
+
+text-align: center;
+
+color: #FFFFFF;
+}
+/* ==========================================================NETWORK ALERT CSS============================================================= */

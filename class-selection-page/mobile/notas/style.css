@@ -1,0 +1,239 @@
+/* importação da fonte Poppins */
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
+/* Importação dos Icones estilizados do google*/
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+/* importação de outro pacote de icones estilizados */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+/* importação dos icones do Bootstrap */
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css');
+
+/* fonte Poppins Para todos os campos possiveis da pagina, para n ter q declarar um a um */
+*{
+    font-family: Poppins;
+}
+/* posicionamento vertical das setas para esquerda e direita, que tem como função, alternar entre as matérias */
+.car-btn{
+    height: 30px; 
+  }
+/* titulo ao lado do cadeado */
+.titulo{
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 32px;
+}
+/* icone cadeado */
+.material-icons{
+    font-family: Material icons;
+    color: #4D228A;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 16px;
+    margin-bottom: -40px;
+}
+
+/* materia */
+.materia{
+    text-align: center;
+    color: #4D228A;
+    font-size: 14px;
+}
+/* card aluno */
+.aluno{
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+
+    background: #FFFFFF;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    margin: 10px 10px 10px 10px;
+}
+/* icone do aluno */
+img{
+
+    margin-top: 8px;
+   
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0px 2px 8px rgba(0.25, 0, 0, 0.25);
+}
+/* div - nome, matricula e situação */
+.info-aluno{
+    float: left;
+    margin-left: 70px;
+    margin-top: -50px;
+    }
+/* nome do aluno */
+.aluno-nome{
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+}
+/* número de matricula do aluno */
+.matricula{
+    left: 19.51%;
+    right: 67.68%;
+    top: 27.55%;
+    bottom: 56.12%;
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 8px;
+    line-height: 16px;
+    /* or 200% */
+
+    display: flex;
+    align-items: center;
+
+    color: #4F4F4F;
+}
+/* situação do aluno, aprovado, reprovado ou transferido */
+.situacao{
+
+    background: #089944;
+    border-radius: 24px;
+    width: 135px;
+    font-size: 10px;
+}
+#bg-situacao{
+  background-color: #828282;
+}
+/* apenas uma linha 'hr' q divide o cabeçalho, da barra de progresso*/
+.linha{
+    margin-top: 20px;
+    margin-left: 0%;
+    border: 1px solid rgba(130, 130, 130, 0.5);
+}
+/* setas para esquerda e direita que fazem a transição entre as paginas */
+.material-icons-outlined{
+    font-family: Material icons;
+    color: #4D228A;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 16px;
+}
+/* circulo da progressbar que exibe a nota atual do aluno */
+.dot {
+    height: 35px;
+    width: 35px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 5px solid #D6E3EA;
+    display: block;
+    text-align: center;
+    position: absolute;
+    color: #089944;
+    font-size: 14px;
+
+  }
+
+  /* posicionamento da barra para se alinhar ao circulo e se unir a ele */
+  .barra{
+      padding-top: 14px;
+      margin-left: 30px;
+      height: 8px;
+  }
+  .progress{
+    width: 100%; height: 8px;
+  }
+  /* variação 1 da barra de progresso */
+  .prog1{
+    background-color: #089944;
+    color: #fff;
+  }
+  /* variação 2 da barra de progresso */
+  .prog2{
+     background-color: #C20101;
+     color: #fff; 
+  }
+  .prog-trf{
+    background-color: #828282;
+  }
+  .prog3{
+    background-color: #FFD47D;
+  }
+  .circ-trf{
+    border: 5px solid #828282;
+    color: #828282;
+    
+  }
+  .circ1{
+    border-color: #089944;
+  }
+  /* variação 2 do circulo que exibe a nota do aluno */
+  .circ2{
+    border-color: #C20101;
+    color: #C20101;
+  }
+/* variação 3 do circulo q exibe a nota do aluno */
+  .circ3{
+    border-color:#FFD47D;
+  }
+  /* filtro de embaçado na div relacionada ao aluno que foi transferido */
+  .blur{
+    
+    filter: blur(0.7px);
+    opacity: 0.7;
+  }
+  /* redução do blur no campo de situação do aluno transferido */
+  .non-blur{
+    filter: blur(-15px);
+    background-color:#FFD47D;
+
+  }
+  .opac{
+    opacity: 0.5;
+  }
+  .nota-etapa{
+    background: #FFFFFF;
+    border: 1px solid #AB58B9;
+    box-sizing: border-box;
+    border-radius: 8px;
+    width: 67.38px;
+    text-align: center;
+  }
+  .etapa{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+    /* identical to box height, or 100% */
+    
+    
+    align-items: center;
+    
+    color: #4F4F4F;
+  }
+  .card-nota{
+    
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px 8px 8px 8px;
+    
+    
+  }
+  .fechar-nota{
+    background: #AB58B9;
+    border-radius: 24px;
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 32px;
+    /* or 229% */
+
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+  }

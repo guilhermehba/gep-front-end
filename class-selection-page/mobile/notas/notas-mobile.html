@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../../css/poppins.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <br>
+    <div class="titulo">
+        <span class="material-icons">lock_open </span><span class="BIMESTRE"> 1º Bimestre</span> | <span class="SERIETURMA">6º Ano - D</span>
+    </div>
+    <div class="container">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <button class="carousel-control-prev car-btn" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                
+                <span class="material-icons-outlined">arrow_back_ios</span>
+                
+              </button>
+              <button class="carousel-control-next car-btn" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                
+                <span class="material-icons-outlined">arrow_forward_ios</span>
+                
+                
+              </button>
+            <div class="carousel-inner">
+                <!-- carousel -->
+                
+                <div class="carousel-item active" data-bs-interval="150000">
+
+                    <div class="materia"><h3>Ciências</h3></div>
+                    <!-- alunos -->
+                    <div class="row">
+                        <div class="col-11 aluno mx-auto" type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#demo">
+                            <div class="col-10 icone-aluno"><img class="icone-aluno" src="img/7.jpg" alt=""></div>
+                            <div class="col-5 info-aluno">
+                                <div class="aluno-nome"><a> 1- </a><a> Aluno Exemplo</a></div>
+                                <div class="matricula"><label>Matricula: <span>0800123</span></label></div>
+                                <div class="situacao prog1" id="bg-situacao">&nbsp Situação: <a id="situacao"></a></div>
+                            </div>
+                            <div class="col-12"><hr class="linha"></div>
+                            <div>
+                                <div><span id="media" class="dot"></span></div>
+                                <div class="barra">
+                                    <div class="progress col-12">
+                                        <div id="barraNota" class="progress-bar prog1" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                        </div>    
+                        <div class="collapse" id="demo">
+                            
+                                <div class="container card card-nota" style="width: 93.5%;">
+                                    <br>
+                                    <div class="row">
+                                    <div class="col-3">
+                                        <div style="text-align: center;"><input type="number" class="nota-etapa nota1 btn" id="nota1" onchange="nota1()"></div>
+                                        <div style="text-align: center;"><label for="nota1" class="etapa">A</label></div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div style="text-align: center;"><input type="number" class="nota-etapa nota2 btn" id="nota2" onchange="nota2()"></div>
+                                        <div style="text-align: center;"><label for="nota2" class="etapa">B</label></div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div style="text-align: center;"><input type="number" class="nota-etapa nota3 btn" id="nota3" onchange="nota3()"></div>
+                                        <div style="text-align: center;"><label for="nota3" class="etapa">C</label></div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div style="text-align: center;"><input type="number" class="nota-etapa nota4 btn" id="nota4" onchange="media()"></div>
+                                        <div style="text-align: center;"><label for="nota4" class="etapa">D</label></div>
+                                    </div>
+                                    </div>
+                                    <br>
+                                    <!-- <button onclick="media()" style="background-color: blueviolet; width: 250px; text-align: center; border-radius: 25px; color: aliceblue;">Calcular Media Final</button> -->
+                                <!-- <div style="text-align: center;" class="col-12"><button type="button" class="btn fechar-nota" data-bs-toggle="collapse" data-bs-target="#demo">Fechar</button></div> -->
+                                <br>
+                                </div>
+                            
+                        </div>
+                        <div class="col-11 aluno mx-auto" type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#demo2">
+                            <div class="col-10 icone-aluno"><img class="icone-aluno" src="img/7.jpg" alt=""></div>
+                            <div class="col-5 info-aluno">
+                                <div class="aluno-nome"><a> 1- </a><a> Aluno Exemplo</a></div>
+                                <div class="matricula"><label>Matricula: <span>0800123</span></label></div>
+                                <div class="situacao prog2">&nbsp Situação: <a>Reprovado(a)</a></div>
+                            </div>
+                            <div class="col-12"><hr class="linha"></div>
+                            <div>
+                                <span class="dot circ2">3</span>
+                                <div class="barra">
+                                    <div class="progress col-12">
+                                        <div class="progress-bar prog2" role="progressbar" style="width: 30%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                        </div>    
+                        <div class="collapse" id="demo2">
+                            
+                            <div class="container card-nota">
+                                <br>
+                                <div class="row" >
+                                <div class="col-3">
+                                    <input type="text" class="nota-etapa">
+                                    <div class="etapa" style="text-align: center;">A</div>
+                                </div>
+                                <div class="col-3">
+                                    <input type="text" class="nota-etapa">
+                                    <div class="etapa" style="text-align: center;">B</div>
+                                </div>
+                                <div class="col-3">
+                                    <input type="text" class="nota-etapa">
+                                    <div class="etapa" style="text-align: center;">C</div>
+                                </div>
+                                <div class="col-3">
+                                    <input type="text" class="nota-etapa">
+                                    <div class="etapa" style="text-align: center;">D</div>
+                                </div>
+                                </div>
+                                <br>
+                            <!-- <div style="text-align: center;" class="col-12"><button type="button" class="btn fechar-nota" data-bs-toggle="collapse" data-bs-target="#demo2">Fechar</button></div> -->
+                            <br>
+                            </div>
+                        
+                        </div>
+                        <div class="col-11 aluno mx-auto"type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#demo3">
+                            <div class="col-10 icone-aluno"><img class="icone-aluno" src="img/7.jpg" alt=""></div>
+                            <div class="col-5 info-aluno">
+                                <div class="aluno-nome"><a> 1- </a><a> Aluno Exemplo</a></div>
+                                <div class="matricula"><label>Matricula: <span>0800123</span></label></div>
+                                <div class="situacao prog1">&nbsp Situação: <a>Aprovado(a)</a></div>
+                            </div>
+                            <div class="col-12"><hr class="linha"></div>
+                            <div>
+                                <span class="dot circ1">7</span>
+                                <div class="barra">
+                                    <div class="progress col-12">
+                                        <div class="progress-bar prog1" role="progressbar" style="width: 70%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                        </div>    
+                    </div>
+                    <div class="collapse" id="demo3">
+                            
+                        <div class="container card-nota">
+                            <br>
+                            <div class="row">
+                            <div class="col-3">
+                                <div>
+                                    <input type="text" class="nota-etapa">
+                                </div>
+                                <div class="etapa" style="text-align: center;">A</div>
+                            </div>
+                            <div class="col-3">
+                                <div>
+                                    <input type="text" class="nota-etapa">
+                                </div>
+                                <div class="etapa" style="text-align: center;">B</div>
+                            </div>
+                            <div class="col-3">
+                                <div>
+                                    <input type="text" class="nota-etapa">
+                                </div>
+                                <div class="etapa" style="text-align: center;">C</div>
+                            </div>
+                            <div class="col-3">
+                                <div>
+                                    <input type="text" class="nota-etapa">
+                                </div>
+                                <div class="etapa" style="text-align: center;">D</div>
+                            </div>
+                            </div>
+                            <br>
+                        <!-- <div style="text-align: center;" class="col-12"><button type="button" class="btn fechar-nota" data-bs-toggle="collapse" data-bs-target="#demo3">Fechar</button></div> -->
+                        <br>
+                        </div>
+                    
+                    </div>
+                    <!-- alunos -->
+                </div>
+              <!-- carousel -->
+              <!-- carousel -->
+              <div class="carousel-item" data-bs-interval="150000">
+                <div class="materia"><h3>Matemática</h3></div>
+                  <!-- aluno -->
+                <div class="row">
+                    <div class="col-11 aluno mx-auto">
+                        <div class="col-10 icone-aluno"><img class="icone-aluno" src="img/7.jpg" alt=""></div>
+                        <div class="col-5 info-aluno">
+                            <div class="aluno-nome"><a> 1- </a><a> Aluno Exemplo</a></div>
+                            <div class="matricula"><label>Matricula: <span>0800123</span></label></div>
+                            <div class="situacao prog1">&nbsp Situação: <a>Aprovado(a)</a></div>
+                        </div>
+                        <div class="col-12"><hr class="linha"></div>
+                        <div>
+                            <span class="dot">10</span>
+                            <div class="barra">
+                                <div class="progress col-12">
+                                    <div class="progress-bar prog1" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                    </div>    
+                    <div class="col-11 aluno mx-auto">
+                        <div class="col-10 icone-aluno"><img class="icone-aluno" src="img/7.jpg" alt=""></div>
+                        <div class="col-5 info-aluno">
+                            <div class="aluno-nome"><a> 2- </a><a> Aluno Exemplo</a></div>
+                            <div class="matricula"><label>Matricula: <span>0800123</span></label></div>
+                            <div class="situacao prog2">&nbsp Situação: <a>Reprovado(a)</a></div>
+                        </div>
+                        <div class="col-12"><hr class="linha"></div>
+                        <div>
+                            <span class="dot circ2">3</span>
+                            <div class="barra">
+                                <div class="progress col-12">
+                                    <div class="progress-bar prog2" role="progressbar" style="width: 30%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                    </div>    
+                    <!-- aluno individual -->
+                    <div class="col-11 aluno mx-auto opac">
+                        <div class="col-10 icone-aluno "><img class="icone-aluno" src="img/7.jpg" alt=""></div>
+                        <div class="col-5 info-aluno">
+                            <div class="aluno-nome"><a> 3- </a><a> Aluno Exemplo</a></div>
+                            <div class="matricula"><label>Matricula: <span>0800123</span></label></div>
+                            <div class="situacao prog3">&nbsp Situação: <a>transferido(a)</a></div>
+                        </div>
+                        <div class="col-12"><hr class="linha"></div>
+                        <div>
+                            <span class="dot circ-trf">0</span>
+                            <div class="barra">
+                                <div class="progress col-12">
+                                    <div class="progress-bar prog-trf" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                    <!-- aluno individual -->
+                    <div class="col-11 aluno mx-auto">
+                        <div class="col-10 icone-aluno"><img class="icone-aluno" src="img/7.jpg" alt=""></div>
+                        <div class="col-5 info-aluno">
+                            <div class="aluno-nome"><a> 4- </a><a> Aluno Exemplo</a></div>
+                            <div class="matricula"><label>Matricula: <span>0800123</span></label></div>
+                            <div class="situacao prog1">&nbsp Situação: <a>Aprovado(a)</a></div>
+                        </div>
+                        <div class="col-12"><hr class="linha"></div>
+                        <div>
+                            <span class="dot">7</span>
+                            <div class="barra">
+                                <div class="progress col-12">
+                                    <div class="progress-bar prog1" role="progressbar" style="width: 70%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                    </div>  
+                    <div class="col-11 aluno mx-auto">
+                        <div class="col-10 icone-aluno"><img class="icone-aluno" src="img/7.jpg" alt=""></div>
+                        <div class="col-5 info-aluno">
+                            <div class="aluno-nome"><a> 5- </a><a> Aluno Exemplo</a></div>
+                            <div class="matricula"><label>Matricula: <span>0800123</span></label></div>
+                            <div class="situacao prog1">&nbsp Situação: <a>Aprovado(a)</a></div>
+                        </div>
+                        <div class="col-12"><hr class="linha"></div>
+                        <div>
+                            <span class="dot">10</span>
+                            <div class="barra">
+                                <div class="progress col-12">
+                                    <div class="progress-bar prog1" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                    </div>    
+                    <div class="col-11 aluno mx-auto">
+                        <div class="col-10 icone-aluno"><img class="icone-aluno" src="img/7.jpg" alt=""></div>
+                        <div class="col-5 info-aluno">
+                            <div class="aluno-nome"><a> 6- </a><a> Aluno Exemplo</a></div>
+                            <div class="matricula"><label>Matricula: <span>0800123</span></label></div>
+                            <div class="situacao prog2">&nbsp Situação: <a>Reprovado(a)</a></div>
+                        </div>
+                        <div class="col-12"><hr class="linha"></div>
+                        <div>
+                            <span class="dot circ2">3</span>
+                            <div class="barra">
+                                <div class="progress col-12">
+                                    <div class="progress-bar prog2" role="progressbar" style="width: 30%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                    </div>    
+                    <!-- aluno individual -->
+                    <div class="col-11 aluno mx-auto opac">
+                        <div class="col-10 icone-aluno "><img class="icone-aluno" src="img/7.jpg" alt=""></div>
+                        <div class="col-5 info-aluno">
+                            <div class="aluno-nome"><a> 3- </a><a> Aluno Exemplo</a></div>
+                            <div class="matricula"><label>Matricula: <span>0800123</span></label></div>
+                            <div class="situacao prog3">&nbsp Situação: <a>transferido(a)</a></div>
+                        </div>
+                        <div class="col-12"><hr class="linha"></div>
+                        <div>
+                            <span class="dot circ-trf">0</span>
+                            <div class="barra">
+                                <div class="progress col-12" style="width: 100%; height: 8px;">
+                                    <div class="progress-bar prog-trf" role="progressbar" style="width: 100%; height: 8px;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                    <!-- aluno individual -->
+                    <div class="col-11 aluno mx-auto">
+                        <div class="col-10 icone-aluno"><img class="icone-aluno" src="img/7.jpg" alt=""></div>
+                        <div class="col-5 info-aluno">
+                            <div class="aluno-nome"><a> 8- </a><a> Aluno Exemplo</a></div>
+                            <div class="matricula"><label>Matricula: <span>0800123</span></label></div>
+                            <div class="situacao prog1">&nbsp Situação: <a>Aprovado(a)</a></div>
+                        </div>
+                        <div class="col-12"><hr class="linha"></div>
+                        <div>
+                            <span class="dot">7</span>
+                            <div class="barra">
+                                <div class="progress col-12">
+                                    <div class="progress-bar prog1" role="progressbar" style="width: 70%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                    <div class="col-11 aluno mx-auto">
+                        <div class="col-10 icone-aluno"><img class="icone-aluno" src="img/7.jpg" alt=""></div>
+                        <div class="col-5 info-aluno">
+                            <div class="aluno-nome"><a> 9- </a><a> Aluno Exemplo</a></div>
+                            <div class="matricula"><label>Matricula: <span>0800123</span></label></div>
+                            <div class="situacao prog1">&nbsp Situação: <a>Aprovado(a)</a></div>
+                        </div>
+                        <div class="col-12"><hr class="linha"></div>
+                        <div>
+                            <span class="dot">10</span>
+                            <div class="barra">
+                                <div class="progress col-12">
+                                    <div class="progress-bar prog1" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                    </div>    
+                    <div class="col-11 aluno mx-auto">
+                        <div class="col-10 icone-aluno"><img class="icone-aluno" src="img/7.jpg" alt=""></div>
+                        <div class="col-5 info-aluno">
+                            <div class="aluno-nome"><a> 10- </a><a> Aluno Exemplo</a></div>
+                            <div class="matricula"><label>Matricula: <span>0800123</span></label></div>
+                            <div class="situacao prog2">&nbsp Situação: <a>Reprovado(a)</a></div>
+                        </div>
+                        <div class="col-12"><hr class="linha"></div>
+                        <div>
+                            <span class="dot circ2">3</span>
+                            <div class="barra">
+                                <div class="progress col-12">
+                                    <div class="progress-bar prog2" role="progressbar" style="width: 30%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                    </div>    
+                    <!-- aluno individual -->
+                    <div class="col-11 aluno mx-auto opac">
+                        <div class="col-10 icone-aluno "><img class="icone-aluno" src="img/7.jpg" alt=""></div>
+                        <div class="col-5 info-aluno">
+                            <div class="aluno-nome"><a> 3- </a><a> Aluno Exemplo</a></div>
+                            <div class="matricula"><label>Matricula: <span>0800123</span></label></div>
+                            <div class="situacao prog3">&nbsp Situação: <a>transferido(a)</a></div>
+                        </div>
+                        <div class="col-12"><hr class="linha"></div>
+                        <div>
+                            <span class="dot circ-trf">0</span>
+                            <div class="barra">
+                                <div class="progress col-12">
+                                    <div class="progress-bar prog-trf" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                    <!-- aluno individual -->
+                    <div class="col-11 aluno mx-auto">
+                        <div class="col-10 icone-aluno"><img class="icone-aluno" src="img/7.jpg" alt=""></div>
+                        <div class="col-5 info-aluno">
+                            <div class="aluno-nome"><a> 12- </a><a> Aluno Exemplo</a></div>
+                            <div class="matricula"><label>Matricula: <span>0800123</span></label></div>
+                            <div class="situacao prog1">&nbsp Situação: <a>Aprovado(a)</a></div>
+                        </div>
+                        <div class="col-12"><hr class="linha"></div>
+                        <div>
+                            <span class="dot">7</span>
+                            <div class="barra">
+                                <div class="progress col-12">
+                                    <div class="progress-bar prog1" role="progressbar" style="width: 70%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                    </div>  
+                </div>
+                <!-- aluno -->
+              </div>
+              <!-- carousel -->
+              <div class="carousel-item" data-bs-interval="150000">
+                <div class="materia"><h3>Lingua Portuguesa</h3></div>
+                <div class="row">
+                    <div class="col-11 aluno mx-auto">
+                        <div class="col-10 icone-aluno"><img class="icone-aluno" src="img/7.jpg" alt=""></div>
+                        <div class="col-5 info-aluno">
+                            <div class="aluno-nome"><a> 1- </a><a> Aluno Exemplo</a></div>
+                            <div class="matricula"><label>Matricula: <span>0800123</span></label></div>
+                            <div class="situacao prog1">&nbsp Situação: <a>Aprovado(a)</a></div>
+                        </div>
+                        <div class="col-12"><hr class="linha"></div>
+                        <div>
+                            <span class="dot">10</span>
+                            <div class="barra">
+                                <div class="progress col-12">
+                                    <div class="progress-bar prog1" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                    </div>    
+                    <div class="col-11 aluno mx-auto">
+                        <div class="col-10 icone-aluno"><img class="icone-aluno" src="img/7.jpg" alt=""></div>
+                        <div class="col-5 info-aluno">
+                            <div class="aluno-nome"><a> 1- </a><a> Aluno Exemplo</a></div>
+                            <div class="matricula"><label>Matricula: <span>0800123</span></label></div>
+                            <div class="situacao prog2">&nbsp Situação: <a>Reprovado(a)</a></div>
+                        </div>
+                        <div class="col-12"><hr class="linha"></div>
+                        <div>
+                            <span class="dot circ2">3</span>
+                            <div class="barra">
+                                <div class="progress col-12">
+                                    <div class="progress-bar prog2" role="progressbar" style="width: 30%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                    </div>    
+                    <div class="col-11 aluno mx-auto">
+                        <div class="col-10 icone-aluno"><img class="icone-aluno" src="img/7.jpg" alt=""></div>
+                        <div class="col-5 info-aluno">
+                            <div class="aluno-nome"><a> 1- </a><a> Aluno Exemplo</a></div>
+                            <div class="matricula"><label>Matricula: <span>0800123</span></label></div>
+                            <div class="situacao prog1">&nbsp Situação: <a>Aprovado(a)</a></div>
+                        </div>
+                        <div class="col-12"><hr class="linha"></div>
+                        <div>
+                            <span class="dot">7</span>
+                            <div class="barra">
+                                <div class="progress col-12">
+                                    <div class="progress-bar prog1" role="progressbar" style="width: 70%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                    </div>    
+                </div>
+              </div>
+            </div>
+            
+          </div>
+    </div>
+    
+</body>
+</html>

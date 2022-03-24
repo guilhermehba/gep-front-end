@@ -1,23 +1,23 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html> -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="SHORTCUT ICON" href="http://teste.ergonsistemas.com.br/gepweb_d.dll/cache/gepweb_e_exe/n2/favicon.ico">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles-of-modals.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/ckeditor/styles.css">
     <link rel="stylesheet" href="css/poppins.css">
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
-    <link rel="stylesheet" href="sweetalert2.min.css">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     
     <title>Document</title>
 </head>
-<body>
+<body data-editor="ClassicEditor" data-collaboration="false" data-revision-history="false">
     <!-- Button trigger modal prontuário -->
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal_prontuario">
       Abrir Prontuário do Aluno
@@ -191,65 +191,166 @@
       <!-- Modal Nova Aula -->
       <!-- Modal Observações-->
       <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#delete_on_confirm_code"  onclick="document.getElementById('random_numero').innerHTML = getRndInteger(0,699999), dataHoje()">
   Launch demo modal
 </button>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+<div class="modal fade" id="delete_on_confirm_code" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered"  style="width: 438px; height: 256px;">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
+      
       <div class="modal-body">
-        ...
+        <div>Digite o seguinte código <a id="random_numero"></a> para confirmar.</div>
+        <div>Exclusão da frequência do dia: <a id="dataHoje"></a></div>
+        <p></p>
+        <input id="input_code" style="width: 248px;" type="number">
+        <br>
+        <br>
+        <button id="enviar_cod" class="btn" onclick="confirmarExclusaoTeste()">Enviar</button>
+        <button id="cancelar_envio" class="btn" data-bs-dismiss="modal">Cancelar</button>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+      
     </div>
   </div>
 </div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
+
 
       <!-- Modal Observações-->
+      
+      <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalMural">
+          Launch Mural modal
+        </button>
+        <!-- Button trigger modal -->
+        <!-- Modal Mural da Turma -  tarefa -->
+        <!-- Modal -->
+        <div class="modal fade" id="modalMural" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+              <div class="row">
+                <h5 class="modal-title col-6" id="exampleModalLabel" style="text-align: right; margin-top: 20px;">Tarefa</h5>
+                <span type="button" class="material-icons-outlined col-6" data-bs-dismiss="modal" aria-label="Close">highlight_off</span>
+              </div>
+              <div class="modal-body">
+                <br>
+                <br>
+                <br>
+                <label style="margin-left: -580px;">Para</label>
+                <div id="buscaCompleto" class="input-group buscaCompleto">
+                  <input type="text" aria-label="First name" class="form-control campo-busca" placeholder="Ex: 1º Ano - A">
+                  <span class="input-group-text  btn botao-busca">Selecionar Destino <a class="lupaBuscaTurma"> search</a></span>
+                </div>
+                <br>
+                <br>
+                <br>
+                <label style="margin-left: -560px;">Assunto</label>
+                <div ><input class="assunto" type="name" placeholder="Ex: Assunto da Publicação"></div>
+                <br>
+                <br>
+                <br>
+                <label style="margin-left: -560px;">Descrição</label>
+                <main>
+                  <div class="centered">
+                    <div class="row row-editor">
+                      <div class="editor-container">
+                        <div class="editor">
+                        
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </main>
+              </div>
+              <div class="modal-footer" style="text-align: center;">
+                <div class="col-12">As mensagens serão enviadas para o portal do aluno e para todos os alunos com o app GEP Sala de Aula instalado. </div>
+                <div class="col-12">E de responsabilidade da escola informar aos alunos a importância da instalação do app! a coluna App - Indica que aluno possui aplicativo GEP - Sala de Aula instalado.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- Modal Mural da Turma -  tarefa -->
+      <script>
+        ClassicEditor
+            .create( document.querySelector( '#editor' ) )
+            .catch( error => {
+                console.error( error );
+            } );
+      </script>
       <!-- Sweet alert confirmation -->
-      <div class="row sweetalert2">
-        <div class="col-5">
+    
+       
           <button class="btn btn-success" onclick="acionar(), document.getElementById('random_numero').innerHTML = getRndInteger(0,699999)">
             Sweet Alert
           </button>
-          <br>
-          <br>
-          <br>
-          <div id="random_numero"></div>
-        </div>
-       
-        <div class="col-5">
+
           <button class="btn btn-danger" onclick="teste()">
             teste
           </button>
-        </div>
-  
+       
+          <div class="modal" tabindex="-1" id="networkModal"  data-bs-backdrop="static" data-bs-keyboard="false">
+            <div class="modal-dialog">
+              <span class="networkError">
+                wifi_off
+                </span>
+                <div class="networkFailTxt"><a>Falha na conexão com a internet</a></div>
+                <br>
+                <br>
+                <br>
+                <div class="networkReconnect"><a>Aguardando reconexão: <a id="countdown">30s</a></a></div>
+                <br>
+                <br>
+                
+            </div>
+          </div>
         
-      </div>
-      
+      <!-- <button data-bs-toggle="modal" data-bs-target="#networkModal">aaa</button> -->
       <!-- Sweet alert confirmation -->
 </body>
 </html>
+
+<script>
+   if(navigator.onLine){
+    
+  } else {
+    $('#networkModal').modal({backdrop: 'static'});
+
+    //countdown per seconds
+    var timeleft = 30;
+    var networkTimer = setInterval(function(){
+      if(timeleft <= 0){
+        clearInterval(networkTimer);
+        setTimeout(function(){
+          window.location.reload(1);
+        })
+      } else {
+        document.getElementById("countdown").innerText = timeleft + "s";
+      }
+      timeleft -= 1;
+    }, 1000);
+    //countdown per seconds
+  }
+</script>
+<script src="js/ckeditor/ckeditor.js"></script>
+		<script>ClassicEditor
+				.create( document.querySelector( '.editor' ), {
+					
+					licenseKey: '',
+					
+					
+					
+				} )
+				.then( editor => {
+					window.editor = editor;
+			
+					
+					
+					
+				} )
+				.catch( error => {
+					console.error( 'Ops, algo deu errado!' );
+
+					console.error( error );
+				} );
+		</script>

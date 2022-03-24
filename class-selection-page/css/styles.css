@@ -66,6 +66,10 @@ label {
   background: #FEFEFE;
   border-radius: 16px;
   margin: 10px 2px 2px 2px;
+
+}
+.card-erg:hover .card-erg:focus{
+  border: 1px solid #AB58B9;
 }
 
 .border-radios-erg {

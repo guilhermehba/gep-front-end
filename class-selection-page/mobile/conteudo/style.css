@@ -1,0 +1,145 @@
+/* importação da fonte Poppins */
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
+/* Importação dos Icones estilizados do google*/
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+/* importação de outro pacote de icones estilizados */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+/* importação dos icones do Bootstrap */
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css');
+
+/* fonte Poppins Para todos os campos possiveis da pagina, para n ter q declarar um a um */
+*{
+    font-family: Poppins;
+}
+/* posicionamento vertical das setas para esquerda e direita, que tem como função, alternar entre as matérias */
+.car-btn{
+    height: 30px; 
+  }
+/* titulo ao lado do cadeado */
+.titulo{
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 32px;
+}
+/* icone cadeado */
+.material-icons{
+    font-family: Material icons;
+    color: #4D228A;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 16px;
+    margin-bottom: -40px;
+}
+.material-icons-outlined{
+    font-family: Material icons;
+    color: #4D228A;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 16px;
+}
+
+/* materia */
+.materia{
+    
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+
+    /* identical to box height, or 229% */
+
+    text-align: center;
+
+    color: #6F31AD;
+    }
+.conteudo-aula{
+    background: #FFFFFF;
+    border: 1px solid #D6E3EA;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    }
+.conteudo-aula:focus{
+    outline: none !important;
+}
+
+.trash_btn{
+    background: #FFFFFF;
+    border: 1px solid #AB58B9;
+    box-sizing: border-box;
+    border-radius: 24px;
+
+    width: 90px;
+    height: 48px;
+
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    /* identical to box height, or 160% */
+    float: left;
+    align-items: center;
+    text-align: center;
+
+    color: #AB58B9;
+
+}
+.save_btn{
+    background: #AB58B9;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 24px;
+    width: 148px;
+    height: 48px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 32px;
+    /* identical to box height, or 229% */
+
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+.copypaste_btn{
+    background: #FFFFFF;
+    border: 1px solid #AB58B9;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 24px;
+    width: 90px;
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    /* identical to box height, or 160% */
+    float: right;
+    align-items: center;
+    text-align: center;
+
+    color: #AB58B9;
+}
+.botoes-conteudo-ergon{
+    margin-top: 5px;
+    text-align: center;
+}
+/* block resize option for textarea */
+textarea{
+    resize: none;
+}
+/* campo criado com o unico proposito de permitir simular a resolução mobile e poder utilizar a extensão de régua que não funciona na resolução mobile nativa */
+/* body{
+    width: 415px; 
+    border :2px solid black; 
+    margin: 50px;
+} */
+#dataHoje{
+    font-weight: 500
+}

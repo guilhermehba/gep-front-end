@@ -1,0 +1,725 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+header, #bimestre-and-filter, #class{margin: 5px 5px 5px 5px;}
+* {
+font-family: Poppins;
+font-style: normal;
+font-size: 16px;
+line-height: 24px;
+}
+body a{
+  text-decoration: none;
+}
+.corpo{
+  margin-top: 60px;
+}
+a{
+  color: #AB58B9 ;
+}
+a:hover{
+  color: #6F31AD ;
+}
+
+.col-3{
+  width: 100%;
+  margin: 5px auto;
+}
+
+.card-header{
+  border-radius: 16px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+}
+.card {
+
+
+float: none;
+text-align: center;
+background: #FEFEFE;
+box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+border-radius: 16px;
+/*    word-wrap:break-word;   */
+
+}
+
+/* Style the buttons */
+img {
+object-fit: cover;
+width: 80px;
+height: 80px;
+border-radius: 50% solid;
+z-index: 0;
+}
+#file{
+display: none;
+}
+
+/*******************card css***************************/
+/*box config*/
+#ident_class{
+font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+
+/* identical to box height, or 100% */
+color: #AB58B9;
+}
+
+#class_cod{
+
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 8px;
+text-align: justify;
+color: #4F4F4F;
+
+}
+/*student icon, dot and count number*/
+#student_icon{
+color: #AB58B9;
+font-size: 20px;
+cursor: pointer;
+
+font-family: Material Icons;
+cursor: pointer;
+border-radius: 50px;
+text-decoration: none;
+}
+#dot{
+color: #AB58B9;
+font-size: 20px;
+margin: 2px 2px 2px 2px;
+font-family: Material Icons;
+cursor: pointer;
+border-radius: 50px;
+text-decoration: none;
+}
+.CDSERIE{
+  font-size: 20px;
+  color: #AB58B9;
+  font-family: Poppins;
+  cursor: pointer;
+  border-radius: 50px;
+  text-decoration: none;
+
+}
+  /*student icon, dot and count number*/
+#class_lock{
+      font-family: Material Icons;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 24px;
+      cursor: pointer;
+      
+      color: #AB58B9;
+}
+#SERIETURMA{
+  height: 25px;
+  float: left;
+ 
+  font-family: Poppins;
+   font-style: normal;
+   font-weight: 600;
+   font-size: 16px;
+ 
+   /* identical to box height, or 100% */
+   color: #AB58B9;
+   
+ }
+#cont_div2{
+  height: 25px;
+  text-align: right;
+
+  float: left;
+  margin-right: 20px;
+ 
+ }
+ #cont_div3{
+  height: 25px;
+  float: right;
+
+ }
+*{
+text-decoration: none;
+}
+#teacher{
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 10px;
+
+  text-align: left;
+
+  color: #4F4F4F;
+}
+#progress_bar_tittle{
+font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 8px;
+/* identical to box height, or 100% */
+
+text-align: left;
+
+color: #4F4F4F;
+}
+.progress-bar{
+width: 50%;
+text-align: left;
+font-weight: 500;
+}
+#max_aulas{
+  font-size: 16px; 
+  margin-top: -3px; 
+  margin-left: 105px;
+}
+.disciplinas{
+  text-align: center;
+  font-size: 15px;
+  text-decoration: none;
+  color: #AB58B9;
+  }
+  .disciplinas:hover{
+      color: #6F31AD;
+  }
+/*******************card css***************************/
+@media (max-width: 767px) {
+  #image-perfil-top{
+      position: absolute;
+      top: 9px;
+      right: 16px;
+  }
+  .image-user{
+      width: 48px;
+      height: 48px;
+      background-image: url(img/katie.webp);
+      background-size: 100%;
+      border-radius: 100%;
+      background-position: center;
+  }
+
+  .container-no-fluid{
+      display: inline-block !important;
+  }
+
+  .title-nav-top{
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+
+      color: #FFFFFF;
+  }
+
+  .title{
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+  }
+
+  .sub-title{
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 8px;
+      line-height: 16px;
+  }
+
+  .legend-top{
+      margin-top: 10vw;
+      padding-top: 5%;
+      height: 90px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .content-middle{
+      margin-top: 4vw;
+  }
+}
+
+@media (min-width: 850px) {
+  #image-perfil-top{
+      position: absolute;
+      top: 9px;
+      right: 16px;
+  }
+  .image-user{
+      width: 48px;
+      height: 48px;
+      background-image: url(img/katie.webp);
+      background-size: 100%;
+      border-radius: 100%;
+      background-position: center;
+  }
+
+  .container-no-fluid{
+      display: inline-block !important;
+  }
+
+  .title-nav-top{
+      display: none;
+  }
+
+  .navbar-brand{
+      padding: 0;
+      margin: 0;
+  }
+
+  .title{
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+  }
+
+  .sub-title{
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 8px;
+      line-height: 16px;
+  }
+
+  .legend-top{
+      margin-top: 8vw;
+      height: 90px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .content-middle{
+      margin-top: 4vw;
+  }
+}
+
+@media (min-width: 852px){
+  #image-perfil-top{
+      position: absolute;
+      top: 9px;
+      right: 16px;
+      display: none;
+  }
+  .title-nav-top{
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+
+      color: #FFFFFF;
+      display: none;
+  }
+  
+  .legend-top{
+      margin-top: 10vh;
+  }
+}
+
+.bg-ergon{
+  background-color: #6F31AD !important;
+  padding: 1px;
+}
+
+.navbar-dark .navbar-toggler{
+  border: none !important;
+}
+
+.navbar-toggler:active{
+  border: none !important;
+}
+
+.navbar-dark .navbar-toggler {
+  color: rgba(255,255,255,.01) !important;
+  border: none !important;
+}
+
+.navbar-dark .navbar-toggler-icon-back {
+  background-image: url(img/arrow_back.svg);
+  background-size: 80%;
+}
+
+.title {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: #6F31AD;
+}
+
+.content-mobile{
+  width: 95vw;
+  margin: auto;
+}
+
+.btn-group-ergon{
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  border-radius: 8px;
+  height: 48px;
+}
+
+.btn-ergon-mobile{
+  border-right: 1px solid rgba(171, 88, 185, 0.5);
+  color: #6F31AD;
+  /* padding: 0; */
+}
+
+.btn-ergon-mobile.disabled{
+  color: #828282;
+  border: none;
+  background: #D6E3EA;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 1;
+}
+
+.btn-ergon-mobile>span{
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 8px;
+  display: block;
+  padding-top: 1px;
+}
+.btn-ergon-mobile>.strong-ergon-legend{
+  font-size: 14px;
+  padding-top: 4px;
+}
+
+.btn-ergon-mobile-legend{
+  padding-bottom: 2px;
+}
+
+/*******************header css***************************/
+/*=========nav=========*/
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-bottom: 0;
+  list-style: none;
+  background: #F3F5F7;
+  border-radius: .25rem;
+  --bs-breadcrumb-divider: '>';
+}
+#list{
+  color: #AB58B9;
+  padding-top: 8px;
+  font-size: 16px;
+  line-height: 32px;
+  padding-left: 15px;
+  cursor: pointer;
+}
+/*=========nav=========*/
+/*=========bimestre=========*/
+#bimestre{
+  font-size: 18px;
+  line-height: 24px;
+}
+
+#diario-turma{
+  font-size: 14px;
+  line-height: 24px;
+  width: 100%;
+  margin: auto 14px;
+
+}
+
+#drop_bimestre{
+  background: #FFFDFD;
+  border: 1px solid #6F31AD;
+  box-sizing: border-box;
+  border-radius: 8px;
+  width: 172px;
+  height: 48px;
+  color: #AB58B9;
+  
+  
+
+}
+#drop_bimestre:hover{
+background: #FFFDFD;
+border: 1px solid #6F31AD;
+box-sizing: border-box;
+border-radius: 8px;
+width: 172px;
+color: #6F31AD;
+
+}
+#drop_list{
+width: 25%;
+}
+/**/
+#bimestre_filter_btn{
+  float: right;
+  margin: auto 10px;
+  
+}
+
+/**/
+#filter_buttom{
+  background: #AB58B9;
+  border: 1px solid #FFFFFF;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  margin: auto 10px;
+      
+}
+#icon_fil{
+  padding-top: 5px;
+  width: 30%;
+  float: left;
+  color: #FFFFFF;
+}
+#filter_text{
+  text-decoration: none;
+  color: black;
+  width: 70%;
+  float: right;
+  padding-top: 8px;
+}
+#back_class_bar{
+  background: #D6E3EA;
+  border-radius: 2px 2px 0px 0px;
+  
+  left: 86px;
+  padding-top: 2px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  color: #4F4F4F;
+  background: #D6E3EA;
+}
+#class{
+  font-size: 12px;
+  margin: auto 10px;
+}
+
+
+
+
+/*=========bimestre=========*/
+/*==============style for modals===================*/
+
+#ModalLabel{
+  text-align: center; 
+  border: none; 
+  margin: 0 auto;
+  font-weight: 600;
+}
+.modal-content{
+  border-radius: 25px !important;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+}
+#center_align_div{
+  text-align: center;
+}
+#lbl_drop_filters{
+ margin-left: 10%;
+}
+#dropdown_prontuario{
+  width: 100%;
+  height: 48px;
+  left: calc(50% - 496px/2 - 7px);
+  top: 320px;
+
+  background: #FFFDFD;
+  border: 1px solid #6F31AD;
+  box-sizing: border-box;
+  border-radius: 8px;
+  color: #AB58B9;
+}
+#dropdown_ocorrencia{
+  width: 100%;
+  height: 48px;
+  left: calc(50% - 496px/2);
+  top: 408px;
+  
+  background: #FFFDFD;
+  border: 1px solid #6F31AD;
+  box-sizing: border-box;
+  border-radius: 8px;
+  color: #AB58B9;
+}
+#dropdown_gravidade{
+  width: 100%;
+  height: 48px;
+  left: calc(50% - 496px/2);
+  top: 408px;
+  
+  background: #FFFDFD;
+  border: 1px solid #6F31AD;
+  box-sizing: border-box;
+  border-radius: 8px;
+  color: #AB58B9;
+}
+#dropdown_evolucao{
+  width: 100%;
+  height: 48px;
+  left: calc(50% - 496px/2);
+  top: 408px;
+  
+  background: #FFFDFD;
+  border: 1px solid #6F31AD;
+  box-sizing: border-box;
+  border-radius: 8px;
+  color: #AB58B9;
+}
+#detalhe_ocorrencia{
+  width: 100%;
+  height: 135px;
+  left: calc(50% - 496px/2);
+  top: 588px;
+
+  background: #FFFDFD;
+  border: 1px solid #AB58B9;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+.dropdown-menu{
+  width: 25%;
+  border: darkgrey 0.5px solid;
+}
+#save_prontuario{
+  background: #AB58B9;
+  border-radius: 24px;
+}
+#cancel_changes{
+
+  border-radius: 24px;
+}
+
+/*===============WARNING CONTENT===================*/
+#warning_content{
+  width: 454px;
+  height: 152px;
+  left: calc(50% - 454px/2);
+  top: 385px;
+
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  /* or 150% */
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+}
+#manual_btn{
+      background: #AB58B9;
+      border-radius: 24px;
+      border: none;
+      width: 40%;
+      height: 48px;
+
+      left: 0%;
+      right: 0%;
+      top: 0%;
+      bottom: 0%;
+
+      color: #ffffff;
+}
+#close_warning{
+      border-radius: 24px;
+      border: 0.5px solid darkgrey;
+      width: 40%;
+      color: #AB58B9;
+}
+
+/*============CONFIRMATION MODAL=================*/
+
+#confirmation_content{
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 8px;
+
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+}
+#lock_icon{
+  top: 100%;
+  font-size: 24px;
+}
+
+
+#manual_btn{
+  background: #AB58B9;
+  border-radius: 24px;
+  border: none;
+  width: 40%;
+  height: 48px;
+
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+
+  color: #ffffff;
+}
+#close_warning{
+      border-radius: 24px;
+      border: 0.5px solid darkgrey;
+      width: 40%;
+      color: #AB58B9;
+}
+/*========filter modal=========*/
+#modalFilter{
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
+  border-radius: 24px;
+}
+#dropdown_professor{
+  background: #FFFDFD;
+  border: 1px solid #6F31AD;
+  box-sizing: border-box;
+  border-radius: 8px;
+  width: 276px;
+  text-align: right;
+}
+#dropdown_bimestre{
+  background: #FFFDFD;
+  border: 1px solid #6F31AD;
+  box-sizing: border-box;
+  border-radius: 8px;
+  width: 276px;
+  text-align: right;
+}
+#dropdown_series{
+  background: #FFFDFD;
+  border: 1px solid #6F31AD;
+  box-sizing: border-box;
+  border-radius: 8px;
+  width: 276px;
+  text-align: right;
+}
+#dropdown_turmas{
+  background: #FFFDFD;
+  border: 1px solid #6F31AD;
+  box-sizing: border-box;
+  border-radius: 8px;
+  width: 276px;
+  text-align: right;
+}
+
+#apply_filter{
+  background: #AB58B9;
+  border-radius: 24px;
+  width: 35%;
+}
+#close_filter{
+  background: #FFFFFF;
+  border: 1px solid #AB58B9;
+  box-sizing: border-box;
+  border-radius: 24px;
+  width: 35%;
+}
+/*========filter modal=========*/
