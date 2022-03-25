@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login/style.css">
+    <link rel="stylesheet" href="class-selection-page/css/bootstrap.min.css">
+    <link rel="stylesheet" href="class-selection-page/templates/modais/css/styles-of-modals.css">
+    <script src="class-selection-page/JS/bootstrap.bundle.min.js"></script>
+    <script src="login/script.js"></script>    
+    <title>Document</title>
+</head>
+<body>
+    <div style="margin: 100px;">
+        <div class="row row-login" style="border: 1px solid;">
+            <div class="col-8 img-ergon-login" >
+                <img class="img-ergon" src="assets/img-ergon-login.png" alt="">
+            </div>
+            <div class="col-4 form-ergon-login">
+                <div class="login-ergon">
+                    <div>
+                        <label for="login-usuario">Usuário:</label>
+                        <form name="form1">
+                            <form name="form1">
+                                <input class="login-usuario" type="text" name="ao_cpf" id="ao_cpf" placeholder="000.000.000-00" maxlength="14" OnBlur="ValidaCPF();"/>
+                                </form>
+                        </form>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <label for="local-usuario">Município:</label>
+                        <select id="municipios" class=" local-usuario" name="locais" id="">
+                            <option value="0">Selecione o município</option>
+                            <option value="1">Cidade</option>
+                        </select>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <label for="senha-usuario">Senha:</label>
+                        <input id="senha" class="senha-usuario" type="password" name="senha-usuario" placeholder="********">
+                    </div>
+                    <br>
+                    <div style="margin-top: 20px;">
+                        <label for="ano-letivo">Ano Letivo:</label>
+                        <select name="" class="ano-letivo" id="ano-letivo" onclick="dataHoje()">
+                            <option id="teste" value="0"> &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp </option>
+                            <option id="dataHoje" value="1"></option>
+                        </select>
+                    </div>
+                    <br>
+             
+                    <div class="campo-btn-login-ergon">
+                        <a class="btn btn-entrar-ergon" style="background-color:#AB58B9; border-radius: 24px;width: 115px;height: 40px;" onclick="validar()"><span style=" color: #FFFFFF;font-style: normal;
+                            font-weight: 700;
+                            font-size: 16px">Entrar</span></a>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="col-12 campo-btn-recuperar-senha">
+                        <a class="btn recuperar-senha" data-bs-toggle="modal" data-bs-target="#ModalEmail">Esqueceu a senha?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<!-- Button trigger modal -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="ModalEmail" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog ">
+        <div class="modal-content">
+            
+            <div class="modal-body " style="text-align: left;">
+                <label for="inputEmailRecuperacao">Confirme seu E-mail para recuperação de senha</label>
+                <input class="inputEmailRecuperacao" type="email" name="" id="user-email" placeholder="exemplo@email.com">
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn " data-bs-dismiss="modal">Enviar</button>
+                <button type="button" class="btn " data-bs-dismiss="modal">Cancelar</button>
+            </div>
+        </div>
+    </div>
+  </div>

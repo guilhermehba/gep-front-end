@@ -19,7 +19,7 @@
 </head>
 <body data-editor="ClassicEditor" data-collaboration="false" data-revision-history="false">
     <!-- Button trigger modal prontuário -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal_prontuario">
+    <button type="button" class="btn btn-primary launch" data-bs-toggle="modal" data-bs-target="#modal_prontuario">
       Abrir Prontuário do Aluno
     </button>
     <!-- Button trigger modal prontuário -->
@@ -95,7 +95,7 @@
 </div>
 <!-- Modal prontuário -->
     <!-- Button trigger modal atenção -->
-      <button id="warning_remote" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal_warning">
+      <button id="warning_remote" type="button" class="btn btn-primary launch" data-bs-toggle="modal" data-bs-target="#modal_warning">
         <strong>ATENÇÃO</strong>
       </button>
       <!-- Button trigger modal atenção -->
@@ -128,7 +128,7 @@
       </div>
       <!-- Modal atenção fim -->
       <!-- Button trigger modal confirmação -->
-      <button id="warning_remote" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal_confirmation">
+      <button id="warning_remote" type="button" class="btn btn-primary launch" data-bs-toggle="modal" data-bs-target="#modal_confirmation">
         <strong>CONFIRMAÇÃO</strong>
       </button>
       <!-- Button trigger modal confirmação -->
@@ -165,7 +165,7 @@
     </div>
       <!-- Modal confirmação -->
       <!-- Button trigger modal nova aula -->
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      <button type="button" class="btn btn-primary launch" data-bs-toggle="modal" data-bs-target="#exampleModal">
         Nova Aula Alerta
       </button>
       <!-- Button trigger modal nova aula -->
@@ -191,8 +191,8 @@
       <!-- Modal Nova Aula -->
       <!-- Modal Observações-->
       <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#delete_on_confirm_code"  onclick="document.getElementById('random_numero').innerHTML = getRndInteger(0,699999), dataHoje()">
-  Launch demo modal
+<button type="button" class="btn btn-primary launch" data-bs-toggle="modal" data-bs-target="#delete_on_confirm_code"  onclick="document.getElementById('random_numero').innerHTML = getRndInteger(0,699999), dataHoje()">
+  Launch Exclusão
 </button>
 
 <!-- Modal -->
@@ -220,7 +220,7 @@
       <!-- Modal Observações-->
       
       <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalMural">
+        <button type="button" class="btn btn-primary launch" data-bs-toggle="modal" data-bs-target="#modalMural">
           Launch Mural modal
         </button>
         <!-- Button trigger modal -->
@@ -281,7 +281,7 @@
       <!-- Sweet alert confirmation -->
     
        
-          <button class="btn btn-success" onclick="acionar(), document.getElementById('random_numero').innerHTML = getRndInteger(0,699999)">
+          <button class="btn btn-success launch" onclick="acionar(), document.getElementById('random_numero').innerHTML = getRndInteger(0,699999)">
             Sweet Alert
           </button>
 
@@ -381,7 +381,7 @@
 .
 .
 ."></div> -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#EXAMPLEpRONTU">
+<button type="button" class="btn btn-primary launch" data-bs-toggle="modal" data-bs-target="#EXAMPLEpRONTU">
   banana
 </button>
 
@@ -453,3 +453,81 @@
   </div>
 </div>
 <!-- Modal prontuário -->
+<!-- Modal aviso aluno -->
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary launch" data-bs-toggle="modal" data-bs-target="#avisoAluno">
+  Launch Aviso Aluno
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="avisoAluno" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal aviso aluno -->
+
+
+
+<!-- Modal aviso turma -->
+<button type="button" class="btn btn-primary launch" data-bs-toggle="modal" data-bs-target="#avisoTurma">
+  Launch Aviso Turma
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="avisoTurma" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <h5 class="modal-title modal-title-aviso" id="exampleModalLabel">Selecionar Destino</h5>
+
+      <div id="fundo-navegação">
+        <nav style="--bs-breadcrumb-divider: '\F27B';" class="breadcrumb" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html" style="color: #6F31AD !important;">Início</a></li>
+                <li class="breadcrumb-item active" aria-current="page"><a>Seleção de turmas</a></li>
+            </ol>
+            <div class="help-top">
+                <a href="#" class="link-ergon" onclick="notificationGEP('Diário de Turmas!', 'bottom')"><svg
+                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-question-circle-fill"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247zm2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z" />
+                    </svg></a>
+            </div>
+        </nav>
+    </div>
+    
+      <div class="modal-body">
+        <label class="AvisoTurma-label" for="AvisoTurma-select">Curso / turno</label>
+        <select class="AvisoTurma-select" name="" id="">
+          <option value="0">Selecione um Periodo</option>
+          <option value="1"> 1º Ano - A</option>
+          <option value="2">2º Ano - A</option>
+          <option value="3">3º Ano - A</option>
+          <option value="4">4º Ano - A</option>
+        </select>
+        <label class="AvisoTurma-label" for="selected-turmas">Série / turma selecionadas</label>
+        <div class="selected-turmas">
+          
+        </div>
+      </div>
+      <div class="modal-footer" style="text-align: center;">
+        <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+        <button id="enviar_cod" type="button" class="btn">Enviar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal aviso turma -->

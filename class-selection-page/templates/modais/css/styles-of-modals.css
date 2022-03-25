@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
-
+a{
+    text-decoration: none;
+}
+.launch{
+    margin: 20px;
+}
 .material-icons-outlined{
     font-family: Material Icons;
     font-size: 50px;
@@ -416,3 +421,51 @@ text-align: center;
 color: #FFFFFF;
 }
 /* ==========================================================NETWORK ALERT CSS============================================================= */
+/* ======================================================================================================================= */
+/* ======================================================================================================================= */
+/* ==========================================================AVISO ALUNO ALERT CSS============================================================= */
+/* ==========================================================AVISO ALUNO ALERT CSS============================================================= */
+/* ==========================================================AVISO TURMA ALERT CSS============================================================= */
+.AvisoTurma-select{
+    width: 335px;
+    background: #FFFDFD;
+    border: 1px solid #6F31AD;
+   
+    border-radius: 8px;
+}
+.AvisoTurma-select:focus{
+    width: 335px;
+    background: #AB58B9;
+    border: 1px solid #AB58B9;
+    
+    border-radius: 8px;
+}
+.AvisoTurma-select:focus option{
+    background-color: #FFFDFD;
+}
+.AvisoTurma-select:focus option:hover{
+    background-color: #AB58B9;
+}
+.modal-title-aviso{
+    margin-left: 160px;
+    margin-right: 140px;
+}
+.selected-turmas{
+    background: #FFFDFD;
+border: 1px solid #6F31AD;
+box-sizing: border-box;
+border-radius: 8px;
+Width: 335px;
+height: 227px;
+text-align: left;
+margin-top: 2px;
+margin-left: 65px;
+
+}
+.AvisoTurma-label{
+    display: flex;
+    margin-left: 65px;
+    margin-top: 10px;
+   
+}
+/* ==========================================================AVISO TURMA ALERT CSS============================================================= */

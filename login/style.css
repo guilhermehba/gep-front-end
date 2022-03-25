@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css');
+
+
+*{
+    font-family: Poppins;
+}
+a{
+    text-decoration: none !important ;
+    color: #AB58B9 !important;
+}
+a:hover{
+    color: #4D228A !important;
+}
+.row-login{
+    
+    width: 970px;
+    left: 245px;
+    top: 271px;
+
+    background: #FFFFFF;
+    box-shadow: -15px 71px 32px rgba(0, 0, 0, 0.1);
+    border-radius: 24px;
+    }
+.img-ergon-login{
+    float: left;
+}
+.img-ergon{
+    width: 640px;
+    border-radius: 24px;
+}
+.form-ergon-login{
+    float: right;
+}
+.login-ergon{
+    margin-top: 80px;
+}
+.login-usuario{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+/* identical to box height, or 150% */
+    width: 260px;
+    
+    border-bottom: 2px solid #AB58B9;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    color: #828282;
+    outline: none;
+}
+.local-usuario{
+    display: flex;
+    width: 260px;
+    border-bottom: 2px solid #AB58B9;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    
+}
+.senha-usuario{
+    display: flex;  
+    width: 260px;
+    border-bottom: 2px solid #AB58B9;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    outline: none;
+}
+.ano-letivo{
+    display: flex;
+    background: #FFFDFD;
+    border: 1px solid #4D228A;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+.campo-btn-login-ergon{
+    text-align: center;
+    
+}
+.btn-corpo{
+    background-color:#AB58B9; 
+    border-radius: 24px;
+    width: 115px;
+    height: 40px;
+}
+.btn-entrar-ergon{
+ 
+    color: #dddd;font-style: normal;
+    font-weight: 700;
+    font-size: 16px
+    
+}
+.recuperar-senha{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 32px;
+    /* identical to box height, or 200% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-decoration-line: underline;
+
+    color: #AB58B9;
+}
+.campo-btn-recuperar-senha{
+    text-align: center;
+}
+.span-icon-ergon{
+    font-family: Material Icons;
+}
+.inputEmailRecuperacao{
+    width: 587px;
+    height: 48px;
+    left: 16px;
+    top: 48px;
+
+    background: #FFFFFF;
+    border: 1px solid #AB58B9;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
