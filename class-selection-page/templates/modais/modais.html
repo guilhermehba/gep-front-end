@@ -33,8 +33,8 @@
       <p style="text-align: center;"><strong>LUKAS SILVA E SILVA</strong></p>
       <div class="modal-body">
           <div  class="dropdown">
-              <label>Prontuário</label>
-              <button class="btn btn-outline-secondary dropdown-toggle btn-prontuario" type="button" id="dropdown_prontuario" data-bs-toggle="dropdown" aria-expanded="false">
+              <label class="label-pront" for="btn-prontuario">Prontuário</label>
+              <button class="btn btn-outline dropdown-toggle btn-prontuario" type="button" id="dropdown_prontuario" data-bs-toggle="dropdown" aria-expanded="false">
                   Prontuário
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdown_prontuario">
@@ -45,8 +45,8 @@
           </div>
           <br>
           <div  class="dropdown">
-              <label>Ocorrência do Prontuário</label>
-              <button class="btn btn-outline-secondary dropdown-toggle btn-ocorrencia" type="button" id="dropdown_ocorrencia" data-bs-toggle="dropdown" aria-expanded="false">
+              <label class="label-ocorr">Ocorrência do Prontuário</label>
+              <button class="btn btn-outline dropdown-toggle btn-ocorrencia" type="button" id="dropdown_ocorrencia" data-bs-toggle="dropdown" aria-expanded="false">
                   Ocorrência do Prontuário
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdown_ocorrencia">
@@ -58,8 +58,8 @@
           <br>
           <div>
               <div  class="dropdown" style="width: 45%; float: left; width: 50%;">
-                  <label>Gravidade</label>
-                  <button class="btn btn-outline-secondary dropdown-toggle btn-gravidade" type="button" id="dropdown_gravidade" data-bs-toggle="dropdown" aria-expanded="false">
+                  <label class="label-grav">Gravidade</label>
+                  <button class="btn btn-outline dropdown-toggle btn-gravidade" type="button" id="dropdown_gravidade" data-bs-toggle="dropdown" aria-expanded="false">
                       Gravidade
                   </button>
                   <ul class="dropdown-menu" aria-labelledby="dropdown_gravidade">
@@ -69,8 +69,8 @@
                   </ul>
               </div>
               <div  class="dropdown" style="width: 45%; float: right;">
-                  <label>Evolução</label>
-                  <button class="btn btn-outline-secondary dropdown-toggle btn-evolucao" type="button" id="dropdown_evolucao" data-bs-toggle="dropdown" aria-expanded="false">
+                  <label class="label-evo">Evolução</label>
+                  <button class="btn btn-outline dropdown-toggle btn-evolucao" type="button" id="dropdown_evolucao" data-bs-toggle="dropdown" aria-expanded="false">
                       Evolução
                   </button>
                   <ul class="dropdown-menu" aria-labelledby="dropdown_evolucao">
@@ -87,7 +87,7 @@
           <div style="text-align: center;">
               <button id="save_prontuario" type="button" class="btn btn-outline" style="width: 30%;">salvar</button>
               <p></p>
-              <button id="cancel_changes" type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal" style="width: 30%;">Cancelar</button>
+              <button id="cancel_changes" type="button" class="btn btn-outline" data-bs-dismiss="modal" style="width: 30%;">Cancelar</button>
               <p></p>
           </div>
     </div>
@@ -354,3 +354,102 @@
 					console.error( error );
 				} );
 		</script>
+
+
+
+
+
+
+
+
+<!-- <div class=".
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+."></div> -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#EXAMPLEpRONTU">
+  banana
+</button>
+
+<!-- Modal prontuário -->
+<div class="modal fade" id="EXAMPLEpRONTU" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center" id="exampleModalLabel" style="text-align: center; border: none; margin: 0 auto;">Prontuário do Aluno</h5>
+      </div>
+      <p style="text-align: center;"><strong>LUKAS SILVA E SILVA</strong></p>
+      <div class="modal-body">
+          
+          <label class="label-pront" for="btn-prontuario">Prontuário</label>
+          <select name="" class="btn-prontuario">
+            <option value="0">Selecione um Prontuário</option>
+            <option value="1">PRONTUÁRIO A</option>
+            <option value="2">PRONTUÁRIO B</option>
+            <option value="3">PRONTUÁRIO C</option>
+            <option value="4">PRONTUÁRIO D</option>
+          </select>
+          <br>
+          <br>
+          
+          <label class="label-pront" for="btn-ocorrencia">Ocorrência do Prontuário</label>
+          <select name="" class="btn-ocorrencia">
+            <option value="0">Selecione uma Ocorrência do Prontuário</option>
+            <option value="1">Ocorrência do Prontuário A</option>
+            <option value="2">Ocorrência do Prontuário B</option>
+            <option value="3">Ocorrência do Prontuário C</option>
+            <option value="4">Ocorrência do Prontuário D</option>
+          </select>
+         <br>
+         <br>
+        
+          <div>
+              <div style="width: 3%; float: left; width: 50%;">
+                <label class="label-grav" for="btn-gravidade">Gravidade</label>
+                <select name="" class="btn-gravidade" >
+                  <option value="0">Qual a Gravidade do caso</option>
+                  <option value="1">Leve</option>
+                  <option value="2">Mediano</option>
+                  <option value="3">Grave</option>
+                  <option value="4">Risco de Vida</option>
+                </select>
+              </div>
+              <div style="width: 40%; float: right; width: 50%;">
+                <label class="label-evo" for="btn-gravidade">Evolução</label>
+                <select name="" class="btn-evolucao" >
+                  <option value="0">Qual a Evolução do caso</option>
+                  <option value="1">Evolução Mediana</option>
+                  <option value="2">Evolução Boa</option>
+                  <option value="3">Evolução ótima</option>
+                  <option value="4">Curado</option>
+                </select>
+              </div>
+          </div>
+          <p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</p>
+          <label>Detalhes da Ocorrência:</label>
+          <textarea id="detalhe_ocorrencia" name="" id="" cols="30" rows="10" style="width: 100%;"></textarea>
+      </div>
+          <div style="text-align: center;">
+              <button id="save_prontuario" type="button" class="btn btn-outline" style="width: 30%;">salvar</button>
+              <p></p>
+              <button id="cancel_changes" type="button" class="btn btn-outline" data-bs-dismiss="modal" style="width: 30%;">Cancelar</button>
+              <p></p>
+          </div>
+    </div>
+  </div>
+</div>
+<!-- Modal prontuário -->

@@ -63,7 +63,7 @@ function main2() {
             console.log("it's works");
             console.log(dado[1]);
         } else {
-            document.querySelector('.diario').innerHTML += `Problem`;
+            document.querySelector('.diario').innerHTML = "`Problem`";
         }
     }
 

@@ -56,6 +56,15 @@ header{
   --bs-breadcrumb-divider: '>';
   /* animation-name: identifier;
   animation-duration: 4s; */
+  font-weight: 600;
+}
+.item-1-miganha{
+  color: #AB58B9;
+  font-size: 16px;
+}
+.item-1-miganha:hover{
+  color: #4D228A;
+  font-size: 16px;
 }
 .material-icons-next{
   font-family: Material Icons;

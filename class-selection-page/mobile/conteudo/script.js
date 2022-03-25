@@ -1,20 +1,4 @@
-$.fn.cursorToEnd = function() {
-    var start, end;
-    start = end = this.val().length;
-    return this.each(function() {
-        if (this.setSelectionRange) {
-            this.focus();
-            this.setSelectionRange(start, end);
-        } else if (this.createTextRange) {
-            var range = this.createTextRange();
-            range.collapse(true);
-            range.moveEnd('character', end);
-            range.moveStart('character', start);
-            range.select();
-        }
-    });
-};
-$('#InputBox').cursorToEnd();
+
 
 
 // ==============================================================================
@@ -36,3 +20,4 @@ function myFunction() {
     copyPaste.style.color = '#FFFFFF',
     copyPaste.style.border = '1px solid #FFFDFD'
   }
+ 
