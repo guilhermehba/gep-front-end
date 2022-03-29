@@ -14,6 +14,8 @@ a{
 
 .new-grupo{
     height: 46px;
+    left: 0px;
+    top: 0px;
 
     background: #D6E3EA;
     border-radius: 2px 2px 0px 0px;
@@ -29,7 +31,7 @@ a{
     align-items: center;
     cursor: pointer;
     color: #4F4F4F;
-   
+    margin: 5px;
 }
 ul{
     display: flex;
@@ -91,10 +93,8 @@ li {
 }
 /*============================================= DIV class_title ================================================ */
 .diario{
-    margin-left: 10px !important;
+    margin-left: 20px !important;
     margin-right: 10px !important;
-    margin-bottom: 10px !important;
-    margin-top: 10px !important;
 }
 .new-card-diario{
     padding: 16px;
@@ -116,12 +116,15 @@ li {
 }
 
 .new-SERIETURMA{
-    width: 130px;
-    
+    width: 124px;
+    height: 48px;
+   
+
+
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 24px;
     /* or 150% */
 
@@ -140,7 +143,7 @@ li {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 16px;
     /* identical to box height, or 100% */
 
@@ -155,32 +158,16 @@ li {
     cursor: pointer;
 }
 .icons-conjunto{
-  
-    color: #6F31AD;
-    text-decoration: none;
-    margin-top: -10px;
-    
-    width: 100px
-}
-.icons-conjunto-alunos{
     font-family: Material Icons;
-    position: relative ;
- 
-    font-size: 20px;
-    
+    color: #6F31AD;
+    font-size: 18px;
+    text-decoration: none;
 }
-.icons-conjunto-ponto{
-    position: relative ;
-    
-}
-
 .icons-conjunto-valor{
 
     text-decoration: none;
     color: #6F31AD;
-    font-size: 24px;
-    position: relative ;
-    top: 0;
+    font-size: 18px;
 }
 .icons-conjunto-valor:hover{
     color: #6F31AD;
@@ -252,10 +239,6 @@ li {
     color: #F3F5F7;
     font-size: 14px;
 }
-.contador-progress:hover{
-    color: #F3F5F7;
-    font-size: 14px;
-}
 
 .progress{
     height: 24px;
@@ -266,7 +249,10 @@ li {
 .parte-1{
    display: flex;
 }
-
+.parte-2{
+    margin-top: 28px;
+    display: block;
+}
 .parte-3{
     display: block;
   
@@ -300,8 +286,3 @@ li {
       color: #D6E3EA;
   }
   
-
-/* ============================================================================ */
-/* +++++++++++++++++++++++++++++++ DATA TITLE CSS++++++++++++++++++++++++++++++ */
-/* ============================================================================ */
-

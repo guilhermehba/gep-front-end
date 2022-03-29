@@ -10,12 +10,14 @@
 
     <!--CSS Class Selection Mobile-->
     <link rel="stylesheet" href="css/style-mobile.css">
+    <link rel="stylesheet" href="css/a.css">
 
     <!--JS Bootstrap 5-->
     <script src="js/bootstrap.bundle.min.js"></script>
 
     <!--JS Class Selection Mobile-->
     <script src="js/mobile.js"></script>
+
     <!--JS Jquery-->
     
 
@@ -83,56 +85,11 @@
         
       </div>
         </div>
-        <div class="col-lg-12" id="back_class_bar">
-            <a id="class">ENSINO FUNDAMENTAL ANOS INICIAIS - MATUTINO</a>
-        </div>
-      <p></p>
+        
       <div class="container">
         <div class="diario">
-          <div class="row">
-              <script type="text/template" id="diarioTemplate">
-              
-                  <!-- Template para os diarios -->            
-                  <div class="col-3 mx-auto">
-                    <div class="card">
-                        <h5 class="card-header">
-                        <div id="SERIETURMA" class="col-auto SERIETURMA"></div>
-                        <div  id="cont_div2" class="col-8">
-                            <a id="student_icon" class="material-icons" 
-                               href="../templates/testes/grid-lst/grid-students.html">perm_identity
-                            </a>
-
-                            <span id="dot" class="material-icons">&bull;</span>
-
-                            <label class="CDSERIE"></label>
-                        </div>
-                        <div id="cont_div3" class="col-sm-1">
-                            <span id="class_lock" class="material-icons" data-bs-toggle="modal" 
-                                  data-bs-target="#modal_confirmation">lock_open</span>
-                        </div>
-                        </h5>
-                        <div class="card-body">
-                        <div class="card-title"></div>
-                            <div class="card-text">
-                                <a class="DISCIPLINA" href="../../attendance-page.html"></a>
-                            </div>
-                            <div class="col-12"><hr></div>
-                            <div class="col-12" id="teacher">
-                                <label class="PROFESSOR" id="teacher"></label>
-                            </div>
-                            <div class="col-12" id="progress_bar_tittle">
-                                <a id="progress_bar_tittle">AULAS DADAS X AULAS PREVISTAS</a>
-                                <div class="progress">
-                                    <div class="progress-bar bg-success"
-                                        role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"
-                                        style="width: 70%;">55</div><div id="max_aulas">70</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                  </div>
-      
-              </script>
+          <div id="demo" class="row diario">
+            <script src="class-selection-page/JS/scripts-v2.js" type="text/template" id="diarioTemplate"></script>
           </div>
         </div>
       </div>

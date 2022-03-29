@@ -1,3 +1,43 @@
+function resolution(){
+    $(window).on('load resize', function () {
+        
+        if($(window).width() < 1440){
+
+            $(".parte-1").removeClass("col-4");
+            $(".parte-2").removeClass("col-4");
+            $(".parte-3").removeClass("col-4");
+
+
+            $(".parte-1").addClass("col-md-6");
+            $(".parte-2").addClass("col-md-6");
+            $(".parte-3").addClass("col-md-12");
+
+        }
+   
+        if ($(window).width() > 1400) {
+
+            $(".parte-1").removeClass("col-md-6");
+
+            $(".parte-1").addClass("col-4");
+
+            $(".parte-2").removeClass("col-md-6");
+            
+            $(".parte-2").addClass("col-4");
+            
+            $(".parte-3").removeClass("col-md-12");
+
+            $(".parte-3").addClass("col-4");
+
+
+            
+        }
+        
+       
+    });
+}
+resolution();
+
+
 function test() {
     $(window).on('load resize', function () {
         if ($(window).width() < 950) {
@@ -7,12 +47,12 @@ function test() {
 }
 
 test();
-/* JS for load another html with Resize Window - end */
-/* alter status for 'diario' */
-function clicked_on_lock() {
-    document.getElementById('class_lock').innerHTML = 'https';
-}
-/* alter status for 'diario' - end */
+// /* JS for load another html with Resize Window - end */
+// /* alter status for 'diario' */
+// function clicked_on_lock() {
+//     document.getElementById('class_lock').innerHTML = 'https';
+// }
+// /* alter status for 'diario' - end */
 
 
 function notificationGEP(msg, position) {
@@ -37,19 +77,24 @@ if(navigator.onLine){
 }
 
 
-function collapseGrupo(){
-    var seta = document.getElementById('icon-ergon-collapse')
+// function collapseGrupo(){
+//     var seta = document.getElementById('icon-ergon-collapse')
     
-    if(seta.innerHTML = 'arrow_drop_down'){
-        document.getElementById('icon-ergon-collapse').innerHTML = 'arrow_drop_up';
-    }
+//     if(seta.innerText = 'arrow_drop_down'){
+//         document.getElementById('icon-ergon-collapse').innerHTML = 'arrow_drop_up';
+//     }
+//     else
+//     if(seta.innerText = 'arrow_drop_up'){
+//         document.getElementById('icon-ergon-collapse').innerHTML = 'arrow_drop_down';
+//     }
 
-}
-function collapseGrupo2(){
-    var seta = document.getElementById('icon-ergon-collapse')
+// }
+
+// // function collapseGrupo2(){
+//     var seta = document.getElementById('icon-ergon-collapse')
     
-    if(seta.innerHTML = 'arrow_drop_up'){
-        document.getElementById('icon-ergon-collapse').innerHTML = 'arrow_drop_down';
-    }
+//     if(seta.innerHTML = 'arrow_drop_up'){
+//         document.getElementById('icon-ergon-collapse').innerHTML = 'arrow_drop_down';
+//     }
 
-}
+// }

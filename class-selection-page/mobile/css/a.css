@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css');
+
+* {
+  font-family: Poppins;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 24px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+label {
+  cursor: pointer;
+}
+
+.card-header {
+  border-radius: 16px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+  height: 70px;
+}
+.card-body{
+  height: 150px;
+  overflow-y: scroll;
+  
+
+}
+
+.card-erg {
+  float: none;
+  background: #FEFEFE;
+  border-radius: 16px;
+  margin: 10px 2px 2px 2px;
+}
+
+.border-radios-erg {
+  border-radius: 16px 16px 0 0 !important;
+  position: relative;
+  top: 0;
+}
+
+.card-erg .cod-serie {
+  color: #808080;
+
+  position: relative;
+  bottom: 0;
+  font-size: 8px !important;
+}
+
+
+/* Style the buttons */
+/* img {
+  object-fit: cover;
+  width: 80px;
+  height: 80px;
+  border-radius: 50% solid;
+  z-index: 0;
+} */
+
+#file {
+  display: none;
+}
+
+/*******************card css***************************/
+/*box config*/
+
+
+#COD {
+
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 8px;
+  margin-left: -80px;
+  color: #4F4F4F;
+
+}
+
+/*student icon, dot and count number*/
+#student_icon {
+  color: #AB58B9;
+  cursor: pointer;
+  border-radius: 50px;
+  position: relative ;
+  top: 9px;
+  right: 36px;
+  font-size: 20px;
+}
+
+#dot {
+  color: #AB58B9;
+  width: 4px;
+  position: relative;
+  top: 6px;
+  right: 42px;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+#student_count {
+  position: relative;
+  top: 6px;
+  right: 36px;
+  color: #AB58B9;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 50px;
+  text-decoration: none;
+
+}
+
+/*student icon, dot and count number*/
+#class_lock {
+  cursor: pointer;
+  color: #AB58B9;
+  position: absolute;
+  top: 10px;
+  right: -10px;
+  
+  font-size: 40px;
+}
+
+#SERIETURMA {
+  height: 20px;
+  float: left;
+
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+
+  /* identical to box height, or 100% */
+  color: #AB58B9;
+
+}
+
+#cont_div2 {
+  position: relative;
+  bottom: 0px;
+}
+
+#cont_div3 {
+  position: relative;
+  bottom: 0;
+}
+
+#teacher {
+  font-weight: 700;
+  font-size: 8px;
+
+  margin-top: -10px;
+  
+
+}
+
+#progress_bar_tittle {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 8px;
+  /* identical to box height, or 100% */
+  align-items: left;
+
+  color: #4F4F4F;
+}
+
+.progress-bar-ergon {
+  text-align: left;
+  font-size: 12px;
+  border-radius: 20px;
+  padding-left: 2%;
+}
+
+#max_aulas {
+  font-size: 12px;
+  margin-left: 55px;
+}
+
+.progress-ergon {
+  background-color: #ffffff;
+  color: #000000;
+  text-align: right;
+  border: 1px solid #828282;
+  border-radius: 20px;
+}
+
+.bg-missing{
+  background-color: #ffffff;
+  border-radius: 0px;
+  color: #000000;
+  text-align: right;
+  padding-right: 2%;
+}
+
+.disciplinas {
+  text-align: center;
+  font-size: 15px;
+  text-decoration: none;
+  color: #AB58B9;
+}
+
+.disciplinas:hover {
+  color: #6F31AD;
+}
+
+/*******************card css***************************/
+
+
+/*******************header css***************************/
+/*=========nav=========*/
+
+
+#diario-turma {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+#GRUPO {
+  font-weight: 600;
+  font-size: 14px;
+  color: #4F4F4F;
+  background: #D6E3EA;
+  border-radius: 2px 2px 0px 0px;
+  width: 100%;
+}
+
+
+/*=========bimestre=========*/
+
+#ModalLabel {
+  text-align: center;
+  border: none;
+  margin: 0 auto;
+  font-weight: 600;
+}
+
+.modal-content {
+  border-radius: 25px !important;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/*=================================================*/
+/*=================================================*/
+/*=================================================*/
+/*=================================================*/
+/*=================================================*/
+/*=================================================*/
+/*=================================================*/
+/*=================================================*/
+/*=================================================*/
+/*=================================================*/
+/*=================================================*/
+/*=================================================*/
+/*=================================================*/
+/*=================================================*/
+/*=================================================*/
+/*=================================================*/
+/*=================================================*/
+
+.link-ergon {
+  color: #AB58B9;
+}
+
+.link-ergon:hover {
+  color: #6F31AD;
+}
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  padding: .25rem 1rem;
+
+  list-style: none;
+  background: #F3F5F7;
+  border-radius: .25rem;
+  --bs-breadcrumb-divider: '>';
+  /* animation-name: identifier;
+  animation-duration: 4s; */
+
+}
+
+/* btn ergon */
+.btn-ergon {
+  color: #fff;
+  background-color: #AB58B9;
+  border-color: #AB58B9;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 24px;
+}
+
+.btn-ergon:hover {
+  background-color: #7D3989;
+  color: #fff;
+}
+
+.btn-option {
+  color: #AB58B9;
+  background-color: #fff;
+  border: 1px solid #AB58B9;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 24px;
+}
+
+.btn-shadow {
+  box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.4),
+    0 0.03rem 0.1rem rgba(42, 11, 54, 0.5);
+}
+
+.options-buttom {
+  float: right;
+  margin: 1% 3%;
+}
+
+.record-type .dropup .dropdown-toggle::after {
+  content: none;
+}
+
+/* 25/02/2021 - ERGON - Author: Wellysson Rocha */
+.dropdown-item.active, .dropdown-item:active {
+  color: #fff;
+  text-decoration: none;
+  background-color: #6F31AD;
+}
+
+
+/* buttom circle */
+.xyz {
+  background-size: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.btn-circle.btn-sm {
+  width: 30px;
+  height: 30px;
+  padding: 6px 0px;
+  border-radius: 15px;
+  font-size: 8px;
+  text-align: center;
+}
+
+.btn-circle.btn-md {
+  width: 50px;
+  height: 50px;
+  padding: 7px 10px;
+  border-radius: 25px;
+  font-size: 10px;
+  text-align: center;
+}
+
+.btn-circle.btn-xl {
+  width: 70px;
+  height: 70px;
+  padding: 10px 16px;
+  border-radius: 35px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.help-top svg {
+  float: right;
+  width: 100%;
+}
+
+/* help top resolução 767px */
+@media only screen and (max-width: 1229px) {
+  .help-top svg {
+    float: right;
+    width: 30px;
+  }
+}
+
+.tabela-content {
+  width: 100%;
+  margin: auto;
+}
+
+#liveToast {
+  transition: 0.09s;
+}
+
+/* .select-ergon{
+  border-radius: 8px;
+  border: 1px solid #6F31AD;
+} */
+
+.select-ergon>.select-ergon-select {
+  border-radius: 8px;
+  border: 1px solid #6F31AD;
+  font-size: 16px;
+}
+
+.select-ergon>.select-ergon-select option[selected] {
+  color: #828282;
+}
+
+/* 03/03/2021 - ERGON - Author: Wellysson Rocha */
+
+[title-label]::after {
+  content: attr(title-label);
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 5px;
+  padding: 0 0.5%;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 24px;
+}
+
+[title-label]:hover::after {
+  display: block;
+}
+
+.status-attendance {
+  color: #089944 !important;
+}
+
+/* 10/03/2021 - ERGON - Author: Wellysson N Rocha */
+.help-top {
+  width: 38px;
+  position: absolute;
+  right: 16px;
+}
+
+#fundo-navegação {
+  position: relative;
+}
+
+/* 15/03/2021 - ERGON -Author: Wellysson N Rocha */
+.aulas-porcentagem{
+  width: 100%;
+  font-weight: 600;
+  font-size: 8px !important;
+}
+
+.card-footer-ergon{
+  border-radius: 0 0 16px 16px !important;
+}
