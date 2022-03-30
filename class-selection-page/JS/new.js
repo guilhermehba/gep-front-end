@@ -1,47 +1,22 @@
-function resolution(){
-    $(window).on('load resize', function () {
-        
-        if($(window).width() < 1440){
-
-            $(".parte-1").removeClass("col-4");
-            $(".parte-2").removeClass("col-4");
-            $(".parte-3").removeClass("col-4");
-
-
-            $(".parte-1").addClass("col-md-6");
-            $(".parte-2").addClass("col-md-6");
-            $(".parte-3").addClass("col-md-12");
-
-        }
-   
-        if ($(window).width() > 1400) {
-
-            $(".parte-1").removeClass("col-md-6");
-
-            $(".parte-1").addClass("col-4");
-
-            $(".parte-2").removeClass("col-md-6");
-            
-            $(".parte-2").addClass("col-4");
-            
-            $(".parte-3").removeClass("col-md-12");
-
-            $(".parte-3").addClass("col-4");
-
-
-            
-        }
-        
-       
+function resolution() {
+    $(window).on("load resize", function () {
+      if ($(window).width() < 1250) {
+        $(".grupo-geral").addClass("flex-wrap");
+      }
+  
+      if ($(window).width() > 1250) {
+        $(".grupo-geral").removeClass("flex-wrap");
+      }
     });
-}
-resolution();
+  }
+  resolution();
+  
 
 
 function test() {
     $(window).on('load resize', function () {
         if ($(window).width() < 950) {
-            window.location = "class-selection-page/mobile/class-selection-mobile.html"
+            window.location = "class-selection-page/mobile/class-selection-mobile.html?database=GEP_TESTE_AUX&TABELA=V_API_TurmasDiario&FILTRO=cdescola=17000000%20and%20exerc=2021%20and%20cpf=648.578.671-68"
         }
     });
 }

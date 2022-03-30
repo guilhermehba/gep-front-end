@@ -224,7 +224,7 @@ function desenhaSubList(params) {
 function test() {
     $(window).on('load resize', function () {
         if ($(window).width() > 950) {
-            window.location = "../../new-diario.html"
+            window.location = "../../new-diario.html?database=GEP_TESTE_AUX&TABELA=V_API_TurmasDiario&FILTRO=cdescola=17000000%20and%20exerc=2021%20and%20cpf=648.578.671-68"
         }
     });
 }

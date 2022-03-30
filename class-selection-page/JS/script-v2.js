@@ -16,7 +16,7 @@ function clicouSelect(bimestre) {
 
             // ======================================================================================================================================================================
             //  var newURL = `http://apialuno.ergonsistemas.com.br:7073/SELECT?database=${database}&TABELA=${table}&FILTRO=cdescola=${codescola} and exerc=${ano_exerc} and cpf='${prof_cpf}'`;
-            newURL = `http://apialuno.ergonsistemas.com.br:7073/select?database=${DATABASE}&TABELA=${TABELA}&FILTRO=cdescola=17000000 and exerc=${exerc} and cpf='${prof_cpf}' and bimestre=${bimestre}`;
+            newURL = `http://apialuno.ergonsistemas.com.br:7073/select?database=${DATABASE}&TABELA=${TABELA}&FILTRO=cdescola=17000000 and exerc=2021 and cpf='648.578.671-68' and bimestre=${bimestre}`;
             console.log(newURL)
             const xhttp = new XMLHttpRequest();
 
@@ -26,7 +26,7 @@ function clicouSelect(bimestre) {
 
                 var getSelector = document.querySelector("#demo");
 
-                alert(newURL)
+                //alert(newURL)
 
                 getSelector.innerHTML = "";
 
@@ -179,56 +179,65 @@ function desenhaSubList(params) {
         console.log(id)
         var html = `
         <div id="demoCollapse-${id}" class="collapse show">
-        <div class=" new-card-diario">
-        <div class="row">
-            <div class="col-4 parte-1">
-               
-                    <div><span id="icon-ergon-lock" class="icon-ergon" title="${params[key]['STATUS']}">lock_open</span></div>
-                
-                    <div>
-                        <ul>
-                            <li><a style="display:flex" class="new-SERIETURMA">${params[key]['SERIETURMA']}</a></li>
-                            
-                            <li><a class="new-SEQUENCIAL" title="Código sequencial deste diário">${params[key]['SEQUENCIAL']}</a></li>
+        
+        <div class="card new-card-diario">
 
-                            <li >
-                                <div class="icons-conjunto">
-                                    <span class="icons-conjunto-alunos">perm_identity</span>
-                                    <a>&bull;</a>
-                                    <a class="icons-conjunto-valor" title="Quantidade de Alunos Matriculados">${params[key]['LOTACAO']}</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-               
+        <div class="d-flex flex-row grupo-geral">
+
+        <div class="p-2 d-flex flex-row bd-highlight grupo1 flex-fill">
+            <div id="icon-ergon-lock" class="icon-ergon" title="${params[key]['STATUS']}">lock_open</div>
+            <div class="d-flex flex-row ">
+            <div class="flex-fill marcadores">&bull;</div>
+            <div class="p-2 flex-fill parte-1 new-SERIETURMA">
+                ${params[key]['SERIETURMA']}
             </div>
-            <div class="col-4 parte-2">
-                    <div class="new-disciplinas">
-                        <ul>
-                            <li><a title="${params[key]['DISCIPLINA']}">${params[key]['DISCIPLINA']}</a></li>
-                        </ul>
-                    </div>
+            <div class="flex-fill marcadores">&bull;</div>
+            <div class="p-2 flex-fill parte-2 new-SEQUENCIAL" title="Código sequencial deste diário">
+                ${params[key]['SEQUENCIAL']}
             </div>
-                <div class="col-3 parte-3">
+            <div class="flex-fill marcadores">&bull;</div>
+                <a class="bd-highlight d-flex flex-row flex-fill btn btn-alunos" href="class-selection-page/templates/grid-lst/grid-students.html">
+                    <div class="flex-fill icons-conjunto-alunos">perm_identity</div>
+                    <div class="p-2 flex-fill icons-conjunto-ponto">&bull;</div>
+                    <div class="flex-fill contador-alunos parte-3 icons-conjunto-valor" title="Quantidade de Alunos Matriculados">
+                        ${params[key]['LOTACAO']}
+                    </div>
+                </a>
+            </div>
+
+        </div>
+        <div class="d-flex flex-row grupo2 col-4">
+            <div class="p-2 flex-fill marcadores">&bull;</div>
+            <a href="attendance-page.html" class="p-3 d-flex flex-fill bd-highlight new-disciplinas" title="${params[key]['DISCIPLINA']}">
+                ${params[key]['DISCIPLINA']}
+            </a>
+        </div>
+
+        <div class="grupo3 col-4">
+            <div class="d-flex p-1 align-items-baseline ">
+            <div class="d-flex bd-highlight marcadores">&bull;</div>
+                <div class="d-flex">
                     <div class="new-progress">
-                        <ul style="display: block;">
-                            <li>
-                                <div class="progress" title="Aulas Dadas x Aulas Previstas" style="background: #E0E0DE; border-radius: 50px">
-                                    <div class="progress-bar bg-success" role="progressbar" style="width: ${porcentagem}%; border-radius: 0 20px 20px 0;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" ><a id="cont-prog" class="contador-progress" style="text-align: right;">${value2}/${value1} &nbsp </a></div>
-                                </div>
-                            </li>       
-                        </ul>
+                    <div class="progress" title="Aulas Dadas x Aulas Previstas" style="background: #E0E0DE; border-radius: 50px">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: ${porcentagem}%; border-radius: 0 20px 20px 0;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                            <a id="cont-prog" class="contador-progress" style="text-align: right;">
+                                ${value2}/${value1} &nbsp 
+                            </a>
+                        </div>
+                    </div>
                     </div>
                 </div>
-                <div class="col-12"><hr class="new-line"></div>
-                    <div >
-                        <ul>
-                            <div class="new-line"></div>
-                            <div class="new-professor">${params[key]['PROFESSOR']} - <a class="new-professor-cpf"> ${params[key]['CPF']}</a></div>
-                        </ul>
-                    </div>
             </div>
         </div>
+        </div>
+            <div class="card-footer">
+                <div><a class="new-professor">${params[key]['PROFESSOR']} - <span class="new-professor-cpf">${params[key]['CPF']}</span></a></div>
+            </div>
+        </div>
+    
+        
+        
+
         `;
         retorno.push(html);
     }
