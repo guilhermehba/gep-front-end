@@ -1,0 +1,99 @@
+@import '/css/variaveis.css';
+
+body{
+    background-color: var(--color--primary);
+}
+
+@media (min-width: 991px) {
+    .container{
+        height: 100vh;
+        display: flex;
+    }
+    
+    .container-login{
+        position: relative;
+        background-color: #FFFFFF;
+        width: 950px;
+        height: 574px;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        border-radius: 10px;
+        box-shadow: -15px 71px 32px rgba(0, 0, 0, 0.1);
+    }
+    
+    .container-login .images-login{
+        position: relative;
+        width: 100%;
+        background-image: url(/assets/img/Intersect.svg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .container-login .logo{
+        width: 40%;
+        position: absolute;
+        top: 20%;
+    }
+    
+    .container-login .mascote{
+        width: 80%;
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+    }
+    
+    .container-login .form-login{
+        padding: 50px;
+        width: 800px;
+    }
+    
+    .container-login .form-control.is-invalid, .was-validated .form-control:invalid{
+        padding: 0.375rem 0.75rem;
+    }
+    
+    .container-login .btn-ergon{
+        background: var(--color-segundary2);
+        border-radius: 24px;
+        color: #FFFFFF;
+        width: 115px;
+    }
+    
+    .container-login .btn.recuperar-senha{
+        color: var(--color-segundary2);
+        font-weight: 600;
+    }
+}
+
+@media (max-width: 991px) {
+    body{
+        background: rgba(111, 49, 173, 0.5);
+
+    }
+
+    .container-login{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 100vh;
+    }
+
+    .container-login .form-login{
+        background-color: #FFFFFF;
+        border-radius: 10px;
+        padding: 30px;
+        box-shadow: -15px 71px 32px rgba(0, 0, 0, 0.1);
+    }
+
+    .container-login .images-login{
+        display: flex;
+        justify-content: center;
+    }
+
+    .container-login .images-login{
+        display: none;
+    }
+}

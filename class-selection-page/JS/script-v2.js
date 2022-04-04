@@ -15,8 +15,11 @@ function clicouSelect(bimestre) {
         function main3() {
 
             // ======================================================================================================================================================================
-            //  var newURL = `http://apialuno.ergonsistemas.com.br:7073/SELECT?database=${database}&TABELA=${table}&FILTRO=cdescola=${codescola} and exerc=${ano_exerc} and cpf='${prof_cpf}'`;
+            //  newURL para o cpf do professor
             newURL = `http://apialuno.ergonsistemas.com.br:7073/select?database=${DATABASE}&TABELA=${TABELA}&FILTRO=cdescola=17000000 and exerc=2021 and cpf='648.578.671-68' and bimestre=${bimestre}`;
+            // newURL para o cpf do coordenador
+            // newURL = `http://apialuno.ergonsistemas.com.br:7073/select?database=${DATABASE}&TABELA=${TABELA}&FILTRO=cdescola=17000000 and exerc=2021 and CPF_COORDENADOR='003.380.853-86' and bimestre=${bimestre}`;
+            // ======================================================================================================================================================================
             console.log(newURL)
             const xhttp = new XMLHttpRequest();
 
@@ -58,11 +61,11 @@ function clicouSelect(bimestre) {
                     //listaByGrupo['ATENDIMENTO EDUCACIONAL ESPECIALIZADO - MATUTINO'][0]['BIMESTRE']
 
                     /*
-                        1 bim  <= data final do 1 bim
+                        bimestre1  <= data final do bimestre1
 
-                        2 bim <= data final do 2 bim e maior que a data final do 1 bim
+                        bimestre2 <= data final do bimestre2 && > data final do bimestre1
 
-                        3 bim <= data final do 3 bim e maior que a data final do 2 bim
+                        bimestre3 <= data final do bimestre3 && > data final do bimestre2
                     */
 
                     let bimestreAtual;
@@ -77,12 +80,9 @@ function clicouSelect(bimestre) {
                     for (const key in listaByGrupo) {
 
 
-                    let target = 0;
-                    target++
-                    
                         render1 = `
                         <div class="row diario">
-                        <div class="new-grupo col-12 row" data-bs-toggle="collapse" data-bs-target="#demoCollapse-${target}" onclick="collapseGrupo()"><span id="GRUPO" class="col-6 GRUPO">${key}</span></div>
+                        <div class="new-grupo col-12 row" data-bs-toggle="collapse" data-bs-target="#demoCollapse-1" onclick="collapseGrupo()"><span id="GRUPO" class="col-6 GRUPO">${key}</span></div>
                         `;
                         
                         render2 = desenhaSubList(listaByGrupo[key]).join('') + `</div>`;
@@ -172,13 +172,8 @@ function desenhaSubList(params) {
 
         var porcentagem = (value2 / value1) * 100;
 
-        let id = 0;
-        if(id == id){
-        id++
-    }
-        console.log(id)
         var html = `
-        <div id="demoCollapse-${id}" class="collapse show">
+        <div id="demoCollapse-1" class="collapse show">
         
         <div class="card new-card-diario">
 
@@ -188,7 +183,7 @@ function desenhaSubList(params) {
             <div id="icon-ergon-lock" class="icon-ergon" title="${params[key]['STATUS']}">lock_open</div>
             <div class="d-flex flex-row ">
             <div class="flex-fill marcadores">&bull;</div>
-            <div class="p-2 flex-fill parte-1 new-SERIETURMA">
+            <div class="p-2 d-block parte-1 new-SERIETURMA">
                 ${params[key]['SERIETURMA']}
             </div>
             <div class="flex-fill marcadores">&bull;</div>
@@ -213,10 +208,10 @@ function desenhaSubList(params) {
             </a>
         </div>
 
-        <div class="grupo3 col-4">
-            <div class="d-flex p-1 align-items-baseline ">
-            <div class="d-flex bd-highlight marcadores">&bull;</div>
-                <div class="d-flex">
+        <div class="grupo3 col-3">
+            <div class="d-block p-1 align-items-baseline ">
+            <div class="d-flex flex-fill bd-highlight marcadores">&bull;</div>
+                <div class="d-block">
                     <div class="new-progress">
                     <div class="progress" title="Aulas Dadas x Aulas Previstas" style="background: #E0E0DE; border-radius: 50px">
                         <div class="progress-bar bg-success" role="progressbar" style="width: ${porcentagem}%; border-radius: 0 20px 20px 0;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">

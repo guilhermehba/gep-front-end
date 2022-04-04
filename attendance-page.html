@@ -13,17 +13,19 @@
 
     <title>Frequência</title>
 
+    <!-- barra de progresso -->
+    <link rel="stylesheet" href="css/liquid-bar.css">
+
     <!-- grade table javascript -->
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <!-- caledário -->
-    <link rel="stylesheet" href="calendar-ergon/css/mobiscroll.jquery.min.css">
-    <script src="/calendar-ergon/js/mobiscroll.jquery.min.js"></script>
-
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- GUILHERME CSS -->
+    <link rel="stylesheet" href="class-selection-page/css/styles.css">
 
     <!-- ERGON CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -38,6 +40,15 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script src="js/attendance.js"></script>
+
+    <!-- editor -->
+    <link rel="stylesheet" type="text/css" href="js/editor/styles/simditor.css" />
+    <script type="text/javascript" src="js/editor/scripts/module.js"></script>
+    <script type="text/javascript" src="js/editor/scripts/hotkeys.js"></script>
+    <script type="text/javascript" src="js/editor/scripts/uploader.js"></script>
+    <script type="text/javascript" src="js/editor/scripts/simditor.js"></script>
 </head>
 
 <header>
@@ -50,12 +61,16 @@
                 <li class="breadcrumb-item active" aria-current="page">Registro de chamada</li>
             </ol>
             <div class="help-top">
-                <a href="#" class="link-ergon" onclick="notificationGEP('Tela de Seleção de Turmas!', 'bottom')"><svg
-                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-question-circle-fill"
-                        viewBox="0 0 16 16">
-                        <path
-                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247zm2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z" />
-                    </svg></a>
+                <span type="button" class="popover-hover" data-bs-container="body" data-bs-toggle="popover"
+                    data-bs-placement="top" data-bs-content="Top popover">
+                    <a href="#" id="helpTips" class="link-ergon"
+                        onclick="notificationGEP('Tela de Seleção de Turmas!', 'bottom')"><svg
+                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-question-circle-fill"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247zm2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z" />
+                        </svg></a>
+                </span>
             </div>
         </nav>
     </div>
@@ -69,11 +84,47 @@
         <div id="school-attendance" class="col-12">
             <div class="school-attendance-content col-12">
 
-                <div class="row header-school-attendance">
-                    <div class="title col-12">
-                        <span class="material-icons">lock_open</span> 1º Bimestre | 6º ano - D
-                        <div class="sub-title">
-                            LÍNGUA PORTUGUESA, MATEMÁTICA, CIÊNCIAS, HISTÓRIA, GEOGRAFIA
+                <div class="header-school-attendance">
+                    <div class="row">
+                        <div class="title col-md-9">
+                            <span class="material-icons">lock_open</span> 1º Bimestre | 6º ano - D
+                            <div class="sub-title">
+                                LÍNGUA PORTUGUESA, MATEMÁTICA, CIÊNCIAS, HISTÓRIA, GEOGRAFIA
+                            </div>
+                        </div>
+
+                        <!-- barra de progresso topo -->
+                        <div class="barra-de-progresso float-end col-md-2">
+                            <!-- <div class="aulas-porcentagem text-center">AULAS DADAS X AULAS PREVISTAS</div>
+                            <div class="col-12" id="progress_bar">
+                                <div class="progress progress-ergon">
+                                    <div id="BIM_DIASLETDADOS" class="progress-bar progress-bar-ergon bg-success"
+                                        role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"
+                                        style="width: 70%;">70</div>
+                                    <div id="BIM_DIASLETPREV" class="progress-bar progress-bar-ergon bg-missing"
+                                        role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"
+                                        style="width: 30%;">30</div>
+                                </div>
+
+                            </div> -->
+
+                            <div class="progressCircle float-end" role="progressCirclebar">
+                                <div class="progressCircle-inner">
+                                  <div class="progressCircle-indicator"></div>
+                                  <div class="progressCircle-indicator"></div>
+                                </div>
+                                <span class="progressCircle-label">
+                                  <strong id="numeroDadas">0</strong>
+                                  <span>/</span>
+                                  <strong id="numeroPrevistas">0</strong>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="helpButtonClass col-md-1">
+                            <button class="btn btn-ergon btn-shadow float-end" data-bs-toggle="modal"
+                                data-bs-target="#filterModalToggle" title="filtrar por tadas"><i
+                                    class="bi bi-funnel-fill"></i> Filtrar</button>
                         </div>
                     </div>
                     <div class="col-12 filter-data">
@@ -135,9 +186,6 @@
                                 <div class="attendance-alert"></div>
                             </div>
                         </div>
-
-                        <button class="btn btn-ergon btn-shadow float-end" data-bs-toggle="modal"
-                            data-bs-target="#filterModalToggle"><i class="bi bi-funnel-fill"></i> Filtrar</button>
                     </div>
                 </div>
 
@@ -156,6 +204,68 @@
                             </select>
                         </div>
                     </div>
+
+                    <!-- Tabela divida em uma linha -->
+                    <style>
+                        .tabela-content {
+                            position: relative;
+                        }
+
+                        thead>tr>th {
+                            position: sticky;
+                            top: -1px;
+                        }
+                    </style>
+                    <div class="row tabela-content">
+                        <!-- Tabela de frequência -->
+                        <div id="attendance-table" class="table-responsive table-ergon col-12" id="table-scroll">
+                            <div class="">
+                                <table class="table table-hover main-table table" role="grid"
+                                    aria-describedby="example_info">
+                                    <thead>
+                                        <tr role="row">
+                                            <th># <span onclick="orderByOrder(), clickTrue()"><i
+                                                        class="bi bi-chevron-expand iorder"></i></span></th>
+                                            <th>Aluno<span style="float: right;" onclick="orderByName(), clickTrue()"><i
+                                                        class="bi bi-chevron-expand iname"></i></span></th>
+                                            <th>Matr.</th>
+                                            <th>Legenda</th>
+                                            <th>
+                                                <a href="#" data-placement="top" data-toggle="popover">08/02</a>
+                                            </th>
+                                            <th><a href="">09/02</a></th>
+                                            <th><a href="">10/02</a></th>
+                                            <th><a href="">11/02</a></th>
+                                            <th><a href="">12/02</a></th>
+                                            <th><a href="">13/02</a></th>
+                                            <th><a href="">14/02</a></th>
+                                            <th><a href="">15/02</a></th>
+                                            <th><a href="">16/02</a></th>
+                                            <th><a href="">17/02</a></th>
+                                            <th><a href="">18/02</a></th>
+                                            <th><a href="">19/02</a></th>
+                                            <th><a href="">09/02</a></th>
+                                            <th><a href="">10/02</a></th>
+                                            <th><a href="">11/02</a></th>
+                                            <th><a href="">12/02</a></th>
+                                            <th><a href="">13/02</a></th>
+                                            <th><a href="">14/02</a></th>
+                                            <th><a href="">15/02</a></th>
+                                            <th><a href="">16/02</a></th>
+                                            <th><a href="">17/02</a></th>
+                                            <th><a href="">18/02</a></th>
+                                            <th><a href="">19/02</a></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="table-attendance-array">
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!--/ Fim da tabela de frequência -->
+                    </div>
+                    <!--/ Fim Tabela divida em uma linha -->
 
                     <div id="modal-attendance">
                         <!-- Modal include_contents_two_steps -->
@@ -178,7 +288,7 @@
                                         </nav>
                                     </div>
                                     <div class="modal-body attendance-modal-content">
-                                        <table class="table ">
+                                        <table class="table strong">
                                             <thead>
                                                 <tr>
                                                     <th scope="col">Componente Curricular</th>
@@ -241,9 +351,10 @@
                                         </table>
                                     </div>
                                     <div class="modal-footer">
-                                        <button class="btn btn-ergon btn-ergon-modal-large btn-shadow"
+                                        <button class="btn btn-ergon btn-ergon-modal-large btn-shadow nextContentModal"
                                             data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"
-                                            data-bs-dismiss="modal">Avançar</button>
+                                            data-bs-dismiss="modal" onclick="renderTextArea();"
+                                            disabled>Avançar</button>
                                     </div>
 
                                     <a href="" type="button" class="link-ergon attendance-modal-button-close"
@@ -275,20 +386,14 @@
                                     </div>
                                     <div class="modal-body">
                                         <div>
-                                            <a>Lingua Portuguesa</a>
-                                            <input style="width: 100%; height: 80px;" type="text">
-                                            <p></p>
-                                            <a>Matemática</a>
-                                            <input style="width: 100%; height: 80px;" type="text">
-                                            <p></p>
-                                            <a>História</a>
-                                            <input style="width: 100%; height: 80px;" type="text">
-                                            <p></p>
-                                            <a>Geografia</a>
-                                            <input style="width: 100%; height: 80px;" type="text">
-                                            <p></p>
-                                            <a>Ciencias</a>
-                                            <input style="width: 100%; height: 80px;" type="text">
+                                            <label for="validationTextarea" class="form-label">Língua Portuguesa</label>
+                                            <textarea id="editor1" placeholder="Balabala" autofocus></textarea>
+
+                                            <label for="validationTextarea" class="form-label">Matemática</label>
+                                            <textarea id="editor2" placeholder="Balabala" autofocus></textarea>
+
+                                            <label for="validationTextarea" class="form-label">Geografia</label>
+                                            <textarea id="editor3" placeholder="Balabala" autofocus></textarea>
                                         </div>
                                     </div>
                                     <div class="modal-footer">
@@ -309,72 +414,10 @@
                         <!--Modal include_contents_two_steps end-->
                     </div>
 
-                    <!-- Tabela divida em uma linha -->
-                    <style>
-                        .tabela-content {
-                            position: relative;
-                        }
-
-                        thead>tr>th {
-                            position: sticky;
-                            top: -1px;
-                        }
-                    </style>
-                    <div class="row tabela-content">
-                        <!-- Tabela de frequência -->
-                        <div class="table-responsive table-ergon col-12" id="table-scroll" style="height: 80vh;">
-                            <div class="">
-                                <table id="example" class="table table-hover main-table table" role="grid"
-                                    aria-describedby="example_info">
-                                    <thead>
-                                        <tr role="row">
-                                            <th># <span onclick="orderByOrder(), clickTrue()"><i
-                                                        class="bi bi-chevron-expand iorder"></i></span></th>
-                                            <th>Aluno<span style="float: right;" onclick="orderByName(), clickTrue()"><i
-                                                        class="bi bi-chevron-expand iname"></i></span></th>
-                                            <th>Cod. Matric</th>
-                                            <th>Legenda</th>
-                                            <th>
-                                                <a href="#" data-placement="top" data-toggle="popover">08/02</a>
-                                            </th>
-                                            <th><a href="">09/02</a></th>
-                                            <th><a href="">10/02</a></th>
-                                            <th><a href="">11/02</a></th>
-                                            <th><a href="">12/02</a></th>
-                                            <th><a href="">13/02</a></th>
-                                            <th><a href="">14/02</a></th>
-                                            <th><a href="">15/02</a></th>
-                                            <th><a href="">16/02</a></th>
-                                            <th><a href="">17/02</a></th>
-                                            <th><a href="">18/02</a></th>
-                                            <th><a href="">19/02</a></th>
-                                            <th><a href="">09/02</a></th>
-                                            <th><a href="">10/02</a></th>
-                                            <th><a href="">11/02</a></th>
-                                            <th><a href="">12/02</a></th>
-                                            <th><a href="">13/02</a></th>
-                                            <th><a href="">14/02</a></th>
-                                            <th><a href="">15/02</a></th>
-                                            <th><a href="">16/02</a></th>
-                                            <th><a href="">17/02</a></th>
-                                            <th><a href="">18/02</a></th>
-                                            <th><a href="">19/02</a></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="table-attendance-array">
-
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                        <!--/ Fim da tabela de frequência -->
-                    </div>
-                    <!--/ Fim Tabela divida em uma linha -->
-
                     <!-- Modal nova aula -->
                     <div class="modal fade" id="addClassModal" tabindex="-1" role="dialog"
                         aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-xl" role="document">
+                        <div class="tamanhoModalPequeno modal-dialog modal-lg" role="document">
                             <div class="modal-content rounded-16px">
                                 <div class="modal-header">
                                     <span class="text-color-ergon font-weight-bold-ergon">Cadastrar Aulas</span>
@@ -383,55 +426,13 @@
                                     </a>
                                 </div>
                                 <div class="modal-body rounded-bottom-16px content-add-class">
+                                    <div class="calendar-buttons">
+                                        <!-- Butões -->
+                                    </div>
                                     <div class="container">
                                         <div class="row hidden-md-up">
-                                            <div class="col-md-4">
-                                                <div class="card p-2 table-add-class bg-white rounded-16px text-center">
-                                                    <span class="font-weight-bold-ergon text-color-ergon">Aulas
-                                                        Cadastradas</span>
-
-                                                    <table class="table table-bordered text-14px">
-                                                        <thead class="thead-add-class">
-                                                            <tr>
-                                                                <th scope="col">#</th>
-                                                                <th scope="col">Data</th>
-                                                                <th scope="col">Excluir</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <th scope="row">1</th>
-                                                                <td>31/01/2021</td>
-                                                                <td class="text-center">
-                                                                    <button class="btn pb-0" onclick="deleteClass('Tem ceteza que quer excluir?','top', 'toastDelete');">
-                                                                        <span
-                                                                            class="material-icons text-color-ergon">delete_outline</span>
-                                                                    </button>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <th scope="row">2</th>
-                                                                <td>01/02/2021</td>
-                                                                <td class="text-center"><button class="btn pb-0">
-                                                                        <span
-                                                                            class="material-icons text-color-ergon">delete_outline</span>
-                                                                    </button></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <th scope="row">3</th>
-                                                                <td>02/02/2021</td>
-                                                                <td class="text-center"><button class="btn pb-0">
-                                                                        <span
-                                                                            class="material-icons text-color-ergon">delete_outline</span>
-                                                                    </button></td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-5">
+                                            
+                                            <div class="calendar-col2 col-md-8 pb-2">
                                                 <div class="card p-2 table-add-class bg-white rounded-16px text-center">
                                                     <div>
                                                         <span class="d-block title p-0 m-0">1º Bimestre</span>
@@ -439,32 +440,69 @@
                                                             30/04/2022</span>
                                                     </div>
 
-                                                    <div mbsc-page class="demo-multiple-months">
-                                                        <div style="height:100%">
-                                                          <div id="demo-2-months"></div>
+                                                    <div class="calendar-section">
+                                                        <div class="calendar-header">
+                                                            <span>Calendário letivo</span>
                                                         </div>
-                                                      </div>
+                                                        <div class="row no-gutters">
+                                                            <div class="col-md-12">
 
+                                                                <div class="calendar calendar-first"
+                                                                    id="calendar_first">
+                                                                    <div class="calendar_header">
+                                                                        <button class="switch-month switch-left">
+                                                                            <i class="bi bi-caret-left-fill"></i>
+                                                                        </button>
+                                                                        <h2></h2>
+                                                                        <button class="switch-month switch-right">
+                                                                            <i class="bi bi-caret-right-fill"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                    <div class="calendar_weekdays"></div>
+                                                                    <div class="calendar_content"></div>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="col-md-12">
+
+                                                                <div class="calendar calendar-second"
+                                                                    id="calendar_second">
+                                                                    <div class="calendar_header">
+                                                                        <button class="switch-month switch-left">
+                                                                            <i class="bi bi-caret-left-fill"></i>
+                                                                        </button>
+                                                                        <h2></h2>
+                                                                        <button class="switch-month switch-right">
+                                                                            <i class="bi bi-caret-right-fill"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                    <div class="calendar_weekdays"></div>
+                                                                    <div class="calendar_content"></div>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div> <!-- End Row -->
+
+                                                    </div> <!-- End Calendar -->
                                                 </div>
                                             </div>
 
-                                            <div class="col-md-3">
+                                            <div id="calendar-col3" class="calendar-col3 col-md-4 pb-2">
                                                 <div class="card p-2 table-add-class bg-white rounded-16px text-center">
                                                     <span class="font-weight-bold-ergon text-color-ergon">Aulas
                                                         selecionadas</span>
 
                                                     <div class="list-selected-classes">
-                                                        <ul class="list-group">
-                                                            <li class="list-group" aria-current="true">31/01/2021</li>
-                                                            <li class="list-group">01/02/2021</li>
-                                                            <li class="list-group">02/02/2021</li>
-                                                            <li class="list-group">03/02/2021</li>
-                                                            <li class="list-group">04/02/2021</li>
+                                                        <ul class="list-group listClasses">
+                                                            <!-- desenha lista -->
                                                         </ul>
                                                     </div>
-
+                                                    <button class="btn btn-ergon btn-shadow salvarAulas"
+                                                        onclick="salvarAulas()" disabled>Salvar Aulas</button>
                                                 </div>
                                             </div>
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -472,12 +510,17 @@
                         </div>
                     </div>
 
+                    <!-- Modal Falta justificada -->
+                    <div class="modal fade" id="faltaJustificadaModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel23" aria-hidden="true">
+                        <!-- gerado por javascript -->
+                    </div>
+
                     <!-- Opções no rodapé -->
                     <div class="footer-options fixed-bottom">
                         <div class="options-buttom">
                             <!-- Button trigger modal -->
-                            <button class="btn mb-2 mr-2 btn-pill btn-ergon btn-shadow" data-bs-toggle="modal"
-                                data-bs-target="#addClassModal">
+                            <button onclick="calendarSelection()" class="btn mb-2 mr-2 btn-pill btn-ergon btn-shadow"
+                                data-bs-toggle="modal" data-bs-target="#addClassModal">
                                 Nova Aula
                             </button>
 
@@ -489,6 +532,13 @@
                                     Opções
                                 </button>
                                 <ul class="dropdown-menu">
+
+                                    <li><a class="btn dropdown-item link-ergon"
+                                            onclick="calcularFaltasEPresencas()">Calcular faltas e presenças</a>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider link-ergon">
+                                    </li>
                                     <li><a class="dropdown-item link-ergon" href="#">Ver total de faltas e Presenças</a>
                                     </li>
                                     <li>
@@ -521,26 +571,6 @@
         crossorigin="anonymous"></script>
 
     <script>
-                                                  
-        mobiscroll.setOptions({
-            locale: mobiscroll.localePtBR,  // Specify language like: locale: mobiscroll.localePl or omit setting to use default
-            theme: 'ios',                   // Specify theme like: theme: 'ios' or omit setting to use default
-                themeVariant: 'light'       // More info about themeVariant: https://docs.mobiscroll.com/5-15-1/calendar#opt-themeVariant
-        });
-        
-        $(function () {
-            // Mobiscroll Calendar initialization
-            $('#demo-2-months').mobiscroll().datepicker({
-                controls: ['calendar'],     // More info about controls: https://docs.mobiscroll.com/5-15-1/calendar#opt-controls
-                display: 'inline',          // Specify display mode like: display: 'bottom' or omit setting to use default
-                calendarType: 'month',
-                pages: 1,
-                selectMultiple: true,
-            });
-        });
-    </script>
-
-    <script>
         //'<a id="include_contents_two_steps" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Digitar conteúdo <i class="bi bi-pen-fill"></i></a>'
 
         $(document).ready(function () {
@@ -549,27 +579,89 @@
             popoverPropriety.popover({
                 title: '',
                 html: true,
-                content: '<a href="#" class="link-ergon" id="include_contents_two_steps" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Digitar conteúdo <i class="bi bi-pen-fill"></i></a>',
+                content: `
+                    <div class="popover-options">
+                        <a href="#" class="link-ergon p-4" id="include_contents_two_steps" type="button" data-bs-toggle="modal"
+                        data-bs-target="#exampleModalToggle">Exluir data <span class="material-icons text-color-ergon float-end">delete</span></a>
+                    </div>
+                    <hr>
+                    <div class="popover-options">
+                        <a href="#" class="link-ergon p-4" id="include_contents_two_steps" type="button" data-bs-toggle="modal"
+                        data-bs-target="#exampleModalToggle">Digitar conteúdo <span class="material-icons text-color-ergon float-end">edit</span></a>
+                    </div>
+                `,
                 placement: "top",
-                trigger: "click"
+                trigger: "focus",
+                template: `
+                '<div class="popover options-popover-attendance-table" role="tooltip">
+                    <div class="popover-arrow"></div>
+                    <h3 class="popover-header"></h3>
+                    <div class="popover-body"></div>
+                </div>'
+                `
             });
 
             $(document).on('click', "#include_contents_two_steps", function () {
                 $('#exampleModalToggle').modal('show');
                 popoverPropriety.popover('hide');
             });
-        });
-    </script>
 
-    <!-- grade table javascript -->
-    <script src="js/table-attendance.js"></script>
+            var popoverHover = $('.popover-hover');
+
+            popoverHover.popover({
+                title: '',
+                html: true,
+                content: 'Precisa de ajuda aí, amigo?',
+                placement: "top",
+                trigger: "hover"
+            });
+
+            $(document).on('hover', "#include_contents_two_steps", function () {
+                $('#exampleModalToggle').modal('show');
+                popoverHover.popover('hide');
+            });
+
+            var popoverLegendaAluno = $('.popover-aluno-transferido');
+
+            popoverLegendaAluno.popover({
+                title: '',
+                html: true,
+                content: 'Aluno transferido',
+                placement: "top",
+                trigger: "hover",
+                template: `
+                <div class="popover aluno-transferido" role="tooltip">
+                    <div class="popover-arrow"></div>
+                    <h3 class="popover-header"></h3>
+                    <div class="popover-body"></div>
+                </div>
+                `
+            });
+
+            $(document).on('hover', "#include_contents_two_steps", function () {
+                $('#exampleModalToggle').modal('show');
+                popoverLegendaAluno.popover('hide');
+            });
+        });
+
+        //popover-hover
+
+    </script>
 
     <!-- bootstarp datapicker -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.js"></script>
 
-    <script src="js/filter.js"></script>
+    <!-- grade table javascript -->
+    <script src="js/table-attendance.js"></script>
 
-    <script src="js/attendance.js"></script>
+    <script src="js/filter.js"></script>
+    <script src="js/editor.js"></script>
+
+    <!-- tips -->
+    <script src="js/tips.js"></script>
+
+    <!-- progress bar circle -->
+    <script src="js/liquidbar.js"></script>
 </body>
 
 </html>

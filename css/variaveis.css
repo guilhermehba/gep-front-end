@@ -1,0 +1,19 @@
+:root {
+    --color--primary: #4D228A;
+    --color--primary2: #6F31AD;
+    --color--primary3: #65DDEC;
+    --color--primary4: #FFC552;
+    --color--primary5: #089944;
+    --color--primary6: #17E66D;
+    --color--primary7: #E69917;
+    --color-segundary: #FA8088;
+    --color-segundary2: #AB58B9;
+    --color-segundary3: #D6E3EA;
+    --color-segundary4: #FFC552;
+    --color-segundary5: #F3F5F7;
+    --color-gray: #333333;
+    --color-gray2: #4F4F4F;
+    --color-gray3: #828282;
+    --color-gray4: #F6F6F6;
+    --font-family: Poppins, Kalam, Montserrat, sans-serif;
+}

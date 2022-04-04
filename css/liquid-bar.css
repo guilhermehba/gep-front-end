@@ -1,0 +1,177 @@
+:root {
+  --color-primary: #1a2556;
+  --color-secondary: #a5b3d4;
+  --color-light-gray: #f3f6fb;
+  --color-white: white;
+  --color-black: #3e3743;
+  --color-input-hover: rgba(165, 179, 212, 0.6);
+  --color-input-focus: rgba(26, 37, 86, 0.45);
+  --color-input-error: rgba(255, 94, 31, 0.6);
+  --color-input-warning: rgba(166, 145, 54, 0.6);
+  --color-input-success: rgba(23, 125, 23, 0.45);
+  --color-input-disabled: #dde6f3;
+  --font-family: Roboto, Montserrat, sans-serif;
+  --font-persian: Yekan, Lalezar, cursive;
+  --font-proxima: proxima-soft, Proxima Soft, Proxima Nova Soft, Helvetica, Arial, sans-serif;
+}
+
+/* __[ STYLE ]__ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  transition: 0.2s ease all;
+}
+
+:root {
+  --color-progressCircle: #4D228A;
+  --color-progressCircle-alpha: #6F31AD;
+}
+
+.description {
+  margin-top: 45px;
+}
+
+.progressCircle {
+  --progressCircle-value: 0;
+  --progressCircle-indicator-size: 117px;
+  --progressCircle-size: 64px;
+  --progressCircle-inner-size: calc(var(--progressCircle-size) - 20px);
+  border: 5px solid var(--color-progressCircle-alpha);
+}
+
+.progressCircle::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  min-width: 8px;
+  min-height: 8px;
+  transform: translate(-50%, -50%);
+}
+.progressCircle[data-value="100"] {
+  --color-progressCircle: #4D228A;
+  --color-progressCircle-alpha: #AB58B9;
+}
+.progressCircle[data-value="100"]::before {
+  -webkit-animation: progressCircle-firework 1.3s 0.1s ease infinite both;
+          animation: progressCircle-firework 1.3s 0.1s ease infinite both;
+}
+.progressCircle, .progressCircle-inner {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  width: var(--progressCircle-size);
+  height: var(--progressCircle-size);
+  border-radius: var(--progressCircle-size);
+  background: var(--color-gray4);
+}
+.progressCircle-inner {
+  width: var(--progressCircle-inner-size);
+  height: var(--progressCircle-inner-size);
+  border: none;
+  margin: auto;
+  overflow: hidden;
+}
+.progressCircle--upper-half-value .progressCircle-label {
+  color: var(--color-light-gray) !important;
+}
+.progressCircle-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  color: var(--color-black);
+  text-align: center;
+  overflow: hidden;
+}
+.progressCircle-label strong {
+  font-size: 70%;
+  color: var(--color-gray);
+}
+.progressCircle-label span {
+  font-size: 70%;
+}
+.progressCircle-indicator {
+  background: var(--color-progressCircle);
+  transform-origin: center center;
+  opacity: 0.6;
+  -webkit-animation: progressCircle-wave-animation 8s linear infinite both;
+          animation: progressCircle-wave-animation 8s linear infinite both;
+  position: absolute;
+  top: calc(100% - var(--progressCircle-value) * 1%);
+  left: -100%;
+  right: 50%;
+  width: var(--progressCircle-indicator-size);
+  height: var(--progressCircle-indicator-size);
+  border-radius: calc(var(--progressCircle-indicator-size) / 2.5);
+}
+.progressCircle-indicator:nth-child(2) {
+  background: var(--color-progressCircle-alpha);
+  transform: rotate(90deg);
+  border-radius: 90px;
+}
+
+@-webkit-keyframes progressCircle-firework {
+  from, 0% {
+    width: 50%;
+    height: 50%;
+    background: var(--color-progressCircle);
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  to, 100% {
+    width: 150%;
+    height: 150%;
+    background: var(--color-progressCircle-alpha);
+    opacity: 0;
+  }
+}
+
+@keyframes progressCircle-firework {
+  from, 0% {
+    width: 50%;
+    height: 50%;
+    background: var(--color-progressCircle);
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  to, 100% {
+    width: 150%;
+    height: 150%;
+    background: var(--color-progressCircle-alpha);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes progressCircle-wave-animation {
+  to, 100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes progressCircle-wave-animation {
+  to, 100% {
+    transform: rotate(360deg);
+  }
+}
+*:not(.watermark) {
+  z-index: 2;
+}
+
+.watermark {
+  color: var(--color-primary);
+  transform: translate(-85px, -50px);
+}

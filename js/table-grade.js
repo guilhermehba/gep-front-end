@@ -28,7 +28,6 @@ function headerTable(data) {
             <td class="fixed-side">${data[a].id}</td>
             <td class="fixed-side">${data[a].nome}</td>
             <td class="fixed-side">${data[a].matricula}</td>
-            <td class="fixed-side">${data[a].legenda}</td>
             <td style="text-align: center;">${data[a].notas.a}</td>
             <td style="text-align: center;">${data[a].notas.b}</td>
             <td style="text-align: center;">${data[a].notas.c}</td>

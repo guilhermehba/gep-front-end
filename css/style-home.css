@@ -26,6 +26,7 @@
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
     overflow: hidden;
+    border: 1px solid var(--color--primary);
 }
 
 #wrapper.toggled {
@@ -128,9 +129,8 @@
 
 @media (min-width: 768px) {
     #wrapper {
-        /* padding-left: 250px; */
         float: left;
-        width: 20%;
+        width: 20%; position: absolute; z-index: 1;
     }
 
     .fixed-brand {
@@ -144,7 +144,7 @@
     #sidebar-wrapper {
         width: 100%;
         white-space: nowrap;
-        height: 95vh;
+        height: 92vh;
     }
 
     #wrapper.toggled #sidebar-wrapper {
@@ -192,10 +192,14 @@
 }
 
 .toggled-2{
-    width: 4% !important;
+    width: 3% !important;
     float: left;
 }
 
 .fullpage{
     width: 80% !important;
+}
+
+.card-shadow{
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
 }

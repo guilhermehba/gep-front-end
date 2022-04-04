@@ -5,9 +5,10 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="SHORTCUT ICON" href="http://teste.ergonsistemas.com.br/gepweb_d.dll/cache/gepweb_e_exe/n2/favicon.ico">
 
-    <title>Hello, world!</title>
-    
+    <title>GEP - ERGON</title>
+
     <!-- grade table javascript -->
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
 
@@ -34,139 +35,283 @@
 
     <nav class="navbar navbar-ergon navbar-expand-lg navbar-light bg-light no-margin">
         <div class="container-fluid">
-            <a class="navbar-brand" id="menu-toggle-2" href="#"><i style="font-size: 22px;" class="bi bi-justify"></i></a>
+            <a class="navbar-brand" id="menu-toggle-2" href="#"><i style="font-size: 22px;"
+                    class="bi bi-justify"></i></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled">Disabled</a>
-                    </li>
-                </ul> -->
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
-                </form>
+                <div class="d-flex">
+                    <select id="select-escolas-top" class="form-select" aria-label="Default select example">
+                        <script>
+                            let userLogado = localStorage.getItem("userLogado");
+                            let escolas = localStorage.getItem('escolas');
+                            escolas = JSON.parse(escolas);
+
+                            userLogado = JSON.parse(userLogado);
+
+                            let getSelectEscolas = document.querySelector(
+                                "#select-escolas-top"
+                            );
+
+                            for (const key in escolas) {
+                                getSelectEscolas.innerHTML += `<option class="cd-${escolas[key].CDESCOLA}" value="1">${escolas[key].ESCOLA}</option>`;
+                                
+                                if (escolas[key].CDESCOLA == userLogado.CDESCOLA) {
+                                    document.querySelector("#select-escolas-top").querySelector(".cd-"+escolas[key].CDESCOLA).setAttribute("SELECTED", true)
+                                }
+                            }
+                        </script>
+                    </select>
+                </div>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                </ul>
+                <div class="d-flex">
+                    <span class="material-icons text-color-ergon float-end pe-2"
+                        style="color: white; font-size: 36px;">person</span>
+                    <select class="form-select" aria-label="Default select example">
+                        <option value="1">2020</option>
+                        <option value="2">2021</option>
+                        <option value="3" selected>2022</option>
+                    </select>
+                </div>
             </div>
         </div>
     </nav>
 
-    <div id="wrapper" class="toggled-2">
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <div class="d-flex flex-column flex-shrink-0 pt-3 px-2" style="width: 100%;">
-                <!-- <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none">
-                  <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-                  <span class="fs-4">Sidebar</span>
-                </a>
-                <hr> -->
-                <ul class="nav nav-pills flex-column mb-auto">
-                  <li class="nav-item">
-                    <a href="attendance-page.html" class="nav-link active-ergon" aria-current="page">
-                        <i class="bi bi-pencil"></i>
-                        <span class="isOver">Frequência</span>
-                      </a>
-                  </li>
-                  <li>
-                    <a href="#" class="nav-link">
-                        <span class="material-icons">
-                            edit_note
-                        </span>
-                      <span class="isOver">Frequência da recuperação</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="grades-page.html" class="nav-link">
-                        <span class="material-icons">
-                            design_services
-                            </span>
-                      <span class="isOver">Notas(Avaliações)</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="nav-link">
-                        <span class="material-icons">
-                            import_contacts
-                            </span>
-                      <span class="isOver">Registro de habilidades</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="nav-link">
-                        <span class="material-icons">
-                            insert_comment
-                            </span>
-                      <span class="isOver">Observação da turma</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="nav-link">
-                        <span class="material-icons">
-                            menu_book
-                            </span>
-                      <span class="isOver">Registro de habilidades</span>
-                    </a>
-                  </li>
-                </ul>
-                <hr>
-                <!-- <div class="dropdown">
-                  <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
-                    <strong>mdo</strong>
-                  </a>
-                  <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-                    <li><a class="dropdown-item" href="#">New project...</a></li>
-                    <li><a class="dropdown-item" href="#">Settings</a></li>
-                    <li><a class="dropdown-item" href="#">Profile</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Sign out</a></li>
-                  </ul>
-                </div> -->
-              </div>
-        </div>
-        <!-- /#sidebar-wrapper -->
-    </div>
+    <div class="conteiner">
+        <div id="wrapper" class="toggled-2">
+            <!-- Sidebar -->
+            <div id="sidebar-wrapper">
+                <div class="d-flex flex-column justify-content-between pt-3">
+                    <ul class="nav nav-pills flex-column mb-auto">
+                        <li class="nav-item">
+                            <a href="attendance-page.html" class="nav-link sidebar-home-link active-ergon"
+                                aria-current="page">
+                                <span class="material-icons">
+                                    edit
+                                </span>
+                                <span class="isOver ps-2">Frequência</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link sidebar-home-link">
+                                <span class="material-icons">
+                                    edit_note
+                                </span>
+                                <span class="isOver ps-2">Frequência da recuperação</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="grades-page.html" class="nav-link sidebar-home-link">
+                                <span class="material-icons">
+                                    design_services
+                                </span>
+                                <span class="isOver ps-2">Notas(Avaliações)</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link sidebar-home-link">
+                                <span class="material-icons">
+                                    import_contacts
+                                </span>
+                                <span class="isOver ps-2">Registro de habilidades</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link sidebar-home-link">
+                                <span class="material-icons">
+                                    insert_comment
+                                </span>
+                                <span class="isOver ps-2">Observação da turma</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link sidebar-home-link">
+                                <span class="material-icons">
+                                    menu_book
+                                </span>
+                                <span class="isOver ps-2">Registro de habilidades</span>
+                            </a>
+                        </li>
+                    </ul>
 
-    <!-- Page Content -->
-    <div id="page-content-wrapper">
-        <div class="container-fluid xyz">
-            <div class="content">
-                <div class="col-lg-12">
-                    <h1>Simple Admin Sidebar With Bootstrap by <a
-                            href="http://http://codepen.io/hughbalboa/">@hughbalboa</a>
-                    </h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident laudantium nobis cum
-                        dignissimos ex
-                        inventore, velit blanditiis. Quod laborum soluta quidem culpa officia eligendi, quam,
-                        recusandae iste
-                        aliquid amet odit! </p>
+                    <ul class="nav nav-pills flex-column mb-auto">
+                        <li>
+                            <a href="#" class="nav-link sidebar-home-link" onclick="sair()">
+                                <span class="material-icons">
+                                    output
+                                </span>
+                            </a>
+                            <!-- Sair -->
+                        </li>
+                    </ul>
                 </div>
             </div>
+            <!-- /#sidebar-wrapper -->
         </div>
-    <!-- /#page-content-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+
+            <div class="container-fluid">
+                <div class="content">
+                    <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 row-cols-xxl-6 g-4 cards-buttons-home">
+
+                        <!-- frequencia -->
+                        <div class="col">
+                            <div class="card h-100 pt-4 btn card-shadow"
+                                onclick="javascript:location.href='/new-diario.html'">
+                                <div class="card-title text-center">
+                                    <img src="assets/img/icons/group-54.png" alt="Frequência">
+                                </div>
+                                <div class="card-body text-center">
+                                    <strong>Frequência e
+                                        conteúdo</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- notas -->
+                        <div class="col">
+                            <div class="card h-100 pt-4 btn card-shadow">
+                                <div class="card-title text-center">
+                                    <img src="assets/img/icons/design.png" alt="Frequência">
+                                </div>
+                                <div class="card-body text-center">
+                                    <strong>Notas</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- habilidades -->
+                        <div class="col">
+                            <div class="card h-100 pt-4 btn card-shadow">
+                                <div class="card-title text-center">
+                                    <img src="assets/img/icons/cv.png" alt="Frequência">
+                                </div>
+                                <div class="card-body text-center">
+                                    <strong>Habilidades</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- observações -->
+                        <div class="col">
+                            <div class="card h-100 pt-4 btn card-shadow">
+                                <div class="card-title text-center">
+                                    <img src="assets/img/icons/comments.png" alt="Frequência">
+                                </div>
+                                <div class="card-body text-center">
+                                    <strong>Observação da
+                                        turma</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- turma -->
+                        <div class="col">
+                            <div class="card h-100 pt-4 btn card-shadow">
+                                <div class="card-title text-center">
+                                    <img src="assets/img/icons/noticeboard.png" alt="Frequência">
+                                </div>
+                                <div class="card-body text-center">
+                                    <strong>Mural da
+                                        turma</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- turma -->
+                        <div class="col">
+                            <div class="card h-100 pt-4 btn card-shadow">
+                                <div class="card-title text-center">
+                                    <img src="assets/img/icons/curriculum.png" alt="Frequência">
+                                </div>
+                                <div class="card-body text-center">
+                                    <strong>Horário de aula</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- turma -->
+                        <div class="col">
+                            <div class="card h-100 pt-4 btn card-shadow">
+                                <div class="card-title text-center">
+                                    <img src="assets/img/icons/newYearCalendar.png" alt="Frequência">
+                                </div>
+                                <div class="card-body text-center">
+                                    <strong>Planejamento de
+                                        aula</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- turma -->
+                        <div class="col">
+                            <div class="card h-100 pt-4 btn card-shadow">
+                                <div class="card-title text-center">
+                                    <img src="assets/img/icons/group-55.png" alt="Frequência">
+                                </div>
+                                <div class="card-body text-center">
+                                    <strong>Alunos x Faltas</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- turma -->
+                        <div class="col">
+                            <div class="card h-100 pt-4 btn card-shadow">
+                                <div class="card-title text-center">
+                                    <img src="assets/img/icons/inscription.png" alt="Frequência">
+                                </div>
+                                <div class="card-body text-center">
+                                    <strong>Relatório de
+                                        acompanhamento</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- turma -->
+                        <div class="col">
+                            <div class="card h-100 pt-4 btn card-shadow">
+                                <div class="card-title text-center">
+                                    <img src="assets/img/icons/comboChart.png" alt="Frequência">
+                                </div>
+                                <div class="card-body text-center">
+                                    <strong>Gráficos</strong>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <!-- /#page-content-wrapper -->
+
+
+            <style>
+                .footer-ergon{
+                    position: absolute;
+                }
+            </style>
+
+            <footer class="footer-ergon">
+                <nav class="navbar fixed-bottom navbar-light bg-ergon">
+                    <div class="container-fluid">
+                      <a class="text-white" href="#">
+                          <div class="d-flex flex-row align-items-center">
+                            <span class="material-icons px-1">help</span> Base de conhecimento
+                          </div>
+                      </a>
+                    </div>
+                  </nav>
+            </footer>
+        </div>
     </div>
 
     <!-- /#wrapper -->
@@ -176,7 +321,9 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
     <script id="rendered-js">
         $("#menu-toggle").click(function (e) {
             e.preventDefault();
@@ -185,7 +332,7 @@
         $("#menu-toggle-2").click(function (e) {
             e.preventDefault();
             $("#wrapper").toggleClass("toggled-2");
-            $("#page-content-wrapper").toggleClass("fullpage");
+            //$("#page-content-wrapper").toggleClass("fullpage");
             $('#menu ul').hide();
         });
 

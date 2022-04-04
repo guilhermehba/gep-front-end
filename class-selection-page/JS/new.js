@@ -1,12 +1,58 @@
 function resolution() {
     $(window).on("load resize", function () {
+      
       if ($(window).width() < 1250) {
         $(".grupo-geral").addClass("flex-wrap");
+
+        $(".grupo1").removeClass("col-4");
+
+
+
+        $(".grupo3").removeClass("col-3");
+
+        $(".grupo1").addClass("col-6");
+
+    
+
+        $(".grupo3").addClass("col-12");
+
       }
-  
+
+      if ($(window).width() < 1100) {
+
+        $(".grupo2").removeClass("col-4");
+
+      
+
+
+      }
+      
+      if ($(window).width() > 1100) {
+
+ 
+
+        $(".grupo2").addClass("col-4");
+
+
+      }
+      
       if ($(window).width() > 1250) {
         $(".grupo-geral").removeClass("flex-wrap");
+
+        $(".grupo1").removeClass("col-6");
+
+        $(".grupo2").removeClass("col-5");
+
+        $(".grupo3").removeClass("col-12");
+
+        $(".grupo1").addClass("col-4");
+
+        $(".grupo2").addClass("col-4");
+
+        $(".grupo3").addClass("col-3");
       }
+
+      
     });
   }
   resolution();

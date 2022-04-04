@@ -18,82 +18,78 @@
     <title>Document</title>
 </head>
 <body data-editor="ClassicEditor" data-collaboration="false" data-revision-history="false">
-    <!-- Button trigger modal prontuário -->
-    <button type="button" class="btn btn-primary launch" data-bs-toggle="modal" data-bs-target="#modal_prontuario">
-      Abrir Prontuário do Aluno
-    </button>
-    <!-- Button trigger modal prontuário -->
-    <!-- Modal prontuário -->
-<div class="modal fade" id="modal_prontuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title text-center" id="exampleModalLabel" style="text-align: center; border: none; margin: 0 auto;">Prontuário do Aluno</h5>
+  <button type="button" class="btn btn-primary launch" data-bs-toggle="modal" data-bs-target="#AbrirProntuário">
+    AbrirProntuário
+  </button>
+  
+  <!-- Modal prontuário -->
+  <div class="modal fade" id="AbrirProntuário" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-center" id="exampleModalLabel" style="text-align: center; border: none; margin: 0 auto;">Prontuário do Aluno</h5>
+        </div>
+        <p style="text-align: center;"><strong>LUKAS SILVA E SILVA</strong></p>
+        <div class="modal-body">
+            
+            <label class="label-pront" for="btn-prontuario">Prontuário</label>
+            <select name="" class="btn-prontuario">
+              <option value="0">Selecione um Prontuário</option>
+              <option value="1">PRONTUÁRIO A</option>
+              <option value="2">PRONTUÁRIO B</option>
+              <option value="3">PRONTUÁRIO C</option>
+              <option value="4">PRONTUÁRIO D</option>
+            </select>
+            <br>
+            <br>
+            
+            <label class="label-pront" for="btn-ocorrencia">Ocorrência do Prontuário</label>
+            <select name="" class="btn-ocorrencia">
+              <option value="0">Selecione uma Ocorrência do Prontuário</option>
+              <option value="1">Ocorrência do Prontuário A</option>
+              <option value="2">Ocorrência do Prontuário B</option>
+              <option value="3">Ocorrência do Prontuário C</option>
+              <option value="4">Ocorrência do Prontuário D</option>
+            </select>
+           <br>
+           <br>
+          
+            <div>
+                <div style="width: 3%; float: left; width: 50%;">
+                  <label class="label-grav" for="btn-gravidade">Gravidade</label>
+                  <select name="" class="btn-gravidade" >
+                    <option value="0">Qual a Gravidade do caso</option>
+                    <option value="1">Leve</option>
+                    <option value="2">Mediano</option>
+                    <option value="3">Grave</option>
+                    <option value="4">Risco de Vida</option>
+                  </select>
+                </div>
+                <div style="width: 40%; float: right; width: 50%;">
+                  <label class="label-evo" for="btn-gravidade">Evolução</label>
+                  <select name="" class="btn-evolucao" >
+                    <option value="0">Qual a Evolução do caso</option>
+                    <option value="1">Evolução Mediana</option>
+                    <option value="2">Evolução Boa</option>
+                    <option value="3">Evolução ótima</option>
+                    <option value="4">Curado</option>
+                  </select>
+                </div>
+            </div>
+            <p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</p>
+            <label>Detalhes da Ocorrência:</label>
+            <textarea id="detalhe_ocorrencia" name="" id="" cols="30" rows="10" style="width: 100%;"></textarea>
+        </div>
+            <div style="text-align: center;">
+                <button id="save_prontuario" type="button" class="btn btn-outline" style="width: 30%;">salvar</button>
+                <p></p>
+                <button id="cancel_changes" type="button" class="btn btn-outline" data-bs-dismiss="modal" style="width: 30%;">Cancelar</button>
+                <p></p>
+            </div>
       </div>
-      <p style="text-align: center;"><strong>LUKAS SILVA E SILVA</strong></p>
-      <div class="modal-body">
-          <div  class="dropdown">
-              <label class="label-pront" for="btn-prontuario">Prontuário</label>
-              <button class="btn btn-outline dropdown-toggle btn-prontuario" type="button" id="dropdown_prontuario" data-bs-toggle="dropdown" aria-expanded="false">
-                  Prontuário
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdown_prontuario">
-                <li><a class="dropdown-item" href="#">PRONTUÁRIO A</a></li>
-                <li><a class="dropdown-item" href="#">PRONTUÁRIO B</a></li>
-                <li><a class="dropdown-item" href="#">PRONTUÁRIO C</a></li>
-              </ul>
-          </div>
-          <br>
-          <div  class="dropdown">
-              <label class="label-ocorr">Ocorrência do Prontuário</label>
-              <button class="btn btn-outline dropdown-toggle btn-ocorrencia" type="button" id="dropdown_ocorrencia" data-bs-toggle="dropdown" aria-expanded="false">
-                  Ocorrência do Prontuário
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdown_ocorrencia">
-                <li><a class="dropdown-item" href="#">Ocorrência do Prontuário A</a></li>
-                <li><a class="dropdown-item" href="#">Ocorrência do Prontuário B</a></li>
-                <li><a class="dropdown-item" href="#">Ocorrência do Prontuário C</a></li>
-              </ul>
-          </div>
-          <br>
-          <div>
-              <div  class="dropdown" style="width: 45%; float: left; width: 50%;">
-                  <label class="label-grav">Gravidade</label>
-                  <button class="btn btn-outline dropdown-toggle btn-gravidade" type="button" id="dropdown_gravidade" data-bs-toggle="dropdown" aria-expanded="false">
-                      Gravidade
-                  </button>
-                  <ul class="dropdown-menu" aria-labelledby="dropdown_gravidade">
-                    <li><a class="dropdown-item" href="#">Gravidade A</a></li>
-                    <li><a class="dropdown-item" href="#">Gravidade B</a></li>
-                    <li><a class="dropdown-item" href="#">Gravidade C</a></li>
-                  </ul>
-              </div>
-              <div  class="dropdown" style="width: 45%; float: right;">
-                  <label class="label-evo">Evolução</label>
-                  <button class="btn btn-outline dropdown-toggle btn-evolucao" type="button" id="dropdown_evolucao" data-bs-toggle="dropdown" aria-expanded="false">
-                      Evolução
-                  </button>
-                  <ul class="dropdown-menu" aria-labelledby="dropdown_evolucao">
-                    <li><a class="dropdown-item" href="#">Evolução A</a></li>
-                    <li><a class="dropdown-item" href="#">Evolução B</a></li>
-                    <li><a class="dropdown-item" href="#">Evolução C</a></li>
-                  </ul>
-              </div>
-          </div>
-          <p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</p>
-          <label>Detalhes da Ocorrência:</label>
-          <textarea id="detalhe_ocorrencia" name="" id="" cols="30" rows="10" style="width: 100%;"></textarea>
-      </div>
-          <div style="text-align: center;">
-              <button id="save_prontuario" type="button" class="btn btn-outline" style="width: 30%;">salvar</button>
-              <p></p>
-              <button id="cancel_changes" type="button" class="btn btn-outline" data-bs-dismiss="modal" style="width: 30%;">Cancelar</button>
-              <p></p>
-          </div>
     </div>
   </div>
-</div>
-<!-- Modal prontuário -->
+  <!-- Modal prontuário -->
     <!-- Button trigger modal atenção -->
       <button id="warning_remote" type="button" class="btn btn-primary launch" data-bs-toggle="modal" data-bs-target="#modal_warning">
         <strong>ATENÇÃO</strong>
@@ -190,6 +186,11 @@
       </div>
       <!-- Modal Nova Aula -->
       <!-- Modal Observações-->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
       <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary launch" data-bs-toggle="modal" data-bs-target="#delete_on_confirm_code"  onclick="document.getElementById('random_numero').innerHTML = getRndInteger(0,699999), dataHoje()">
   Launch Exclusão
@@ -207,7 +208,7 @@
         <input id="input_code" style="width: 248px;" type="number">
         <br>
         <br>
-        <button id="enviar_cod" class="btn" onclick="confirmarExclusaoTeste()">Enviar</button>
+        <button id="enviar_cod" class="btn" onclick="confirmarExclusao()">Enviar</button>
         <button id="cancelar_envio" class="btn" data-bs-dismiss="modal">Cancelar</button>
       </div>
       
@@ -215,7 +216,11 @@
   </div>
 </div>
 
-
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
+<!-- ========================================================================================================================================== -->
 
       <!-- Modal Observações-->
       
@@ -271,13 +276,13 @@
           </div>
         </div>
       <!-- Modal Mural da Turma -  tarefa -->
-      <script>
+      <!-- <script>
         ClassicEditor
             .create( document.querySelector( '#editor' ) )
             .catch( error => {
                 console.error( error );
             } );
-      </script>
+      </script> -->
       <!-- Sweet alert confirmation -->
     
        
@@ -332,7 +337,7 @@
     //countdown per seconds
   }
 </script>
-<script src="js/ckeditor/ckeditor.js"></script>
+<!-- <script src="js/ckeditor/ckeditor.js"></script>
 		<script>ClassicEditor
 				.create( document.querySelector( '.editor' ), {
 					
@@ -353,7 +358,7 @@
 
 					console.error( error );
 				} );
-		</script>
+		</script> -->
 
 
 
@@ -381,78 +386,7 @@
 .
 .
 ."></div> -->
-<button type="button" class="btn btn-primary launch" data-bs-toggle="modal" data-bs-target="#EXAMPLEpRONTU">
-  banana
-</button>
 
-<!-- Modal prontuário -->
-<div class="modal fade" id="EXAMPLEpRONTU" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title text-center" id="exampleModalLabel" style="text-align: center; border: none; margin: 0 auto;">Prontuário do Aluno</h5>
-      </div>
-      <p style="text-align: center;"><strong>LUKAS SILVA E SILVA</strong></p>
-      <div class="modal-body">
-          
-          <label class="label-pront" for="btn-prontuario">Prontuário</label>
-          <select name="" class="btn-prontuario">
-            <option value="0">Selecione um Prontuário</option>
-            <option value="1">PRONTUÁRIO A</option>
-            <option value="2">PRONTUÁRIO B</option>
-            <option value="3">PRONTUÁRIO C</option>
-            <option value="4">PRONTUÁRIO D</option>
-          </select>
-          <br>
-          <br>
-          
-          <label class="label-pront" for="btn-ocorrencia">Ocorrência do Prontuário</label>
-          <select name="" class="btn-ocorrencia">
-            <option value="0">Selecione uma Ocorrência do Prontuário</option>
-            <option value="1">Ocorrência do Prontuário A</option>
-            <option value="2">Ocorrência do Prontuário B</option>
-            <option value="3">Ocorrência do Prontuário C</option>
-            <option value="4">Ocorrência do Prontuário D</option>
-          </select>
-         <br>
-         <br>
-        
-          <div>
-              <div style="width: 3%; float: left; width: 50%;">
-                <label class="label-grav" for="btn-gravidade">Gravidade</label>
-                <select name="" class="btn-gravidade" >
-                  <option value="0">Qual a Gravidade do caso</option>
-                  <option value="1">Leve</option>
-                  <option value="2">Mediano</option>
-                  <option value="3">Grave</option>
-                  <option value="4">Risco de Vida</option>
-                </select>
-              </div>
-              <div style="width: 40%; float: right; width: 50%;">
-                <label class="label-evo" for="btn-gravidade">Evolução</label>
-                <select name="" class="btn-evolucao" >
-                  <option value="0">Qual a Evolução do caso</option>
-                  <option value="1">Evolução Mediana</option>
-                  <option value="2">Evolução Boa</option>
-                  <option value="3">Evolução ótima</option>
-                  <option value="4">Curado</option>
-                </select>
-              </div>
-          </div>
-          <p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</p>
-          <label>Detalhes da Ocorrência:</label>
-          <textarea id="detalhe_ocorrencia" name="" id="" cols="30" rows="10" style="width: 100%;"></textarea>
-      </div>
-          <div style="text-align: center;">
-              <button id="save_prontuario" type="button" class="btn btn-outline" style="width: 30%;">salvar</button>
-              <p></p>
-              <button id="cancel_changes" type="button" class="btn btn-outline" data-bs-dismiss="modal" style="width: 30%;">Cancelar</button>
-              <p></p>
-          </div>
-    </div>
-  </div>
-</div>
-<!-- Modal prontuário -->
 <!-- Modal aviso aluno -->
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary launch" data-bs-toggle="modal" data-bs-target="#avisoAluno">

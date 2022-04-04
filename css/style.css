@@ -24,6 +24,7 @@
 /* 23/02/2021 - ERGON - Author: Wellysson Rocha */
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
+@import '/css/variaveis.css';
 
 @keyframes slidein {
     from {
@@ -32,25 +33,26 @@
         padding: 0;
         margin: 0;
     }
-    to{
+
+    to {
         opacity: 1;
     }
 }
 
 @keyframes surgir {
-    from{
+    from {
         width: 30px;
     }
 }
 
 @keyframes surgirUp {
-    from{
+    from {
         height: 10px;
     }
 }
 
 @keyframes sizeUP {
-    from{
+    from {
         font-size: 1px;
         opacity: 0;
     }
@@ -103,8 +105,7 @@ body a:hover {
 }
 
 .link-ergon {
-    color: #AB58B9 !important;
-    font-weight: bold;
+    color: #AB58B9;
 }
 
 .link-ergon:hover {
@@ -124,7 +125,7 @@ body a:hover {
     animation-duration: 4s; */
 }
 
-.breadcrumb a{
+.breadcrumb a {
     color: #6F31AD;
 }
 
@@ -174,7 +175,7 @@ body a:hover {
     white-space: nowrap;
     margin-bottom: 1%;
     padding: 0;
-    margin-bottom: 5%;
+    margin-bottom: 0;
 }
 
 .record-type .table-ergon * {
@@ -182,12 +183,9 @@ body a:hover {
 }
 
 /* table-scroll */
-.table-ergon {
-    /* overflow-y: scroll; */
-}
 
 .table-ergon::-webkit-scrollbar {
-    width: 0;
+    width: 10px;
     /* width of the entire scrollbar */
     height: 10px;
 }
@@ -257,6 +255,7 @@ body a:hover {
     font-weight: 600;
     font-size: 16px;
     border-radius: 24px;
+    cursor: pointer;
 }
 
 .btn-ergon:hover {
@@ -301,8 +300,16 @@ body a:hover {
 /* 25/02/2021 - ERGON - Author: Guilherme 1.0 */
 /* 01/03/2021 - ERGON - Author: Wellysson N Rocha 1.1 */
 #modal-attendance * {
-    font-weight: bold;
     transition: all ease 0.3s;
+}
+
+.strong * {
+    font-weight: bold;
+}
+
+.modal-body label {
+    font-weight: bold;
+    margin: 1% 1%;
 }
 
 #modal-attendance .attendance-alert * {
@@ -523,79 +530,79 @@ body a:hover {
     display: none;
     position: absolute;
     top: 0;
-    left: 5px;
+    left: 50%;
     padding: 0 0.5%;
     color: #fff;
     background: rgba(0, 0, 0, 0.4);
     border-radius: 24px;
+    z-index: 2;
 }
 
 [title-label]:hover::after {
     display: block;
 }
 
-.status-attendance{
+.status-attendance {
     color: #089944 !important;
 }
 
 /* 10/03/2021 - ERGON - Author: Wellysson Rocha */
-.help-top{
+.help-top {
     width: 38px;
     position: absolute;
     right: 16px;
 }
 
-#fundo-navegação{
+#fundo-navegação {
     position: relative;
 }
 
-.animation-left-right .toast{
+.animation-left-right .toast {
     animation-name: surgir;
     animation-duration: 0.5s;
     background-color: rgba(171, 88, 185, 0.8);
     border-radius: 24px;
 }
 
-.animation-left-right .toast *{
+.animation-left-right .toast * {
     animation-name: sizeUP;
     animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
     animation-duration: 0.6s;
 }
 
-.nav-pills a{
+.nav-pills a {
     color: #6F31AD;
 
 }
 
-.nav-pills a:focus{
+.nav-pills a:focus {
     color: #AB58B9;
 }
 
-.nav-pills a:hover{
+.nav-pills a:hover {
     color: #7D3989;
 }
 
 /* calendar */
-@media only screen and (max-width: 1518px){
-    input[type="date"]{
-        background-color: #6F31AD;
-        color: #ffffff;
-        border: none;
+@media only screen and (max-width: 1518px) {
+    input[type="date"] {
+        color: #000000;
+        border: 1px solid #6F31AD;
         outline: none;
         border-radius: 5px;
         padding: 1%;
-    }    
-}
-input[type="date"]{
-    background-color: #6F31AD;
-        color: #ffffff;
-        border: none;
-        outline: none;
-        border-radius: 5px;
-        padding: 1%;
+    }
 }
 
-::-webkit-calendar-picker-indicator{
+input[type="date"] {
+    color: #000000;
+    border: 1px solid #6F31AD;
+    outline: none;
+    border-radius: 5px;
+    padding: 1%;
+}
+
+::-webkit-calendar-picker-indicator {
     background-color: white;
     padding: 5px;
     cursor: pointer;
@@ -604,75 +611,520 @@ input[type="date"]{
 }
 
 /* modal de filtro de datas */
-#filterModalDateButton{
+#filterModalDateButton {
     margin: auto;
 }
 
-#filterModalDateButton button{
+#filterModalDateButton button {
     width: 125px !important;
 }
 
-.modal-date-filter .attendance-modal-content{
+.modal-date-filter .attendance-modal-content {
     width: 100% !important;
 }
 
-.modal-date-filter .attendance-modal-content *{
+.modal-date-filter .attendance-modal-content * {
     text-align: center;
 }
 
-.text-color-ergon{
+.text-color-ergon {
     color: rgba(77, 34, 138, 1);
 }
 
-.font-weight-bold-ergon{
+.font-weight-bold-ergon {
     font-weight: 600 !important;
 }
-.text-14px td, th{
+
+.text-14px td, th {
     font-size: 14px !important;
 }
 
-.text-14px i{
+.text-14px i {
     font-size: 22px !important;
 }
 
-.thead-add-class{
+.thead-add-class {
     border: 1px solid #828282;
     background-color: #D6E3EA;
     border-radius: 24px !important;
 }
 
-.content-add-class{
+.content-add-class {
     background: rgba(243, 245, 247, 1);
 }
 
-.table-add-class{
+.table-add-class {}
 
-}
-
-.rounded-16px{
+.rounded-16px {
     border-radius: 16px;
 }
 
-.rounded-bottom-16px{
+.rounded-bottom-16px {
     border-radius: 0 0 16px 16px;
 }
 
-.table-add-class .title{
+.table-add-class .title {
     font-size: 18px;
     color: #606162;
     font-weight: 600;
 }
 
-.table-add-class .sub-title{
+.table-add-class .sub-title {
     font-size: 12px;
     color: #606162;
 }
 
-.swal-button{
-    background-color: #AB58B9;
+.swal-button--confirm {
+    background-color: rgba(171, 88, 185, 1);
     border-radius: 24px;
 }
 
-.swal-button:hover{
+.swal-button--confirm:hover {
     background-color: #6F31AD !important;
+}
+
+.swal-button--cancel {
+    background-color: #F3F5F7;
+    border-radius: 24px;
+}
+
+/* 17/03/2022 - Author: Wellysson Nascimento Rocha */
+/* Calendar */
+.calendar-header {
+    background: rgba(214, 227, 234, 1);
+    border-radius: 8px 8px 0 0;
+    font-size: 14px;
+}
+
+.calendar-section {
+    margin-bottom: 20px;
+}
+
+.calendar,
+.calendar_weekdays,
+.calendar_content {}
+
+.calendar {
+    /*float: left;*/
+    background: #fff;
+    padding: 10px;
+    -webkit-box-shadow: 0px 4px 26px -22px rgba(0, 0, 0, 0.14);
+    -moz-box-shadow: 0px 4px 26px -22px rgba(0, 0, 0, 0.14);
+    box-shadow: 0px 4px 26px -22px rgba(0, 0, 0, 0.14);
+}
+
+.calendar_weekdays {
+    color: #aaa;
+    font-weight: 300;
+}
+
+.calendar_weekdays div {
+    display: inline-block;
+    vertical-align: top;
+    color: #000;
+    font-weight: 700;
+}
+
+.calendar_content,
+.calendar_weekdays,
+.calendar_header {
+    position: relative;
+}
+
+.calendar_content:after,
+.calendar_weekdays:after,
+.calendar_header:after {
+    content: ' ';
+    display: table;
+    clear: both;
+}
+
+.calendar_weekdays div,
+.calendar_content div {
+    /*border: 1px dotted #999;*/
+    width: 14%;
+    height: 28px;
+    line-height: 29px;
+    overflow: hidden;
+    text-align: center;
+    background-color: transparent;
+    margin: auto;
+}
+
+.calendar_weekdays * {
+    width: 13.4% !important;
+}
+
+.calendar_content div {
+    float: left;
+    margin-left: 1px;
+    margin-top: 1px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+
+.calendar_content div:hover {
+    border: 1px solid #ededed;
+    /*line-height: 68px;*/
+    cursor: pointer;
+}
+
+.calendar_content div.blank:hover {
+    cursor: default;
+    border: none;
+}
+
+.calendar_content div.past-date {
+    cursor: initial;
+    color: #d5d5d5;
+}
+
+.calendar_content div.today {
+    font-weight: 700;
+    font-size: 18px;
+    color: #bd83ce;
+    background-color: #fff;
+    border-radius: 9999px;
+    border: 1px solid #bd83ce;
+}
+
+.calendar_content div.selected {
+    background-color: #bd83ce;
+    /*rgba(170, 170, 176, .5) #aaaab0*/
+    color: #fff;
+    border-radius: 9999px;
+}
+
+.calendar_header {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    height: 55px;
+    display: table;
+    vertical-align: middle;
+}
+
+.calendar_header h2 {
+    margin-top: 15px;
+    padding: 0;
+    font-weight: 700;
+    font-size: 18px;
+    color: #000 !important;
+    text-transform: uppercase;
+}
+
+button.switch-month {
+    background-color: transparent;
+    padding: 0;
+    outline: none;
+    border: none;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    color: #cccccc;
+    -webkit-transition: color .2s;
+    -o-transition: color .2s;
+    transition: color .2s;
+}
+
+button.switch-month.switch-left {
+    left: 0;
+}
+
+button.switch-month.switch-right {
+    right: 0;
+}
+
+button.switch-month:hover {
+    color: #bd83ce;
+}
+
+button.switch-month:active {
+    background-color: transparent;
+}
+
+.btn-disable {
+    opacity: 0.2;
+}
+
+/*barra de progresso*/
+.swal-modal {
+    background-color: rgba(246, 246, 246, 1);
+    border: 3px solid white;
+}
+
+.swal-text {
+    text-align: center;
+}
+
+.swal-icon--success:before{
+    background-color: transparent;
+}
+
+.swal-icon--success::after{
+    background-color: transparent;
+}
+
+.swal-icon--success__hide-corners{
+    background-color: transparent;
+}
+
+.swal-button{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: 1px solid #AB58B9;
+    border-radius: 24px !important;
+}
+
+.swal-modal.confirmAtualizado{
+    background-color: rgba(8, 153, 68, 1);
+    border-radius: 24px;
+}
+.swal-modal.confirmAtualizado .swal-text{
+    color: white;
+    font-weight: bold;
+}
+
+.swal-modal.confirmAtualizado .swal-icon{
+    background-color: rgba(255, 255, 255, 1);
+}
+
+#attendance-table{
+    height: 65vh;
+}
+
+@media (max-width: 1480px) {
+    *{
+        font-size: 12px;
+    }
+
+    #attendance-table{
+        height: 66vh;
+    }
+
+    .record-type .table-ergon{
+        margin-bottom: 0 !important;
+    }
+
+    .school-attendance-content{
+        margin-top: 1%;
+    }
+
+    .school-attendance-content .title{
+        font-size: 14px;
+    }
+
+    .school-attendance-content .title .material-icons{
+        font-size: 14px;
+    }
+
+    .select-ergon>.select-ergon-select{
+        font-size: 12px;
+    }
+
+    .helpButtonClass .btn-ergon{
+        padding: 0 10px;
+        font-size: 12px;
+    }
+
+    .helpButtonClass .btn.btn-ergon.btn-shadow.float-end{
+        margin-top: 5% !important;
+    }
+
+    .btn-ergon i {
+        padding: 0;
+        margin: 0;
+    }
+
+    .help-top {
+        width: 24px;
+        top: 3px;
+    }
+
+    .breadcrumb {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 0.5rem;
+    }
+
+    .breadcrumb-item+.breadcrumb-item {
+        padding-left: .3rem;
+    }
+    
+    .school-attendance-content .record-type{
+        margin-top: 0;
+    }
+
+    .record-type .table-ergon td{
+        /* padding: 0 3px; */
+        font-size: 10px !important;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .record-type .table-ergon td span{
+        font-size: 10px;
+    }
+    .record-type .table-ergon th{
+        /* padding: 0 3px; */
+        font-size: 10px !important;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .record-type .table-ergon th a{
+        font-size: 10px;
+    }
+
+    .helpButtonClass{
+        padding-top: 10px;
+    }
+
+    .popover-aluno-transferido{
+        
+    }
+
+    .aluno-transferido{
+        background: #FFC552;
+        opacity: 0.95;
+        border-radius: 4px;
+    }
+
+    .aluno-transferido .popover-arrow::after{
+        border-top-color: rgba(255, 197, 82, 1);
+    }
+
+    .aluno-transferido .popover-body{
+        font-size: 10px !important;
+        padding: 0 10px;
+    }
+
+    .popover-body{
+        padding: 0 10px;
+    }
+
+    .btn-ergon{
+        font-size: 12px;
+    }
+    .btn-option{
+        font-size: 12px;
+    }
+
+    .options-buttom{
+        margin: 0;
+        padding: 5px 3%;
+    }
+
+    .calendar_content div{
+        margin-left: 0px;
+    }
+
+    .calendar_content div.today{
+        font-size: 14px;
+        font-weight: normal;
+    }
+
+    #faltaJustificadaModal *{
+        font-size: 12px;
+    }
+
+    #faltaJustificadaModal .modal-header .title{
+        font-size: 14px;
+        color: #000;
+    }
+}
+
+.helpButtonClass .btn.btn-ergon.btn-shadow.float-end{
+    margin-top: 5% !important;
+}
+
+.popover-aluno-transferido{
+    font-size: 14px;
+}
+
+.aluno-transferido{
+    background: #FFC552;
+    opacity: 0.95;
+    border-radius: 4px;
+}
+
+.aluno-transferido .popover-body{
+    font-size: 14px;
+}
+
+.aluno-transferido .popover-arrow::after{
+    border-top-color: rgba(255, 197, 82, 1);
+}
+
+.options-popover-attendance-table .popover-body{
+    padding: 0;
+}
+
+.options-popover-attendance-table .popover-options{
+    padding: 0 15px;
+}
+
+.options-popover-attendance-table hr{
+    padding: 0;
+    margin: 0;
+}
+
+.options-popover-attendance-table span{
+    position: relative;
+    top: 5px;
+    color: #AB58B9;
+}
+
+.options-buttom{
+
+}
+
+.dataDaFalta-header {
+    background: rgba(214, 227, 234, 1);
+    border-radius: 8px 8px 0 0;
+}
+
+@media (min-width: 1481px) {
+    #faltaJustificadaModal *{
+        font-size: 14px;
+    }
+
+    #faltaJustificadaModal .modal-header .title{
+        font-size: 24px;
+        color: #000;
+    }
+}
+
+#faltaJustificadaModal .modal-content{
+    background-color: var(--color-gray4);
+}
+
+#faltaJustificadaModal .nav-link{
+    color: #000;
+    font-weight: 600;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+    background-color: var(--color-segundary2);
+    color: #fff !important;
+    /*border: 2px solid var(--bs-gray-500);*/
+}
+
+#faltaJustificadaModal .nav-pills .nav-link{
+    border-radius: 0%;
+}
+
+.cards-buttons-home .card-title.text-center img, svg{
+    width: 20%;
+}
+
+.row-cols-xxl-7>* {
+    flex: 0 0 auto;
+    width: 14.286%;
+}
+
+.bg-ergon{
+    background-color: var(--color-segundary2);
 }
